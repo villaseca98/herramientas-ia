@@ -15,8 +15,17 @@ export function leerJson(ruta) {
   return JSON.parse(readFileSync(join(RAIZ, ruta), 'utf8'));
 }
 
+// La URL pública sale de SITIO_URL, o del dominio de producción que Vercel expone al compilar,
+// o en último caso de data/sitio.json.
+export function urlPublica(entorno = process.env, porDefecto = '') {
+  if (entorno.SITIO_URL) return entorno.SITIO_URL.replace(/\/+$/, '');
+  if (entorno.VERCEL_PROJECT_PRODUCTION_URL) return `https://${entorno.VERCEL_PROJECT_PRODUCTION_URL}`;
+  return porDefecto;
+}
+
 export function cargarSitio() {
-  return leerJson('data/sitio.json');
+  const sitio = leerJson('data/sitio.json');
+  return { ...sitio, url: urlPublica(process.env, sitio.url) };
 }
 
 export function cargarAfiliados() {

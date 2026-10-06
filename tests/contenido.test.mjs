@@ -48,3 +48,10 @@ test('no se puede publicar con marcadores pendientes', () => {
   assert.equal(errores.length, 1);
   assert.deepEqual(validarArticulo({ ...base, cuerpo: 'Hola [TU PRUEBA: captura]' }, afiliados, categorias), []);
 });
+
+test('urlPublica prioriza SITIO_URL, luego el dominio de Vercel', async () => {
+  const { urlPublica } = await import('../scripts/lib/contenido.mjs');
+  assert.equal(urlPublica({ SITIO_URL: 'https://mi.web/' }, 'https://x'), 'https://mi.web');
+  assert.equal(urlPublica({ VERCEL_PROJECT_PRODUCTION_URL: 'herramientas-ia.vercel.app' }, 'https://x'), 'https://herramientas-ia.vercel.app');
+  assert.equal(urlPublica({}, 'https://x'), 'https://x');
+});

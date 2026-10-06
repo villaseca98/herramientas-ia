@@ -53,11 +53,9 @@ npm run redes -- --articulo make-vs-n8n --simular
 ## Puesta en marcha (una sola vez)
 
 1. **Repositorio:** crea un repositorio en GitHub y sube esta carpeta (rama `main`).
-2. **Hosting:** en Cloudflare, Workers & Pages → Create → Pages → conectar con Git, elige el repositorio y configura:
-   - Build command: `npm run build`
-   - Build output directory: `dist`
-   Cada fusión en `main` publica la web sola.
-3. **Dirección:** cambia `url` en `data/sitio.json` por la dirección que te dé Cloudflare (`*.pages.dev`) o tu dominio.
+2. **Hosting (Vercel):** en Vercel, Add New → Project, importa el repositorio y pulsa Deploy. `vercel.json` ya indica el build (`npm run build`) y la carpeta de salida (`dist`). Cada cambio en `main` publica la web sola.
+   - Alternativa, Cloudflare Pages: Build command `npm run build`, Build output directory `dist`.
+3. **Dirección:** en Vercel se usa sola la dirección de producción del proyecto. En otro hosting, o con dominio propio, define la variable `SITIO_URL` (por ejemplo `https://midominio.com`) o cambia `url` en `data/sitio.json`.
 4. **IA:** crea una clave gratuita en [Google AI Studio](https://aistudio.google.com/apikey) y guárdala en GitHub → Settings → Secrets and variables → Actions como `GEMINI_API_KEY`. Opcional: variable `GEMINI_MODEL` para cambiar el modelo.
 5. **Pull requests automáticos:** en GitHub → Settings → Actions → General, activa "Allow GitHub Actions to create and approve pull requests".
 6. **Afiliados:** date de alta en cada programa (`npm run enlaces` muestra la lista) y pega tus enlaces en `data/afiliados.json`.
