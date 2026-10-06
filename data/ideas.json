@@ -1,0 +1,449 @@
+[
+  {
+    "id": "d73907230ab6",
+    "tipo": "comparativa",
+    "titulo": "Systeme.io vs beehiiv",
+    "herramientas": [
+      "systeme",
+      "beehiiv"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "a25d9fdb8b2a",
+    "tipo": "comparativa",
+    "titulo": "Systeme.io vs GetResponse",
+    "herramientas": [
+      "systeme",
+      "getresponse"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "01e4056c8577",
+    "tipo": "comparativa",
+    "titulo": "Systeme.io vs Kit (ConvertKit)",
+    "herramientas": [
+      "systeme",
+      "kit"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "4d4e3e265375",
+    "tipo": "comparativa",
+    "titulo": "beehiiv vs GetResponse",
+    "herramientas": [
+      "beehiiv",
+      "getresponse"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "f2170f4b3403",
+    "tipo": "comparativa",
+    "titulo": "beehiiv vs Kit (ConvertKit)",
+    "herramientas": [
+      "beehiiv",
+      "kit"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "846c10288569",
+    "tipo": "comparativa",
+    "titulo": "GetResponse vs Kit (ConvertKit)",
+    "herramientas": [
+      "getresponse",
+      "kit"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "cc673d99ebbb",
+    "tipo": "comparativa",
+    "titulo": "Make vs n8n",
+    "herramientas": [
+      "make",
+      "n8n"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "62cb9c434e17",
+    "tipo": "comparativa",
+    "titulo": "ElevenLabs vs HeyGen",
+    "herramientas": [
+      "elevenlabs",
+      "heygen"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "7aee0a6853da",
+    "tipo": "comparativa",
+    "titulo": "Surfer vs Semrush",
+    "herramientas": [
+      "surfer",
+      "semrush"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "5d4ff1b36924",
+    "tipo": "lista",
+    "titulo": "Alternativas a Systeme.io",
+    "herramientas": [
+      "systeme",
+      "beehiiv",
+      "getresponse",
+      "kit"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "5c9c424a45bc",
+    "tipo": "lista",
+    "titulo": "Alternativas a beehiiv",
+    "herramientas": [
+      "beehiiv",
+      "systeme",
+      "getresponse",
+      "kit"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "d36cd86c9299",
+    "tipo": "lista",
+    "titulo": "Alternativas a GetResponse",
+    "herramientas": [
+      "getresponse",
+      "systeme",
+      "beehiiv",
+      "kit"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "f2fa337cc5cf",
+    "tipo": "lista",
+    "titulo": "Alternativas a Kit (ConvertKit)",
+    "herramientas": [
+      "kit",
+      "systeme",
+      "beehiiv",
+      "getresponse"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "dae49c0cd55d",
+    "tipo": "lista",
+    "titulo": "Alternativas a Make",
+    "herramientas": [
+      "make",
+      "n8n"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "e33e41e1a083",
+    "tipo": "lista",
+    "titulo": "Alternativas a n8n",
+    "herramientas": [
+      "n8n",
+      "make"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "062ca1e93a29",
+    "tipo": "lista",
+    "titulo": "Alternativas a ElevenLabs",
+    "herramientas": [
+      "elevenlabs",
+      "heygen"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "339c28c40abe",
+    "tipo": "lista",
+    "titulo": "Alternativas a HeyGen",
+    "herramientas": [
+      "heygen",
+      "elevenlabs"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "25077ebd7b6b",
+    "tipo": "lista",
+    "titulo": "Alternativas a Surfer",
+    "herramientas": [
+      "surfer",
+      "semrush"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "b109ecaa4934",
+    "tipo": "lista",
+    "titulo": "Alternativas a Semrush",
+    "herramientas": [
+      "semrush",
+      "surfer"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "e283e2fb86d6",
+    "tipo": "resena",
+    "titulo": "Systeme.io: reseña, precios y cómo empezar",
+    "herramientas": [
+      "systeme"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "0ccf44a453bd",
+    "tipo": "resena",
+    "titulo": "beehiiv: reseña, precios y cómo empezar",
+    "herramientas": [
+      "beehiiv"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "69393fd33901",
+    "tipo": "resena",
+    "titulo": "GetResponse: reseña, precios y cómo empezar",
+    "herramientas": [
+      "getresponse"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "5d4fd974cb40",
+    "tipo": "resena",
+    "titulo": "Kit (ConvertKit): reseña, precios y cómo empezar",
+    "herramientas": [
+      "kit"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "63d1dada584e",
+    "tipo": "resena",
+    "titulo": "Make: reseña, precios y cómo empezar",
+    "herramientas": [
+      "make"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "c906b130b5db",
+    "tipo": "resena",
+    "titulo": "n8n: reseña, precios y cómo empezar",
+    "herramientas": [
+      "n8n"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "794743e11ed6",
+    "tipo": "resena",
+    "titulo": "ElevenLabs: reseña, precios y cómo empezar",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "6d6a39fe815b",
+    "tipo": "resena",
+    "titulo": "HeyGen: reseña, precios y cómo empezar",
+    "herramientas": [
+      "heygen"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "38e8862b2736",
+    "tipo": "resena",
+    "titulo": "Surfer: reseña, precios y cómo empezar",
+    "herramientas": [
+      "surfer"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "33b57362672c",
+    "tipo": "resena",
+    "titulo": "Semrush: reseña, precios y cómo empezar",
+    "herramientas": [
+      "semrush"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "ed5c726ee142",
+    "tipo": "resena",
+    "titulo": "Hostinger: reseña, precios y cómo empezar",
+    "herramientas": [
+      "hostinger"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  }
+]

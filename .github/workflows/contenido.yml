@@ -1,0 +1,59 @@
+# Cada mañana detecta ideas, redacta borradores con Gemini y abre un pull request para revisar.
+name: Contenido diario
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    inputs:
+      borradores:
+        description: "Número de borradores a redactar"
+        default: "1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: contenido
+  cancel-in-progress: false
+
+jobs:
+  contenido:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Detectar ideas
+        run: npm run detectar
+      - name: Redactar borradores
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          BORRADORES: ${{ github.event.inputs.borradores || '1' }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo "::warning::Falta el secreto GEMINI_API_KEY; solo se actualiza la cola de ideas."
+          else
+            node scripts/redactar.mjs --n "$BORRADORES"
+          fi
+      - name: Comprobar que el sitio compila
+        run: npm test && npm run build:preview
+      - name: Abrir pull request con los borradores
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: contenido/borradores
+          delete-branch: true
+          commit-message: "Contenido: nuevas ideas y borradores"
+          title: "Borradores nuevos para revisar"
+          body: |
+            Borradores redactados automáticamente.
+
+            Para publicar uno: completa los marcadores [VERIFICAR] y [TU PRUEBA], cambia `estado: borrador` a `estado: publicado` y fusiona este pull request.
+          add-paths: |
+            content/articulos/*.md
+            data/ideas.json

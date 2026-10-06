@@ -1,0 +1,7 @@
+[
+  { "nombre": "Product Hunt", "url": "https://www.producthunt.com/feed" },
+  { "nombre": "Hacker News (Show HN)", "url": "https://hnrss.org/show?points=50" },
+  { "nombre": "n8n blog", "url": "https://blog.n8n.io/rss/" },
+  { "nombre": "Google Noticias: herramientas IA", "url": "https://news.google.com/rss/search?q=%22herramienta+de+IA%22+OR+%22herramientas+de+inteligencia+artificial%22&hl=es&gl=ES&ceid=ES:es" },
+  { "nombre": "Google Noticias: marcas del catálogo", "url": "https://news.google.com/rss/search?q=ElevenLabs+OR+HeyGen+OR+n8n+OR+beehiiv+OR+Semrush&hl=es&gl=ES&ceid=ES:es" }
+]

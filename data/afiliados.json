@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "systeme",
+    "nombre": "Systeme.io",
+    "categoria": "email-marketing",
+    "resumen": "Embudos, email, cursos y web en una sola herramienta, con plan gratuito.",
+    "urlOficial": "https://systeme.io",
+    "urlAfiliado": "",
+    "palabrasClave": ["systeme", "funnel", "embudo", "sales funnel", "course platform"],
+    "programa": { "comision": "60%", "duracion": "De por vida", "cookie": "De por vida", "url": "https://systeme.io/affiliate-program" }
+  },
+  {
+    "slug": "beehiiv",
+    "nombre": "beehiiv",
+    "categoria": "email-marketing",
+    "resumen": "Plataforma de newsletters con web incluida y gratis hasta 2.500 suscriptores.",
+    "urlOficial": "https://www.beehiiv.com",
+    "urlAfiliado": "",
+    "palabrasClave": ["beehiiv", "newsletter", "substack"],
+    "programa": { "comision": "50% a 60%", "duracion": "12 meses", "cookie": "60 días", "url": "https://www.beehiiv.com/partners" }
+  },
+  {
+    "slug": "getresponse",
+    "nombre": "GetResponse",
+    "categoria": "email-marketing",
+    "resumen": "Email marketing, automatizaciones y webinars.",
+    "urlOficial": "https://www.getresponse.com",
+    "urlAfiliado": "",
+    "palabrasClave": ["getresponse", "email marketing", "autoresponder", "webinar"],
+    "programa": { "comision": "40% a 60%", "duracion": "12 meses", "cookie": "90 días", "url": "https://www.getresponse.com/affiliate-programs" }
+  },
+  {
+    "slug": "kit",
+    "nombre": "Kit (ConvertKit)",
+    "categoria": "email-marketing",
+    "resumen": "Email marketing pensado para creadores.",
+    "urlOficial": "https://kit.com",
+    "urlAfiliado": "",
+    "palabrasClave": ["kit.com", "convertkit", "creator email"],
+    "programa": { "comision": "50%, luego 10% a 20%", "duracion": "12 meses + recurrente por nivel", "cookie": "No indicado", "url": "https://kit.com/affiliate" }
+  },
+  {
+    "slug": "make",
+    "nombre": "Make",
+    "categoria": "automatizacion",
+    "resumen": "Automatización visual sin código; plan gratis de 1.000 créditos al mes.",
+    "urlOficial": "https://www.make.com",
+    "urlAfiliado": "",
+    "palabrasClave": ["make.com", "integromat", "no-code automation", "automatización", "zapier"],
+    "programa": { "comision": "35%", "duracion": "12 meses", "cookie": "30 días", "url": "https://www.make.com/en/affiliate" }
+  },
+  {
+    "slug": "n8n",
+    "nombre": "n8n",
+    "categoria": "automatizacion",
+    "resumen": "Automatización con agentes de IA, de código abierto o en la nube.",
+    "urlOficial": "https://n8n.io",
+    "urlAfiliado": "",
+    "palabrasClave": ["n8n", "ai agent", "agentes de ia"],
+    "programa": { "comision": "30%", "duracion": "12 meses", "cookie": "No indicado", "url": "https://n8n.io/affiliates/" }
+  },
+  {
+    "slug": "elevenlabs",
+    "nombre": "ElevenLabs",
+    "categoria": "voz-video",
+    "resumen": "Voces realistas con IA, doblaje y agentes de voz.",
+    "urlOficial": "https://elevenlabs.io",
+    "urlAfiliado": "",
+    "palabrasClave": ["elevenlabs", "eleven labs", "text to speech", "text-to-speech", "voz con ia", "ai voice", "dubbing"],
+    "programa": { "comision": "22%", "duracion": "12 meses", "cookie": "No indicado", "url": "https://elevenlabs.io/affiliates" }
+  },
+  {
+    "slug": "heygen",
+    "nombre": "HeyGen",
+    "categoria": "voz-video",
+    "resumen": "Avatares y vídeos con IA a partir de texto.",
+    "urlOficial": "https://www.heygen.com",
+    "urlAfiliado": "",
+    "palabrasClave": ["heygen", "avatar", "ai video", "video generator"],
+    "programa": { "comision": "35%", "duracion": "3 meses", "cookie": "30 días", "url": "https://www.heygen.com/affiliate-program" }
+  },
+  {
+    "slug": "surfer",
+    "nombre": "Surfer",
+    "categoria": "seo-escritura",
+    "resumen": "Optimización SEO de contenido con IA.",
+    "urlOficial": "https://surferseo.com",
+    "urlAfiliado": "",
+    "palabrasClave": ["surfer", "seo content", "content optimization"],
+    "programa": { "comision": "75% a 125% del primer mes", "duracion": "Solo primer pago", "cookie": "90 días", "url": "https://surferseo.com/affiliate-program/" }
+  },
+  {
+    "slug": "semrush",
+    "nombre": "Semrush",
+    "categoria": "seo-escritura",
+    "resumen": "Suite de SEO, palabras clave y competencia.",
+    "urlOficial": "https://www.semrush.com",
+    "urlAfiliado": "",
+    "palabrasClave": ["semrush", "keyword research", "seo tool", "backlinks"],
+    "programa": { "comision": "100 $ a 450 $ por venta + 10 $ por prueba", "duracion": "Pago único", "cookie": "120 días", "url": "https://www.semrush.com/lp/affiliate-program/en/" }
+  },
+  {
+    "slug": "hostinger",
+    "nombre": "Hostinger",
+    "categoria": "web-hosting",
+    "resumen": "Hosting y creador de webs con IA.",
+    "urlOficial": "https://www.hostinger.com",
+    "urlAfiliado": "",
+    "palabrasClave": ["hostinger", "hosting", "website builder", "wordpress"],
+    "programa": { "comision": "Desde 40%", "duracion": "Por venta", "cookie": "No indicado", "url": "https://www.hostinger.com/affiliates" }
+  }
+]

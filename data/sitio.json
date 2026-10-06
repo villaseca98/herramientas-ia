@@ -1,0 +1,19 @@
+{
+  "nombre": "Herramientas IA",
+  "lema": "Probamos las herramientas de IA por ti y te decimos cuál usar, cómo y cuánto cuesta.",
+  "url": "https://herramientas-ia.pages.dev",
+  "idioma": "es",
+  "autor": "Equipo Herramientas IA",
+  "newsletter": {
+    "nombre": "La IA de la semana",
+    "descripcion": "Cada semana, las herramientas de IA que merecen la pena, con tutoriales y plantillas gratis.",
+    "urlSuscripcion": ""
+  },
+  "categorias": {
+    "automatizacion": "Automatización",
+    "email-marketing": "Email marketing y embudos",
+    "voz-video": "Voz y vídeo con IA",
+    "seo-escritura": "SEO y escritura con IA",
+    "web-hosting": "Webs y hosting"
+  }
+}
