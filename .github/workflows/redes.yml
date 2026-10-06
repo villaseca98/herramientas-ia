@@ -1,0 +1,47 @@
+# Al publicar artículos en main, genera su kit de redes (guiones de clips y publicaciones) en social/.
+name: Kits de redes
+
+on:
+  push:
+    branches: [main]
+    paths: ["content/articulos/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: redes
+  cancel-in-progress: false
+
+jobs:
+  redes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Generar kits que falten
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo "::warning::Falta el secreto GEMINI_API_KEY; no se generan kits de redes."
+            exit 0
+          fi
+          npm run redes
+      - name: Guardar kits
+        run: |
+          git add social
+          if git diff --cached --quiet; then
+            echo "Sin kits nuevos."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Redes: kits para artículos nuevos [skip ci]"
+          git push

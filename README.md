@@ -13,7 +13,10 @@ Coste: 0 €. Hosting en Cloudflare Pages, automatización en GitHub Actions, re
 | Web | `scripts/build.mjs` | Genera `dist/`: portada, categorías, artículos, directorio, páginas legales, sitemap, RSS y redirecciones `/ir/<herramienta>/`. |
 | Detector | `scripts/detectar.mjs` | Lee los feeds de `data/fuentes.json` y el catálogo, y guarda ideas priorizadas en `data/ideas.json`. |
 | Redactor | `scripts/redactar.mjs` | Convierte las mejores ideas en borradores con Gemini. |
+| Redes sociales | `scripts/redes.mjs` | Crea en `social/<artículo>/` 3 guiones de clips verticales y los textos para X, LinkedIn, Instagram y Pinterest, con enlaces UTM. |
+| Enlace en la bio | `/enlaces/` | Página para la bio de TikTok, Instagram y YouTube con las últimas guías (sustituye a Linktree). |
 | Automatización | `.github/workflows/contenido.yml` | Cada día a las 06:00 UTC detecta, redacta y abre un pull request. |
+| Automatización de redes | `.github/workflows/redes.yml` | Al publicar un artículo genera su kit de redes y lo guarda en `social/`. |
 
 ### Atajos dentro de los artículos
 
@@ -43,6 +46,8 @@ GEMINI_API_KEY=... npm run redactar -- --n 2
 npm run redactar -- --tema "Cómo clonar tu voz con IA" --herramientas elevenlabs --tipo tutorial
 npm run redactar -- --simular   # prueba sin API
 npm run enlaces            # qué programas de afiliado faltan por activar
+npm run redes              # kits de redes de los artículos publicados que no lo tengan
+npm run redes -- --articulo make-vs-n8n --simular
 ```
 
 ## Puesta en marcha (una sola vez)
@@ -62,4 +67,5 @@ npm run enlaces            # qué programas de afiliado faltan por activar
 
 1. Abre el pull request diario "Borradores nuevos para revisar".
 2. En cada borrador, completa los `[VERIFICAR]`, añade tus capturas en los `[TU PRUEBA]` y cambia `estado: borrador` por `estado: publicado`.
-3. Fusiona. Cloudflare publica en un minuto.
+3. Fusiona. Cloudflare publica la web y, a continuación, se genera su kit de redes en `social/<artículo>/`.
+4. Graba los 3 clips con el guion de `kit.md` (CapCut o similar), súbelos y programa los textos de `publicaciones.csv` en Buffer. Pon `https://tu-web/enlaces/` en la bio de tus redes.

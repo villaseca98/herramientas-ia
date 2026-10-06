@@ -178,3 +178,20 @@ export function pagina404(sitio) {
     contenido: '<h1>Página no encontrada</h1><p><a href="/">Volver al inicio</a></p>',
   });
 }
+
+// Página "enlace en la bio" para TikTok, Instagram y YouTube: sustituye a Linktree, gratis.
+export function paginaEnlaces(sitio, articulos) {
+  const ultimos = articulos.filter((a) => a.estado === 'publicado').slice(0, 8);
+  const lista = ultimos.length
+    ? ultimos.map((a) => `<li><a class="enlace-bio" href="/${a.slug}/">${e(a.titulo)}</a></li>`).join('')
+    : '<li class="vacio">Pronto habrá guías nuevas aquí.</li>';
+  const suscripcion = sitio.newsletter.urlSuscripcion
+    ? `<li><a class="enlace-bio destacado" href="${e(sitio.newsletter.urlSuscripcion)}" target="_blank" rel="noopener">${e(sitio.newsletter.nombre)}: suscríbete gratis</a></li>`
+    : '';
+  return pagina(sitio, {
+    titulo: 'Enlaces',
+    descripcion: `Las guías más recientes de ${sitio.nombre}.`,
+    ruta: '/enlaces/',
+    contenido: `<section class="bio"><h1>${e(sitio.nombre)}</h1><p>${e(sitio.lema)}</p><ul class="lista-bio">${suscripcion}${lista}<li><a class="enlace-bio" href="/herramientas/">Todas las herramientas que recomendamos</a></li></ul></section>`,
+  });
+}

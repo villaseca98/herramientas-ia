@@ -9,7 +9,7 @@ test('el build genera páginas, redirecciones, sitemap y RSS', () => {
   const salida = mkdtempSync(join(tmpdir(), 'web-'));
   const r = construir({ incluirBorradores: true, salida });
   assert.ok(r.articulos >= 1);
-  for (const f of ['index.html', 'herramientas/index.html', 'aviso-afiliados/index.html', 'sitemap.xml', 'rss.xml', 'robots.txt', '_redirects', 'estilos.css', '404.html', 'ir/make/index.html']) {
+  for (const f of ['index.html', 'herramientas/index.html', 'aviso-afiliados/index.html', 'sitemap.xml', 'rss.xml', 'robots.txt', '_redirects', 'estilos.css', '404.html', 'ir/make/index.html', 'enlaces/index.html']) {
     assert.ok(existsSync(join(salida, f)), `falta ${f}`);
   }
   const redir = readFileSync(join(salida, '_redirects'), 'utf8');

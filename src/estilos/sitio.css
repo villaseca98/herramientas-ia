@@ -70,3 +70,8 @@ table.comparativa { border-collapse: collapse; width: 100%; margin: 16px 0; font
 .newsletter h2 { margin-top: 0; }
 .nota { color: var(--suave); font-size: .9rem; }
 .pie { border-top: 1px solid var(--borde); color: var(--suave); font-size: .85rem; padding: 20px 0 32px; }
+.bio { max-width: 520px; margin: 0 auto; text-align: center; }
+.lista-bio { list-style: none; padding: 0; display: grid; gap: 12px; margin-top: 24px; }
+.enlace-bio { display: block; padding: 14px 18px; border: 1.5px solid var(--borde); border-radius: var(--radio); background: var(--superficie); color: var(--texto); text-decoration: none; font-weight: 600; }
+.enlace-bio:hover { border-color: var(--acento); color: var(--acento); }
+.enlace-bio.destacado { background: var(--acento); color: var(--acento-texto); border-color: var(--acento); }

@@ -14,7 +14,8 @@
     "detectar": "node scripts/detectar.mjs",
     "redactar": "node scripts/redactar.mjs",
     "enlaces": "node scripts/enlaces.mjs",
-    "test": "node --test \"tests/*.test.mjs\""
+    "test": "node --test \"tests/*.test.mjs\"",
+    "redes": "node scripts/redes.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^5.0.0",

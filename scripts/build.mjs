@@ -8,7 +8,7 @@ import {
   destinoAfiliado, escaparHtml, separarFrontmatter,
 } from './lib/contenido.mjs';
 import {
-  paginaInicio, paginaCategoria, paginaArticulo, paginaHerramientas, paginaLegal, pagina404,
+  paginaInicio, paginaCategoria, paginaArticulo, paginaHerramientas, paginaLegal, pagina404, paginaEnlaces,
 } from './lib/plantillas.mjs';
 
 export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist') } = {}) {
@@ -35,6 +35,7 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
     escribir(`${art.slug}/index.html`, paginaArticulo(sitio, art, renderizarMarkdown(art.cuerpo, afiliados), afiliados));
   }
   escribir('herramientas/index.html', paginaHerramientas(sitio, afiliados));
+  escribir('enlaces/index.html', paginaEnlaces(sitio, articulos));
   escribir('404.html', pagina404(sitio));
 
   const dirLegal = join(RAIZ, 'content', 'legal');

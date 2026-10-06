@@ -8,46 +8,18 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { RAIZ, DIR_ARTICULOS, cargarAfiliados, slugificar } from './lib/contenido.mjs';
 import { idDe } from './lib/ideas.mjs';
+import { pedirJson } from './lib/gemini.mjs';
 import { INSTRUCCIONES_SISTEMA, construirEncargo, sanearCuerpo, componerArticulo, respuestaSimulada } from './lib/redaccion.mjs';
 
 const RUTA_IDEAS = join(RAIZ, 'data', 'ideas.json');
-const MODELO = process.env.GEMINI_MODEL || 'gemini-3.5-flash';
 
 function argumento(nombre) {
   const i = process.argv.indexOf(`--${nombre}`);
   return i > -1 ? process.argv[i + 1] : undefined;
 }
 
-const espera = (ms) => new Promise((r) => setTimeout(r, ms));
-
-export async function llamarGemini(encargo, { clave = process.env.GEMINI_API_KEY, modelo = MODELO, intentos = 4 } = {}) {
-  if (!clave) throw new Error('Falta GEMINI_API_KEY (consíguela gratis en https://aistudio.google.com/apikey) o usa --simular');
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`;
-  const cuerpo = {
-    systemInstruction: { parts: [{ text: INSTRUCCIONES_SISTEMA }] },
-    contents: [{ role: 'user', parts: [{ text: encargo }] }],
-    generationConfig: { responseMimeType: 'application/json', temperature: 0.7 },
-  };
-  for (let intento = 1; ; intento += 1) {
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json', 'x-goog-api-key': clave },
-      body: JSON.stringify(cuerpo),
-      signal: AbortSignal.timeout(120000),
-    });
-    if (res.ok) {
-      const datos = await res.json();
-      const texto = datos.candidates?.[0]?.content?.parts?.map((p) => p.text ?? '').join('') ?? '';
-      const json = JSON.parse(texto.replace(/^```(?:json)?\s*|\s*```$/g, ''));
-      if (!json.titulo || !json.descripcion || !json.cuerpo) throw new Error('Respuesta de la IA incompleta');
-      return json;
-    }
-    if ((res.status === 429 || res.status >= 500) && intento < intentos) {
-      await espera(2 ** intento * 5000);
-      continue;
-    }
-    throw new Error(`Gemini respondió ${res.status}: ${(await res.text()).slice(0, 300)}`);
-  }
+export function llamarGemini(encargo, opciones = {}) {
+  return pedirJson(encargo, { sistema: INSTRUCCIONES_SISTEMA, claves: ['titulo', 'descripcion', 'cuerpo'], ...opciones });
 }
 
 function elegirIdeas(ideas, n) {
