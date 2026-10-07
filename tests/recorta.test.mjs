@@ -30,6 +30,9 @@ test('calcula el recorte con la alternativa más barata y prefiere afiliados en 
   assert.equal(r.ahorroAnual, 182 * 12);
   assert.equal(mejorAlternativa(stack.herramientas.find((h) => h.slug === 'mailchimp')).afiliado, 'kit');
   assert.equal(calcularRecorte([], stack.herramientas).ahorroAnual, 0);
+  const propio = calcularRecorte(['kajabi'], stack.herramientas, { kajabi: 143 });
+  assert.equal(propio.gastoMes, 143);
+  assert.equal(propio.ahorroMes, 143 - 17);
 });
 
 test('formatea cifras al estilo español', () => {
@@ -50,5 +53,8 @@ test('genera la calculadora, el directorio y una página por alternativa', () =>
   assert.match(kajabi, /href="\/ir\/systeme\/" rel="sponsored nofollow noopener"/);
   assert.match(readFileSync(join(salida, 'sitemap.xml'), 'utf8'), /\/alternativas\/zapier\//);
   assert.ok(existsSync(join(salida, 'guias/index.html')));
+  assert.match(inicio, /id="por-que"/);
+  assert.match(inicio, /Plan de recorte personal/);
+  assert.match(readFileSync(join(salida, 'precios/index.html'), 'utf8'), /Así gano dinero/);
   assert.equal(preguntasAlternativa(stack.herramientas.find((h) => h.slug === 'kajabi'), '$').length, 3);
 });

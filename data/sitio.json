@@ -3,7 +3,12 @@
   "lema": "Mismo trabajo, menos factura. Descubre cuánto pagas de más en software y a qué cambiarte.",
   "url": "http://localhost:4321",
   "idioma": "es",
-  "autor": "Equipo Recorta",
+  "autor": {
+    "nombre": "",
+    "rol": "Creador de Recorta",
+    "foto": "",
+    "historia": ""
+  },
   "newsletter": {
     "nombre": "El Recorte",
     "descripcion": "Una vez por semana: un recorte de software concreto con su ahorro en euros, chollos de por vida y cambios de precio de las herramientas que pagas.",
@@ -31,16 +36,61 @@
       "Alternativas"
     ],
     [
-      "/herramientas/",
-      "Herramientas"
+      "/#por-que",
+      "Por qué yo"
     ],
     [
       "/guias/",
       "Guías"
     ],
     [
-      "/servicios/",
-      "Empresas"
+      "/precios/",
+      "Servicios"
     ]
+  ],
+  "productos": [
+    {
+      "id": "plan-personal",
+      "nombre": "Plan de recorte personal",
+      "precio": "19 €",
+      "pago": "pago único",
+      "resumen": "Me dices lo que pagas y en 48 horas te devuelvo tu plan: qué cambiar, qué mantener, cómo migrar paso a paso y los descuentos que hay ahora mismo.",
+      "incluye": [
+        "Revisión de todas tus suscripciones, no solo las de la calculadora",
+        "Plan de migración paso a paso para cada cambio",
+        "Descuentos y ofertas vigentes de cada alternativa",
+        "Garantía: si no te ahorras al menos 19 € al año, te devuelvo el dinero"
+      ],
+      "urlPago": "",
+      "destacado": true
+    },
+    {
+      "id": "migracion",
+      "nombre": "Migración hecha por mí",
+      "precio": "desde 149 €",
+      "pago": "por herramienta",
+      "resumen": "Muevo tus datos y procesos a la alternativa elegida (contactos, cursos, embudos, automatizaciones) sin que pierdas nada ni pares de vender.",
+      "incluye": [
+        "Migración de contactos, productos y automatizaciones",
+        "Pruebas antes de apagar la herramienta antigua",
+        "Vídeo explicando cómo usar la nueva"
+      ],
+      "urlPago": "",
+      "destacado": false
+    },
+    {
+      "id": "auditoria",
+      "nombre": "Auditoría para empresas",
+      "precio": "desde 390 €",
+      "pago": "por equipo",
+      "resumen": "Inventario de todo el software del equipo, licencias sin uso, duplicidades y un plan de recorte priorizado por ahorro.",
+      "incluye": [
+        "Inventario y coste real anual de todo el stack",
+        "Licencias sin uso y herramientas duplicadas",
+        "Plan priorizado por ahorro con calendario de migración"
+      ],
+      "urlPago": "",
+      "destacado": false
+    }
   ]
 }

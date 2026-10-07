@@ -11,7 +11,7 @@ import {
   paginaCategoria, paginaArticulo, paginaHerramientas, paginaHerramienta, paginaEstatica,
   pagina404, paginaEnlaces, paginaTest, formularioNewsletter, rutaFicha,
 } from './lib/plantillas.mjs';
-import { cargarStack, paginaRecorta, paginaAlternativa, paginaAlternativas, paginaGuias, rutaAlternativa } from './lib/recorta.mjs';
+import { cargarStack, paginaRecorta, paginaAlternativa, paginaAlternativas, paginaGuias, paginaPrecios, rutaAlternativa } from './lib/recorta.mjs';
 
 // Bloque de contacto para páginas de servicios: solo aparece si hay email o formulario en data/sitio.json.
 function bloqueContacto(sitio) {
@@ -44,6 +44,7 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   escribir('alternativas/index.html', paginaAlternativas(sitio, stack));
   for (const h of stack.herramientas) escribir(`${rutaAlternativa(h.slug).slice(1)}index.html`, paginaAlternativa(sitio, h, stack));
   escribir('guias/index.html', paginaGuias(sitio, articulos));
+  escribir('precios/index.html', paginaPrecios(sitio));
   for (const slug of Object.keys(sitio.categorias)) {
     escribir(`categoria/${slug}/index.html`, paginaCategoria(sitio, slug, articulos.filter((a) => a.categoria === slug), afiliados));
   }
@@ -88,7 +89,7 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   }
   escribir('_redirects', `${redirecciones.join('\n')}\n`);
 
-  const urls = ['/', '/alternativas/', ...stack.herramientas.map((h) => rutaAlternativa(h.slug)), '/guias/', '/herramientas/', '/que-herramienta-necesito/', ...fichas, ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...estaticas];
+  const urls = ['/', '/alternativas/', ...stack.herramientas.map((h) => rutaAlternativa(h.slug)), '/guias/', '/precios/', '/herramientas/', '/que-herramienta-necesito/', ...fichas, ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...estaticas];
   const entradas = [
     ...urls.map((u) => ({ loc: new URL(u, sitio.url).href })),
     ...articulos.filter((a) => a.estado === 'publicado').map((a) => ({ loc: new URL(`/${a.slug}/`, sitio.url).href, lastmod: a.actualizado ?? a.fecha })),

@@ -104,7 +104,7 @@ ${contenido}
       </div>
       <div><p class="pie-titulo">Recortar</p><a href="/#calculadora">Calculadora</a><a href="/alternativas/">Alternativas</a><a href="/herramientas/">Fichas de herramientas</a><a href="/que-herramienta-necesito/">Test de herramientas</a></div>
       <div><p class="pie-titulo">Aprender</p><a href="/guias/">Guías</a><a href="/recursos/">Recursos gratis</a><a href="/rss.xml">RSS</a></div>
-      <div><p class="pie-titulo">Negocio</p><a href="/servicios/">Auditoría para empresas</a><a href="/patrocina/">Patrocina</a><a href="/aviso-afiliados/">Aviso de afiliados</a><a href="/privacidad/">Privacidad</a><a href="/cookies/">Cookies</a></div>
+      <div><p class="pie-titulo">Negocio</p><a href="/precios/">Servicios y precios</a><a href="/servicios/">Auditoría para empresas</a><a href="/patrocina/">Patrocina</a><a href="/aviso-afiliados/">Aviso de afiliados</a><a href="/privacidad/">Privacidad</a><a href="/cookies/">Cookies</a></div>
     </div>
     <p class="pie-legal">${e(sitio.nombre)} se financia con enlaces de afiliado: si te das de alta en una herramienta desde aquí podemos cobrar una comisión, sin coste extra para ti. Eso nunca cambia el orden de las alternativas, que se ordenan por precio.</p>
   </div>
