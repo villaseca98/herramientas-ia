@@ -198,13 +198,13 @@ ${formularioNewsletter(sitio)}
 <script type="application/json" id="datos-stack">${datos}</script>
 <script type="module" src="/js/calculadora.js"></script>`;
   return pagina(sitio, {
-    titulo: sitio.nombre,
-    descripcion: sitio.lema,
-    ruta: '/',
+    titulo: 'Calculadora de ahorro en software: cuánto pagas de más',
+    descripcion: 'Marca el software que pagas cada mes (Kajabi, Zapier, Mailchimp, Ahrefs…) y mira cuánto te ahorras con alternativas más baratas, con precios oficiales.',
+    ruta: '/software/',
+    migas: [['/software/', 'Software']],
     contenido,
     jsonLd: [
-      { '@type': 'WebSite', name: sitio.nombre, url: sitio.url, inLanguage: sitio.idioma },
-      { '@type': 'WebApplication', name: `Calculadora de ${sitio.nombre}`, applicationCategory: 'FinanceApplication', operatingSystem: 'Web', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }, url: sitio.url },
+      { '@type': 'WebApplication', name: `Calculadora de software de ${sitio.nombre}`, applicationCategory: 'FinanceApplication', operatingSystem: 'Web', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }, url: new URL('/software/', sitio.url).href },
     ],
   });
 }
@@ -263,7 +263,7 @@ export function paginaAlternativa(sitio, h, stack) {
   <p class="antetitulo">${ICONO_TIJERA} Alternativas · precios verificados el ${fechaLarga(stack.verificado)}</p>
   <h1>Alternativas más baratas a ${e(h.nombre)} (${ano})</h1>
   <p class="entradilla">Si pagas ${e(h.nombre)} ${e(h.plan)} (${formatear(h.precioMes)} ${M}/mes), ${anual > 0 ? `puedes recortar <strong class="resalta">hasta ${formatear(anual)} ${M} al año</strong> cambiándote a ${e(alt.nombre)}` : `estas son las opciones que hay`}. Aquí tienes cada opción con su precio oficial y lo que pierdes al cambiar.</p>
-  <p><a class="boton" href="/?s=${h.slug}#calculadora">Calcular mi recorte completo</a></p>
+  <p><a class="boton" href="/software/?s=${h.slug}#calculadora">Calcular mi recorte completo</a></p>
 </section>
 <p class="aviso-afiliado">Algunos enlaces son de afiliado: si te das de alta podemos cobrar una comisión, sin coste para ti. Nunca cambia el orden, que va de más barato a más caro. <a href="/aviso-afiliados/">Más información</a>.</p>
 <div class="tabla-scroll"><table class="comparativa"><thead><tr><th>Opción</th><th>Precio</th><th>Al año</th><th>Recorte</th></tr></thead><tbody>${filas}</tbody></table></div>
@@ -296,7 +296,7 @@ export function paginaAlternativas(sitio, stack) {
     descripcion: 'Alternativas más baratas (o gratis) a Kajabi, ClickFunnels, Mailchimp, Zapier, Ahrefs, Typeform y más, con precios oficiales y lo que pierdes al cambiar.',
     ruta: '/alternativas/',
     migas: [['/alternativas/', 'Alternativas']],
-    contenido: `<section class="hero hero-alt"><p class="antetitulo">${ICONO_TIJERA} Directorio de recortes</p><h1>Alternativas más baratas al software que pagas</h1><p class="entradilla">Cada página compara la herramienta cara con sus alternativas, con precios oficiales y la letra pequeña de cada cambio.</p><p><a class="boton" href="/#calculadora">Calcular mi recorte</a></p></section>${secciones}`,
+    contenido: `<section class="hero hero-alt"><p class="antetitulo">${ICONO_TIJERA} Directorio de recortes</p><h1>Alternativas más baratas al software que pagas</h1><p class="entradilla">Cada página compara la herramienta cara con sus alternativas, con precios oficiales y la letra pequeña de cada cambio.</p><p><a class="boton" href="/software/#calculadora">Calcular mi recorte</a></p></section>${secciones}`,
   });
 }
 

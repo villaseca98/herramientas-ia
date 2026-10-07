@@ -413,3 +413,16 @@ table.comparativa { width: 100%; border-collapse: collapse; font-size: .95rem; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Recorta en casa: bonos por cambiarte */
+.res-bonos { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; color: var(--res-suave); font-size: .95rem; }
+.res-bonos strong { font: 800 1.6rem/1 var(--display); color: #ffc24b; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.res-bonos[hidden] { display: none; }
+.bono-tarjeta .alternativa-cabeza { align-items: center; }
+.bono-cifra { font: 800 2rem/1 var(--display); letter-spacing: -.04em; color: var(--ahorro); }
+.bono-tarjeta h3 { margin: 0; }
+.codigo { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: .9rem; }
+.codigo code { font: 700 .95rem var(--mono); background: var(--papel-2); border: 1px dashed var(--linea); border-radius: 8px; padding: 4px 10px; }
+.copiar-codigo { border: 0; background: none; padding: 0; font: 600 .85rem var(--mono); color: var(--acento-hondo); text-decoration: underline; cursor: pointer; }
+.consejos { margin: 0; padding-left: 1.2em; display: grid; gap: 10px; max-width: 70ch; }
+.consejos li { line-height: 1.6; }

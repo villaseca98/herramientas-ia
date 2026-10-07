@@ -11,6 +11,7 @@ import {
   paginaCategoria, paginaArticulo, paginaHerramientas, paginaHerramienta, paginaEstatica,
   pagina404, paginaEnlaces, paginaTest, formularioNewsletter, rutaFicha,
 } from './lib/plantillas.mjs';
+import { cargarFacturas, paginaHogar, paginaFactura, paginaBonos, redireccionesFacturas, rutaFactura } from './lib/facturas.mjs';
 import { cargarStack, paginaRecorta, paginaAlternativa, paginaAlternativas, paginaGuias, paginaPrecios, paginaMigracion, rutaAlternativa } from './lib/recorta.mjs';
 
 // Bloque de contacto para páginas de servicios: solo aparece si hay email o formulario en data/sitio.json.
@@ -26,6 +27,7 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   const afiliados = cargarAfiliados();
   const articulos = cargarArticulos({ incluirBorradores });
   const stack = cargarStack(afiliados);
+  const facturas = cargarFacturas();
 
   rmSync(salida, { recursive: true, force: true });
   mkdirSync(salida, { recursive: true });
@@ -40,7 +42,10 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
 
   cpSync(join(RAIZ, 'src', 'cliente'), join(salida, 'js'), { recursive: true });
 
-  escribir('index.html', paginaRecorta(sitio, stack));
+  escribir('index.html', paginaHogar(sitio, facturas));
+  escribir('bonos/index.html', paginaBonos(sitio, facturas));
+  for (const f of facturas.facturas) escribir(`${rutaFactura(f.slug).slice(1)}index.html`, paginaFactura(sitio, f, facturas));
+  escribir('software/index.html', paginaRecorta(sitio, stack));
   escribir('alternativas/index.html', paginaAlternativas(sitio, stack));
   for (const h of stack.herramientas) escribir(`${rutaAlternativa(h.slug).slice(1)}index.html`, paginaAlternativa(sitio, h, stack));
   escribir('guias/index.html', paginaGuias(sitio, articulos));
@@ -84,14 +89,20 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   // Redirecciones de afiliado: /ir/<slug>/ -> URL de afiliado (o la oficial si aún no hay).
   // Cloudflare Pages usa _redirects; la página HTML es el respaldo para otros hostings.
   const redirecciones = [];
-  for (const a of afiliados.values()) {
-    const destino = destinoAfiliado(a);
-    redirecciones.push(`/ir/${a.slug} ${destino} 302`, `/ir/${a.slug}/ ${destino} 302`);
-    escribir(`ir/${a.slug}/index.html`, `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${escaparHtml(destino)}"><title>Redirigiendo a ${escaparHtml(a.nombre)}</title><a href="${escaparHtml(destino)}" rel="sponsored nofollow">Ir a ${escaparHtml(a.nombre)}</a>`);
+  const destinos = [
+    ...[...afiliados.values()].map((a) => ({ slug: a.slug, nombre: a.nombre, destino: destinoAfiliado(a) })),
+    ...redireccionesFacturas(facturas),
+  ];
+  const vistos = new Set();
+  for (const { slug, nombre, destino } of destinos) {
+    if (vistos.has(slug)) throw new Error(`Enlace /ir/${slug}/ repetido entre afiliados.json y facturas.json`);
+    vistos.add(slug);
+    redirecciones.push(`/ir/${slug} ${destino} 302`, `/ir/${slug}/ ${destino} 302`);
+    escribir(`ir/${slug}/index.html`, `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${escaparHtml(destino)}"><title>Redirigiendo a ${escaparHtml(nombre)}</title><a href="${escaparHtml(destino)}" rel="sponsored nofollow">Ir a ${escaparHtml(nombre)}</a>`);
   }
   escribir('_redirects', `${redirecciones.join('\n')}\n`);
 
-  const urls = ['/', '/alternativas/', ...stack.herramientas.map((h) => rutaAlternativa(h.slug)), '/guias/', '/precios/', '/migracion-gratis/', '/herramientas/', '/que-herramienta-necesito/', ...fichas, ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...estaticas];
+  const urls = ['/', '/bonos/', ...facturas.facturas.map((f) => rutaFactura(f.slug)), '/software/', '/alternativas/', ...stack.herramientas.map((h) => rutaAlternativa(h.slug)), '/guias/', '/precios/', '/migracion-gratis/', '/herramientas/', '/que-herramienta-necesito/', ...fichas, ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...estaticas];
   const entradas = [
     ...urls.map((u) => ({ loc: new URL(u, sitio.url).href })),
     ...articulos.filter((a) => a.estado === 'publicado').map((a) => ({ loc: new URL(`/${a.slug}/`, sitio.url).href, lastmod: a.actualizado ?? a.fecha })),
