@@ -3,6 +3,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { RAIZ, leerJson, escaparHtml as e, separarFrontmatter, renderizarMarkdown } from './contenido.mjs';
 import { pagina, formularioNewsletter, extraerPreguntas } from './plantillas.mjs';
+import { formularioLead, hayLeads, scriptLeads } from './leads.mjs';
 import { extraerDatos, analizarFactura } from '../../src/cliente/energia.js';
 import { formatear } from '../../src/cliente/recorte.js';
 
@@ -34,7 +35,18 @@ export function enlacePeticion(sitio, texto = '') {
   return null;
 }
 
-function bloqueCta(sitio, tipo) {
+function bloqueCta(sitio, tipo, g = {}) {
+  if (tipo === 'contacto' && hayLeads(sitio)) {
+    const pro = g.ruta === '/instaladores/' ? 'instalador' : 'profesional';
+    return formularioLead(sitio, {
+      id: `lead-${pro}`,
+      tipo: pro,
+      interes: 'colaborar',
+      titulo: pro === 'instalador' ? 'Quiero recibir clientes de placas' : 'Quiero ofrecer el ahorro a mis clientes',
+      texto: 'Cuéntanos quién eres y dónde trabajas. Te escribimos con una propuesta concreta: sin cuotas, sin exclusividad y sin letra pequeña.',
+      boton: 'Quiero colaborar',
+    });
+  }
   if (tipo === 'placas') {
     return `<aside class="cta-caja cta-placas"><div><p class="antetitulo">Simulador gratis</p><h3>¿Cuánto te ahorrarías con placas?</h3><p>Pon tu consumo o lo que pagas al mes y te decimos tamaño, coste, ahorro y en cuántos años se pagan.</p></div><a class="boton" href="/placas-solares/">Simular mis placas &rarr;</a></aside>`;
   }
@@ -50,7 +62,7 @@ function bloqueCta(sitio, tipo) {
 
 export function paginaGuia(sitio, g, guias) {
   const html = renderizarMarkdown(g.cuerpo, new Map())
-    .replace(/<p>\{\{(lector|placas|contacto)\}\}<\/p>/g, (_, t) => bloqueCta(sitio, t));
+    .replace(/<p>\{\{(lector|placas|contacto)\}\}<\/p>/g, (_, t) => bloqueCta(sitio, t, g));
   const preguntas = extraerPreguntas(g.cuerpo);
   const indice = [...g.cuerpo.matchAll(/^## (.+)$/gm)].map((m) => m[1]).filter((t) => t !== 'Preguntas frecuentes');
   const idDe = (t) => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -68,8 +80,10 @@ export function paginaGuia(sitio, g, guias) {
   ${indice.length > 2 ? `<nav class="guia-indice" aria-label="En esta página"><p class="antetitulo">En esta página</p><ol>${indice.map((t) => `<li><a href="#${idDe(t)}">${e(t)}</a></li>`).join('')}</ol></nav>` : ''}
   <article class="prosa guia-cuerpo">${conIds}</article>
 </div>
+${g.grupo === 'sector' ? formularioLead(sitio, { id: 'lead-sector', sector: g.antetitulo?.split('·').pop().trim() ?? '', titulo: 'Revisamos la factura de tu negocio gratis' }) : ''}
 ${hermanas.length ? `<section><div class="cabecera-seccion"><h2>Sigue leyendo</h2></div><div class="tarjetas-guia">${hermanas.map(tarjetaGuia).join('')}</div></section>` : ''}
-${formularioNewsletter(sitio)}`;
+${formularioNewsletter(sitio)}
+${/\{\{contacto\}\}/.test(g.cuerpo) || g.grupo === 'sector' ? scriptLeads(sitio) : ''}`;
   return pagina(sitio, {
     titulo: g.titulo,
     descripcion: g.descripcion,
@@ -126,8 +140,8 @@ ${PASOS}
   </div>
 </section>
 <section>
-  <div class="cabecera-seccion"><h2>Por tipo de negocio</h2></div>
-  <div class="tarjetas-guia">${sectores.map(tarjetaGuia).join('')}</div>
+  <div class="cabecera-seccion"><h2>Por tipo de negocio</h2><a href="/negocios/sectores/">Ver todos los sectores &rarr;</a></div>
+  <div class="tarjetas-guia">${sectores.map(tarjetaGuia).join('')}<a class="tarjeta-guia" href="/negocios/sectores/"><span class="antetitulo">Más sectores</span><strong>Panaderías, talleres, gimnasios, hoteles…</strong><span>Guías de ahorro para cada tipo de negocio, con placas incluidas.</span></a></div>
 </section>
 <section class="historia" id="por-que">
   <div class="historia-carta">
@@ -171,7 +185,7 @@ export function paginaHubNegocios(sitio, guias) {
     migas: [['/negocios/', 'Negocios']],
     contenido: `<section class="hero hero-alt"><p class="antetitulo">${ICONO_TIJERA} Guía para negocios</p><h1>Todo lo que tu negocio puede recortar en la luz</h1><p class="entradilla">Cuatro fugas de dinero que se repiten en casi todas las facturas de negocio, explicadas sin jerga, y cómo arreglar cada una.</p><p><a class="boton" href="/revisar-factura/">Revisar mi factura gratis &rarr;</a></p></section>
 <section><div class="cabecera-seccion"><h2>Entiende tu factura</h2></div><div class="tarjetas-guia">${temas.map(tarjetaGuia).join('')}<a class="tarjeta-guia" href="/placas-solares/guia/"><span class="antetitulo">Placas solares · guía</span><strong>Placas solares para empresas y negocios</strong><span>Precios, ahorro, excedentes y qué preguntar al instalador.</span></a></div></section>
-<section><div class="cabecera-seccion"><h2>Por tipo de negocio</h2></div><div class="tarjetas-guia">${sectores.map(tarjetaGuia).join('')}</div></section>
+<section><div class="cabecera-seccion"><h2>Por tipo de negocio</h2><a href="/negocios/sectores/">Todos los sectores &rarr;</a></div><div class="tarjetas-guia">${sectores.map(tarjetaGuia).join('')}<a class="tarjeta-guia" href="/negocios/sectores/"><span class="antetitulo">Más sectores</span><strong>Panaderías, talleres, gimnasios, hoteles…</strong><span>Guías de ahorro para 15 tipos de negocio más, con placas incluidas.</span></a></div></section>
 ${bloqueCta(sitio, 'lector')}
 ${formularioNewsletter(sitio)}`,
   });
@@ -182,8 +196,9 @@ function campo(nombre, etiqueta, unidad, extra = '') {
 }
 
 export function paginaRevisar(sitio, neg) {
-  const datos = JSON.stringify({ ref: neg.ref, ejemplo: neg.ejemplo, contacto: sitio.contacto ?? {} }).replaceAll('<', '\\u003c');
-  const enl = enlacePeticion(sitio);
+  const leads = hayLeads(sitio);
+  const datos = JSON.stringify({ ref: neg.ref, ejemplo: neg.ejemplo, contacto: sitio.contacto ?? {}, leads }).replaceAll('<', '\\u003c');
+  const enl = leads ? { href: '#lead-revisar' } : enlacePeticion(sitio);
   const periodos = [1, 2, 3, 4, 5, 6].map((i) => `<div class="periodo-fila${i > 2 ? ' solo-seis' : ''}"><b>P${i}</b>${campo(`p${i}`, `Potencia P${i}`, 'kW')}${campo(`m${i}`, `Maxímetro P${i}`, 'kW')}</div>`).join('');
   const contenido = `<section class="hero hero-alt">
   <p class="antetitulo">${ICONO_TIJERA} Lector de facturas · gratis</p>
@@ -226,11 +241,13 @@ export function paginaRevisar(sitio, neg) {
   </div>
   <div class="hallazgos" id="rf-hallazgos"></div>
   <div class="rf-solar"><h3>Y si pusieras placas solares</h3><div id="rf-solar"></div></div>
+  ${formularioLead(sitio, { id: 'lead-revisar', titulo: 'Quiero que me lo gestionéis gratis', texto: 'Te mandamos ofertas por escrito con estos datos y, si te interesa, presupuesto de placas de un instalador de tu zona. Nos paga la compañía, no tú.', conFactura: false, oscuro: true })}
 </section>
 <section class="como"><h2>Tu factura no sale de tu ordenador</h2><p class="como-texto">El PDF se procesa con JavaScript en tu navegador. No lo subimos ni lo guardamos. Solo nos llega algo si pulsas "Quiero que me lo gestionéis" y decides enviarnos el resumen.</p></section>
 ${bloqueCta(sitio, 'placas')}
 <script type="application/json" id="datos-revisar">${datos}</script>
 <script type="module" src="/js/revisar.js"></script>
+${scriptLeads(sitio)}
 <script type="module">if (new URLSearchParams(location.search).has('ejemplo')) addEventListener('load', () => document.getElementById('cargar-ejemplo').click());</script>`;
   return pagina(sitio, {
     titulo: 'Revisa gratis tu factura de luz: lector automático para negocios',
@@ -275,16 +292,18 @@ export function paginaPlacas(sitio, neg, guias) {
       </div>
       <div class="sim-grafico" id="sim-grafico" aria-label="Saldo acumulado año a año"></div>
       <p class="sim-leyenda"><span class="neg">Recuperando la inversión</span><span class="pos">Ganancia</span></p>
-      <a class="boton boton-bloque" href="/revisar-factura/">Afinar con mi factura real &rarr;</a>
+      <a class="boton boton-bloque" href="${hayLeads(sitio) ? '#lead-placas' : '/revisar-factura/'}">${hayLeads(sitio) ? 'Pedir presupuesto gratis &rarr;' : 'Afinar con mi factura real &rarr;'}</a>
     </div>
   </div>
 </section>
+${formularioLead(sitio, { id: 'lead-placas', interes: 'placas', titulo: 'Pide presupuesto de placas gratis', texto: 'Te ponemos en contacto con un instalador de tu zona con este estudio ya hecho. Presupuesto por escrito, con producción estimada y garantías. Sin compromiso.', boton: 'Quiero presupuesto' })}
 <p class="meta">Cálculo orientativo. Producción: ${e(s.fuenteProduccion.texto)} (<a href="${e(s.fuenteProduccion.url)}" rel="nofollow noopener" target="_blank">PVGIS</a>). Coste: ${formatear(s.costeKwpPequena)} €/kWp hasta ${s.umbralGrandeKwp} kWp y ${formatear(s.costeKwpGrande)} €/kWp por encima, a partir de los <a href="${e(s.fuenteCoste.url)}" rel="nofollow noopener" target="_blank">precios de SotySolar 2026</a>. Dimensionamos la instalación para cubrir tu consumo en horas de sol, que es la energía que más ahorra.</p>
 ${PASOS.replace('Subes tu factura', 'Simulas o subes tu factura').replace('Si quieres, lo gestionamos', 'Te buscamos instalador')}
 <section><div class="cabecera-seccion"><h2>Antes de pedir presupuesto</h2></div><div class="tarjetas-guia">${deplacas.map(tarjetaGuia).join('')}<a class="tarjeta-guia" href="/instaladores/"><span class="antetitulo">Para instaladores</span><strong>¿Instalas placas?</strong><span>Recibe clientes de tu zona con el consumo ya analizado.</span></a></div></section>
 ${formularioNewsletter(sitio)}
 <script type="application/json" id="datos-placas">${datos}</script>
-<script type="module" src="/js/placas.js"></script>`;
+<script type="module" src="/js/placas.js"></script>
+${scriptLeads(sitio)}`;
   return pagina(sitio, {
     titulo: 'Simulador de placas solares para negocios y comunidades',
     descripcion: 'Calcula gratis qué instalación de placas solares necesitas, cuánto cuesta, cuánto ahorras al año y en cuántos años se paga, para negocios, comunidades y viviendas.',

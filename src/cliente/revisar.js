@@ -73,6 +73,15 @@ function pintar() {
 </div>
 <p class="nota">Estimación con ${formatear(C.ref.solar.produccionKwhKwp)} kWh por kWp al año y tu precio actual de la energía. El estudio real depende de tu tejado, orientación y horario. <a href="/placas-solares/">Ajustar en el simulador &rarr;</a></p>` : '';
   const texto = resumenPeticion(d, r);
+  const lead = $('lead-revisar');
+  if (lead) {
+    lead.elements.resumen.value = texto;
+    lead.elements.ahorroAnual.value = String(Math.round(r.ahorroAnual + (r.solar?.ahorroAnual ?? 0)));
+    lead.elements.tipo.value = form.tipo.value;
+    if (d.total) lead.elements.facturaMensual.value = String(Math.round((d.total / (d.dias || 30)) * 30));
+  }
+  $('rf-copiar').dataset.texto = texto;
+  if (C.leads) return;
   const enlace = enlacePeticion(texto);
   const boton = $('rf-pedir');
   if (enlace) {
@@ -80,7 +89,6 @@ function pintar() {
     boton.classList.remove('boton-apagado');
     if (enlace.nuevo) { boton.target = '_blank'; boton.rel = 'noopener'; }
   }
-  $('rf-copiar').dataset.texto = texto;
 }
 
 async function leerPdf(archivo) {

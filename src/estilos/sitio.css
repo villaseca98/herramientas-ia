@@ -587,3 +587,49 @@ table.comparativa { width: 100%; border-collapse: collapse; font-size: .95rem; }
 .sim-leyenda .neg::before { background: var(--acento); }
 .sim-leyenda .pos::before { background: var(--res-verde); }
 @media (max-width: 860px) { .simulador { grid-template-columns: 1fr; } }
+
+/* Formulario de solicitud (lead) */
+.form-lead { margin: 32px 0; padding: clamp(20px, 3vw, 32px); border-radius: 20px; background: var(--superficie); border: 1.5px solid color-mix(in srgb, var(--acento) 45%, transparent); box-shadow: var(--sombra); display: grid; gap: 16px; scroll-margin-top: 90px; }
+.lead-cabeza h3 { margin: 4px 0 6px; font-size: clamp(1.35rem, 2.6vw, 1.75rem); }
+.lead-cabeza p { margin: 0; color: var(--suave); max-width: 62ch; }
+.lead-cabeza .antetitulo { margin: 0; }
+.lead-campos { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px 14px; }
+.lead-input { width: 100%; border: 1.5px solid var(--linea); border-radius: 10px; background: var(--papel); padding: 11px 12px; font: 500 1rem var(--texto); color: var(--tinta); }
+.lead-input:focus { outline: none; border-color: var(--tinta); }
+.lead-trampa { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.lead-consentimiento { display: flex; gap: 10px; align-items: flex-start; font-size: .86rem; color: var(--suave); line-height: 1.45; }
+.lead-consentimiento input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--acento); flex: none; }
+.lead-estado { margin: 0; min-height: 1.2em; font-size: .9rem; font-weight: 600; }
+.lead-estado[data-tipo="error"] { color: var(--acento-hondo); }
+.form-lead .boton { justify-self: start; }
+.form-lead .boton:disabled { opacity: .6; cursor: wait; }
+.lead-nota { margin: -6px 0 0; }
+.lead-gracias h3 { margin: 4px 0 8px; font-size: 1.6rem; color: var(--ahorro); }
+.lead-gracias p { margin: 0; color: var(--suave); }
+.form-lead-oscuro { background: transparent; border-color: #34302a; box-shadow: none; margin: 26px 0 0; }
+.form-lead-oscuro .lead-cabeza p, .form-lead-oscuro .lead-consentimiento, .form-lead-oscuro .nota, .form-lead-oscuro .campo, .form-lead-oscuro .lead-gracias p { color: #a9a193; }
+.form-lead-oscuro .lead-input, .form-lead-oscuro .campo-entrada { background: #211e18; border-color: #34302a; color: #f2eee5; }
+.form-lead-oscuro .campo-entrada input { color: #f2eee5; }
+.form-lead-oscuro .lead-consentimiento a { color: #ffc24b; }
+.form-lead-oscuro .lead-estado[data-tipo="error"] { color: #ffc24b; }
+.form-lead-oscuro .lead-gracias h3 { color: #5fd394; }
+
+/* Páginas de sector */
+.sector-rejilla { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 20px; margin: 8px 0 24px; }
+.sector-bloque { background: var(--superficie); border: 1px solid var(--linea); border-radius: var(--radio); padding: clamp(18px, 3vw, 28px); margin-bottom: 20px; }
+.sector-bloque h2 { margin: 0 0 14px; font-size: 1.45rem; }
+.sector-equipos { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.sector-equipos li { padding-left: 26px; position: relative; }
+.sector-equipos li::before { content: ""; position: absolute; left: 0; top: .5em; width: 12px; height: 12px; border-radius: 4px; background: var(--acento); }
+.sector-fugas, .sector-consejos { margin: 0; padding-left: 1.3em; display: grid; gap: 14px; }
+.sector-fugas li::marker, .sector-consejos li::marker { font: 700 1rem var(--mono); color: var(--acento-hondo); }
+.sector-fugas p { margin: 4px 0 0; color: var(--suave); }
+.sector-tema { font: 700 1.08rem var(--display); color: var(--tinta); }
+.sector-placas { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 24px; align-items: center; background: var(--tinta); color: var(--papel); border-radius: 26px; padding: clamp(22px, 4vw, 40px); margin-bottom: 20px; }
+.sector-placas h2 { margin: 6px 0 10px; }
+.sector-placas p { color: #c9c1b2; }
+.sector-placas .nota { color: #a9a193; }
+.sector-placas .antetitulo { color: #ffc24b; margin: 0; }
+.sector-placas .solar-cifras strong.resalta { color: #5fd394; }
+.sector-faq { margin: 12px 0 28px; }
+@media (max-width: 860px) { .sector-rejilla, .sector-placas { grid-template-columns: 1fr; } }

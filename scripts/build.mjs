@@ -12,6 +12,7 @@ import {
   pagina404, paginaEnlaces, paginaTest, formularioNewsletter, rutaFicha,
 } from './lib/plantillas.mjs';
 import { cargarNegocios, cargarGuias, paginaInicioNegocios, paginaHubNegocios, paginaRevisar, paginaPlacas, paginaGuia } from './lib/negocios.mjs';
+import { cargarSectores, paginaSector, paginaSectores, rutaSector } from './lib/sectores.mjs';
 import { cargarFacturas, paginaHogar, paginaFactura, paginaBonos, redireccionesFacturas, rutaFactura } from './lib/facturas.mjs';
 import { cargarStack, paginaRecorta, paginaAlternativa, paginaAlternativas, paginaGuias, paginaPrecios, paginaMigracion, rutaAlternativa } from './lib/recorta.mjs';
 
@@ -31,6 +32,7 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   const facturas = cargarFacturas();
   const negocios = cargarNegocios();
   const guias = cargarGuias();
+  const sectores = cargarSectores();
 
   rmSync(salida, { recursive: true, force: true });
   mkdirSync(salida, { recursive: true });
@@ -52,6 +54,8 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   escribir('revisar-factura/index.html', paginaRevisar(sitio, negocios));
   escribir('placas-solares/index.html', paginaPlacas(sitio, negocios, guias));
   for (const g of guias) escribir(`${g.ruta.slice(1)}index.html`, paginaGuia(sitio, g, guias));
+  escribir('negocios/sectores/index.html', paginaSectores(sitio, sectores, guias.filter((g) => g.grupo === 'sector')));
+  for (const s of sectores) escribir(`${rutaSector(s.slug).slice(1)}index.html`, paginaSector(sitio, s, sectores, negocios.ref));
   escribir('hogar/index.html', paginaHogar(sitio, facturas));
   escribir('bonos/index.html', paginaBonos(sitio, facturas));
   for (const f of facturas.facturas) escribir(`${rutaFactura(f.slug).slice(1)}index.html`, paginaFactura(sitio, f, facturas));
@@ -112,7 +116,7 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   }
   escribir('_redirects', `${redirecciones.join('\n')}\n`);
 
-  const urls = ['/', '/negocios/', '/revisar-factura/', '/placas-solares/', ...guias.map((g) => g.ruta), '/hogar/', '/bonos/', ...facturas.facturas.map((f) => rutaFactura(f.slug)), '/software/', '/alternativas/', ...stack.herramientas.map((h) => rutaAlternativa(h.slug)), '/guias/', '/precios/', '/migracion-gratis/', '/herramientas/', '/que-herramienta-necesito/', ...fichas, ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...estaticas];
+  const urls = ['/', '/negocios/', '/revisar-factura/', '/placas-solares/', ...guias.map((g) => g.ruta), '/negocios/sectores/', ...sectores.map((x) => rutaSector(x.slug)), '/hogar/', '/bonos/', ...facturas.facturas.map((f) => rutaFactura(f.slug)), '/software/', '/alternativas/', ...stack.herramientas.map((h) => rutaAlternativa(h.slug)), '/guias/', '/precios/', '/migracion-gratis/', '/herramientas/', '/que-herramienta-necesito/', ...fichas, ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...estaticas];
   const entradas = [
     ...urls.map((u) => ({ loc: new URL(u, sitio.url).href })),
     ...articulos.filter((a) => a.estado === 'publicado').map((a) => ({ loc: new URL(`/${a.slug}/`, sitio.url).href, lastmod: a.actualizado ?? a.fecha })),

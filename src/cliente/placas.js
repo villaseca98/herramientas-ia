@@ -28,6 +28,13 @@ function pintar() {
   $('sim-vida').textContent = euros(s.ahorroVida);
   $('sim-cobertura').textContent = `${s.cobertura}%`;
   $('sim-produccion').textContent = `${formatear(s.produccionAnual)} kWh/año`;
+  const lead = document.getElementById('lead-placas');
+  if (lead) {
+    lead.elements.ahorroAnual.value = String(Math.round(s.ahorroAnual));
+    lead.elements.tipo.value = f.tipo.value;
+    if (modo === 'euros' && lead.elements.facturaMensual && !lead.elements.facturaMensual.dataset.tocado) lead.elements.facturaMensual.value = String(mensual);
+    lead.elements.resumen.value = `Simulador de placas (${f.tipo.value}): ${modo === 'kwh' ? `${mensual} kWh/mes` : `${mensual} €/mes`}, ${f.diurno.value}% de consumo de día. Instalación de ${coma(s.kWp)} kWp (${s.paneles} paneles), coste orientativo ${euros(s.coste)}, ahorro ${euros(s.ahorroAnual)}/año, se paga en ${s.amortizacionAnos ? `${coma(s.amortizacionAnos)} años` : '—'}.`;
+  }
   const anos = C.solar.vidaUtilAnos;
   const max = Math.max(s.ahorroVida + s.coste, s.coste);
   $('sim-grafico').innerHTML = Array.from({ length: anos + 1 }, (_, a) => {
@@ -39,4 +46,5 @@ function pintar() {
 
 f.tipo.addEventListener('change', () => { f.diurno.value = Math.round((C.solar.autoconsumoPorDefecto[f.tipo.value] ?? 0.5) * 100); pintar(); });
 f.addEventListener('input', pintar);
+document.getElementById('lead-placas')?.elements.facturaMensual?.addEventListener('input', (ev) => { ev.target.dataset.tocado = '1'; });
 pintar();

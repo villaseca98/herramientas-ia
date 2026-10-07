@@ -1,0 +1,342 @@
+{
+  "revisado": "2026-10-07",
+  "nota": "Cada sector genera /negocios/sectores/<slug>/. El ejemplo de placas se calcula con el simulador y los datos de data/negocios.json; ejemploMensual es una factura supuesta, no una media del sector.",
+  "sectores": [
+    {
+      "slug": "panaderias-y-obradores",
+      "nombre": "Panaderías y obradores",
+      "singular": "una panadería",
+      "corto": "Panadería",
+      "descripcion": "Hornos, cámaras de fermentación y amasadoras: dónde pierde dinero la factura de luz de una panadería u obrador y cómo recortarla, con placas incluidas.",
+      "entradilla": "El horno arranca de madrugada y las cámaras no paran nunca. Pero buena parte de lo que paga una panadería de más no tiene nada que ver con cuánto hornea.",
+      "equipos": ["Hornos eléctricos de pisos o convección", "Cámaras de fermentación controlada y congeladores", "Amasadoras, batidoras y laminadoras", "Vitrinas refrigeradas en tienda"],
+      "fugas": [
+        { "tema": "potencia", "texto": "Horno, amasadora y cámara arrancando a la vez marcan picos muy altos durante pocos minutos. Muchas panaderías contrataron potencia para ese pico en todos los periodos, también en los que el obrador está parado." },
+        { "tema": "reactiva", "texto": "Los motores de amasadoras y compresores de frío generan energía reactiva. Si tu factura tiene una línea de reactiva con importe, se elimina con una batería de condensadores." },
+        { "tema": "horario", "texto": "Hornear de madrugada coincide con el periodo más barato (P6 en 3.0TD). Si tu precio de P6 no es claramente más bajo que el de P1, tu contrato no aprovecha tu horario." },
+        { "tema": "placas", "texto": "El obrador gasta sobre todo de noche, pero la tienda, el frío y la segunda hornada sí coinciden con el sol. Las placas cubren esa parte." }
+      ],
+      "placas": { "encaje": "medio", "diurno": 0.45, "ejemploMensual": 600, "texto": "Encaje medio: el horno de madrugada no lo cubren las placas, pero el frío 24 horas y la tienda abierta de día sí." },
+      "consejos": ["Escalona el arranque de horno, amasadora y cámaras para bajar el pico de potencia.", "Revisa que el precio de P6 sea el más barato de tu contrato: es donde más consumes.", "Limpia condensadores de cámaras y vitrinas: un compresor sucio gasta más y trabaja más horas."],
+      "faq": [
+        { "p": "¿Qué tarifa suele tener una panadería?", "r": "Con horno eléctrico casi siempre supera los 15 kW y tiene tarifa 3.0TD, con seis periodos de potencia y energía. Una panadería pequeña que solo despacha puede estar en 2.0TD." },
+        { "p": "¿Merece la pena poner placas si horneo de noche?", "r": "Depende de cuánto consumes de día. El frío, la tienda y las hornadas de mañana sí coinciden con el sol. Con tu factura calculamos qué parte cubrirían y en cuántos años se pagan." }
+      ]
+    },
+    {
+      "slug": "carnicerias-y-charcuterias",
+      "nombre": "Carnicerías y charcuterías",
+      "singular": "una carnicería",
+      "corto": "Carnicería",
+      "descripcion": "Cámaras frigoríficas, vitrinas y picadoras: cómo recortar la factura de luz de una carnicería o charcutería y cuánto ahorrarías con placas.",
+      "entradilla": "En una carnicería el frío es casi toda la factura. Y el frío tiene tres enemigos caros: motores que generan reactiva, potencia mal ajustada y un precio que nadie revisa.",
+      "equipos": ["Cámaras frigoríficas de conservación", "Vitrinas refrigeradas y murales", "Arcones congeladores", "Picadoras, sierras y envasadoras al vacío"],
+      "fugas": [
+        { "tema": "reactiva", "texto": "Compresores de cámaras y vitrinas funcionando todo el día: es el perfil típico de quien paga energía reactiva cada mes sin saberlo." },
+        { "tema": "precio", "texto": "El frío consume a todas horas, así que el precio medio de la energía pesa más que en otros comercios. Un contrato antiguo sin revisar se nota mucho." },
+        { "tema": "potencia", "texto": "Si tu maxímetro nunca se acerca a lo contratado, pagas cada día potencia que no usas." },
+        { "tema": "placas", "texto": "El frío trabaja más justo en las horas de más sol y calor: las placas producen cuando más gastas." }
+      ],
+      "placas": { "encaje": "alto", "diurno": 0.6, "ejemploMensual": 450, "texto": "Encaje alto: el consumo del frío sube en las horas centrales del día, justo cuando producen las placas." },
+      "consejos": ["Comprueba las gomas de cierre de cámaras: una junta rota tiene el compresor trabajando sin parar.", "Cubre las vitrinas por la noche con cortinas térmicas.", "Mira si tu factura cobra reactiva: si la hay, es lo primero que conviene quitar."],
+      "faq": [
+        { "p": "¿Por qué mi carnicería paga energía reactiva?", "r": "Porque los motores de los compresores la generan. Si pasa del límite que permite la normativa, la comercializadora la cobra. Una batería de condensadores la compensa y el recargo desaparece." },
+        { "p": "¿Cuánto consume una cámara frigorífica?", "r": "Depende del tamaño, el aislamiento y cuántas veces se abre. La forma fiable de saberlo es tu propia factura y tu curva de consumo, que puedes descargar de la web de tu distribuidora." }
+      ]
+    },
+    {
+      "slug": "supermercados-y-tiendas-de-alimentacion",
+      "nombre": "Supermercados y tiendas de alimentación",
+      "singular": "un supermercado",
+      "corto": "Supermercado",
+      "descripcion": "Murales de frío, congeladores, iluminación y clima: cómo recortar la factura de luz de un supermercado o tienda de alimentación, con placas en la cubierta.",
+      "entradilla": "Frío abierto, luz encendida todo el horario y climatización: un supermercado de barrio es uno de los negocios donde más se nota cada céntimo del precio de la luz.",
+      "equipos": ["Murales y islas de frío abiertos", "Congeladores y cámaras de reserva", "Iluminación de sala durante todo el horario", "Climatización de sala"],
+      "fugas": [
+        { "tema": "precio", "texto": "Con consumo alto y constante, unas décimas de céntimo por kWh son cientos de euros al año. Es el primer número que conviene comparar." },
+        { "tema": "reactiva", "texto": "Muchos compresores y equipos de clima juntos: si aparece reactiva en la factura, hay un ahorro fijo esperando." },
+        { "tema": "potencia", "texto": "La potencia se dimensionó al montar la tienda. Si has cambiado a LED o renovado el frío, probablemente te sobre." },
+        { "tema": "placas", "texto": "Horario de día, cubierta amplia y consumo que no baja nunca: de los mejores perfiles para autoconsumo." }
+      ],
+      "placas": { "encaje": "alto", "diurno": 0.65, "ejemploMensual": 1200, "texto": "Encaje alto: abre de día, el frío no para y suele tener cubierta plana grande." },
+      "consejos": ["Pon puertas o cortinas nocturnas en los murales abiertos.", "Si ya cambiaste a LED, revisa la potencia contratada: probablemente sobra.", "Pide la curva horaria a tu distribuidora para dimensionar las placas con datos reales."],
+      "faq": [
+        { "p": "¿Un supermercado pequeño puede poner placas en un local alquilado?", "r": "Sí, con permiso del propietario o de la comunidad si la cubierta es común. Hay fórmulas de alquiler o pago por energía que evitan la inversión inicial." },
+        { "p": "¿Qué ahorro da quitar la reactiva?", "r": "Todo lo que pagas hoy en esa línea de la factura. Con el importe de tus facturas te decimos cuánto es al año y en cuánto se paga la batería de condensadores." }
+      ]
+    },
+    {
+      "slug": "peluquerias-y-centros-de-estetica",
+      "nombre": "Peluquerías y centros de estética",
+      "singular": "una peluquería",
+      "corto": "Peluquería",
+      "descripcion": "Secadores, termo, climatización y aparatología: cómo bajar la factura de luz de una peluquería o centro de estética sin cambiar tu forma de trabajar.",
+      "entradilla": "En una peluquería se suman muchos aparatos potentes que funcionan a ratos. Eso hace que la potencia contratada y el precio pesen más de lo que parece.",
+      "equipos": ["Secadores de mano y de casco", "Termo eléctrico para agua caliente", "Climatización del local", "Aparatología de estética y cabinas"],
+      "fugas": [
+        { "tema": "potencia", "texto": "Varios secadores, termo y aire a la vez marcan picos. Ajustar bien la potencia evita tanto pagar de más como los excesos." },
+        { "tema": "precio", "texto": "Casi todo el consumo cae en horario comercial, que en la tarifa son las horas caras. Un precio por periodos bien negociado se nota." },
+        { "tema": "horario", "texto": "Si tienes termo eléctrico, programarlo para calentar en horas valle baja el coste sin que lo notes." },
+        { "tema": "placas", "texto": "Trabajas de día: las placas cubren directamente el consumo de secadores y clima en las horas de sol, si tienes acceso a cubierta." }
+      ],
+      "placas": { "encaje": "medio", "diurno": 0.7, "ejemploMensual": 220, "texto": "Encaje medio: el consumo es de día, pero muchos locales están en bajos sin cubierta propia. Si hay tejado disponible, salen bien." },
+      "consejos": ["Programa el termo para que caliente de noche o en horas valle.", "Comprueba si tienes tarifa 2.0TD o 3.0TD: cambia mucho cómo se cobra la potencia.", "Pide el precio de cada periodo por escrito al comparar ofertas."],
+      "faq": [
+        { "p": "¿Qué potencia necesita una peluquería?", "r": "Depende de cuántos secadores y aparatos funcionen a la vez. El maxímetro de tus facturas dice cuánta usas de verdad; con él se ajusta sin riesgo de que salte." },
+        { "p": "¿Puedo poner placas si mi local está en un bajo?", "r": "Necesitas acceso a una cubierta, propia o de la comunidad con su permiso. También existe el autoconsumo compartido con instalaciones cercanas." }
+      ]
+    },
+    {
+      "slug": "gimnasios",
+      "nombre": "Gimnasios y centros deportivos",
+      "singular": "un gimnasio",
+      "corto": "Gimnasio",
+      "descripcion": "Climatización, agua caliente de duchas, máquinas e iluminación: cómo recortar la factura de luz de un gimnasio y cuánto aportan las placas solares.",
+      "entradilla": "Un gimnasio abre muchas horas, climatiza salas grandes y calienta agua para las duchas. Es un consumidor serio, y por eso cualquier fuga se multiplica.",
+      "equipos": ["Climatización y ventilación de salas", "Agua caliente para duchas (termos o bomba de calor)", "Cintas, elípticas y máquinas con motor", "Iluminación de salas y pantallas"],
+      "fugas": [
+        { "tema": "reactiva", "texto": "Motores de cintas, ventilación y climatización: si la factura cobra reactiva, se elimina con una inversión pequeña." },
+        { "tema": "precio", "texto": "Muchas horas abiertas, incluidas las caras. Comparar el precio por periodo con tu curva real de consumo suele dar el mayor ahorro." },
+        { "tema": "potencia", "texto": "Revisa el maxímetro de cada periodo: los gimnasios suelen tener potencia contratada igual en todos, y no la usan igual." },
+        { "tema": "placas", "texto": "Mucho consumo de día, en especial clima y agua caliente. Si la cubierta es tuya o la comunidad lo permite, el autoconsumo encaja bien." }
+      ],
+      "placas": { "encaje": "alto", "diurno": 0.6, "ejemploMensual": 1500, "texto": "Encaje alto: clima y agua caliente consumen en las horas de sol, y suelen tener naves o cubiertas grandes." },
+      "consejos": ["Calienta el agua de duchas en horas valle o con bomba de calor.", "Ajusta la potencia por periodos según tu maxímetro, no igual en los seis.", "Pon detectores de presencia en vestuarios y salas poco usadas."],
+      "faq": [
+        { "p": "¿Cuánto puede ahorrar un gimnasio con placas?", "r": "Depende del consumo de día y de la cubierta. Con tu factura y tus metros de tejado calculamos instalación, coste y años de amortización." },
+        { "p": "¿Conviene la tarifa indexada en un gimnasio?", "r": "Puede convenir si consumes mucho en horas baratas y aceptas que el precio varíe. Te enseñamos las dos opciones con tus números antes de decidir." }
+      ]
+    },
+    {
+      "slug": "hoteles-y-casas-rurales",
+      "nombre": "Hoteles, hostales y casas rurales",
+      "singular": "un hotel",
+      "corto": "Alojamiento",
+      "descripcion": "Climatización, agua caliente, cocina y lavandería: cómo bajar la factura de luz de un hotel, hostal o casa rural, y cuándo salen a cuenta las placas.",
+      "entradilla": "Un alojamiento consume las 24 horas y en temporada alta todo a la vez. Los recargos de potencia y reactiva suelen esconderse justo en esos meses.",
+      "equipos": ["Climatización de habitaciones y zonas comunes", "Agua caliente sanitaria", "Cocina y cámaras", "Lavandería, ascensores y piscina (bombas)"],
+      "fugas": [
+        { "tema": "potencia", "texto": "La temporada alta marca picos que no se repiten el resto del año. Si contrataste potencia para agosto, la pagas también en noviembre." },
+        { "tema": "reactiva", "texto": "Ascensores, bombas de piscina, clima y frío: un catálogo completo de motores. Revisa si pagas reactiva." },
+        { "tema": "precio", "texto": "El consumo es alto y continuo: el precio por periodo pesa mucho en el total. Comparar con tu curva real marca la diferencia." },
+        { "tema": "placas", "texto": "Clima y agua caliente consumen de día en verano, justo cuando más producen las placas. En casas rurales suele haber terreno o tejado." }
+      ],
+      "placas": { "encaje": "alto", "diurno": 0.55, "ejemploMensual": 2000, "texto": "Encaje alto: el pico de consumo de verano coincide con el pico de producción solar." },
+      "consejos": ["Analiza el maxímetro mes a mes: los excesos se concentran en temporada alta.", "Usa tarjeta de habitación para cortar clima y luz al salir el cliente.", "Valora aerotermia para el agua caliente si aún usas termos eléctricos."],
+      "faq": [
+        { "p": "¿Puedo tener una potencia distinta en verano y en invierno?", "r": "En 3.0TD contratas potencia por periodo, y los periodos cambian según el mes. Ajustarla bien evita pagar excesos en temporada alta y potencia sobrante el resto del año." },
+        { "p": "¿Las placas sirven en una casa rural aislada?", "r": "Sí. Con conexión a red se compensan los excedentes; sin red, se necesitan baterías y el estudio es distinto. Te lo calculamos según tu caso." }
+      ]
+    },
+    {
+      "slug": "farmacias",
+      "nombre": "Farmacias",
+      "singular": "una farmacia",
+      "corto": "Farmacia",
+      "descripcion": "Cruz luminosa, neveras de medicamentos, climatización y horario ampliado: cómo recortar la factura de luz de una farmacia.",
+      "entradilla": "Una farmacia tiene equipos que no se pueden apagar (neveras de medicamentos, cruz, sistemas) y horarios largos. Por eso conviene que cada kWh salga al mejor precio.",
+      "equipos": ["Neveras de medicamentos termosensibles", "Climatización obligada por la conservación de productos", "Cruz luminosa y rótulos", "Robot dispensador, ordenadores y TPV"],
+      "fugas": [
+        { "tema": "precio", "texto": "Horario comercial amplio y consumo constante: el precio de las horas punta y llano es lo que más pesa." },
+        { "tema": "potencia", "texto": "Muchas farmacias están en 2.0TD cerca del límite de 15 kW o en 3.0TD con potencia de sobra. Las dos cosas tienen arreglo." },
+        { "tema": "horario", "texto": "Las farmacias de guardia consumen de noche: con una tarifa por periodos bien elegida, esas horas salen baratas." },
+        { "tema": "placas", "texto": "El clima y las neveras consumen de día. Si hay cubierta disponible, las placas reducen la parte más cara de la factura." }
+      ],
+      "placas": { "encaje": "medio", "diurno": 0.6, "ejemploMensual": 300, "texto": "Encaje medio: buen perfil de consumo de día, pero depende de tener cubierta accesible." },
+      "consejos": ["Programa rótulos y cruz con reloj astronómico, no fijo.", "Mantén las neveras lejos de focos de calor y con las juntas en buen estado.", "Si estás en 2.0TD, revisa si la potencia que tienes es la que de verdad usas."],
+      "faq": [
+        { "p": "¿Una farmacia puede tener tarifa 2.0TD?", "r": "Sí, si su potencia contratada es de 15 kW o menos. Por encima pasa a 3.0TD, con seis periodos de potencia y energía." },
+        { "p": "¿Qué pasa con las neveras si cambio de compañía?", "r": "Nada. El cambio de comercializadora es solo administrativo: no hay corte de luz ni cambio de contador." }
+      ]
+    },
+    {
+      "slug": "clinicas-dentales-y-veterinarias",
+      "nombre": "Clínicas dentales, veterinarias y centros médicos",
+      "singular": "una clínica",
+      "corto": "Clínica",
+      "descripcion": "Compresores, autoclaves, aparatos de rayos y climatización: cómo bajar la factura de luz de una clínica dental, veterinaria o centro médico.",
+      "entradilla": "Compresor, autoclave, equipos de imagen y clima: una clínica concentra aparatos potentes en horario de consulta, que es justo cuando la luz es más cara.",
+      "equipos": ["Compresor y aspiración quirúrgica", "Autoclaves y esterilización", "Equipos de rayos X y diagnóstico", "Climatización de gabinetes y salas de espera"],
+      "fugas": [
+        { "tema": "reactiva", "texto": "Compresores y bombas de aspiración generan reactiva. Si tu factura la cobra, es un ahorro fijo cada mes." },
+        { "tema": "potencia", "texto": "El autoclave y el compresor a la vez marcan picos. Revisa si la potencia contratada se ajusta al maxímetro real." },
+        { "tema": "precio", "texto": "Todo el consumo se concentra en horario de consulta, que coincide con los periodos punta y llano." },
+        { "tema": "placas", "texto": "Consumo de día y de lunes a viernes: las placas cubren directamente el horario de consulta." }
+      ],
+      "placas": { "encaje": "medio", "diurno": 0.75, "ejemploMensual": 350, "texto": "Encaje medio: perfil muy diurno, pero muchas clínicas están en locales sin cubierta propia." },
+      "consejos": ["Lanza los ciclos de autoclave fuera de las horas punta cuando puedas.", "Revisa fugas de aire del compresor: si arranca de noche, pierde aire.", "Apaga equipos de imagen en reposo al final del día."],
+      "faq": [
+        { "p": "¿Cambiar de comercializadora afecta a los equipos médicos?", "r": "No. El suministro es el mismo: cambia quién te factura, no la instalación ni la calidad de la corriente." },
+        { "p": "¿Qué es el maxímetro y por qué importa en una clínica?", "r": "Es la potencia máxima que has usado en el periodo. Si siempre queda muy por debajo de lo contratado, estás pagando potencia de más cada día." }
+      ]
+    },
+    {
+      "slug": "talleres-mecanicos",
+      "nombre": "Talleres mecánicos y de chapa",
+      "singular": "un taller",
+      "corto": "Taller mecánico",
+      "descripcion": "Compresores, elevadores, cabina de pintura y soldadura: cómo eliminar recargos de reactiva y potencia en la factura de luz de un taller mecánico.",
+      "entradilla": "Un taller es una suma de motores: compresor, elevadores, cabina de pintura. Es el perfil donde más se ve la energía reactiva y los excesos de potencia.",
+      "equipos": ["Compresor de aire", "Elevadores y gatos eléctricos", "Cabina de pintura con quemador y extracción", "Soldadura, herramientas y equipos de diagnosis"],
+      "fugas": [
+        { "tema": "reactiva", "texto": "Compresor, extractores y elevadores: el taller típico paga reactiva cada mes. Con una batería de condensadores desaparece." },
+        { "tema": "potencia", "texto": "La cabina de pintura y la soldadura disparan picos cortos. O pagas excesos o contrataste de más en todos los periodos." },
+        { "tema": "precio", "texto": "Horario de día entre semana: periodos caros. Un precio por periodo bien negociado pesa mucho." },
+        { "tema": "placas", "texto": "Naves con cubierta grande y consumo de día: uno de los perfiles más rentables para autoconsumo." }
+      ],
+      "placas": { "encaje": "alto", "diurno": 0.75, "ejemploMensual": 500, "texto": "Encaje alto: trabajo de día, cubierta de nave y consumo de motores en horas de sol." },
+      "consejos": ["Busca fugas en la red de aire comprimido: el compresor arrancando sin uso es dinero perdido.", "Apaga el compresor al cerrar.", "Si pagas excesos de potencia, mira en qué periodo y ajusta solo ese."],
+      "faq": [
+        { "p": "¿Cuánto cuesta una batería de condensadores para un taller?", "r": "Depende de la reactiva que generes. Con el importe de tus facturas te decimos el tamaño y en cuántos meses se paga con lo que dejas de pagar." },
+        { "p": "¿Puedo poner placas en una nave alquilada?", "r": "Sí, con permiso del propietario. Hay modalidades sin inversión, como el pago por energía producida o el renting." }
+      ]
+    },
+    {
+      "slug": "carpinterias-y-metalisterias",
+      "nombre": "Carpinterías, metalisterías e industria pequeña",
+      "singular": "una carpintería",
+      "corto": "Carpintería",
+      "descripcion": "Sierras, aspiración, compresores y maquinaria trifásica: cómo bajar la factura de luz de una carpintería, metalistería o pequeña industria.",
+      "entradilla": "Maquinaria trifásica, aspiración y compresores: la pequeña industria paga muchas veces recargos que no tienen nada que ver con lo que produce.",
+      "equipos": ["Sierras, tupís, cepilladoras y plegadoras", "Sistemas de aspiración de virutas y humos", "Compresores", "Soldadura y hornos de curado"],
+      "fugas": [
+        { "tema": "reactiva", "texto": "Motores grandes trabajando a media carga: la receta de la energía reactiva. Revisa esa línea de tu factura." },
+        { "tema": "potencia", "texto": "Arranques de motores grandes marcan picos. Un arrancador suave o escalonar arranques puede permitir bajar potencia." },
+        { "tema": "precio", "texto": "Con consumos altos, comparar precio fijo frente a indexado con tu curva horaria real suele dar el mayor ahorro." },
+        { "tema": "placas", "texto": "Nave con cubierta y trabajo de día: el autoconsumo cubre una parte grande del consumo." }
+      ],
+      "placas": { "encaje": "alto", "diurno": 0.75, "ejemploMensual": 900, "texto": "Encaje alto: trabajo de día y naves con cubierta amplia." },
+      "consejos": ["Escalona el arranque de máquinas grandes al empezar la jornada.", "Revisa la aspiración: muchas veces queda encendida sin máquinas trabajando.", "Pide a tu distribuidora la curva horaria: es la base para negociar precio y dimensionar placas."],
+      "faq": [
+        { "p": "¿Qué tarifa tiene una pequeña industria?", "r": "Normalmente 3.0TD. Por encima de ciertos consumos y en media tensión pasa a 6.1TD, con condiciones distintas." },
+        { "p": "¿Las placas pueden alimentar maquinaria trifásica?", "r": "Sí: los inversores trifásicos inyectan en tu instalación y la maquinaria usa esa energía primero. Lo que falte sigue llegando de la red." }
+      ]
+    },
+    {
+      "slug": "lavanderias",
+      "nombre": "Lavanderías y tintorerías",
+      "singular": "una lavandería",
+      "corto": "Lavandería",
+      "descripcion": "Lavadoras industriales, secadoras, planchas y calderas: cómo recortar la factura de luz de una lavandería o tintorería, con o sin autoservicio.",
+      "entradilla": "Calentar agua y secar ropa es de lo más caro que se puede hacer con electricidad. En una lavandería, el precio de cada periodo decide el margen.",
+      "equipos": ["Lavadoras industriales", "Secadoras y túneles de secado", "Planchas y calandras", "Calentamiento de agua"],
+      "fugas": [
+        { "tema": "precio", "texto": "Consumo muy alto y concentrado en horario comercial: el precio de punta y llano es la clave." },
+        { "tema": "potencia", "texto": "Varias secadoras a la vez marcan picos fuertes. Ajustar la potencia por periodo evita excesos y potencia sobrante." },
+        { "tema": "reactiva", "texto": "Motores de tambores y ventiladores: revisa si pagas reactiva." },
+        { "tema": "placas", "texto": "Trabaja de día y el calor del agua se puede apoyar con solar: buen candidato si hay cubierta." }
+      ],
+      "placas": { "encaje": "alto", "diurno": 0.7, "ejemploMensual": 800, "texto": "Encaje alto: consumo fuerte en horas de sol." },
+      "consejos": ["Si puedes, concentra los lavados grandes de encargos en horas valle.", "Limpia filtros de secadoras a diario: secan antes y gastan menos.", "Valora bomba de calor para el agua caliente."],
+      "faq": [
+        { "p": "¿Una lavandería autoservicio puede bajar la potencia?", "r": "Si el maxímetro muestra que nunca se usan todas las máquinas a la vez, sí. Si lo hacen, mejor ajustar por periodos." },
+        { "p": "¿Qué ahorro dan las placas en una lavandería?", "r": "Depende de cuánto consumes en horas de sol y de la cubierta disponible. Lo calculamos con tu factura." }
+      ]
+    },
+    {
+      "slug": "oficinas-y-despachos",
+      "nombre": "Oficinas, despachos y coworkings",
+      "singular": "una oficina",
+      "corto": "Oficina",
+      "descripcion": "Climatización, ordenadores, servidores e iluminación: cómo bajar la factura de luz de una oficina, despacho profesional o coworking.",
+      "entradilla": "En una oficina casi toda la luz se va en clima, iluminación y equipos que se quedan encendidos por la noche. Y en un precio que nadie ha comparado desde que se firmó.",
+      "equipos": ["Climatización", "Ordenadores, pantallas e impresoras", "Servidores y equipos de red 24 horas", "Iluminación"],
+      "fugas": [
+        { "tema": "precio", "texto": "Contratos firmados hace años y prorrogados solos: es donde más ahorro hay en oficinas." },
+        { "tema": "potencia", "texto": "Al pasar a LED o renovar el clima, la potencia contratada se queda grande." },
+        { "tema": "horario", "texto": "Equipos encendidos fuera de horario suman kWh en las horas valle y en fin de semana. Una regleta programable lo arregla." },
+        { "tema": "placas", "texto": "Horario de día de lunes a viernes. Si el edificio permite cubierta, las placas cubren el clima en verano." }
+      ],
+      "placas": { "encaje": "medio", "diurno": 0.75, "ejemploMensual": 250, "texto": "Encaje medio: perfil muy diurno, pero en edificios de oficinas la cubierta suele ser compartida." },
+      "consejos": ["Programa el apagado de clima e iluminación al cierre.", "Revisa la fecha de tu contrato de luz: si tiene más de un año, compara.", "Si estás en un edificio, propón autoconsumo compartido a la comunidad."],
+      "faq": [
+        { "p": "¿Puedo cambiar de compañía de luz si la oficina es alquilada?", "r": "Sí, si el contrato está a tu nombre. Si está a nombre del propietario, necesitas su acuerdo o un cambio de titular." },
+        { "p": "¿Qué es el autoconsumo compartido?", "r": "Una instalación de placas en el edificio que reparte la energía entre varios consumidores, por ejemplo las oficinas de una misma comunidad." }
+      ]
+    },
+    {
+      "slug": "naves-y-almacenes",
+      "nombre": "Naves, almacenes y logística",
+      "singular": "una nave",
+      "corto": "Nave",
+      "descripcion": "Iluminación de gran altura, carretillas eléctricas, puertas rápidas y clima: cómo recortar la factura de luz de una nave o almacén y aprovechar su cubierta.",
+      "entradilla": "Una nave tiene dos activos que casi nadie aprovecha: una cubierta enorme y un consumo de día muy predecible. Y suele tener un contrato de luz de hace años.",
+      "equipos": ["Iluminación de gran altura", "Carga de carretillas y transpaletas eléctricas", "Puertas rápidas, muelles y montacargas", "Climatización de oficinas y, a veces, cámaras"],
+      "fugas": [
+        { "tema": "horario", "texto": "Cargar carretillas en horas valle en vez de al acabar el turno de tarde baja el coste de esa energía." },
+        { "tema": "potencia", "texto": "Si cambiaste a LED, la potencia contratada se quedó grande para lo que usas." },
+        { "tema": "reactiva", "texto": "Montacargas, puertas y cargadores pueden generar reactiva. Revisa la línea de tu factura." },
+        { "tema": "placas", "texto": "La mejor situación para el autoconsumo: cubierta grande, sin sombras y consumo de día." }
+      ],
+      "placas": { "encaje": "alto", "diurno": 0.7, "ejemploMensual": 1000, "texto": "Encaje alto: cubierta amplia y consumo diurno, el escenario ideal." },
+      "consejos": ["Programa la carga de carretillas de noche.", "Pon sensores de presencia en pasillos de estanterías.", "Revisa el estado de la cubierta antes de pedir presupuesto de placas."],
+      "faq": [
+        { "p": "¿Una nave puede vender la energía que le sobra?", "r": "Con autoconsumo con excedentes se compensan o se venden a precio de mercado. Lo más rentable es dimensionar para consumir casi todo lo que se produce." },
+        { "p": "¿Qué pasa si la cubierta es de fibrocemento?", "r": "Si contiene amianto hay que retirarla antes por una empresa autorizada. Algunas ayudas cubren parte de ese coste junto con las placas." }
+      ]
+    },
+    {
+      "slug": "explotaciones-agricolas-y-riego",
+      "nombre": "Explotaciones agrícolas, granjas y riego",
+      "singular": "una explotación",
+      "corto": "Explotación agrícola",
+      "descripcion": "Bombeo de riego, naves ganaderas, frío y ordeño: cómo bajar la factura de luz de una explotación agrícola o granja y cuándo compensan las placas.",
+      "entradilla": "El bombeo de riego consume justo en los meses y horas de más sol. Pocas actividades encajan tan bien con las placas, y pocas pagan tanto por potencia que solo usan en temporada.",
+      "equipos": ["Bombas de riego y pozos", "Ventilación y climatización de naves ganaderas", "Tanques de frío y ordeño", "Iluminación y equipos de alimentación"],
+      "fugas": [
+        { "tema": "potencia", "texto": "La potencia se contrata para la campaña de riego y se paga los doce meses. Ajustarla por periodos ahorra en los meses de parada." },
+        { "tema": "reactiva", "texto": "Las bombas son motores grandes: revisa si pagas reactiva." },
+        { "tema": "precio", "texto": "El consumo de verano es muy alto. Comparar fijo con indexado según tu curva tiene mucho efecto." },
+        { "tema": "placas", "texto": "Bombeo de día en verano: el perfil solar perfecto. Existen soluciones de bombeo solar directo, incluso sin conexión a red." }
+      ],
+      "placas": { "encaje": "alto", "diurno": 0.8, "ejemploMensual": 900, "texto": "Encaje alto: el riego consume en las horas y meses de más producción solar." },
+      "consejos": ["Riega en las horas valle si no tienes placas, o en las de sol si las tienes.", "Revisa el rendimiento de las bombas: una bomba vieja gasta más por cada metro cúbico.", "Infórmate de las ayudas autonómicas para regadío eficiente y autoconsumo agrario."],
+      "faq": [
+        { "p": "¿Puedo tener placas para riego sin conexión a red?", "r": "Sí, con bombeo solar directo: las placas alimentan la bomba mientras hay sol. Para pozos aislados suele salir más barato que llevar la línea." },
+        { "p": "¿Puedo bajar la potencia fuera de la campaña de riego?", "r": "En 3.0TD contratas potencia por periodo y los periodos dependen del mes. Te ayudamos a ajustarla sin perder la que necesitas en verano." }
+      ]
+    },
+    {
+      "slug": "colegios-y-academias",
+      "nombre": "Colegios, guarderías y academias",
+      "singular": "un colegio",
+      "corto": "Centro educativo",
+      "descripcion": "Calefacción eléctrica, iluminación de aulas, cocina y equipos: cómo bajar la factura de luz de un colegio privado, guardería o academia.",
+      "entradilla": "Un centro educativo consume de día y de lunes a viernes, con meses de vacaciones casi a cero. Es un perfil que muchos contratos no tienen en cuenta.",
+      "equipos": ["Calefacción y climatización de aulas", "Iluminación", "Cocina y comedor", "Ordenadores, pizarras digitales y proyectores"],
+      "fugas": [
+        { "tema": "potencia", "texto": "La potencia se paga también en julio y agosto, con el centro cerrado. Ajustarla por periodos reduce ese gasto fijo." },
+        { "tema": "precio", "texto": "Todo el consumo cae en horas de clase, que son las caras. El precio de punta y llano decide el total." },
+        { "tema": "horario", "texto": "Calefacción que arranca muy pronto o se queda por la tarde sin alumnos: programarla bien ahorra sin que nadie lo note." },
+        { "tema": "placas", "texto": "Consumo de día y cubiertas grandes. En verano los excedentes se compensan en la factura." }
+      ],
+      "placas": { "encaje": "alto", "diurno": 0.8, "ejemploMensual": 700, "texto": "Encaje alto: horario lectivo de día y cubiertas amplias." },
+      "consejos": ["Programa calefacción y clima por horario lectivo y por aula.", "Revisa la potencia contratada de verano.", "Las placas en colegios son también un recurso educativo: algunas ayudas lo valoran."],
+      "faq": [
+        { "p": "¿Qué pasa con las placas en vacaciones?", "r": "La energía que no consumes se vierte a la red y se compensa en tu factura o se vende. Por eso conviene dimensionar con tu consumo real." },
+        { "p": "¿Un colegio concertado puede cambiar de comercializadora?", "r": "Sí, si es el titular del contrato. Si depende de la administración, el contrato suele ir por licitación." }
+      ]
+    },
+    {
+      "slug": "heladerias-y-cafeterias",
+      "nombre": "Cafeterías, heladerías y pastelerías",
+      "singular": "una cafetería",
+      "corto": "Cafetería",
+      "descripcion": "Cafetera, vitrinas, congeladores de helado y horno: cómo recortar la factura de luz de una cafetería, heladería o pastelería.",
+      "entradilla": "La cafetera nunca se apaga en horario, las vitrinas tampoco y el obrador arranca temprano. Pequeños consumos que suman una factura grande.",
+      "equipos": ["Cafetera industrial y molinos", "Vitrinas refrigeradas y congeladores de helado", "Hornos y obrador", "Lavavajillas y climatización"],
+      "fugas": [
+        { "tema": "potencia", "texto": "Cafetera, horno y lavavajillas a la vez marcan el pico. Revisa si la potencia que pagas cuadra con tu maxímetro." },
+        { "tema": "reactiva", "texto": "Si tienes muchas vitrinas y congeladores, revisa si tu factura cobra reactiva." },
+        { "tema": "precio", "texto": "Consumes sobre todo en horas caras. Un precio por periodo bien elegido baja la factura sin tocar nada." },
+        { "tema": "placas", "texto": "Las heladerías consumen más justo en verano y a mediodía: con cubierta disponible, las placas encajan muy bien." }
+      ],
+      "placas": { "encaje": "medio", "diurno": 0.65, "ejemploMensual": 450, "texto": "Encaje medio-alto: mucho consumo de día, sobre todo en verano, si hay acceso a cubierta." },
+      "consejos": ["Apaga la cafetera al cierre: mantener la caldera caliente de noche es caro.", "Revisa juntas y descarche de congeladores de helado.", "Si usas el lavavajillas a última hora, que sea fuera de punta."],
+      "faq": [
+        { "p": "¿Cuánto gasta una cafetera industrial?", "r": "Depende del número de grupos y de cuánto tiempo está encendida. Mantenerla caliente todo el día es una parte importante de la factura de una cafetería." },
+        { "p": "¿Merece la pena cambiar de comercializadora para una cafetería pequeña?", "r": "Si el contrato tiene más de un año sin revisar, casi siempre. Con tu factura te decimos cuánto exactamente antes de cambiar nada." }
+      ]
+    }
+  ]
+}
