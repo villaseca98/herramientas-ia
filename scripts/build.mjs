@@ -8,9 +8,10 @@ import {
   destinoAfiliado, escaparHtml, separarFrontmatter,
 } from './lib/contenido.mjs';
 import {
-  paginaInicio, paginaCategoria, paginaArticulo, paginaHerramientas, paginaHerramienta, paginaEstatica,
+  paginaCategoria, paginaArticulo, paginaHerramientas, paginaHerramienta, paginaEstatica,
   pagina404, paginaEnlaces, paginaTest, formularioNewsletter, rutaFicha,
 } from './lib/plantillas.mjs';
+import { cargarStack, paginaRecorta, paginaAlternativa, paginaAlternativas, paginaGuias, rutaAlternativa } from './lib/recorta.mjs';
 
 // Bloque de contacto para páginas de servicios: solo aparece si hay email o formulario en data/sitio.json.
 function bloqueContacto(sitio) {
@@ -24,6 +25,7 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   const sitio = cargarSitio();
   const afiliados = cargarAfiliados();
   const articulos = cargarArticulos({ incluirBorradores });
+  const stack = cargarStack(afiliados);
 
   rmSync(salida, { recursive: true, force: true });
   mkdirSync(salida, { recursive: true });
@@ -36,7 +38,12 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   if (existsSync(join(RAIZ, 'public'))) cpSync(join(RAIZ, 'public'), salida, { recursive: true });
   escribir('estilos.css', readFileSync(join(RAIZ, 'src', 'estilos', 'sitio.css')));
 
-  escribir('index.html', paginaInicio(sitio, articulos, afiliados));
+  cpSync(join(RAIZ, 'src', 'cliente'), join(salida, 'js'), { recursive: true });
+
+  escribir('index.html', paginaRecorta(sitio, stack));
+  escribir('alternativas/index.html', paginaAlternativas(sitio, stack));
+  for (const h of stack.herramientas) escribir(`${rutaAlternativa(h.slug).slice(1)}index.html`, paginaAlternativa(sitio, h, stack));
+  escribir('guias/index.html', paginaGuias(sitio, articulos));
   for (const slug of Object.keys(sitio.categorias)) {
     escribir(`categoria/${slug}/index.html`, paginaCategoria(sitio, slug, articulos.filter((a) => a.categoria === slug), afiliados));
   }
@@ -81,7 +88,7 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   }
   escribir('_redirects', `${redirecciones.join('\n')}\n`);
 
-  const urls = ['/', '/herramientas/', '/que-herramienta-necesito/', ...fichas, ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...estaticas];
+  const urls = ['/', '/alternativas/', ...stack.herramientas.map((h) => rutaAlternativa(h.slug)), '/guias/', '/herramientas/', '/que-herramienta-necesito/', ...fichas, ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...estaticas];
   const entradas = [
     ...urls.map((u) => ({ loc: new URL(u, sitio.url).href })),
     ...articulos.filter((a) => a.estado === 'publicado').map((a) => ({ loc: new URL(`/${a.slug}/`, sitio.url).href, lastmod: a.actualizado ?? a.fecha })),
@@ -103,7 +110,7 @@ ${items.join('\n')}
 </channel></rss>
 `);
 
-  return { articulos: articulos.length, afiliados: afiliados.size, salida };
+  return { articulos: articulos.length, afiliados: afiliados.size, alternativas: stack.herramientas.length, salida };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

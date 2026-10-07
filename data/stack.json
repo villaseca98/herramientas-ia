@@ -1,0 +1,177 @@
+{
+  "verificado": "2026-10-07",
+  "moneda": "$",
+  "nota": "Precios en dólares, sin impuestos, consultados en la web oficial de cada herramienta. Cambian a menudo: confírmalos antes de comprar.",
+  "categorias": {
+    "embudos-cursos": "Embudos y cursos",
+    "email": "Email y newsletter",
+    "automatizacion": "Automatización",
+    "seo-escritura": "SEO y escritura con IA",
+    "web-formularios": "Web, formularios y agenda"
+  },
+  "herramientas": [
+    {
+      "slug": "kajabi",
+      "nombre": "Kajabi",
+      "categoria": "embudos-cursos",
+      "plan": "Basic",
+      "precioMes": 179,
+      "detalle": "Pago mensual. 5 productos, 2.500 contactos.",
+      "urlPrecios": "https://kajabi.com/pricing",
+      "busqueda": "alternativas a Kajabi",
+      "alternativas": [
+        { "afiliado": "systeme", "plan": "Startup", "precioMes": 17, "gratis": true, "porQue": "Cursos, embudos, email y web en un solo panel, con plan gratis para empezar y 0% de comisión por venta.", "pierdes": "Las plantillas son más sencillas y la app móvil para alumnos es más básica." }
+      ]
+    },
+    {
+      "slug": "clickfunnels",
+      "nombre": "ClickFunnels",
+      "categoria": "embudos-cursos",
+      "plan": "Launch",
+      "precioMes": 97,
+      "detalle": "Pago mensual (81 $/mes en pago anual). 10.000 contactos.",
+      "urlPrecios": "https://www.clickfunnels.com/pricing",
+      "busqueda": "alternativas a ClickFunnels",
+      "alternativas": [
+        { "afiliado": "systeme", "plan": "Startup", "precioMes": 17, "gratis": true, "porQue": "Embudos, email, cursos y pagos sin comisión. El plan gratis ya incluye 3 embudos y 2.000 contactos.", "pierdes": "Menos opciones avanzadas de diseño y de test A/B." },
+        { "afiliado": "getresponse", "plan": "Marketer", "precioMes": 59, "gratis": false, "porQue": "Email marketing muy completo con embudos de conversión y webinars.", "pierdes": "Sin plan gratis permanente y precio que sube con los contactos." }
+      ]
+    },
+    {
+      "slug": "teachable",
+      "nombre": "Teachable",
+      "categoria": "embudos-cursos",
+      "plan": "Starter",
+      "precioMes": 39,
+      "detalle": "Pago mensual y 7,5% de comisión por cada venta.",
+      "urlPrecios": "https://www.teachable.com/pricing",
+      "busqueda": "alternativas a Teachable",
+      "alternativas": [
+        { "afiliado": "systeme", "plan": "Gratis", "precioMes": 0, "gratis": true, "porQue": "Tu primer curso gratis y sin comisión por venta: te quedas el 7,5% que Teachable se lleva.", "pierdes": "Menos opciones de certificados y de comunidad dentro del curso." }
+      ]
+    },
+    {
+      "slug": "mailchimp",
+      "nombre": "Mailchimp",
+      "categoria": "email",
+      "plan": "Standard (500 contactos)",
+      "precioMes": 20,
+      "detalle": "Precio de entrada; sube con cada tramo de contactos.",
+      "urlPrecios": "https://mailchimp.com/pricing/marketing/",
+      "busqueda": "alternativas a Mailchimp",
+      "alternativas": [
+        { "afiliado": "kit", "plan": "Newsletter (gratis)", "precioMes": 0, "gratis": true, "porQue": "Gratis hasta 10.000 suscriptores con formularios y landing pages ilimitados.", "pierdes": "Las automatizaciones avanzadas están en los planes de pago." },
+        { "afiliado": "mailerlite", "plan": "Gratis / Comfort", "precioMes": 0, "gratis": true, "porQue": "Editor muy fácil y automatizaciones; gratis hasta 250 suscriptores y 12 $/mes con 500.", "pierdes": "El plan gratis se queda corto en cuanto creces." },
+        { "afiliado": "brevo", "plan": "Gratis", "precioMes": 0, "gratis": true, "porQue": "Plan gratis para siempre con hasta 300 emails al día, sin tarjeta.", "pierdes": "El límite diario de envíos obliga a pagar si mandas campañas grandes." }
+      ]
+    },
+    {
+      "slug": "kit-creator",
+      "nombre": "Kit (ConvertKit) Creator",
+      "categoria": "email",
+      "plan": "Creator (1.000 suscriptores)",
+      "precioMes": 33,
+      "detalle": "Pago mensual; sube con los suscriptores.",
+      "urlPrecios": "https://kit.com/pricing",
+      "busqueda": "alternativas baratas a ConvertKit",
+      "alternativas": [
+        { "afiliado": "beehiiv", "plan": "Launch (gratis)", "precioMes": 0, "gratis": true, "porQue": "Gratis hasta 2.500 suscriptores, con web de la newsletter y envíos ilimitados.", "pierdes": "Automatizaciones y monetización avanzada solo en los planes de pago." },
+        { "afiliado": "mailerlite", "plan": "Comfort (1.000)", "precioMes": 20, "gratis": true, "porQue": "Automatizaciones, web y landing pages con un precio más bajo por tramo.", "pierdes": "Menos pensado para creadores que venden productos digitales." }
+      ]
+    },
+    {
+      "slug": "zapier",
+      "nombre": "Zapier",
+      "categoria": "automatizacion",
+      "plan": "Professional",
+      "precioMes": 19.99,
+      "detalle": "Precio de entrada en pago anual (750 tareas). Sube rápido con el volumen.",
+      "urlPrecios": "https://zapier.com/pricing",
+      "busqueda": "alternativas a Zapier",
+      "alternativas": [
+        { "afiliado": "make", "plan": "Core", "precioMes": 12, "gratis": true, "porQue": "Escenarios visuales con muchos más pasos por el mismo dinero y plan gratis de 1.000 créditos.", "pierdes": "Curva de aprendizaje algo mayor que Zapier." },
+        { "afiliado": "n8n", "plan": "Community (autoalojado)", "precioMes": 0, "gratis": true, "porQue": "Gratis si lo alojas tú y sin límite de ejecuciones; ideal para automatizaciones con IA.", "pierdes": "Necesitas un servidor y algo de soltura técnica (o pagar su nube)." }
+      ]
+    },
+    {
+      "slug": "ahrefs",
+      "nombre": "Ahrefs",
+      "categoria": "seo-escritura",
+      "plan": "Lite",
+      "precioMes": 129,
+      "detalle": "Pago mensual.",
+      "urlPrecios": "https://ahrefs.com/pricing",
+      "busqueda": "alternativas baratas a Ahrefs",
+      "alternativas": [
+        { "nombre": "Ahrefs Starter", "url": "https://ahrefs.com/pricing", "plan": "Starter", "precioMes": 29, "gratis": false, "porQue": "Si solo investigas palabras clave y competencia, el plan Starter del propio Ahrefs cuesta 100 $ menos.", "pierdes": "Sin auditoría del sitio ni seguimiento completo de posiciones." },
+        { "afiliado": "semrush", "plan": "SEO (anual)", "precioMes": 117.33, "gratis": true, "porQue": "Suite SEO completa con investigación, auditoría y seguimiento, y cuenta gratis con 10 informes al día.", "pierdes": "El ahorro es pequeño: compénsalo si usas también sus herramientas de contenido y anuncios." }
+      ]
+    },
+    {
+      "slug": "jasper",
+      "nombre": "Jasper",
+      "categoria": "seo-escritura",
+      "plan": "Pro",
+      "precioMes": 69,
+      "detalle": "Pago mensual, por usuario.",
+      "urlPrecios": "https://www.jasper.ai/pricing",
+      "busqueda": "alternativas a Jasper AI",
+      "alternativas": [
+        { "nombre": "ChatGPT Plus", "url": "https://chatgpt.com/pricing", "plan": "Plus", "precioMes": 20, "gratis": true, "porQue": "Para redactar, resumir y crear ideas, un asistente general hace lo mismo por menos de un tercio.", "pierdes": "Sin plantillas de marketing ni gestión de voz de marca para equipos." },
+        { "afiliado": "surfer", "plan": "Discovery (anual)", "precioMes": 49, "gratis": false, "porQue": "Si escribes para posicionar en Google, Surfer optimiza cada artículo con datos SEO reales.", "pierdes": "Es una herramienta de SEO, no un redactor generalista." }
+      ]
+    },
+    {
+      "slug": "grammarly",
+      "nombre": "Grammarly Pro",
+      "categoria": "seo-escritura",
+      "plan": "Pro",
+      "precioMes": 12,
+      "detalle": "Precio en pago anual.",
+      "urlPrecios": "https://www.grammarly.com/plans",
+      "busqueda": "alternativas a Grammarly en español",
+      "alternativas": [
+        { "nombre": "LanguageTool", "url": "https://languagetool.org", "plan": "Gratis", "precioMes": 0, "gratis": true, "porQue": "Corrige ortografía, gramática y estilo en español (Grammarly solo trabaja en inglés).", "pierdes": "Las reescrituras avanzadas están en su plan de pago." }
+      ]
+    },
+    {
+      "slug": "squarespace",
+      "nombre": "Squarespace",
+      "categoria": "web-formularios",
+      "plan": "Basic",
+      "precioMes": 25,
+      "detalle": "Pago mensual (19 $/mes en pago anual).",
+      "urlPrecios": "https://www.squarespace.com/pricing",
+      "busqueda": "alternativas baratas a Squarespace",
+      "alternativas": [
+        { "afiliado": "hostinger", "plan": "Premium", "precioMes": 10.99, "gratis": false, "porQue": "Hosting con WordPress o creador web con IA, dominio gratis el primer año y precio de entrada de 2,99 $/mes.", "pierdes": "Calculamos con el precio de renovación (10,99 $) para no engañarte; las plantillas son menos pulidas." }
+      ]
+    },
+    {
+      "slug": "typeform",
+      "nombre": "Typeform",
+      "categoria": "web-formularios",
+      "plan": "Basic",
+      "precioMes": 29,
+      "detalle": "Pago mensual. Solo 100 respuestas al mes.",
+      "urlPrecios": "https://www.typeform.com/pricing/",
+      "busqueda": "alternativas gratis a Typeform",
+      "alternativas": [
+        { "afiliado": "tally", "plan": "Gratis", "precioMes": 0, "gratis": true, "porQue": "Formularios y respuestas ilimitados gratis, con lógica condicional, pagos y firmas.", "pierdes": "Quitar la marca de Tally y usar tu dominio requiere el plan Pro." }
+      ]
+    },
+    {
+      "slug": "calendly",
+      "nombre": "Calendly",
+      "categoria": "web-formularios",
+      "plan": "Standard",
+      "precioMes": 10,
+      "detalle": "Pago mensual por usuario.",
+      "urlPrecios": "https://calendly.com/pricing",
+      "busqueda": "alternativas gratis a Calendly",
+      "alternativas": [
+        { "nombre": "Cal.com", "url": "https://cal.com", "plan": "Gratis", "precioMes": 0, "gratis": true, "porQue": "Tipos de evento y calendarios ilimitados gratis para una persona, con cobros por Stripe y PayPal.", "pierdes": "Las funciones de equipo (round robin, marca propia) son de pago." }
+      ]
+    }
+  ]
+}
