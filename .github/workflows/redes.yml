@@ -36,6 +36,7 @@ jobs:
           npm run redes
       - name: Guardar kits
         run: |
+          [ -d social ] || { echo "Sin kits nuevos."; exit 0; }
           git add social
           if git diff --cached --quiet; then
             echo "Sin kits nuevos."
