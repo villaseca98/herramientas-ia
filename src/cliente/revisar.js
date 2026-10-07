@@ -73,6 +73,15 @@ function pintar() {
 </div>
 <p class="nota">Estimación con ${formatear(C.ref.solar.produccionKwhKwp)} kWh por kWp al año y tu precio actual de la energía. El estudio real depende de tu tejado, orientación y horario. <a href="/placas-solares/">Ajustar en el simulador &rarr;</a></p>` : '';
   const texto = resumenPeticion(d, r);
+  const lead = $('lead-revisar');
+  if (lead) {
+    lead.elements.resumen.value = texto;
+    lead.elements.ahorroAnual.value = String(Math.round(r.ahorroAnual + (r.solar?.ahorroAnual ?? 0)));
+    lead.elements.tipo.value = form.tipo.value;
+    if (d.total) lead.elements.facturaMensual.value = String(Math.round((d.total / (d.dias || 30)) * 30));
+  }
+  $('rf-copiar').dataset.texto = texto;
+  if (C.leads) return;
   const enlace = enlacePeticion(texto);
   const boton = $('rf-pedir');
   if (enlace) {
@@ -80,7 +89,6 @@ function pintar() {
     boton.classList.remove('boton-apagado');
     if (enlace.nuevo) { boton.target = '_blank'; boton.rel = 'noopener'; }
   }
-  $('rf-copiar').dataset.texto = texto;
 }
 
 async function leerPdf(archivo) {
@@ -117,7 +125,7 @@ zona.addEventListener('drop', (ev) => ev.dataTransfer.files[0] && leerPdf(ev.dat
 $('cargar-ejemplo').addEventListener('click', () => { rellenar(C.ejemplo); form.tipo.value = 'negocio'; $('estado-lectura').textContent = 'Hemos cargado la factura de ejemplo de un bar con tarifa 3.0TD.'; pintar(); document.getElementById('resultado-factura').scrollIntoView({ behavior: 'smooth' }); });
 form.addEventListener('input', () => { mostrarPeriodos(); pintar(); });
 // Conversión para los anuncios de Meta: el negocio pide que le gestionemos la factura.
-$('rf-pedir').addEventListener('click', () => { if (window.fbq) window.fbq('track', 'Lead'); });
+$('rf-pedir').addEventListener('click', () => { if (window.fbq && !C.leads) window.fbq('track', 'Lead'); });
 $('rf-copiar').addEventListener('click', async (ev) => {
   const b = ev.currentTarget;
   try { await navigator.clipboard.writeText(b.dataset.texto); b.textContent = '¡Copiado!'; } catch { b.textContent = 'No se pudo copiar'; }

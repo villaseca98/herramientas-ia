@@ -25,7 +25,8 @@
   "contacto": {
     "email": "",
     "urlFormulario": "",
-    "whatsapp": ""
+    "whatsapp": "",
+    "webhookLeads": "https://leadshunters.app.n8n.cloud/webhook/recorta-lead"
   },
   "menu": [
     {
@@ -76,6 +77,11 @@
           "ruta": "/negocios/comunidades-de-vecinos/",
           "nombre": "Comunidades de vecinos",
           "desc": "Ascensor, garaje y zonas comunes"
+        },
+        {
+          "ruta": "/negocios/sectores/",
+          "nombre": "Todos los sectores",
+          "desc": "Panaderías, talleres, gimnasios, hoteles y más"
         }
       ]
     },
