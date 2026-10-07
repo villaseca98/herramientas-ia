@@ -1,0 +1,230 @@
+{
+  "verificado": "2026-10-07",
+  "nota": "Medias y bonos sacados de las fuentes enlazadas en cada factura. Los planes amigo y las tarifas cambian a menudo: confirma las condiciones en la web de cada compañía antes de contratar.",
+  "facturas": [
+    {
+      "slug": "luz-y-gas",
+      "nombre": "Luz y gas",
+      "corto": "luz y gas",
+      "detalle": "Recibo medio de luz (690 €/año) y gas (522 €/año)",
+      "gastoMedioMes": 101,
+      "fuenteGasto": { "texto": "Informe de consumo 2026 de Roams (febrero de 2026)", "url": "https://www.energias-renovables.com/panorama/los-hogares-espa-oles-destinan-690-euros-20260205" },
+      "ahorroPct": 0.15,
+      "fuenteAhorro": { "texto": "Selectra calcula entre 100 y 300 € al año comparando tarifas de energía", "url": "https://images.selectra.es/es-grupo/prensa/informes/docs/cesta-digital-hogar-2026.pdf" },
+      "titulo": "Cómo pagar menos luz y gas (y que te paguen por cambiarte)",
+      "busqueda": "bajar la factura de la luz",
+      "consejos": [
+        "Mira en tu factura la potencia contratada: bajar un escalón que no usas recorta el término fijo todos los meses.",
+        "Compara con tu consumo real en kWh, no con el precio de oferta del primer mes.",
+        "Cambiar de comercializadora es gratis, no corta el suministro y lo tramita la compañía nueva.",
+        "Luz y gas pueden estar en compañías distintas: elige la mejor para cada una."
+      ],
+      "opciones": [
+        {
+          "slug": "octopus-energy",
+          "nombre": "Octopus Energy",
+          "dominio": "octopusenergy.es",
+          "urlOficial": "https://octopusenergy.es/",
+          "que": "Luz y gas 100% renovable, sin permanencia y con precio claro por kWh.",
+          "bono": 50,
+          "bonoTexto": "50 € de crédito en tu factura al entrar con un enlace de amigo (y 50 € para quien te invita).",
+          "condiciones": "Se aplica tras la primera factura. Sin límite de invitaciones.",
+          "enlaceReferido": "",
+          "codigo": ""
+        },
+        {
+          "slug": "plenitude",
+          "nombre": "Plenitude",
+          "dominio": "eniplenitude.es",
+          "urlOficial": "https://eniplenitude.es/",
+          "que": "Comercializadora de luz y gas del grupo Eni, con tarifas fijas y por tramos.",
+          "bono": 30,
+          "bonoTexto": "Tarjeta regalo de Amazon de 30 a 60 € para ti y para quien te invita.",
+          "condiciones": "Máximo 10 amigos por persona. Quien invita no necesita ser cliente.",
+          "enlaceReferido": "",
+          "codigo": ""
+        },
+        {
+          "slug": "holaluz",
+          "nombre": "Holaluz",
+          "dominio": "holaluz.com",
+          "urlOficial": "https://www.holaluz.com/",
+          "que": "Luz verde con tarifa fija, y placas solares con plan amigo propio.",
+          "bono": 30,
+          "bonoTexto": "30 € al contratar la luz con un código amigo (hasta 400 € si instalas placas solares).",
+          "condiciones": "Sin límite de invitaciones.",
+          "enlaceReferido": "",
+          "codigo": ""
+        }
+      ]
+    },
+    {
+      "slug": "fibra-y-movil",
+      "nombre": "Fibra y móvil",
+      "corto": "fibra y móvil",
+      "detalle": "Paquete medio de fibra, móvil y fijo",
+      "gastoMedioMes": 39.2,
+      "fuenteGasto": { "texto": "Cesta digital del hogar 2026 de Selectra (paquete cuádruple)", "url": "https://images.selectra.es/es-grupo/prensa/informes/docs/cesta-digital-hogar-2026.pdf" },
+      "fuenteAhorro": { "texto": "Tarifas de fibra y móvil más baratas de Kelisto (octubre de 2026)", "url": "https://www.kelisto.es/internet/mejor-compra/tarifas-internet-movil-mas-baratas-2889" },
+      "titulo": "Fibra y móvil más baratos: cuánto pagas de más y a qué cambiarte",
+      "busqueda": "fibra y móvil baratos",
+      "consejos": [
+        "Revisa la permanencia antes de irte: si te queda poca, espera a que acabe.",
+        "La portabilidad es gratis y se hace en 24 horas; la compañía nueva lo tramita todo.",
+        "Si pagas la tele o el fútbol en el paquete, compáralo por separado: a veces sale más barato fuera.",
+        "Llama a tu compañía con la oferta de otra en la mano: muchas igualan el precio para no perderte."
+      ],
+      "opciones": [
+        {
+          "slug": "lowi",
+          "nombre": "Lowi",
+          "dominio": "lowi.es",
+          "urlOficial": "https://www.lowi.es/",
+          "que": "Fibra de 300 Mb y móvil con 50 GB, sin permanencia.",
+          "precioMes": 30,
+          "plan": "Fibra 300 Mb + 50 GB",
+          "bono": 60,
+          "bonoTexto": "Hasta 60 € de descuento entrando con un amigo, según el paquete (menos en solo móvil).",
+          "condiciones": "Hay que ser cliente nuevo. Hasta 24 invitaciones al año.",
+          "enlaceReferido": "",
+          "codigo": ""
+        },
+        {
+          "slug": "simyo",
+          "nombre": "Simyo",
+          "dominio": "simyo.es",
+          "urlOficial": "https://www.simyo.es/",
+          "que": "Fibra de 600 Mb con 100 GB de móvil, de las que más datos dan por su precio.",
+          "precioMes": 33.99,
+          "plan": "Fibra 600 Mb + 100 GB",
+          "bono": 0,
+          "bonoTexto": "",
+          "condiciones": "",
+          "enlaceReferido": "",
+          "codigo": ""
+        },
+        {
+          "slug": "digi",
+          "nombre": "Digi",
+          "dominio": "digimobil.es",
+          "urlOficial": "https://www.digimobil.es/",
+          "que": "De las operadoras más baratas en móvil y fibra, sin permanencia.",
+          "bono": 30,
+          "bonoTexto": "30 € de descuento con DIGI&Friends (3 € al mes durante 10 meses).",
+          "condiciones": "Hay que ser cliente nuevo.",
+          "enlaceReferido": "",
+          "codigo": ""
+        },
+        {
+          "slug": "pepephone",
+          "nombre": "Pepephone",
+          "dominio": "pepephone.com",
+          "urlOficial": "https://www.pepephone.com/",
+          "que": "Fibra de 600 Mb y 60 GB sin permanencia, con muy buena atención al cliente.",
+          "precioMes": 35,
+          "plan": "Fibra 600 Mb + 60 GB",
+          "bono": 0,
+          "bonoTexto": "Su plan amigo planta un árbol en lugar de dar dinero.",
+          "condiciones": "",
+          "enlaceReferido": "",
+          "codigo": ""
+        }
+      ]
+    },
+    {
+      "slug": "banco",
+      "nombre": "Comisiones del banco",
+      "corto": "comisiones del banco",
+      "detalle": "Mantenimiento y tarjetas de una cuenta no bonificada",
+      "gastoMedioMes": 13.33,
+      "fuenteGasto": { "texto": "Asufin: mantener una cuenta cuesta 160 € al año de media (mayo de 2025)", "url": "https://www.infobae.com/espana/agencias/2025/05/28/mantener-una-cuenta-bancaria-sube-un-6-de-media-hasta-160-euros-al-ano-segun-asufin/" },
+      "precioReferencia": 0,
+      "fuenteAhorro": { "texto": "Planes amigo de bancos de Rankia (julio de 2026)", "url": "https://www.rankia.com/blog/cuentas-corrientes/6902491-plan-amigo-bancos" },
+      "titulo": "Deja de pagar comisiones al banco (y cobra por cambiarte)",
+      "busqueda": "cuenta sin comisiones",
+      "consejos": [
+        "Busca en tu extracto los cargos de mantenimiento, de tarjeta y de transferencias: suman más de lo que parece.",
+        "No hace falta cerrar tu banco de golpe: abre la cuenta nueva, mueve los recibos y cierra la vieja cuando esté vacía.",
+        "Los bonos de bienvenida suelen pedir domiciliar la nómina o hacer unas compras con tarjeta: léelo antes.",
+        "Los bonos tributan como rendimiento: el banco suele retener el 19% y va en la declaración de la renta."
+      ],
+      "opciones": [
+        {
+          "slug": "ing",
+          "nombre": "ING",
+          "dominio": "ing.es",
+          "urlOficial": "https://www.ing.es/",
+          "que": "Cuenta Nómina sin comisiones de mantenimiento ni tarjeta de débito.",
+          "precioMes": 0,
+          "plan": "Cuenta Nómina",
+          "bono": 250,
+          "bonoTexto": "250 € para ti si abres la Cuenta Nómina con un amigo (y 50 € para quien te invita).",
+          "condiciones": "Ingresos de al menos 700 € al mes durante 6 meses. Máximo 500 € para quien invita.",
+          "enlaceReferido": "",
+          "codigo": ""
+        },
+        {
+          "slug": "myinvestor",
+          "nombre": "MyInvestor",
+          "dominio": "myinvestor.es",
+          "urlOficial": "https://myinvestor.es/",
+          "que": "Cuenta sin comisiones, remunerada, y fondos indexados baratos en la misma app.",
+          "precioMes": 0,
+          "plan": "Cuenta remunerada",
+          "bono": 25,
+          "bonoTexto": "25 € con código amigo.",
+          "condiciones": "Traer 1.000 € a la cuenta o invertir 100 € en fondos.",
+          "enlaceReferido": "",
+          "codigo": ""
+        },
+        {
+          "slug": "openbank",
+          "nombre": "Openbank",
+          "dominio": "openbank.es",
+          "urlOficial": "https://www.openbank.es/",
+          "que": "Banco online del Santander sin comisiones de mantenimiento.",
+          "precioMes": 0,
+          "plan": "Cuenta sin comisiones",
+          "bono": 0,
+          "bonoTexto": "Plan amigo: 70 € para quien invita por cada amigo que haga 3 compras con tarjeta.",
+          "condiciones": "Máximo 10 amigos (700 €).",
+          "enlaceReferido": "",
+          "codigo": ""
+        },
+        {
+          "slug": "revolut",
+          "nombre": "Revolut",
+          "dominio": "revolut.com",
+          "urlOficial": "https://www.revolut.com/es-ES/",
+          "que": "Plan Standard gratis, cambio de divisa barato y tarjetas virtuales para suscripciones.",
+          "precioMes": 0,
+          "plan": "Standard",
+          "bono": 0,
+          "bonoTexto": "Recompensa por invitación según la campaña del momento.",
+          "condiciones": "Abrir cuenta, pedir la tarjeta y hacer compras.",
+          "enlaceReferido": "",
+          "codigo": ""
+        }
+      ]
+    },
+    {
+      "slug": "suscripciones",
+      "nombre": "Streaming y suscripciones",
+      "corto": "streaming y suscripciones",
+      "detalle": "Netflix, Disney+ y HBO Max a la vez",
+      "gastoMedioMes": 36.97,
+      "fuenteGasto": { "texto": "Cesta digital del hogar 2026 de Selectra (tres plataformas)", "url": "https://images.selectra.es/es-grupo/prensa/informes/docs/cesta-digital-hogar-2026.pdf" },
+      "ahorroPct": 0.5,
+      "fuenteAhorro": { "texto": "Selectra: rotar plataformas en vez de tenerlas a la vez recorta entre el 50 y el 60% del gasto", "url": "https://images.selectra.es/es-grupo/prensa/informes/docs/cesta-digital-hogar-2026.pdf" },
+      "titulo": "Cómo pagar la mitad en Netflix, Disney+, HBO Max y Spotify",
+      "busqueda": "ahorrar en suscripciones streaming",
+      "consejos": [
+        "Rota: una plataforma cada mes o dos, ves lo que te interesa y cancelas. Te ahorras la mitad sin perderte nada.",
+        "Mira si tu compañía de fibra ya incluye alguna plataforma: muchos la pagan dos veces sin saberlo.",
+        "El plan con anuncios cuesta bastante menos y para series se nota poco.",
+        "Paga las suscripciones con una tarjeta virtual: si se te olvida cancelar, la bloqueas y se acabó el cobro."
+      ],
+      "opciones": []
+    }
+  ]
+}

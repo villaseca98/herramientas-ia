@@ -44,7 +44,7 @@ test('formatea cifras al estilo español', () => {
 test('genera la calculadora, el directorio y una página por alternativa', () => {
   const salida = mkdtempSync(join(tmpdir(), 'recorta-'));
   construir({ salida });
-  const inicio = readFileSync(join(salida, 'index.html'), 'utf8');
+  const inicio = readFileSync(join(salida, 'software/index.html'), 'utf8');
   assert.match(inicio, /id="datos-stack"/);
   assert.match(inicio, /\/js\/calculadora\.js/);
   assert.ok(existsSync(join(salida, 'js/recorte.js')));

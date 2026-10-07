@@ -1,6 +1,6 @@
 {
   "nombre": "Recorta",
-  "lema": "Mismo trabajo, menos factura. Descubre cuánto pagas de más en software y a qué cambiarte.",
+  "lema": "Mismas facturas, menos dinero. Descubre cuánto pagas de más en luz, internet, banco y suscripciones, y cuánto te pagan por cambiarte.",
   "url": "http://localhost:4321",
   "idioma": "es",
   "autor": {
@@ -11,7 +11,7 @@
   },
   "newsletter": {
     "nombre": "El Recorte",
-    "descripcion": "Una vez por semana: un recorte de software concreto con su ahorro en euros, chollos de por vida y cambios de precio de las herramientas que pagas.",
+    "descripcion": "Una vez por semana: un recorte concreto con su ahorro en euros, los bonos por cambiarte que acaban de salir y las subidas de precio que te van a llegar.",
     "urlSuscripcion": "",
     "urlEmbed": ""
   },
@@ -32,12 +32,16 @@
       "Calculadora"
     ],
     [
-      "/alternativas/",
-      "Alternativas"
+      "/bonos/",
+      "Bonos por cambiarte"
     ],
     [
-      "/#por-que",
-      "Por qué yo"
+      "/#facturas",
+      "Facturas"
+    ],
+    [
+      "/software/",
+      "Software"
     ],
     [
       "/guias/",
@@ -45,7 +49,7 @@
     ],
     [
       "/precios/",
-      "Servicios"
+      "Cómo gano dinero"
     ]
   ],
   "productos": [

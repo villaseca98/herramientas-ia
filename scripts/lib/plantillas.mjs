@@ -62,7 +62,7 @@ function migasDePan(sitio, migas) {
 }
 
 export function pagina(sitio, { titulo, descripcion, ruta, contenido, tipoOg = 'website', jsonLd = [], noIndex = false, migas = null }) {
-  const tituloCompleto = ruta === '/' ? `${sitio.nombre}: calcula cuánto pagas de más en software` : `${titulo} | ${sitio.nombre}`;
+  const tituloCompleto = ruta === '/' ? `${sitio.nombre}: calcula cuánto pagas de más en tus facturas` : `${titulo} | ${sitio.nombre}`;
   const canonica = new URL(ruta, sitio.url).href;
   const migasPan = migasDePan(sitio, migas);
   const grafo = [...(Array.isArray(jsonLd) ? jsonLd : [jsonLd]), migasPan.jsonLd].filter(Boolean);
@@ -112,11 +112,11 @@ ${contenido}
         <p class="pie-marca">${e(sitio.nombre.toLowerCase())}<span>.</span></p>
         <p>${e(sitio.lema)}</p>
       </div>
-      <div><p class="pie-titulo">Recortar</p><a href="/#calculadora">Calculadora</a><a href="/alternativas/">Alternativas</a><a href="/herramientas/">Fichas de herramientas</a><a href="/que-herramienta-necesito/">Test de herramientas</a></div>
+      <div><p class="pie-titulo">Recortar</p><a href="/#calculadora">Calculadora de facturas</a><a href="/bonos/">Bonos por cambiarte</a><a href="/software/">Calculadora de software</a><a href="/alternativas/">Alternativas</a><a href="/herramientas/">Fichas de herramientas</a><a href="/que-herramienta-necesito/">Test de herramientas</a></div>
       <div><p class="pie-titulo">Aprender</p><a href="/guias/">Guías</a><a href="/recursos/">Recursos gratis</a><a href="/rss.xml">RSS</a></div>
       <div><p class="pie-titulo">Negocio</p><a href="/precios/">Servicios y precios</a><a href="/servicios/">Auditoría para empresas</a><a href="/patrocina/">Patrocina</a><a href="/aviso-afiliados/">Aviso de afiliados</a><a href="/privacidad/">Privacidad</a><a href="/cookies/">Cookies</a></div>
     </div>
-    <p class="pie-legal">${e(sitio.nombre)} se financia con enlaces de afiliado: si te das de alta en una herramienta desde aquí podemos cobrar una comisión, sin coste extra para ti. Eso nunca cambia el orden de las alternativas, que se ordenan por precio.</p>
+    <p class="pie-legal">${e(sitio.nombre)} se financia con enlaces de afiliado: si te das de alta en una compañía o herramienta desde aquí podemos cobrar una comisión o un bono de plan amigo, sin coste extra para ti. Eso nunca cambia el orden de las opciones, que se ordenan por lo que te ahorras.</p>
   </div>
 </footer>
 </body>

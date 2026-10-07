@@ -1,4 +1,6 @@
-# Recorta: calcula cuánto pagas de más en software
+# Recorta: calcula cuánto pagas de más en tus facturas
+
+**Desde octubre de 2026 la portada es la calculadora de facturas del hogar** (luz y gas, fibra y móvil, comisiones del banco, streaming): enseña el ahorro anual y los bonos de plan amigo que te dan por cambiarte. Datos en `data/facturas.json` (cada opción genera su `/ir/<slug>/`; pega tu enlace o código de plan amigo en `enlaceReferido` / `codigo`). Páginas: `/`, `/facturas/<slug>/`, `/bonos/`. La calculadora de software sigue en `/software/`. Cómo darse de alta para cobrar: `ALTAS-REFERIDOS.md`.
 
 Web estática en español que ayuda a pagar menos por el software: una calculadora marca lo que pagas, te enseña tu "ticket" y te propone alternativas más baratas con precios oficiales y lo que pierdes con cada cambio. Monetiza con enlaces de afiliado en las alternativas, la newsletter "El Recorte" y auditorías de stack para empresas.
 
@@ -9,7 +11,7 @@ Coste: 0 €. Hosting en Vercel, automatización en GitHub Actions, redacción c
 | Pieza | Archivo | Qué hace |
 | --- | --- | --- |
 | Datos del recorte | `data/stack.json` | Herramientas caras (precio oficial, plan, enlace a precios) y sus alternativas (`afiliado` del catálogo o `nombre` + `url`), con `porQue` y `pierdes`. |
-| Calculadora | `/` (`src/cliente/calculadora.js`) | El usuario marca lo que paga, ve su ticket y su ahorro anual, y lo comparte (`?s=kajabi,zapier`). |
+| Calculadora de software | `/software/` (`src/cliente/calculadora.js`) | El usuario marca lo que paga, ve su ticket y su ahorro anual, y lo comparte (`?s=kajabi,zapier`). |
 | Páginas de alternativas | `/alternativas/<slug>/` | Una página SEO por herramienta cara ("alternativas más baratas a X") con tabla, FAQ y enlaces. |
 
 Para añadir un recorte nuevo basta con añadir una entrada a `data/stack.json`: el build genera su página, la añade al sitemap y a la calculadora.

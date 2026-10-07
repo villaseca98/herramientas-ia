@@ -22,4 +22,4 @@ La mayoría de equipos pagan herramientas duplicadas, licencias de gente que ya 
 
 {{contacto}}
 
-¿Quieres hacerlo tú primero? Empieza por la [calculadora](/#calculadora) y el [directorio de alternativas](/alternativas/).
+¿Quieres hacerlo tú primero? Empieza por la [calculadora](/software/#calculadora) y el [directorio de alternativas](/alternativas/).
