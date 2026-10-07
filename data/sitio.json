@@ -1,13 +1,14 @@
 {
   "nombre": "Herramientas IA",
-  "lema": "Probamos las herramientas de IA por ti y te decimos cuál usar, cómo y cuánto cuesta.",
+  "lema": "Comparamos las herramientas de IA por ti y te decimos cuál usar, cómo y cuánto cuesta.",
   "url": "http://localhost:4321",
   "idioma": "es",
   "autor": "Equipo Herramientas IA",
   "newsletter": {
     "nombre": "La IA de la semana",
     "descripcion": "Cada semana, las herramientas de IA que merecen la pena, con tutoriales y plantillas gratis.",
-    "urlSuscripcion": ""
+    "urlSuscripcion": "",
+    "urlEmbed": ""
   },
   "categorias": {
     "automatizacion": "Automatización",
@@ -15,5 +16,27 @@
     "voz-video": "Voz y vídeo con IA",
     "seo-escritura": "SEO y escritura con IA",
     "web-hosting": "Webs y hosting"
-  }
+  },
+  "contacto": {
+    "email": "",
+    "urlFormulario": ""
+  },
+  "menu": [
+    [
+      "/que-herramienta-necesito/",
+      "¿Qué herramienta necesito?"
+    ],
+    [
+      "/herramientas/",
+      "Herramientas"
+    ],
+    [
+      "/recursos/",
+      "Recursos gratis"
+    ],
+    [
+      "/servicios/",
+      "Servicios"
+    ]
+  ]
 }

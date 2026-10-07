@@ -75,3 +75,31 @@ table.comparativa { border-collapse: collapse; width: 100%; margin: 16px 0; font
 .enlace-bio { display: block; padding: 14px 18px; border: 1.5px solid var(--borde); border-radius: var(--radio); background: var(--superficie); color: var(--texto); text-decoration: none; font-weight: 600; }
 .enlace-bio:hover { border-color: var(--acento); color: var(--acento); }
 .enlace-bio.destacado { background: var(--acento); color: var(--acento-texto); border-color: var(--acento); }
+.entradilla { font-size: 1.12rem; color: var(--suave); max-width: 62ch; }
+.seccion { font-size: 1.25rem; margin-top: 40px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+.chip { display: flex; flex-direction: column; padding: 10px 14px; border: 1px solid var(--borde); border-radius: var(--radio); background: var(--superficie); color: var(--texto); text-decoration: none; font-size: .9rem; }
+.chip span { color: var(--suave); font-size: .82rem; }
+.chip:hover { border-color: var(--acento); }
+.migas { font-size: .85rem; color: var(--suave); margin-bottom: 16px; }
+.migas a { color: var(--suave); }
+.mini-fichas { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.mini-ficha { border: 1px solid var(--borde); border-radius: var(--radio); padding: 12px 14px; background: var(--superficie); display: flex; flex-direction: column; gap: 4px; }
+.mini-ficha span { color: var(--suave); font-size: .85rem; }
+.mini-ficha p { margin: 6px 0 0; font-size: .9rem; }
+.relacionados { margin-top: 40px; }
+.ficha-datos th { width: 130px; color: var(--suave); font-weight: 600; }
+.pros-contras { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.pros-contras > div { border: 1px solid var(--borde); border-radius: var(--radio); padding: 4px 18px 8px; background: var(--superficie); }
+.pros-contras h2 { font-size: 1.05rem; }
+.test fieldset { border: 1px solid var(--borde); border-radius: var(--radio); margin: 0 0 16px; padding: 12px 16px; background: var(--superficie); }
+.test legend { font-weight: 600; padding: 0 6px; }
+.opcion { display: block; padding: 6px 0; cursor: pointer; }
+.test .boton { border: 0; font: inherit; font-weight: 600; cursor: pointer; }
+.principal { border: 2px solid var(--acento); }
+.embed-newsletter { width: 100%; min-height: 320px; border: 0; }
+.pie-cats a { color: var(--suave); }
+.cuerpo code { background: var(--superficie); border: 1px solid var(--borde); border-radius: 6px; padding: 1px 5px; font-size: .9em; white-space: pre-wrap; }
+.cuerpo blockquote { border-left: 3px solid var(--acento); margin: 16px 0; padding: 2px 16px; color: var(--suave); }
+.cuerpo table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+.cuerpo th, .cuerpo td { border-bottom: 1px solid var(--borde); padding: 8px 10px; text-align: left; vertical-align: top; }

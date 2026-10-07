@@ -2,7 +2,7 @@
 
 Web estática en español que compara herramientas de IA y software y monetiza con enlaces de afiliado. Un pipeline diario detecta ideas, redacta borradores con la API gratuita de Gemini y abre un pull request para que solo tengas que revisar y publicar.
 
-Coste: 0 €. Hosting en Cloudflare Pages, automatización en GitHub Actions, redacción con Gemini (plan gratuito).
+Coste: 0 €. Hosting en Vercel (o Cloudflare Pages), automatización en GitHub Actions, redacción con Gemini (plan gratuito).
 
 ## Cómo funciona
 
@@ -11,6 +11,9 @@ Coste: 0 €. Hosting en Cloudflare Pages, automatización en GitHub Actions, re
 | Catálogo de afiliados | `data/afiliados.json` | Una entrada por herramienta. Pega tu enlace en `urlAfiliado` y toda la web lo usa. |
 | Artículos | `content/articulos/*.md` | Markdown con frontmatter. Solo se publican los que tienen `estado: publicado`. |
 | Web | `scripts/build.mjs` | Genera `dist/`: portada, categorías, artículos, directorio, páginas legales, sitemap, RSS y redirecciones `/ir/<herramienta>/`. |
+| Fichas de herramientas | `/herramientas/<slug>/` | Precio, plan gratis, pros, contras y alternativas de cada herramienta (datos en `ficha` de `data/afiliados.json`). |
+| Test | `/que-herramienta-necesito/` | 3 preguntas y recomienda 2 herramientas con su enlace de afiliado. |
+| Páginas de negocio | `content/paginas/*.md` | Recursos gratis (imán de suscriptores), Servicios y Patrocina. Admiten `{{newsletter}}` y `{{contacto}}`. |
 | Detector | `scripts/detectar.mjs` | Lee los feeds de `data/fuentes.json` y el catálogo, y guarda ideas priorizadas en `data/ideas.json`. |
 | Redactor | `scripts/redactar.mjs` | Convierte las mejores ideas en borradores con Gemini. |
 | Redes sociales | `scripts/redes.mjs` | Crea en `social/<artículo>/` 3 guiones de clips verticales y los textos para X, LinkedIn, Instagram y Pinterest, con enlaces UTM. |
@@ -58,8 +61,9 @@ npm run redes -- --articulo make-vs-n8n --simular
 3. **Dirección:** en Vercel se usa sola la dirección de producción del proyecto. En otro hosting, o con dominio propio, define la variable `SITIO_URL` (por ejemplo `https://midominio.com`) o cambia `url` en `data/sitio.json`.
 4. **IA:** crea una clave gratuita en [Google AI Studio](https://aistudio.google.com/apikey) y guárdala en GitHub → Settings → Secrets and variables → Actions como `GEMINI_API_KEY`. Opcional: variable `GEMINI_MODEL` para cambiar el modelo.
 5. **Pull requests automáticos:** en GitHub → Settings → Actions → General, activa "Allow GitHub Actions to create and approve pull requests".
-6. **Afiliados:** date de alta en cada programa (`npm run enlaces` muestra la lista) y pega tus enlaces en `data/afiliados.json`.
-7. **Newsletter:** crea la publicación en beehiiv y pega su enlace de suscripción en `newsletter.urlSuscripcion` de `data/sitio.json`.
+6. **Afiliados:** date de alta en cada programa siguiendo [ALTAS-AFILIADOS.md](ALTAS-AFILIADOS.md) y pega tus enlaces en `data/afiliados.json`.
+7. **Newsletter:** crea la publicación en beehiiv o Kit y pega su enlace de suscripción en `newsletter.urlSuscripcion` (o el formulario incrustado en `urlEmbed`) de `data/sitio.json`.
+8. **Contacto para servicios y patrocinios:** pon tu email o un formulario gratis en `contacto` de `data/sitio.json`.
 
 ## Publicar un artículo
 

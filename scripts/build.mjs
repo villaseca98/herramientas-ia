@@ -8,8 +8,17 @@ import {
   destinoAfiliado, escaparHtml, separarFrontmatter,
 } from './lib/contenido.mjs';
 import {
-  paginaInicio, paginaCategoria, paginaArticulo, paginaHerramientas, paginaLegal, pagina404, paginaEnlaces,
+  paginaInicio, paginaCategoria, paginaArticulo, paginaHerramientas, paginaHerramienta, paginaEstatica,
+  pagina404, paginaEnlaces, paginaTest, formularioNewsletter, rutaFicha,
 } from './lib/plantillas.mjs';
+
+// Bloque de contacto para páginas de servicios: solo aparece si hay email o formulario en data/sitio.json.
+function bloqueContacto(sitio) {
+  const { email, urlFormulario } = sitio.contacto ?? {};
+  if (urlFormulario) return `<p><a class="boton" href="${escaparHtml(urlFormulario)}" target="_blank" rel="noopener">Pedir presupuesto gratis</a></p>`;
+  if (email) return `<p><a class="boton" href="mailto:${escaparHtml(email)}">Escríbenos: ${escaparHtml(email)}</a></p>`;
+  return '<p class="nota">Pronto abriremos el formulario de contacto. Mientras, suscríbete a la newsletter y responde al primer correo.</p>';
+}
 
 export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist') } = {}) {
   const sitio = cargarSitio();
@@ -27,25 +36,39 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   if (existsSync(join(RAIZ, 'public'))) cpSync(join(RAIZ, 'public'), salida, { recursive: true });
   escribir('estilos.css', readFileSync(join(RAIZ, 'src', 'estilos', 'sitio.css')));
 
-  escribir('index.html', paginaInicio(sitio, articulos));
+  escribir('index.html', paginaInicio(sitio, articulos, afiliados));
   for (const slug of Object.keys(sitio.categorias)) {
-    escribir(`categoria/${slug}/index.html`, paginaCategoria(sitio, slug, articulos.filter((a) => a.categoria === slug)));
+    escribir(`categoria/${slug}/index.html`, paginaCategoria(sitio, slug, articulos.filter((a) => a.categoria === slug), afiliados));
   }
   for (const art of articulos) {
-    escribir(`${art.slug}/index.html`, paginaArticulo(sitio, art, renderizarMarkdown(art.cuerpo, afiliados), afiliados));
+    escribir(`${art.slug}/index.html`, paginaArticulo(sitio, art, renderizarMarkdown(art.cuerpo, afiliados), afiliados, articulos));
   }
   escribir('herramientas/index.html', paginaHerramientas(sitio, afiliados));
+  const fichas = [];
+  for (const a of afiliados.values()) {
+    if (!a.ficha) continue;
+    fichas.push(rutaFicha(a.slug));
+    escribir(`${rutaFicha(a.slug).slice(1)}index.html`, paginaHerramienta(sitio, a, afiliados, articulos));
+  }
+  escribir('que-herramienta-necesito/index.html', paginaTest(sitio, afiliados));
   escribir('enlaces/index.html', paginaEnlaces(sitio, articulos));
   escribir('404.html', pagina404(sitio));
 
-  const dirLegal = join(RAIZ, 'content', 'legal');
-  const legales = [];
-  for (const nombre of readdirSync(dirLegal).filter((n) => n.endsWith('.md'))) {
-    const { datos, cuerpo } = separarFrontmatter(readFileSync(join(dirLegal, nombre), 'utf8'));
-    const ruta = `/${nombre.replace(/\.md$/, '')}/`;
-    legales.push(ruta);
-    const html = renderizarMarkdown(cuerpo.replaceAll('{{sitio}}', sitio.nombre).replaceAll('{{url}}', sitio.url), afiliados);
-    escribir(`${ruta.slice(1)}index.html`, paginaLegal(sitio, { ruta, titulo: datos.titulo, html }));
+  // Páginas estáticas: legales (content/legal) y de negocio (content/paginas: recursos, servicios, patrocina...).
+  const estaticas = [];
+  for (const dir of ['legal', 'paginas']) {
+    const carpeta = join(RAIZ, 'content', dir);
+    if (!existsSync(carpeta)) continue;
+    for (const nombre of readdirSync(carpeta).filter((n) => n.endsWith('.md'))) {
+      const { datos, cuerpo } = separarFrontmatter(readFileSync(join(carpeta, nombre), 'utf8'));
+      const ruta = `/${nombre.replace(/\.md$/, '')}/`;
+      if (dir === 'paginas') estaticas.push(ruta);
+      const md = cuerpo.replaceAll('{{sitio}}', sitio.nombre).replaceAll('{{url}}', sitio.url);
+      const html = renderizarMarkdown(md, afiliados)
+        .replaceAll(/<p>\{\{newsletter\}\}<\/p>|\{\{newsletter\}\}/g, formularioNewsletter(sitio))
+        .replaceAll(/<p>\{\{contacto\}\}<\/p>|\{\{contacto\}\}/g, bloqueContacto(sitio));
+      escribir(`${ruta.slice(1)}index.html`, paginaEstatica(sitio, { ruta, titulo: datos.titulo, descripcion: datos.descripcion, html }));
+    }
   }
 
   // Redirecciones de afiliado: /ir/<slug>/ -> URL de afiliado (o la oficial si aún no hay).
@@ -58,7 +81,7 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   }
   escribir('_redirects', `${redirecciones.join('\n')}\n`);
 
-  const urls = ['/', '/herramientas/', ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...legales];
+  const urls = ['/', '/herramientas/', '/que-herramienta-necesito/', ...fichas, ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...estaticas];
   const entradas = [
     ...urls.map((u) => ({ loc: new URL(u, sitio.url).href })),
     ...articulos.filter((a) => a.estado === 'publicado').map((a) => ({ loc: new URL(`/${a.slug}/`, sitio.url).href, lastmod: a.actualizado ?? a.fecha })),

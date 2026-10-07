@@ -6,8 +6,36 @@
     "resumen": "Embudos, email, cursos y web en una sola herramienta, con plan gratuito.",
     "urlOficial": "https://systeme.io",
     "urlAfiliado": "",
-    "palabrasClave": ["systeme", "funnel", "embudo", "sales funnel", "course platform"],
-    "programa": { "comision": "60%", "duracion": "De por vida", "cookie": "De por vida", "url": "https://systeme.io/affiliate-program" }
+    "palabrasClave": [
+      "systeme",
+      "funnel",
+      "embudo",
+      "sales funnel",
+      "course platform"
+    ],
+    "programa": {
+      "comision": "60%",
+      "duracion": "De por vida",
+      "cookie": "De por vida",
+      "url": "https://systeme.io/affiliate-program"
+    },
+    "ficha": {
+      "precioDesde": "0 $ (gratis); de pago desde 17 $/mes",
+      "planGratis": "Sí: 2.000 contactos, 3 embudos, 1 curso y emails ilimitados, sin tarjeta y sin caducidad",
+      "paraQuien": "Emprendedores que quieren vender un curso, un producto digital o servicios con embudo y email en una sola herramienta.",
+      "pros": [
+        "Plan gratis muy generoso y sin fecha de caducidad",
+        "Embudos, email, cursos, web y afiliados propios en un solo panel",
+        "0% de comisión por transacción en todos los planes"
+      ],
+      "contras": [
+        "El diseño de las páginas es más básico que en un creador web dedicado",
+        "Menos integraciones que las herramientas especializadas"
+      ],
+      "precios": "Startup 17 $/mes (5.000 contactos); Webinar 47 $/mes; Unlimited 97 $/mes",
+      "urlPrecios": "https://systeme.io/pricing",
+      "verificado": "2026-10-06"
+    }
   },
   {
     "slug": "beehiiv",
@@ -16,8 +44,34 @@
     "resumen": "Plataforma de newsletters con web incluida y gratis hasta 2.500 suscriptores.",
     "urlOficial": "https://www.beehiiv.com",
     "urlAfiliado": "",
-    "palabrasClave": ["beehiiv", "newsletter", "substack"],
-    "programa": { "comision": "50% a 60%", "duracion": "12 meses", "cookie": "60 días", "url": "https://www.beehiiv.com/partners" }
+    "palabrasClave": [
+      "beehiiv",
+      "newsletter",
+      "substack"
+    ],
+    "programa": {
+      "comision": "50% a 60%",
+      "duracion": "12 meses",
+      "cookie": "60 días",
+      "url": "https://www.beehiiv.com/partners"
+    },
+    "ficha": {
+      "precioDesde": "0 $ (gratis); de pago desde 49 $/mes",
+      "planGratis": "Sí: hasta 2.500 suscriptores, envíos ilimitados, web y landing pages",
+      "paraQuien": "Creadores que quieren lanzar y monetizar una newsletter.",
+      "pros": [
+        "Envíos ilimitados también en el plan gratis",
+        "Web de la newsletter incluida",
+        "Red de recomendaciones para crecer y red de anuncios en planes de pago"
+      ],
+      "contras": [
+        "El plan gratis no permite quitar la marca de beehiiv",
+        "Salto de precio grande al pasar de 2.500 suscriptores"
+      ],
+      "precios": "Lite 49 $/mes; Pro 95 $/mes; Enterprise a medida",
+      "urlPrecios": "https://www.beehiiv.com/pricing",
+      "verificado": "2026-10-06"
+    }
   },
   {
     "slug": "getresponse",
@@ -26,8 +80,35 @@
     "resumen": "Email marketing, automatizaciones y webinars.",
     "urlOficial": "https://www.getresponse.com",
     "urlAfiliado": "",
-    "palabrasClave": ["getresponse", "email marketing", "autoresponder", "webinar"],
-    "programa": { "comision": "40% a 60%", "duracion": "12 meses", "cookie": "90 días", "url": "https://www.getresponse.com/affiliate-programs" }
+    "palabrasClave": [
+      "getresponse",
+      "email marketing",
+      "autoresponder",
+      "webinar"
+    ],
+    "programa": {
+      "comision": "40% a 60%",
+      "duracion": "12 meses",
+      "cookie": "90 días",
+      "url": "https://www.getresponse.com/affiliate-programs"
+    },
+    "ficha": {
+      "precioDesde": "19 $/mes (15,58 $/mes en pago anual)",
+      "planGratis": "No hay plan gratis permanente; ofrece prueba gratuita",
+      "paraQuien": "Negocios que necesitan automatizaciones de email, landing pages y webinars.",
+      "pros": [
+        "Automatizaciones y segmentación avanzadas",
+        "Landing pages y formularios incluidos",
+        "Webinars en los planes superiores"
+      ],
+      "contras": [
+        "Sin plan gratis permanente",
+        "Los planes con más funciones suben rápido de precio"
+      ],
+      "precios": "Starter 19 $/mes; Marketer 59 $/mes; Creator 69 $/mes (1.000 contactos, mensual)",
+      "urlPrecios": "https://www.getresponse.com/pricing",
+      "verificado": "2026-10-06"
+    }
   },
   {
     "slug": "kit",
@@ -36,8 +117,34 @@
     "resumen": "Email marketing pensado para creadores.",
     "urlOficial": "https://kit.com",
     "urlAfiliado": "",
-    "palabrasClave": ["kit.com", "convertkit", "creator email"],
-    "programa": { "comision": "50%, luego 10% a 20%", "duracion": "12 meses + recurrente por nivel", "cookie": "No indicado", "url": "https://kit.com/affiliate" }
+    "palabrasClave": [
+      "kit.com",
+      "convertkit",
+      "creator email"
+    ],
+    "programa": {
+      "comision": "50%, luego 10% a 20%",
+      "duracion": "12 meses + recurrente por nivel",
+      "cookie": "No indicado",
+      "url": "https://kit.com/affiliate"
+    },
+    "ficha": {
+      "precioDesde": "0 $ (gratis); de pago desde 33 $/mes",
+      "planGratis": "Sí: hasta 10.000 suscriptores, landing pages y formularios ilimitados",
+      "paraQuien": "Creadores (cursos, podcasts, YouTube) que venden productos digitales a su lista.",
+      "pros": [
+        "Plan gratis de hasta 10.000 suscriptores",
+        "Venta de productos digitales y suscripciones",
+        "Pensado para creadores, fácil de usar"
+      ],
+      "contras": [
+        "Las automatizaciones avanzadas requieren plan de pago",
+        "Plantillas de email sencillas"
+      ],
+      "precios": "Creator 33 $/mes; Pro 66 $/mes (desde 1.000 suscriptores)",
+      "urlPrecios": "https://kit.com/pricing",
+      "verificado": "2026-10-06"
+    }
   },
   {
     "slug": "make",
@@ -46,8 +153,36 @@
     "resumen": "Automatización visual sin código; plan gratis de 1.000 créditos al mes.",
     "urlOficial": "https://www.make.com",
     "urlAfiliado": "",
-    "palabrasClave": ["make.com", "integromat", "no-code automation", "automatización", "zapier"],
-    "programa": { "comision": "35%", "duracion": "12 meses", "cookie": "30 días", "url": "https://www.make.com/en/affiliate" }
+    "palabrasClave": [
+      "make.com",
+      "integromat",
+      "no-code automation",
+      "automatización",
+      "zapier"
+    ],
+    "programa": {
+      "comision": "35%",
+      "duracion": "12 meses",
+      "cookie": "30 días",
+      "url": "https://www.make.com/en/affiliate"
+    },
+    "ficha": {
+      "precioDesde": "0 $ (gratis); de pago desde 12 $/mes",
+      "planGratis": "Sí: 1.000 créditos al mes, 2 escenarios activos, cada 15 minutos",
+      "paraQuien": "Quien quiere automatizar tareas entre aplicaciones sin programar.",
+      "pros": [
+        "Editor visual muy claro",
+        "Más de 3.000 aplicaciones conectables",
+        "Precio de entrada bajo"
+      ],
+      "contras": [
+        "El plan gratis solo permite 2 escenarios activos",
+        "Los créditos se gastan rápido en flujos con muchos pasos"
+      ],
+      "precios": "Core 12 $/mes; Pro 21 $/mes; Teams 38 $/mes (10.000 créditos, mensual)",
+      "urlPrecios": "https://www.make.com/en/pricing",
+      "verificado": "2026-10-06"
+    }
   },
   {
     "slug": "n8n",
@@ -56,8 +191,34 @@
     "resumen": "Automatización con agentes de IA, de código abierto o en la nube.",
     "urlOficial": "https://n8n.io",
     "urlAfiliado": "",
-    "palabrasClave": ["n8n", "ai agent", "agentes de ia"],
-    "programa": { "comision": "30%", "duracion": "12 meses", "cookie": "No indicado", "url": "https://n8n.io/affiliates/" }
+    "palabrasClave": [
+      "n8n",
+      "ai agent",
+      "agentes de ia"
+    ],
+    "programa": {
+      "comision": "30%",
+      "duracion": "12 meses",
+      "cookie": "No indicado",
+      "url": "https://n8n.io/affiliates/"
+    },
+    "ficha": {
+      "precioDesde": "Gratis instalado en tu servidor; nube desde 20 €/mes",
+      "planGratis": "Edición Community gratis (autoalojada); prueba gratis en la nube con 1.000 ejecuciones",
+      "paraQuien": "Perfiles algo técnicos que quieren agentes de IA y flujos complejos.",
+      "pros": [
+        "Código abierto y gratis si lo alojas tú",
+        "Muy potente para agentes de IA",
+        "Se paga por ejecución, no por paso"
+      ],
+      "contras": [
+        "Curva de aprendizaje mayor que Make",
+        "Alojarlo tú requiere mantener un servidor"
+      ],
+      "precios": "Starter 20 €/mes (2.500 ejecuciones); Pro 50 €/mes (10.000 ejecuciones)",
+      "urlPrecios": "https://n8n.io/pricing/",
+      "verificado": "2026-10-06"
+    }
   },
   {
     "slug": "elevenlabs",
@@ -66,8 +227,38 @@
     "resumen": "Voces realistas con IA, doblaje y agentes de voz.",
     "urlOficial": "https://elevenlabs.io",
     "urlAfiliado": "",
-    "palabrasClave": ["elevenlabs", "eleven labs", "text to speech", "text-to-speech", "voz con ia", "ai voice", "dubbing"],
-    "programa": { "comision": "22%", "duracion": "12 meses", "cookie": "No indicado", "url": "https://elevenlabs.io/affiliates" }
+    "palabrasClave": [
+      "elevenlabs",
+      "eleven labs",
+      "text to speech",
+      "text-to-speech",
+      "voz con ia",
+      "ai voice",
+      "dubbing"
+    ],
+    "programa": {
+      "comision": "22%",
+      "duracion": "12 meses",
+      "cookie": "No indicado",
+      "url": "https://elevenlabs.io/affiliates"
+    },
+    "ficha": {
+      "precioDesde": "0 $ (gratis); Creator 11 $/mes",
+      "planGratis": "Sí: 10.000 créditos al mes, sin uso comercial",
+      "paraQuien": "Creadores de vídeo, podcast y formación que necesitan voces realistas o doblaje.",
+      "pros": [
+        "Voces muy naturales en español",
+        "Clonación de voz desde los planes de entrada",
+        "Doblaje y efectos de sonido"
+      ],
+      "contras": [
+        "El plan gratis no permite uso comercial",
+        "Los créditos se consumen rápido en textos largos"
+      ],
+      "precios": "Creator 11 $/mes (121.000 créditos); Pro 99 $/mes (600.000 créditos)",
+      "urlPrecios": "https://elevenlabs.io/pricing",
+      "verificado": "2026-10-06"
+    }
   },
   {
     "slug": "heygen",
@@ -76,8 +267,35 @@
     "resumen": "Avatares y vídeos con IA a partir de texto.",
     "urlOficial": "https://www.heygen.com",
     "urlAfiliado": "",
-    "palabrasClave": ["heygen", "avatar", "ai video", "video generator"],
-    "programa": { "comision": "35%", "duracion": "3 meses", "cookie": "30 días", "url": "https://www.heygen.com/affiliate-program" }
+    "palabrasClave": [
+      "heygen",
+      "avatar",
+      "ai video",
+      "video generator"
+    ],
+    "programa": {
+      "comision": "35%",
+      "duracion": "3 meses",
+      "cookie": "30 días",
+      "url": "https://www.heygen.com/affiliate-program"
+    },
+    "ficha": {
+      "precioDesde": "0 $ (gratis); de pago desde 29 $/mes",
+      "planGratis": "Sí: 3 vídeos al mes de hasta 1 minuto, con marca de agua",
+      "paraQuien": "Quien quiere crear vídeos con un avatar sin ponerse delante de la cámara.",
+      "pros": [
+        "Avatares realistas y más de 175 idiomas en pago",
+        "Clonación de voz y traducción de vídeo",
+        "Exporta en 1080p o 4K según plan"
+      ],
+      "contras": [
+        "El plan gratis lleva marca de agua y solo 1 minuto",
+        "Los créditos limitan el volumen de vídeos"
+      ],
+      "precios": "Creator 29 $/mes (24 $ anual); Pro 49 $/mes (41 $ anual)",
+      "urlPrecios": "https://www.heygen.com/pricing",
+      "verificado": "2026-10-06"
+    }
   },
   {
     "slug": "surfer",
@@ -86,8 +304,34 @@
     "resumen": "Optimización SEO de contenido con IA.",
     "urlOficial": "https://surferseo.com",
     "urlAfiliado": "",
-    "palabrasClave": ["surfer", "seo content", "content optimization"],
-    "programa": { "comision": "75% a 125% del primer mes", "duracion": "Solo primer pago", "cookie": "90 días", "url": "https://surferseo.com/affiliate-program/" }
+    "palabrasClave": [
+      "surfer",
+      "seo content",
+      "content optimization"
+    ],
+    "programa": {
+      "comision": "75% a 125% del primer mes",
+      "duracion": "Solo primer pago",
+      "cookie": "90 días",
+      "url": "https://surferseo.com/affiliate-program/"
+    },
+    "ficha": {
+      "precioDesde": "49 $/mes (pago anual)",
+      "planGratis": "No; tiene herramientas gratuitas como la extensión Keyword Surfer",
+      "paraQuien": "Blogs y agencias que quieren posicionar artículos en Google y en buscadores con IA.",
+      "pros": [
+        "Guías de optimización por artículo",
+        "Seguimiento de visibilidad en buscadores con IA",
+        "Integración con Google Docs y WordPress"
+      ],
+      "contras": [
+        "Sin plan gratis",
+        "Precio alto para quien empieza"
+      ],
+      "precios": "Discovery 49 $/mes; Standard 99 $/mes; Pro 182 $/mes (pago anual)",
+      "urlPrecios": "https://surferseo.com/pricing/",
+      "verificado": "2026-10-06"
+    }
   },
   {
     "slug": "semrush",
@@ -96,8 +340,35 @@
     "resumen": "Suite de SEO, palabras clave y competencia.",
     "urlOficial": "https://www.semrush.com",
     "urlAfiliado": "",
-    "palabrasClave": ["semrush", "keyword research", "seo tool", "backlinks"],
-    "programa": { "comision": "100 $ a 450 $ por venta + 10 $ por prueba", "duracion": "Pago único", "cookie": "120 días", "url": "https://www.semrush.com/lp/affiliate-program/en/" }
+    "palabrasClave": [
+      "semrush",
+      "keyword research",
+      "seo tool",
+      "backlinks"
+    ],
+    "programa": {
+      "comision": "100 $ a 450 $ por venta + 10 $ por prueba",
+      "duracion": "Pago único",
+      "cookie": "120 días",
+      "url": "https://www.semrush.com/lp/affiliate-program/en/"
+    },
+    "ficha": {
+      "precioDesde": "117,33 $/mes (pago anual)",
+      "planGratis": "Cuenta gratis con 10 informes al día y prueba de 7 días",
+      "paraQuien": "Negocios y agencias que necesitan investigar palabras clave y competencia.",
+      "pros": [
+        "Base de datos de palabras clave muy completa",
+        "Análisis de la competencia y enlaces",
+        "Seguimiento de posiciones y de visibilidad en IA"
+      ],
+      "contras": [
+        "Caro para empezar",
+        "Demasiadas funciones si solo tienes un blog pequeño"
+      ],
+      "precios": "SEO 117,33 $/mes; Starter 165,17 $/mes; Pro+ 248,17 $/mes (pago anual)",
+      "urlPrecios": "https://www.semrush.com/prices/",
+      "verificado": "2026-10-06"
+    }
   },
   {
     "slug": "hostinger",
@@ -106,7 +377,34 @@
     "resumen": "Hosting y creador de webs con IA.",
     "urlOficial": "https://www.hostinger.com",
     "urlAfiliado": "",
-    "palabrasClave": ["hostinger", "hosting", "website builder", "wordpress"],
-    "programa": { "comision": "Desde 40%", "duracion": "Por venta", "cookie": "No indicado", "url": "https://www.hostinger.com/affiliates" }
+    "palabrasClave": [
+      "hostinger",
+      "hosting",
+      "website builder",
+      "wordpress"
+    ],
+    "programa": {
+      "comision": "Desde 40%",
+      "duracion": "Por venta",
+      "cookie": "No indicado",
+      "url": "https://www.hostinger.com/affiliates"
+    },
+    "ficha": {
+      "precioDesde": "2,99 $/mes (promoción a 48 meses)",
+      "planGratis": "No; garantía de devolución de 30 días",
+      "paraQuien": "Quien quiere su propia web o WordPress barato con dominio incluido.",
+      "pros": [
+        "Precio de entrada muy bajo",
+        "Dominio gratis el primer año",
+        "Garantía de 30 días"
+      ],
+      "contras": [
+        "La renovación cuesta bastante más (10,99 $/mes en Premium)",
+        "El precio bajo exige pagar 48 meses por adelantado"
+      ],
+      "precios": "Premium 2,99 $/mes (renueva a 10,99 $); Unlimited 3,99 $/mes (renueva a 16,99 $)",
+      "urlPrecios": "https://www.hostinger.com/pricing",
+      "verificado": "2026-10-06"
+    }
   }
 ]
