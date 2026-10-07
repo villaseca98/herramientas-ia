@@ -15,6 +15,9 @@ Ordenadas por lo que más puede pagar con poco tráfico. Datos comprobados en ca
 | 9 | HeyGen | 35% | 3 meses | 30 días | https://www.heygen.com/affiliate-program |
 | 10 | n8n | 30% | 12 meses | No indicado | https://n8n.io/affiliates/ |
 | 11 | ElevenLabs | 22% | 12 meses | No indicado | https://elevenlabs.io/affiliates |
+| 12 | Tally | 20% (hasta 150 $ por cliente) | Mientras pague | No indicado | https://tally.so/help/referral-program |
+| 13 | MailerLite | ~30% recurrente (confirmar) | Mientras pague | No indicado | Web de MailerLite, apartado afiliados |
+| 14 | Brevo | Fija por alta y por cliente de pago | Por conversión | 90 días | https://www.brevo.com/partners/affiliates/ |
 
 ## Cómo activar cada enlace
 
@@ -23,6 +26,10 @@ Ordenadas por lo que más puede pagar con poco tráfico. Datos comprobados en ca
 3. Pégalo en `urlAfiliado` de esa herramienta en `data/afiliados.json` y sube el cambio.
 
 Mientras `urlAfiliado` esté vacío, los botones llevan a la web oficial sin comisión, así que nada se rompe.
+
+## Contactar con las empresas
+
+Plantillas de email para pedir cupones, mejores comisiones y vender espacios de anuncio en `CONTACTO-EMPRESAS.md`.
 
 ## Extra recomendado
 

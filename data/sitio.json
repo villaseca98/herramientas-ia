@@ -3,7 +3,12 @@
   "lema": "Mismo trabajo, menos factura. Descubre cuánto pagas de más en software y a qué cambiarte.",
   "url": "http://localhost:4321",
   "idioma": "es",
-  "autor": "Equipo Recorta",
+  "autor": {
+    "nombre": "",
+    "rol": "Programador y creador de Recorta",
+    "foto": "",
+    "historia": ""
+  },
   "newsletter": {
     "nombre": "El Recorte",
     "descripcion": "Una vez por semana: un recorte de software concreto con su ahorro en euros, chollos de por vida y cambios de precio de las herramientas que pagas.",
@@ -31,16 +36,66 @@
       "Alternativas"
     ],
     [
-      "/herramientas/",
-      "Herramientas"
+      "/#por-que",
+      "Por qué yo"
     ],
     [
       "/guias/",
       "Guías"
     ],
     [
-      "/servicios/",
-      "Empresas"
+      "/precios/",
+      "Servicios"
     ]
-  ]
+  ],
+  "productos": [
+    {
+      "id": "migracion-gratis",
+      "nombre": "Te lo migro gratis",
+      "precio": "0 €",
+      "pago": "si te das de alta con mi enlace",
+      "resumen": "Te cambias a la alternativa desde mi enlace y yo, que soy programador, te paso todo: contactos, cursos, embudos y automatizaciones. La herramienta me paga una comisión por tu alta, así que tu migración la paga ella.",
+      "incluye": [
+        "Migración de contactos, productos y páginas",
+        "Hasta 5 automatizaciones rehechas en Make o n8n",
+        "Lo dejo funcionando antes de que canceles la herramienta cara",
+        "Tú pagas lo mismo que si te dieras de alta por tu cuenta"
+      ],
+      "urlPago": "/migracion-gratis/",
+      "destacado": true
+    },
+    {
+      "id": "migracion",
+      "nombre": "Migración a medida",
+      "precio": "desde 149 €",
+      "pago": "para flujos grandes",
+      "resumen": "Para equipos con muchos flujos, integraciones propias o herramientas sin programa de afiliados. Te lo presupuesto según lo que haya que mover.",
+      "incluye": [
+        "Flujos complejos, APIs e integraciones propias",
+        "Migración de datos con scripts, sin copiar a mano",
+        "Pruebas en paralelo antes del cambio"
+      ],
+      "urlPago": "",
+      "destacado": false
+    },
+    {
+      "id": "auditoria",
+      "nombre": "Auditoría para empresas",
+      "precio": "desde 390 €",
+      "pago": "por equipo",
+      "resumen": "Inventario de todo el software del equipo, licencias sin uso, duplicidades y un plan de recorte priorizado por ahorro.",
+      "incluye": [
+        "Inventario y coste real anual de todo el stack",
+        "Licencias sin uso y herramientas duplicadas",
+        "Plan priorizado por ahorro con calendario de migración"
+      ],
+      "urlPago": "",
+      "destacado": false
+    }
+  ],
+  "anuncios": {
+    "adsenseCliente": "",
+    "adsenseHueco": "",
+    "precioPatrocinio": "49 €/mes"
+  }
 }

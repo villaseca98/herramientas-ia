@@ -12,16 +12,18 @@ export function ahorroMaximo(herramienta) {
   return alt ? Math.max(0, herramienta.precioMes - alt.precioMes) : 0;
 }
 
-export function calcularRecorte(slugs, stack) {
+// precios: { slug: lo que paga de verdad el usuario al mes } para sustituir el precio de referencia.
+export function calcularRecorte(slugs, stack, precios = {}) {
   const porSlug = new Map(stack.map((h) => [h.slug, h]));
   const lineas = [...new Set(slugs)]
     .map((s) => porSlug.get(s))
     .filter(Boolean)
     .map((h) => {
       const alternativa = mejorAlternativa(h);
-      return { herramienta: h, alternativa, ahorroMes: alternativa ? Math.max(0, h.precioMes - alternativa.precioMes) : 0 };
+      const pago = Number.isFinite(precios[h.slug]) && precios[h.slug] >= 0 ? precios[h.slug] : h.precioMes;
+      return { herramienta: h, pago, alternativa, ahorroMes: alternativa ? Math.max(0, pago - alternativa.precioMes) : 0 };
     });
-  const gastoMes = lineas.reduce((t, l) => t + l.herramienta.precioMes, 0);
+  const gastoMes = lineas.reduce((t, l) => t + l.pago, 0);
   const ahorroMes = lineas.reduce((t, l) => t + l.ahorroMes, 0);
   return {
     lineas,
