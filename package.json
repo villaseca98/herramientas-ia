@@ -20,6 +20,7 @@
   "dependencies": {
     "fast-xml-parser": "^5.0.0",
     "marked": "^16.0.0",
+    "pdfjs-dist": "^5.7.284",
     "yaml": "^2.8.0"
   }
 }
