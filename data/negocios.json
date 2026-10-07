@@ -1,0 +1,22 @@
+{
+  "verificado": "2026-10-07",
+  "precioReferenciaKwh": 0.117,
+  "fuentePrecio": { "texto": "Tarifa fija más barata para hogares a principios de octubre de 2026 (Xataka Home)", "url": "https://www.xatakahome.com/iluminacion-y-energia/tarifas-luz-baratas-para-empezar-octubre-2026-ahorrando-asi-queda-pvpc-respecto-a-mercado-libre" },
+  "reactiva": {
+    "precioCos80a95": 0.041554,
+    "precioCosMenor80": 0.062332,
+    "ejemplo": { "kvarh": 7379, "euros": 459.96 },
+    "fuente": { "texto": "Selectra: qué es la energía reactiva y cuánto cuesta", "url": "https://selectra.es/energia/empresas/energia-reactiva" }
+  },
+  "solar": {
+    "produccionKwhKwp": 1500,
+    "fuenteProduccion": { "texto": "Producción orientativa en España; calcula la de tu tejado exacto en PVGIS (Comisión Europea)", "url": "https://re.jrc.ec.europa.eu/pvg_tools/es/" },
+    "costeKwpPequena": 1500,
+    "costeKwpGrande": 1000,
+    "umbralGrandeKwp": 10,
+    "fuenteCoste": { "texto": "Precios de instalación 2026 de SotySolar: 4.000–9.000 € en vivienda y desde 26.000 € en empresas de 15–40 kW", "url": "https://sotysolar.es/placas-solares/instalacion/precio" },
+    "potenciaPanelKw": 0.45,
+    "vidaUtilAnos": 25,
+    "autoconsumoPorDefecto": { "negocio": 0.6, "comunidad": 0.5, "vivienda": 0.35 }
+  }
+}

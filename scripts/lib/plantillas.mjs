@@ -61,12 +61,20 @@ function migasDePan(sitio, migas) {
   return { html, jsonLd };
 }
 
+// Menú desplegable: grupos con enlaces y una línea de descripción (data/sitio.json, menu).
+export function menuHtml(grupos, rutaActual = '') {
+  return grupos.map((g, i) => {
+    const activo = g.enlaces.some((l) => l.ruta === rutaActual);
+    return `<div class="menu-grupo${activo ? ' activo' : ''}"><button type="button" aria-expanded="false" aria-controls="menu-panel-${i}">${e(g.titulo)}<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></button><div class="menu-panel" id="menu-panel-${i}">${g.enlaces.map((l) => `<a href="${e(l.ruta)}"${l.destacado ? ' class="menu-destacado"' : ''}${l.ruta === rutaActual ? ' aria-current="page"' : ''}><strong>${e(l.nombre)}</strong><span>${e(l.desc ?? '')}</span></a>`).join('')}</div></div>`;
+  }).join('');
+}
+
 export function pagina(sitio, { titulo, descripcion, ruta, contenido, tipoOg = 'website', jsonLd = [], noIndex = false, migas = null }) {
-  const tituloCompleto = ruta === '/' ? `${sitio.nombre}: calcula cuánto pagas de más en tus facturas` : `${titulo} | ${sitio.nombre}`;
+  const tituloCompleto = ruta === '/' ? `${sitio.nombre}: revisamos gratis la factura de luz de tu negocio` : `${titulo} | ${sitio.nombre}`;
   const canonica = new URL(ruta, sitio.url).href;
   const migasPan = migasDePan(sitio, migas);
   const grafo = [...(Array.isArray(jsonLd) ? jsonLd : [jsonLd]), migasPan.jsonLd].filter(Boolean);
-  const menu = (sitio.menu ?? []).map(([r, n]) => `<a href="${r}">${e(n)}</a>`).join('');
+  const menu = menuHtml(sitio.menu ?? [], ruta);
   return `<!doctype html>
 <html lang="${e(sitio.idioma)}">
 <head>
@@ -97,10 +105,23 @@ ${grafo.length ? `<script type="application/ld+json">${JSON.stringify({ '@contex
 <header class="cabecera">
   <div class="contenedor">
     <a class="marca" href="/" aria-label="${e(sitio.nombre)}, inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></svg><span>${e(sitio.nombre.toLowerCase())}</span></a>
-    <nav class="menu" aria-label="Principal">${menu}</nav>
-    <a class="boton boton-peq" href="/#calculadora">Calcula tu recorte</a>
+    <button class="menu-abrir" type="button" aria-expanded="false" aria-controls="menu-principal"><span class="sr">Menú</span><i></i><i></i><i></i></button>
+    <nav class="menu" id="menu-principal" aria-label="Principal">${menu}</nav>
+    <a class="boton boton-peq cabecera-cta" href="/revisar-factura/">Revisar mi factura</a>
   </div>
 </header>
+<script>
+(() => {
+  const nav = document.getElementById('menu-principal');
+  const abrir = document.querySelector('.menu-abrir');
+  const grupos = [...nav.querySelectorAll('.menu-grupo > button')];
+  const cerrar = (salvo) => grupos.forEach((b) => b !== salvo && b.setAttribute('aria-expanded', 'false'));
+  grupos.forEach((b) => b.addEventListener('click', (ev) => { ev.stopPropagation(); const a = b.getAttribute('aria-expanded') === 'true'; cerrar(b); b.setAttribute('aria-expanded', String(!a)); }));
+  abrir.addEventListener('click', () => { const a = abrir.getAttribute('aria-expanded') === 'true'; abrir.setAttribute('aria-expanded', String(!a)); nav.classList.toggle('abierto', !a); });
+  document.addEventListener('click', (ev) => { if (!nav.contains(ev.target)) cerrar(); });
+  document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape') cerrar(); });
+})();
+</script>
 <main class="contenedor">
 ${migasPan.html}
 ${contenido}
@@ -112,11 +133,11 @@ ${contenido}
         <p class="pie-marca">${e(sitio.nombre.toLowerCase())}<span>.</span></p>
         <p>${e(sitio.lema)}</p>
       </div>
-      <div><p class="pie-titulo">Recortar</p><a href="/#calculadora">Calculadora de facturas</a><a href="/bonos/">Bonos por cambiarte</a><a href="/software/">Calculadora de software</a><a href="/alternativas/">Alternativas</a><a href="/herramientas/">Fichas de herramientas</a><a href="/que-herramienta-necesito/">Test de herramientas</a></div>
-      <div><p class="pie-titulo">Aprender</p><a href="/guias/">Guías</a><a href="/recursos/">Recursos gratis</a><a href="/rss.xml">RSS</a></div>
-      <div><p class="pie-titulo">Negocio</p><a href="/precios/">Servicios y precios</a><a href="/servicios/">Auditoría para empresas</a><a href="/patrocina/">Patrocina</a><a href="/aviso-afiliados/">Aviso de afiliados</a><a href="/privacidad/">Privacidad</a><a href="/cookies/">Cookies</a></div>
+      <div><p class="pie-titulo">Negocios</p><a href="/revisar-factura/">Revisa tu factura gratis</a><a href="/negocios/">Ahorro en luz para negocios</a><a href="/negocios/energia-reactiva/">Energía reactiva</a><a href="/negocios/potencia-contratada/">Potencia contratada</a><a href="/negocios/tarifas-2-0td-3-0td-6-1td/">Tarifas eléctricas</a><a href="/negocios/bares-y-restaurantes/">Bares y restaurantes</a><a href="/negocios/comercios-y-talleres/">Comercios y talleres</a><a href="/negocios/comunidades-de-vecinos/">Comunidades de vecinos</a></div>
+      <div><p class="pie-titulo">Placas y hogar</p><a href="/placas-solares/">Simulador de placas</a><a href="/placas-solares/guia/">Guía de placas para empresas</a><a href="/placas-solares/comunidades/">Placas en comunidades</a><a href="/hogar/">Facturas de casa</a><a href="/bonos/">Bonos por cambiarte</a><a href="/software/">Software</a><a href="/guias/">Guías</a></div>
+      <div><p class="pie-titulo">Recorta</p><a href="/como-funciona/">Cómo funciona</a><a href="/profesionales/">Gestorías y administradores</a><a href="/instaladores/">Instaladores</a><a href="/patrocina/">Anúnciate</a><a href="/aviso-afiliados/">Aviso de afiliados</a><a href="/privacidad/">Privacidad</a><a href="/cookies/">Cookies</a></div>
     </div>
-    <p class="pie-legal">${e(sitio.nombre)} se financia con enlaces de afiliado: si te das de alta en una compañía o herramienta desde aquí podemos cobrar una comisión o un bono de plan amigo, sin coste extra para ti. Eso nunca cambia el orden de las opciones, que se ordenan por lo que te ahorras.</p>
+    <p class="pie-legal">${e(sitio.nombre)} se financia con enlaces de afiliado: si te das de alta en una compañía o herramienta desde aquí podemos cobrar una comisión o un bono de plan amigo, sin coste extra para ti. La revisión de tu factura es gratis y nunca te recomendamos un cambio que te haga pagar más.</p>
   </div>
 </footer>
 </body>

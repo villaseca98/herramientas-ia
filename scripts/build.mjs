@@ -11,6 +11,7 @@ import {
   paginaCategoria, paginaArticulo, paginaHerramientas, paginaHerramienta, paginaEstatica,
   pagina404, paginaEnlaces, paginaTest, formularioNewsletter, rutaFicha,
 } from './lib/plantillas.mjs';
+import { cargarNegocios, cargarGuias, paginaInicioNegocios, paginaHubNegocios, paginaRevisar, paginaPlacas, paginaGuia } from './lib/negocios.mjs';
 import { cargarFacturas, paginaHogar, paginaFactura, paginaBonos, redireccionesFacturas, rutaFactura } from './lib/facturas.mjs';
 import { cargarStack, paginaRecorta, paginaAlternativa, paginaAlternativas, paginaGuias, paginaPrecios, paginaMigracion, rutaAlternativa } from './lib/recorta.mjs';
 
@@ -28,6 +29,8 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   const articulos = cargarArticulos({ incluirBorradores });
   const stack = cargarStack(afiliados);
   const facturas = cargarFacturas();
+  const negocios = cargarNegocios();
+  const guias = cargarGuias();
 
   rmSync(salida, { recursive: true, force: true });
   mkdirSync(salida, { recursive: true });
@@ -41,8 +44,15 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   escribir('estilos.css', readFileSync(join(RAIZ, 'src', 'estilos', 'sitio.css')));
 
   cpSync(join(RAIZ, 'src', 'cliente'), join(salida, 'js'), { recursive: true });
+  // pdf.js para leer las facturas en el navegador, servido desde el propio sitio.
+  for (const f of ['pdf.min', 'pdf.worker.min']) cpSync(join(RAIZ, 'node_modules', 'pdfjs-dist', 'build', `${f}.mjs`), join(salida, 'js', 'pdfjs', `${f}.js`));
 
-  escribir('index.html', paginaHogar(sitio, facturas));
+  escribir('index.html', paginaInicioNegocios(sitio, negocios, guias));
+  escribir('negocios/index.html', paginaHubNegocios(sitio, guias));
+  escribir('revisar-factura/index.html', paginaRevisar(sitio, negocios));
+  escribir('placas-solares/index.html', paginaPlacas(sitio, negocios, guias));
+  for (const g of guias) escribir(`${g.ruta.slice(1)}index.html`, paginaGuia(sitio, g, guias));
+  escribir('hogar/index.html', paginaHogar(sitio, facturas));
   escribir('bonos/index.html', paginaBonos(sitio, facturas));
   for (const f of facturas.facturas) escribir(`${rutaFactura(f.slug).slice(1)}index.html`, paginaFactura(sitio, f, facturas));
   escribir('software/index.html', paginaRecorta(sitio, stack));
@@ -102,7 +112,7 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   }
   escribir('_redirects', `${redirecciones.join('\n')}\n`);
 
-  const urls = ['/', '/bonos/', ...facturas.facturas.map((f) => rutaFactura(f.slug)), '/software/', '/alternativas/', ...stack.herramientas.map((h) => rutaAlternativa(h.slug)), '/guias/', '/precios/', '/migracion-gratis/', '/herramientas/', '/que-herramienta-necesito/', ...fichas, ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...estaticas];
+  const urls = ['/', '/negocios/', '/revisar-factura/', '/placas-solares/', ...guias.map((g) => g.ruta), '/hogar/', '/bonos/', ...facturas.facturas.map((f) => rutaFactura(f.slug)), '/software/', '/alternativas/', ...stack.herramientas.map((h) => rutaAlternativa(h.slug)), '/guias/', '/precios/', '/migracion-gratis/', '/herramientas/', '/que-herramienta-necesito/', ...fichas, ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...estaticas];
   const entradas = [
     ...urls.map((u) => ({ loc: new URL(u, sitio.url).href })),
     ...articulos.filter((a) => a.estado === 'publicado').map((a) => ({ loc: new URL(`/${a.slug}/`, sitio.url).href, lastmod: a.actualizado ?? a.fecha })),

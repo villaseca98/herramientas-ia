@@ -172,13 +172,13 @@ ${formularioNewsletter(sitio)}
 <script type="application/json" id="datos-facturas">${json}</script>
 <script type="module" src="/js/hogar.js"></script>`;
   return pagina(sitio, {
-    titulo: sitio.nombre,
-    descripcion: sitio.lema,
-    ruta: '/',
+    titulo: 'Calculadora de facturas del hogar: luz, fibra, banco y streaming',
+    descripcion: 'Pon lo que pagas de luz, internet, banco y suscripciones y descubre cuánto te ahorras cambiándote y qué bonos te dan las compañías por hacerlo.',
+    ruta: '/hogar/',
+    migas: [['/hogar/', 'Hogar']],
     contenido,
     jsonLd: [
-      { '@type': 'WebSite', name: sitio.nombre, url: sitio.url, inLanguage: sitio.idioma },
-      { '@type': 'WebApplication', name: `Calculadora de facturas de ${sitio.nombre}`, applicationCategory: 'FinanceApplication', operatingSystem: 'Web', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }, url: sitio.url },
+      { '@type': 'WebApplication', name: `Calculadora de facturas de ${sitio.nombre}`, applicationCategory: 'FinanceApplication', operatingSystem: 'Web', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }, url: new URL('/hogar/', sitio.url).href },
     ],
   });
 }
@@ -216,7 +216,7 @@ export function paginaFactura(sitio, f, datos) {
   <p class="antetitulo">${ICONO_TIJERA} ${e(f.nombre)} · datos revisados el ${fechaLarga(datos.verificado)}</p>
   <h1>${e(f.titulo)} (${ano})</h1>
   <p class="entradilla">Un hogar medio paga <strong>${eurosMes(f.gastoMedioMes)}</strong> en ${e(f.corto)}. Puedes recortar <strong class="resalta">unos ${euros(anual)} al año</strong> (${e(textoAhorro(f))})${mejorBono(f) ? ` y llevarte hasta <strong class="resalta">${euros(mejorBono(f).bono)}</strong> de bono por cambiarte` : ''}.</p>
-  <p><a class="boton" href="/#calculadora">Calcular con mis facturas</a></p>
+  <p><a class="boton" href="/hogar/#calculadora">Calcular con mis facturas</a></p>
 </section>
 ${f.opciones.length ? `<p class="aviso-afiliado">Algunos enlaces son de plan amigo o de afiliado: si te das de alta podemos recibir un bono o una comisión, sin coste para ti (y a menudo con bono para ti también). El orden va por precio. <a href="/aviso-afiliados/">Más información</a>.</p>
 <section class="alternativas">${tarjetas}</section>` : ''}
@@ -231,7 +231,7 @@ ${SCRIPT_COPIAR}`;
     titulo: `${f.titulo} (${ano})`,
     descripcion: `Un hogar paga de media ${eurosMes(f.gastoMedioMes)} en ${f.corto}. Te decimos cuánto puedes recortar, a qué compañía cambiarte y qué bono te dan por hacerlo.`.slice(0, 160),
     ruta: rutaFactura(f.slug),
-    migas: [['/#facturas', 'Facturas'], [rutaFactura(f.slug), f.nombre]],
+    migas: [['/hogar/', 'Hogar'], [rutaFactura(f.slug), f.nombre]],
     contenido,
     jsonLd: [{ '@type': 'FAQPage', mainEntity: preguntas.map((q) => ({ '@type': 'Question', name: q.pregunta, acceptedAnswer: { '@type': 'Answer', text: q.respuesta } })) }],
   });
@@ -256,7 +256,7 @@ export function paginaBonos(sitio, datos) {
   <p class="antetitulo">${ICONO_TIJERA} Bonos revisados el ${fechaLarga(datos.verificado)}</p>
   <h1>Te pagan hasta <span class="resalta">${euros(total)}</span> por cambiarte.</h1>
   <p class="entradilla">Bancos, luz y fibra pagan por cada cliente nuevo. Estos son los bonos que te puedes llevar al cambiarte, de mayor a menor, con sus condiciones. La cifra de arriba suma el mejor bono de cada factura.</p>
-  <p><a class="boton" href="/#calculadora">Calcular también lo que ahorro</a></p>
+  <p><a class="boton" href="/hogar/#calculadora">Calcular también lo que ahorro</a></p>
 </section>
 <p class="aviso-afiliado">Son enlaces de plan amigo o de afiliado: si entras con ellos, la compañía nos da a nosotros también un bono o comisión. Tú recibes lo mismo o más que entrando por tu cuenta. <a href="/aviso-afiliados/">Más información</a>.</p>
 <section class="alternativas">${bonos.map(tarjetaBono).join('')}</section>

@@ -1,6 +1,6 @@
 {
   "nombre": "Recorta",
-  "lema": "Mismas facturas, menos dinero. Descubre cuánto pagas de más en luz, internet, banco y suscripciones, y cuánto te pagan por cambiarte.",
+  "lema": "Revisamos gratis la factura de luz de tu negocio y te decimos cuánto pagas de más: potencia, energía reactiva, precio y lo que te ahorrarías con placas solares.",
   "url": "http://localhost:4321",
   "idioma": "es",
   "autor": {
@@ -11,7 +11,7 @@
   },
   "newsletter": {
     "nombre": "El Recorte",
-    "descripcion": "Una vez por semana: un recorte concreto con su ahorro en euros, los bonos por cambiarte que acaban de salir y las subidas de precio que te van a llegar.",
+    "descripcion": "Una vez por semana: un caso real de factura de negocio desmontada, cambios de precio de la luz que te afectan y ayudas a placas solares que abren en tu zona.",
     "urlSuscripcion": "",
     "urlEmbed": ""
   },
@@ -24,33 +24,127 @@
   },
   "contacto": {
     "email": "",
-    "urlFormulario": ""
+    "urlFormulario": "",
+    "whatsapp": ""
   },
   "menu": [
-    [
-      "/#calculadora",
-      "Calculadora"
-    ],
-    [
-      "/bonos/",
-      "Bonos por cambiarte"
-    ],
-    [
-      "/#facturas",
-      "Facturas"
-    ],
-    [
-      "/software/",
-      "Software"
-    ],
-    [
-      "/guias/",
-      "Guías"
-    ],
-    [
-      "/precios/",
-      "Cómo gano dinero"
-    ]
+    {
+      "titulo": "Negocios",
+      "enlaces": [
+        {
+          "ruta": "/revisar-factura/",
+          "nombre": "Revisa tu factura gratis",
+          "desc": "Sube el PDF y ve en un minuto cuánto pagas de más",
+          "destacado": true
+        },
+        {
+          "ruta": "/negocios/",
+          "nombre": "Ahorro en luz para negocios",
+          "desc": "Todo lo que se puede recortar en tu factura"
+        },
+        {
+          "ruta": "/negocios/energia-reactiva/",
+          "nombre": "Energía reactiva",
+          "desc": "El recargo que casi nadie mira"
+        },
+        {
+          "ruta": "/negocios/potencia-contratada/",
+          "nombre": "Potencia contratada",
+          "desc": "Pagas kW que no usas cada día"
+        },
+        {
+          "ruta": "/negocios/tarifas-2-0td-3-0td-6-1td/",
+          "nombre": "Tarifas 2.0TD, 3.0TD y 6.1TD",
+          "desc": "Qué tarifa tienes y cómo se cobra"
+        }
+      ]
+    },
+    {
+      "titulo": "Sectores",
+      "enlaces": [
+        {
+          "ruta": "/negocios/bares-y-restaurantes/",
+          "nombre": "Bares y restaurantes",
+          "desc": "Cámaras, cocina y horario de punta"
+        },
+        {
+          "ruta": "/negocios/comercios-y-talleres/",
+          "nombre": "Comercios y talleres",
+          "desc": "Climatización, maquinaria y escaparates"
+        },
+        {
+          "ruta": "/negocios/comunidades-de-vecinos/",
+          "nombre": "Comunidades de vecinos",
+          "desc": "Ascensor, garaje y zonas comunes"
+        }
+      ]
+    },
+    {
+      "titulo": "Placas solares",
+      "enlaces": [
+        {
+          "ruta": "/placas-solares/",
+          "nombre": "Simulador de placas",
+          "desc": "Cuánto cuestan, cuánto ahorras y en cuánto se pagan",
+          "destacado": true
+        },
+        {
+          "ruta": "/placas-solares/guia/",
+          "nombre": "Guía de placas para empresas",
+          "desc": "Precios, excedentes, ayudas y errores"
+        },
+        {
+          "ruta": "/placas-solares/comunidades/",
+          "nombre": "Placas en comunidades",
+          "desc": "Autoconsumo colectivo paso a paso"
+        }
+      ]
+    },
+    {
+      "titulo": "Hogar",
+      "enlaces": [
+        {
+          "ruta": "/hogar/",
+          "nombre": "Calculadora de facturas de casa",
+          "desc": "Luz, fibra, banco y streaming"
+        },
+        {
+          "ruta": "/bonos/",
+          "nombre": "Bonos por cambiarte",
+          "desc": "Lo que te pagan por cambiar de compañía"
+        },
+        {
+          "ruta": "/software/",
+          "nombre": "Software para tu negocio",
+          "desc": "Alternativas más baratas a lo que pagas"
+        }
+      ]
+    },
+    {
+      "titulo": "Recorta",
+      "enlaces": [
+        {
+          "ruta": "/como-funciona/",
+          "nombre": "Cómo funciona y cómo ganamos",
+          "desc": "Gratis para ti, transparente siempre"
+        },
+        {
+          "ruta": "/profesionales/",
+          "nombre": "Gestorías y administradores",
+          "desc": "Ahorro para tus clientes y comisión para ti"
+        },
+        {
+          "ruta": "/instaladores/",
+          "nombre": "Soy instalador",
+          "desc": "Recibe clientes de placas ya cualificados"
+        },
+        {
+          "ruta": "/guias/",
+          "nombre": "Guías",
+          "desc": "Artículos y comparativas"
+        }
+      ]
+    }
   ],
   "productos": [
     {

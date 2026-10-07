@@ -40,11 +40,11 @@ test('calcula ahorro por precio de referencia o por porcentaje, y suma el mejor 
   assert.ok(preguntasFactura(porSlug('banco')).length === 3);
 });
 
-test('genera la portada de facturas, una página por factura, bonos, software y enlaces /ir/', () => {
+test('genera la página de hogar, una página por factura, bonos, software y enlaces /ir/', () => {
   const salida = mkdtempSync(join(tmpdir(), 'facturas-'));
   construir({ salida });
   const leer = (f) => readFileSync(join(salida, f), 'utf8');
-  const inicio = leer('index.html');
+  const inicio = leer('hogar/index.html');
   assert.match(inicio, /id="datos-facturas"/);
   assert.match(inicio, /\/js\/hogar\.js/);
   assert.ok(existsSync(join(salida, 'js/facturas.js')));

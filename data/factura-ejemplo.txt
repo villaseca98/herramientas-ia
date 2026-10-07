@@ -1,0 +1,13 @@
+FACTURA DE ELECTRICIDAD
+Nº factura: FE24-001234   Periodo de facturación: del 01/09/2026 al 30/09/2026 (30 días)
+Peaje de acceso: 3.0TD   CUPS: ES0021000000000000AA
+Potencias contratadas: P1 30 kW  P2 30 kW  P3 30 kW  P4 30 kW  P5 30 kW  P6 30 kW
+Maxímetro: P1 17,2 kW  P2 18,0 kW  P3 16,4 kW  P4 15,1 kW  P5 14,0 kW  P6 9,8 kW
+Consumo total del periodo 4.250 kWh
+Término de potencia  P1 30 kW x 30 días x 0,045 €/kW día ... 245,10 €
+Término de energía  4.250 kWh x 0,1650 €/kWh  701,25 €
+Energía reactiva  1.180 kVArh x 0,041554 €/kVArh  49,03 €
+Impuesto eléctrico 5,11%  50,93 €
+Alquiler de equipos  12,40 €
+IVA 21%  223,53 €
+TOTAL A PAGAR 1.282,24 €
