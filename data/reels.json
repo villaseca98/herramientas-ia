@@ -1,0 +1,47 @@
+{
+  "descripcion": "Cola de reels para Instagram. El flujo de n8n publica el primero que no haya publicado aún. Para añadir uno: sube el mp4 y la portada a public/reels/ y añade una entrada al final.",
+  "reels": [
+    {
+      "id": "reel-n1-reactiva",
+      "titulo": "La energía reactiva",
+      "video": "/reels/reel-n1-reactiva.mp4",
+      "portada": "/reels/reel-n1-reactiva-portada.jpg",
+      "texto": "¿Tu factura de luz tiene una línea que pone \"energía reactiva\"? 👀\n\nEs un recargo. Lo pagan sobre todo bares, restaurantes y talleres: cámaras, cafeteras, aire acondicionado… todo lo que lleva motor.\n\nEn el ejemplo de Paco: 49 € al mes = 597 € al año.\nSe quita con una batería de condensadores, que se instala una vez.\n\n📌 Guárdalo para cuando te llegue la próxima factura.\n¿Quieres que miremos la tuya? Es gratis: link en la bio.\n\n#facturadeluz #ahorroenergetico #hosteleria #autonomos #pymes #energiareactiva"
+    },
+    {
+      "id": "reel-n5-tres-cosas",
+      "titulo": "Las 3 líneas que tienes que mirar",
+      "video": "/reels/reel-n5-tres-cosas.mp4",
+      "portada": "/reels/reel-n5-tres-cosas-portada.jpg",
+      "texto": "Si tienes un negocio, mira estas 3 líneas de tu factura de luz 👇\n\n1️⃣ Potencia frente a maxímetro: si usas mucho menos de lo contratado, pagas de más cada día.\n2️⃣ Energía reactiva: si aparece, es un recargo evitable.\n3️⃣ Tu precio del kWh: divide el importe de la energía entre los kWh. Así sabes a cuánto la pagas.\n\n📌 Guárdalo y míralo con tu próxima factura.\n¿Te pierdes? Súbela a la web y te marcamos lo que sobra. Link en la bio.\n\n#facturadeluz #autonomos #pymes #ahorroenergetico #educacionfinanciera"
+    },
+    {
+      "id": "reel-n2-potencia",
+      "titulo": "Potencia contratada y maxímetro",
+      "video": "/reels/reel-n2-potencia.mp4",
+      "portada": "/reels/reel-n2-potencia-portada.jpg",
+      "texto": "\"Tengo mucha potencia para que no salte la luz.\" 🙃\n\nLa potencia se paga cada día, la uses o no.\nEl maxímetro te dice cuánta usas de verdad.\n\nSi usas la mitad, estás pagando de más. En el ejemplo de Lucía, unos 150 € al año.\nOjo: solo se puede cambiar una vez cada 12 meses, así que hazlo con margen.\n\n¿No sabes dónde está tu maxímetro? Mándanos la factura y te lo marcamos. Link en la bio.\n\n#facturadeluz #peluqueria #autonomos #ahorro #potenciacontratada #comercio"
+    },
+    {
+      "id": "reel-n6-gratis",
+      "titulo": "¿Por qué es gratis?",
+      "video": "/reels/reel-n6-gratis.mp4",
+      "portada": "/reels/reel-n6-gratis-portada.jpg",
+      "texto": "\"¿Gratis? ¿Dónde está la trampa?\" 🤨\n\nTe lo contamos claro:\n🔸 Si te cambias de compañía o pones placas a través de nosotros, nos paga la compañía o el instalador. Tú no.\n🔸 Solo recomendamos lo que te ahorra dinero. Sin permanencias trampa.\n🔸 Si tu factura ya está bien, te lo decimos y no cambias nada.\n\nY en cualquier caso, te quedas con lo aprendido.\n\nAprender es gratis. Ahorrar también. Link en la bio.\n\n#facturadeluz #transparencia #autonomos #pymes #ahorro"
+    },
+    {
+      "id": "reel-n3-placas-bar",
+      "titulo": "Placas solares en un bar",
+      "video": "/reels/reel-n3-placas-bar.mp4",
+      "portada": "/reels/reel-n3-placas-bar-portada.jpg",
+      "texto": "¿Placas solares en un bar? ☀️\n\nLas placas producen de día. Tu negocio gasta de día.\nTodo lo que producen lo usas: ahorro directo.\n\nEjemplo de un bar con 4.250 kWh al mes:\n🔸 20,7 kWp (46 paneles)\n🔸 Unos 20.700 €\n🔸 Ahorro: unos 5.100 € al año\n🔸 Se paga en unos 4 años, y las placas duran más de 25\n\nAntes de pedir presupuesto, haz los números. Te los hacemos gratis con tu factura: link en la bio.\n\n#placassolares #autoconsumo #hosteleria #pymes #energiasolar #ahorro"
+    },
+    {
+      "id": "reel-n4-comunidad",
+      "titulo": "Placas en la comunidad de vecinos",
+      "video": "/reels/reel-n4-comunidad.mp4",
+      "portada": "/reels/reel-n4-comunidad-portada.jpg",
+      "texto": "La junta de vecinos de siempre: \"la luz del ascensor y el garaje\"… 🏢\n\nExiste el autoconsumo colectivo: placas en el tejado para las zonas comunes. Se aprueba en junta.\n\nEjemplo de una comunidad que paga unos 300 € al mes:\n🔸 5 kWp, 12 paneles\n🔸 Unos 7.500 €\n🔸 Ahorro: unos 1.275 € al año\n🔸 Se paga en unos 6 años, y entre todos sale a poco por vecino\n\n¿Eres presidente o administrador? Te preparamos los números para la junta, gratis. Link en la bio.\n\n#comunidaddevecinos #autoconsumocolectivo #placassolares #administradordefincas #ahorro"
+    }
+  ]
+}

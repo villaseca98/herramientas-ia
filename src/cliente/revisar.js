@@ -124,6 +124,8 @@ $('archivo-pdf').addEventListener('change', (ev) => ev.target.files[0] && leerPd
 zona.addEventListener('drop', (ev) => ev.dataTransfer.files[0] && leerPdf(ev.dataTransfer.files[0]));
 $('cargar-ejemplo').addEventListener('click', () => { rellenar(C.ejemplo); form.tipo.value = 'negocio'; $('estado-lectura').textContent = 'Hemos cargado la factura de ejemplo de un bar con tarifa 3.0TD.'; pintar(); document.getElementById('resultado-factura').scrollIntoView({ behavior: 'smooth' }); });
 form.addEventListener('input', () => { mostrarPeriodos(); pintar(); });
+// Conversión para los anuncios de Meta: el negocio pide que le gestionemos la factura.
+$('rf-pedir').addEventListener('click', () => { if (window.fbq) window.fbq('track', 'Lead'); });
 $('rf-copiar').addEventListener('click', async (ev) => {
   const b = ev.currentTarget;
   try { await navigator.clipboard.writeText(b.dataset.texto); b.textContent = '¡Copiado!'; } catch { b.textContent = 'No se pudo copiar'; }
