@@ -44,6 +44,11 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   escribir('estilos.css', readFileSync(join(RAIZ, 'src', 'estilos', 'sitio.css')));
 
   cpSync(join(RAIZ, 'src', 'cliente'), join(salida, 'js'), { recursive: true });
+  // Cola de reels que lee el flujo de n8n para publicar en Instagram
+  mkdirSync(join(salida, 'reels'), { recursive: true });
+  // En Vercel, la URL pública de producción; Instagram descarga los vídeos desde ahí.
+  const base = process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : sitio.url;
+  writeFileSync(join(salida, 'reels', 'calendario.json'), JSON.stringify({ base, ...JSON.parse(readFileSync(join(RAIZ, 'data', 'reels.json'), 'utf8')) }, null, 2));
   // pdf.js para leer las facturas en el navegador, servido desde el propio sitio.
   for (const f of ['pdf.min', 'pdf.worker.min']) cpSync(join(RAIZ, 'node_modules', 'pdfjs-dist', 'build', `${f}.mjs`), join(salida, 'js', 'pdfjs', `${f}.js`));
 

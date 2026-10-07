@@ -194,6 +194,7 @@
   "anuncios": {
     "adsenseCliente": "",
     "adsenseHueco": "",
-    "precioPatrocinio": "49 €/mes"
+    "precioPatrocinio": "49 €/mes",
+    "metaPixel": ""
   }
 }
