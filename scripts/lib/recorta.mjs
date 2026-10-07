@@ -1,6 +1,6 @@
 // Recorta: calculadora de ahorro de software y páginas "alternativas más baratas a X".
 import { leerJson, escaparHtml as e, enlaceIr } from './contenido.mjs';
-import { pagina, formularioNewsletter, fechaLarga } from './plantillas.mjs';
+import { pagina, formularioNewsletter, fechaLarga, huecoAnuncio } from './plantillas.mjs';
 import { calcularRecorte, mejorAlternativa, ahorroMaximo, formatear } from '../../src/cliente/recorte.js';
 
 // Carga data/stack.json y resuelve cada alternativa: nombre y enlace (/ir/<slug>/ si es afiliado).
@@ -37,9 +37,19 @@ function precioTxt(n, moneda) {
   return n === 0 ? 'Gratis' : `${formatear(n)} ${moneda}/mes`;
 }
 
-function datosCliente(stack) {
+// Enlace al formulario de migración gratis, con la herramienta de origen y destino ya rellenas.
+export function enlaceMigracion(sitio, de = '', a = '') {
+  const base = sitio.contacto?.urlFormulario || '/migracion-gratis/';
+  const url = new URL(base, 'https://x.invalid');
+  if (de) url.searchParams.set('de', de);
+  if (a) url.searchParams.set('a', a);
+  return base.startsWith('/') ? `${url.pathname}${url.search}` : url.href;
+}
+
+function datosCliente(stack, sitio) {
   return {
     moneda: stack.moneda,
+    migracion: enlaceMigracion(sitio),
     herramientas: stack.herramientas.map((h) => ({
       slug: h.slug, nombre: h.nombre, plan: h.plan, precioMes: h.precioMes, dominio: h.dominio, color: h.color,
       alternativas: h.alternativas.map(({ nombre, plan, precioMes, gratis, porQue, pierdes, enlace, afiliado, dominio }) => ({ nombre, plan, precioMes, gratis, porQue, pierdes, enlace, afiliado: Boolean(afiliado), dominio })),
@@ -89,7 +99,7 @@ function calculadoraHtml(stack) {
     </div>
     <ol class="res-cambios" id="res-cambios"></ol>
     <a class="boton boton-bloque" id="ver-plan" href="#plan">Ver mi plan de recorte &darr;</a>
-    <a class="res-pro" href="/precios/#plan-personal"><strong>¿Lo hago yo por ti?</strong> Plan de recorte personal, 19 € con garantía &rarr;</a>
+    <a class="res-pro" href="/migracion-gratis/"><strong>¿Te da pereza migrar?</strong> Te lo migro gratis si te cambias con mi enlace &rarr;</a>
     <div class="compartir"><span>Compartir:</span><a id="compartir-wa" href="#" target="_blank" rel="noopener">WhatsApp</a><a id="compartir-x" href="#" target="_blank" rel="noopener">X</a><button id="compartir-copiar" type="button">Copiar enlace</button></div>
   </aside>
 </section>`;
@@ -129,12 +139,13 @@ function historiaHtml(sitio, stack) {
     <li><span class="promesa-num">01</span><div><h3>Primero lo más barato, aunque no cobre</h3><p>${nombresSinComision.length} de mis recomendaciones no me pagan ni un céntimo (${e(nombresSinComision.join(', '))}). Salen igual, ordenadas por precio.</p></div></li>
     <li><span class="promesa-num">02</span><div><h3>Te digo lo que pierdes</h3><p>Cada cambio trae su letra pequeña. Si la herramienta cara te compensa, te digo que te la quedes.</p></div></li>
     <li><span class="promesa-num">03</span><div><h3>Precios de renovación, nunca de oferta</h3><p>Calculo con lo que pagarás el segundo año, no con el gancho del primer mes.</p></div></li>
-    <li><span class="promesa-num">04</span><div><h3>Si no ahorras, no pagas</h3><p>El plan personal tiene garantía: si no te ahorra al menos lo que cuesta, te devuelvo el dinero.</p></div></li>
+    <li><span class="promesa-num">04</span><div><h3>La migración la paga la herramienta</h3><p>Soy programador. Si te cambias con mi enlace, te paso tus datos y tus flujos gratis: la comisión de tu alta paga mi trabajo.</p></div></li>
   </ul>
 </section>`;
 }
 
 function botonProducto(sitio, p) {
+  if (p.urlPago?.startsWith('/')) return `<a class="boton boton-bloque" href="${e(p.urlPago)}">${p.destacado ? 'Quiero mi migración gratis' : 'Ver cómo funciona'} &rarr;</a>`;
   if (p.urlPago) return `<a class="boton boton-bloque" href="${e(p.urlPago)}" target="_blank" rel="noopener">${p.destacado ? 'Quiero mi plan' : 'Pedirlo'} &rarr;</a>`;
   const { email, urlFormulario } = sitio.contacto ?? {};
   if (urlFormulario) return `<a class="boton boton-bloque" href="${e(urlFormulario)}" target="_blank" rel="noopener">Pedirlo &rarr;</a>`;
@@ -156,7 +167,7 @@ export function productosHtml(sitio) {
 export function paginaRecorta(sitio, stack) {
   const top = [...stack.herramientas].sort((a, b) => ahorroMaximo(b) - ahorroMaximo(a)).slice(0, 6);
   const todo = calcularRecorte(stack.herramientas.map((h) => h.slug), stack.herramientas);
-  const datos = JSON.stringify(datosCliente(stack)).replaceAll('<', '\\u003c');
+  const datos = JSON.stringify(datosCliente(stack, sitio)).replaceAll('<', '\\u003c');
   const contenido = `<section class="hero">
   <p class="antetitulo">${ICONO_TIJERA} Calculadora gratuita · sin registro</p>
   <h1>Pagas <span class="tachado">de más</span> por tu software.</h1>
@@ -170,16 +181,17 @@ export function paginaRecorta(sitio, stack) {
 ${calculadoraHtml(stack)}
 <a class="barra-movil" id="barra-movil" href="#resultado" hidden><span>Te ahorras al año</span><strong id="barra-ahorro">0 ${stack.moneda}</strong><span>Ver &darr;</span></a>
 <section class="bloque-cambios" id="plan" hidden>
-  <div class="cabecera-seccion"><h2>Paso 2 · Tu plan de recorte</h2></div>
+  <div class="cabecera-seccion"><h2>Paso 2 · Tu plan de recorte</h2><a href="/migracion-gratis/">¿Te lo migro gratis? &rarr;</a></div>
   <div class="cambios" id="cambios"></div>
 </section>
+${huecoAnuncio(sitio, 'portada')}
 ${historiaHtml(sitio, stack)}
 <section>
   <div class="cabecera-seccion"><h2>Los recortes más grandes</h2><a href="/alternativas/">Ver todas las alternativas &rarr;</a></div>
   <div class="recortes">${top.map((h) => tarjetaRecorte(h, stack.moneda)).join('')}</div>
 </section>
 <section class="seccion-productos" id="servicios">
-  <div class="cabecera-seccion"><div><p class="antetitulo">¿Sin tiempo para hacerlo tú?</p><h2>Lo recorto yo por ti</h2></div><a href="/precios/">Cómo gano dinero &rarr;</a></div>
+  <div class="cabecera-seccion"><div><p class="antetitulo">¿Sin tiempo para hacerlo tú?</p><h2>Te lo migro yo, y casi siempre gratis</h2></div><a href="/precios/">Cómo gano dinero &rarr;</a></div>
   ${productosHtml(sitio)}
 </section>
 ${formularioNewsletter(sitio)}
@@ -203,16 +215,16 @@ export function paginaPrecios(sitio) {
     descripcion: `La calculadora de ${sitio.nombre} es gratis. Así gano dinero: comisiones que no cambian tu precio, planes de recorte personales y auditorías para empresas.`,
     ruta: '/precios/',
     migas: [['/precios/', 'Precios']],
-    contenido: `<section class="hero hero-alt"><p class="antetitulo">${ICONO_TIJERA} Transparencia total</p><h1>Así gano dinero (y por qué te conviene saberlo)</h1><p class="entradilla">La calculadora y las comparativas son gratis y lo seguirán siendo. Esto es lo que paga Recorta:</p></section>
+    contenido: `<section class="hero hero-alt"><p class="antetitulo">${ICONO_TIJERA} Transparencia total</p><h1>Así gano dinero (y por qué te conviene saberlo)</h1><p class="entradilla">La calculadora, las comparativas y la mayoría de migraciones son gratis para ti. Esto es lo que paga Recorta:</p></section>
 <section class="ingresos">
   <div><span class="promesa-num">01</span><h3>Comisiones que no cambian tu precio</h3><p>Si te das de alta en una alternativa desde mis enlaces, la herramienta me paga una parte. Tú pagas lo mismo, y a veces menos si hay cupón. Nunca cambia el orden: las alternativas van de más barata a más cara, cobre o no.</p></div>
-  <div><span class="promesa-num">02</span><h3>Planes y servicios hechos por mí</h3><p>Para quien prefiere que se lo haga: el plan de recorte personal, la migración y las auditorías para empresas. Son los de abajo.</p></div>
-  <div><span class="promesa-num">03</span><h3>Patrocinios honestos</h3><p>Una marca puede patrocinar la newsletter "El Recorte", siempre señalado y sin tocar los rankings. <a href="/patrocina/">Más información</a>.</p></div>
+  <div><span class="promesa-num">02</span><h3>Migraciones gratis que paga la herramienta</h3><p>Si te cambias con mi enlace, te migro gratis: la comisión de tu alta paga mi trabajo. Solo cobro las migraciones grandes y las auditorías para empresas.</p></div>
+  <div><span class="promesa-num">03</span><h3>Publicidad señalada</h3><p>Hay espacios de anuncio y patrocinios de la newsletter "El Recorte", siempre marcados y fuera de los rankings. <a href="/patrocina/">Anúnciate</a>.</p></div>
 </section>
 <section class="seccion-productos"><div class="cabecera-seccion"><h2>Servicios</h2></div>${productosHtml(sitio)}</section>
 <section class="faq"><h2>Preguntas frecuentes</h2>
 <details><summary>¿La calculadora es gratis de verdad?</summary><p>Sí. No pide registro ni tarjeta. Se paga con las comisiones de las alternativas y con los servicios de pago, que son opcionales.</p></details>
-<details><summary>¿Cómo funciona la garantía del plan personal?</summary><p>Si el plan no te ahorra al menos lo que te costó en un año, me escribes y te devuelvo el dinero.</p></details>
+<details><summary>¿Por qué la migración es gratis?</summary><p>Porque si te das de alta en la alternativa con mi enlace, la herramienta me paga una comisión. Esa comisión paga mi trabajo y tú no pagas nada extra.</p></details>
 <details><summary>¿Recomiendas herramientas que no te pagan comisión?</summary><p>Sí, y salen igual que las demás. Si la mejor opción para ti es gratis y no me paga nada, es la que te recomiendo.</p></details>
 </section>`,
   });
@@ -245,7 +257,7 @@ export function paginaAlternativa(sitio, h, stack) {
   <p class="meta">${e(a.plan)} · ${precioTxt(a.precioMes, M)}${a.gratis && a.precioMes > 0 ? ' · tiene plan gratis o prueba' : ''}</p>
   <p>${e(a.porQue)}</p>
   <p class="pierdes"><strong>Lo que pierdes:</strong> ${e(a.pierdes)}</p>
-  <p class="cambio-acciones">${botonAlt(a, a.gratis ? `Probar ${a.nombre} gratis` : `Ver ${a.nombre}`)}${a.ficha ? ` <a class="enlace-sec" href="${a.ficha}">Ficha y precios de ${e(a.nombre)}</a>` : ''}</p>
+  <p class="cambio-acciones">${botonAlt(a, a.gratis ? `Probar ${a.nombre} gratis` : `Ver ${a.nombre}`)}${a.afiliado ? ` <a class="enlace-sec" href="${e(enlaceMigracion(sitio, h.nombre, a.nombre))}">Migrármelo gratis</a>` : ''}${a.ficha ? ` <a class="enlace-sec" href="${a.ficha}">Ficha y precios</a>` : ''}</p>
 </article>`).join('');
   const contenido = `<section class="hero hero-alt">
   <p class="antetitulo">${ICONO_TIJERA} Alternativas · precios verificados el ${fechaLarga(stack.verificado)}</p>
@@ -257,6 +269,7 @@ export function paginaAlternativa(sitio, h, stack) {
 <div class="tabla-scroll"><table class="comparativa"><thead><tr><th>Opción</th><th>Precio</th><th>Al año</th><th>Recorte</th></tr></thead><tbody>${filas}</tbody></table></div>
 <p class="meta">${e(h.detalle)} Precio de ${e(h.nombre)} en <a href="${e(h.urlPrecios)}" rel="nofollow noopener" target="_blank">su web oficial</a>. ${e(stack.nota)}</p>
 <section class="alternativas">${tarjetas}</section>
+${huecoAnuncio(sitio, 'alternativa')}
 <section class="faq"><h2>Preguntas frecuentes</h2>${preguntas.map((q) => `<details><summary>${e(q.pregunta)}</summary><p>${e(q.respuesta)}</p></details>`).join('')}</section>
 ${otras.length ? `<section><div class="cabecera-seccion"><h2>Otros recortes en ${e(stack.categorias[h.categoria].toLowerCase())}</h2></div><div class="recortes">${otras.map((o) => tarjetaRecorte(o, M)).join('')}</div></section>` : ''}
 ${formularioNewsletter(sitio)}`;
@@ -296,5 +309,52 @@ export function paginaGuias(sitio, articulos) {
     migas: [['/guias/', 'Guías']],
     contenido: `<section class="hero hero-alt"><p class="antetitulo">Guías</p><h1>Guías y comparativas</h1><p class="entradilla">Para cuando ya sabes qué recortar y quieres hacerlo bien.</p></section>
 <section class="rejilla">${lista.map((a) => `<article class="tarjeta"><p class="meta">${e(sitio.categorias[a.categoria] ?? '')}</p><h2><a href="/${a.slug}/">${e(a.titulo)}</a></h2><p>${e(a.descripcion)}</p></article>`).join('')}</section>`,
+  });
+}
+
+export function paginaMigracion(sitio, stack) {
+  const formulario = sitio.contacto?.urlFormulario || '';
+  const pares = stack.herramientas.map((h) => ({ h, alt: mejorAlternativa(h) })).filter((x) => x.alt?.afiliado);
+  const boton = formulario
+    ? `<a class="boton" id="pedir-migracion" href="${e(enlaceMigracion(sitio))}" target="_blank" rel="noopener">Pedir mi migración gratis &rarr;</a>`
+    : '<span class="boton boton-apagado">Formulario muy pronto</span>';
+  return pagina(sitio, {
+    titulo: 'Te migro gratis a una herramienta más barata',
+    descripcion: 'Si te cambias a la alternativa con mi enlace, te migro gratis contactos, cursos, embudos y automatizaciones. La comisión de tu alta paga mi trabajo.',
+    ruta: '/migracion-gratis/',
+    migas: [['/migracion-gratis/', 'Migración gratis']],
+    contenido: `<section class="hero hero-alt">
+  <p class="antetitulo">${ICONO_TIJERA} Migración gratis</p>
+  <h1>Ahorrar no debería costarte un fin de semana.</h1>
+  <p class="entradilla" id="migracion-par">Ya tienes tus flujos montados y cambiar da pereza. Lo entiendo. Así que te lo migro yo, gratis, si te das de alta en la alternativa con mi enlace.</p>
+  <p>${boton}</p>
+</section>
+<section class="pasos">
+  <div><span class="promesa-num">01</span><h3>Te das de alta con mi enlace</h3><p>En la alternativa que te sale en la calculadora. Pagas lo mismo que por tu cuenta, y muchas tienen plan gratis.</p></div>
+  <div><span class="promesa-num">02</span><h3>Me cuentas qué tienes montado</h3><p>Rellenas un formulario corto: qué herramienta usas, cuántos contactos, cursos o automatizaciones tienes.</p></div>
+  <div><span class="promesa-num">03</span><h3>Te lo dejo funcionando</h3><p>Soy programador: muevo tus datos con scripts y rehago tus flujos. Cancelas la herramienta cara solo cuando todo funciona.</p></div>
+</section>
+<section class="como">
+  <h2>¿Por qué gratis?</h2>
+  <p class="como-texto">Cuando te das de alta con mi enlace, la herramienta nueva me paga una comisión, en muchos casos cada mes mientras sigas con ella. Esa comisión paga mi trabajo. Tú te ahorras la cuota cara y la migración.</p>
+</section>
+<section>
+  <div class="cabecera-seccion"><h2>Migraciones que hago gratis</h2></div>
+  <div class="recortes">${pares.map(({ h, alt }) => `<a class="recorte-tarjeta" href="${e(enlaceMigracion(sitio, h.nombre, alt.nombre))}"${formulario ? ' target="_blank" rel="noopener"' : ''}><span class="recorte-par"><s>${e(h.nombre)}</s> &rarr; <strong>${e(alt.nombre)}</strong></span><span class="recorte-precios">Te ahorras hasta ${formatear(Math.round(ahorroMaximo(h) * 12))} ${stack.moneda}/año</span><span class="sello">Migración gratis</span></a>`).join('')}</div>
+</section>
+<section class="faq"><h2>Preguntas frecuentes</h2>
+<details><summary>¿Qué entra en la migración gratis?</summary><p>Contactos y listas, productos y cursos, páginas y embudos, y hasta 5 automatizaciones. Si tienes mucho más, te hago un presupuesto de migración a medida antes de empezar.</p></details>
+<details><summary>¿Y si ya me di de alta sin tu enlace?</summary><p>Entonces la herramienta no me paga nada por ti, y la migración pasa a ser de pago (desde 149 €).</p></details>
+<details><summary>¿Necesitas mis contraseñas?</summary><p>No. Me invitas como colaborador en las dos herramientas o exportas tus datos, y retiras el acceso cuando acabo.</p></details>
+</section>
+<script>
+(() => {
+  const q = new URLSearchParams(location.search);
+  const de = q.get('de'), a = q.get('a');
+  if (de && a) document.getElementById('migracion-par').textContent = 'Te paso de ' + de + ' a ' + a + ' gratis si te das de alta en ' + a + ' con mi enlace. Tú ahorras la cuota y no tocas nada.';
+  const b = document.getElementById('pedir-migracion');
+  if (b && (de || a)) { const u = new URL(b.href); if (de) u.searchParams.set('de', de); if (a) u.searchParams.set('a', a); b.href = u.href; }
+})();
+</script>`,
   });
 }

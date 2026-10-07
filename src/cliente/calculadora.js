@@ -35,6 +35,13 @@ function animar(el, valor) {
   requestAnimationFrame(paso);
 }
 
+function migracion(de, a) {
+  const u = new URL(D.migracion, location.href);
+  u.searchParams.set('de', de);
+  u.searchParams.set('a', a);
+  return u.href;
+}
+
 function enlace(alt, texto) {
   const rel = alt.afiliado ? 'sponsored nofollow noopener' : 'nofollow noopener';
   return `<a class="boton" href="${esc(alt.enlace)}" rel="${rel}" target="_blank">${esc(texto)} &rarr;</a>`;
@@ -81,7 +88,7 @@ function pintar() {
   <p class="cambio-precio">${precio(l.pago)}/mes &rarr; ${a.precioMes === 0 ? 'gratis' : `${precio(a.precioMes)}/mes`} · ${esc(a.plan)}</p>
   <p>${esc(a.porQue)}</p>
   <p class="pierdes"><strong>Lo que pierdes:</strong> ${esc(a.pierdes)}</p>
-  <p class="cambio-acciones">${enlace(a, a.gratis ? `Probar ${a.nombre} gratis` : `Ver ${a.nombre}`)} <a class="enlace-sec" href="/alternativas/${h.slug}/">Más alternativas</a></p>
+  <p class="cambio-acciones">${enlace(a, a.gratis ? `Probar ${a.nombre} gratis` : `Ver ${a.nombre}`)} ${a.afiliado ? `<a class="enlace-sec" href="${esc(migracion(h.nombre, a.nombre))}">Migrármelo gratis</a>` : ''} <a class="enlace-sec" href="/alternativas/${h.slug}/">Más alternativas</a></p>
 </article>`;
     })
     .join('');

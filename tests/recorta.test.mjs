@@ -54,7 +54,9 @@ test('genera la calculadora, el directorio y una página por alternativa', () =>
   assert.match(readFileSync(join(salida, 'sitemap.xml'), 'utf8'), /\/alternativas\/zapier\//);
   assert.ok(existsSync(join(salida, 'guias/index.html')));
   assert.match(inicio, /id="por-que"/);
-  assert.match(inicio, /Plan de recorte personal/);
+  assert.match(inicio, /Te lo migro gratis/);
+  assert.match(readFileSync(join(salida, 'migracion-gratis/index.html'), 'utf8'), /comisión/);
+  assert.match(inicio, /class="anuncio"/);
   assert.match(readFileSync(join(salida, 'precios/index.html'), 'utf8'), /Así gano dinero/);
   assert.equal(preguntasAlternativa(stack.herramientas.find((h) => h.slug === 'kajabi'), '$').length, 3);
 });

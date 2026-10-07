@@ -279,6 +279,22 @@ main > section:first-child, main > .migas + section { margin-top: 28px; }
 .ingresos h3 { margin: 6px 0; }
 .ingresos p { margin: 0; color: var(--suave); }
 
+/* Publicidad */
+.anuncio {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; padding: 16px 20px; border-radius: 16px;
+  border: 1.5px dashed var(--linea); background: var(--papel-2); color: var(--suave); font-size: .93rem;
+}
+.anuncio p { margin: 0; flex: 1 1 320px; }
+.anuncio strong { color: var(--tinta); }
+.anuncio a { font-weight: 600; white-space: nowrap; }
+.anuncio-etq { flex-basis: 100%; font: 600 .7rem var(--mono); text-transform: uppercase; letter-spacing: .1em; }
+.anuncio-adsense { display: block; }
+.articulo .anuncio { margin: 32px 0; }
+.pasos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.pasos h3 { margin: 6px 0; }
+.pasos p { margin: 0; color: var(--suave); }
+.como-texto { max-width: 62ch; font-size: 1.1rem; color: color-mix(in srgb, var(--papel) 78%, transparent); margin: 0; }
+
 /* Bloques de portada */
 .como { background: var(--tinta); color: var(--papel); border-radius: 28px; padding: clamp(28px, 5vw, 56px); }
 .como h2 { max-width: 22ch; }

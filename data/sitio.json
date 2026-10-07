@@ -5,7 +5,7 @@
   "idioma": "es",
   "autor": {
     "nombre": "",
-    "rol": "Creador de Recorta",
+    "rol": "Programador y creador de Recorta",
     "foto": "",
     "historia": ""
   },
@@ -50,30 +50,30 @@
   ],
   "productos": [
     {
-      "id": "plan-personal",
-      "nombre": "Plan de recorte personal",
-      "precio": "19 €",
-      "pago": "pago único",
-      "resumen": "Me dices lo que pagas y en 48 horas te devuelvo tu plan: qué cambiar, qué mantener, cómo migrar paso a paso y los descuentos que hay ahora mismo.",
+      "id": "migracion-gratis",
+      "nombre": "Te lo migro gratis",
+      "precio": "0 €",
+      "pago": "si te das de alta con mi enlace",
+      "resumen": "Te cambias a la alternativa desde mi enlace y yo, que soy programador, te paso todo: contactos, cursos, embudos y automatizaciones. La herramienta me paga una comisión por tu alta, así que tu migración la paga ella.",
       "incluye": [
-        "Revisión de todas tus suscripciones, no solo las de la calculadora",
-        "Plan de migración paso a paso para cada cambio",
-        "Descuentos y ofertas vigentes de cada alternativa",
-        "Garantía: si no te ahorras al menos 19 € al año, te devuelvo el dinero"
+        "Migración de contactos, productos y páginas",
+        "Hasta 5 automatizaciones rehechas en Make o n8n",
+        "Lo dejo funcionando antes de que canceles la herramienta cara",
+        "Tú pagas lo mismo que si te dieras de alta por tu cuenta"
       ],
-      "urlPago": "",
+      "urlPago": "/migracion-gratis/",
       "destacado": true
     },
     {
       "id": "migracion",
-      "nombre": "Migración hecha por mí",
+      "nombre": "Migración a medida",
       "precio": "desde 149 €",
-      "pago": "por herramienta",
-      "resumen": "Muevo tus datos y procesos a la alternativa elegida (contactos, cursos, embudos, automatizaciones) sin que pierdas nada ni pares de vender.",
+      "pago": "para flujos grandes",
+      "resumen": "Para equipos con muchos flujos, integraciones propias o herramientas sin programa de afiliados. Te lo presupuesto según lo que haya que mover.",
       "incluye": [
-        "Migración de contactos, productos y automatizaciones",
-        "Pruebas antes de apagar la herramienta antigua",
-        "Vídeo explicando cómo usar la nueva"
+        "Flujos complejos, APIs e integraciones propias",
+        "Migración de datos con scripts, sin copiar a mano",
+        "Pruebas en paralelo antes del cambio"
       ],
       "urlPago": "",
       "destacado": false
@@ -92,5 +92,10 @@
       "urlPago": "",
       "destacado": false
     }
-  ]
+  ],
+  "anuncios": {
+    "adsenseCliente": "",
+    "adsenseHueco": "",
+    "precioPatrocinio": "49 €/mes"
+  }
 }

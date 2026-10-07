@@ -26,6 +26,15 @@ function botonAfiliado(a, texto = `Probar ${a.nombre}`, clase = 'boton') {
   return `<a class="${clase}" href="${enlaceIr(a.slug)}" ${AFILIADO}>${e(texto)} &rarr;</a>`;
 }
 
+// Hueco de publicidad: AdSense si hay cliente en data/sitio.json (anuncios); si no, anuncio propio para vender el espacio.
+export function huecoAnuncio(sitio, lugar = '') {
+  const a = sitio.anuncios ?? {};
+  if (a.adsenseCliente) {
+    return `<aside class="anuncio anuncio-adsense" data-lugar="${e(lugar)}"><span class="anuncio-etq">Publicidad</span><ins class="adsbygoogle" style="display:block" data-ad-client="${e(a.adsenseCliente)}"${a.adsenseHueco ? ` data-ad-slot="${e(a.adsenseHueco)}"` : ''} data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></aside>`;
+  }
+  return `<aside class="anuncio" data-lugar="${e(lugar)}"><span class="anuncio-etq">Espacio publicitario</span><p><strong>¿Tu herramienta es más barata que la competencia?</strong> Aparece aquí delante de gente que está buscando cambiarse.</p><a href="/patrocina/">Anúnciate desde ${e(a.precioPatrocinio ?? '49 €/mes')} &rarr;</a></aside>`;
+}
+
 export function formularioNewsletter(sitio) {
   const n = sitio.newsletter;
   let accion;
@@ -81,6 +90,7 @@ ${noIndex ? '<meta name="robots" content="noindex">' : ''}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="/estilos.css">
+${sitio.anuncios?.adsenseCliente ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${e(sitio.anuncios.adsenseCliente)}" crossorigin="anonymous"></script>` : ''}
 ${grafo.length ? `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': grafo }).replaceAll('<', '\\u003c')}</script>` : ''}
 </head>
 <body>
@@ -186,6 +196,7 @@ export function paginaArticulo(sitio, art, html, afiliados, todos = []) {
   ${art.estado === 'borrador' ? '<p class="aviso-borrador">Borrador: no se publica hasta cambiar "estado" a "publicado".</p>' : ''}
   <p class="aviso-afiliado">Este artículo contiene enlaces de afiliado. Si compras a través de ellos podemos recibir una comisión, sin coste extra para ti. <a href="/aviso-afiliados/">Más información</a>.</p>
   <div class="cuerpo">${html}</div>
+  ${huecoAnuncio(sitio, 'articulo')}
   ${lateral}
 </article>
 ${masLecturas}
