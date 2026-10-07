@@ -406,5 +406,115 @@
       "urlPrecios": "https://www.hostinger.com/pricing",
       "verificado": "2026-10-06"
     }
+  },
+  {
+    "slug": "mailerlite",
+    "nombre": "MailerLite",
+    "categoria": "email-marketing",
+    "resumen": "Email marketing fácil con automatizaciones, web y landing pages; gratis hasta 250 suscriptores.",
+    "urlOficial": "https://www.mailerlite.com",
+    "urlAfiliado": "",
+    "palabrasClave": [
+      "mailerlite",
+      "email marketing",
+      "newsletter"
+    ],
+    "programa": {
+      "comision": "30% recurrente (según directorios de afiliados; confirmar al darse de alta)",
+      "duracion": "Mientras el cliente pague",
+      "cookie": "Sin confirmar",
+      "url": "https://www.mailerlite.com"
+    },
+    "ficha": {
+      "precioDesde": "0 $ (gratis); de pago desde 12 $/mes",
+      "planGratis": "Sí: hasta 250 suscriptores y 2.500 emails al mes, 3 automatizaciones",
+      "paraQuien": "Quien empieza con email marketing y quiere algo fácil y barato.",
+      "pros": [
+        "Editor muy fácil de usar",
+        "Automatizaciones, web y landing pages incluidas",
+        "Precio por tramo más bajo que Mailchimp"
+      ],
+      "contras": [
+        "El plan gratis es pequeño (250 suscriptores)",
+        "Menos funciones para vender productos digitales que Kit"
+      ],
+      "precios": "Comfort 12 $/mes (500) o 20 $/mes (1.000); Power 25 $/mes (500), pago mensual",
+      "urlPrecios": "https://www.mailerlite.com/pricing",
+      "verificado": "2026-10-07"
+    }
+  },
+  {
+    "slug": "brevo",
+    "nombre": "Brevo",
+    "categoria": "email-marketing",
+    "resumen": "Email, SMS y CRM con plan gratis para siempre de 300 emails al día.",
+    "urlOficial": "https://www.brevo.com",
+    "urlAfiliado": "",
+    "palabrasClave": [
+      "brevo",
+      "sendinblue",
+      "email marketing",
+      "crm"
+    ],
+    "programa": {
+      "comision": "Comisión fija por alta y por cliente de pago (importes al registrarse, vía PartnerStack)",
+      "duracion": "Por conversión",
+      "cookie": "90 días",
+      "url": "https://www.brevo.com/partners/affiliates/"
+    },
+    "ficha": {
+      "precioDesde": "0 $ (gratis); planes de pago según envíos",
+      "planGratis": "Sí: hasta 300 emails al día, sin tarjeta",
+      "paraQuien": "Negocios que quieren email, SMS y un CRM sencillo sin pagar al empezar.",
+      "pros": [
+        "Plan gratis para siempre",
+        "Email, SMS y CRM en una misma herramienta",
+        "Se paga por envíos, no por contactos"
+      ],
+      "contras": [
+        "Límite diario de 300 emails en el plan gratis",
+        "El afiliado pide web propia y email con dominio"
+      ],
+      "precios": "Starter, Standard y Professional según volumen de envíos (consultar en la web)",
+      "urlPrecios": "https://www.brevo.com/pricing/",
+      "verificado": "2026-10-07"
+    }
+  },
+  {
+    "slug": "tally",
+    "nombre": "Tally",
+    "categoria": "web-hosting",
+    "resumen": "Formularios gratis e ilimitados, alternativa a Typeform y Google Forms.",
+    "urlOficial": "https://tally.so",
+    "urlAfiliado": "",
+    "palabrasClave": [
+      "tally",
+      "formularios",
+      "typeform",
+      "google forms"
+    ],
+    "programa": {
+      "comision": "20% de la suscripción (hasta 150 $ por cliente)",
+      "duracion": "Mientras pague, hasta el tope",
+      "cookie": "Sin confirmar",
+      "url": "https://tally.so/help/referral-program"
+    },
+    "ficha": {
+      "precioDesde": "0 $ (gratis); Pro 24 $/mes",
+      "planGratis": "Sí: formularios y respuestas ilimitados, pagos, firmas y lógica condicional",
+      "paraQuien": "Cualquiera que necesite formularios, encuestas o pedidos sin pagar Typeform.",
+      "pros": [
+        "Formularios y respuestas ilimitados gratis",
+        "Pagos, firmas y subida de archivos en el plan gratis",
+        "Integración con Notion, Google Sheets, Zapier y webhooks"
+      ],
+      "contras": [
+        "La marca de Tally solo se quita en Pro",
+        "Menos plantillas de diseño que Typeform"
+      ],
+      "precios": "Pro 24 $/mes (2 meses gratis en pago anual)",
+      "urlPrecios": "https://tally.so/pricing",
+      "verificado": "2026-10-07"
+    }
   }
 ]

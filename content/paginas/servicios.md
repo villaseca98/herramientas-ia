@@ -1,26 +1,25 @@
 ---
-titulo: Servicios
-descripcion: "Te montamos tus automatizaciones, tu embudo de email o tu newsletter con herramientas de IA, para que empieces a ahorrar tiempo y vender."
+titulo: Auditoría de stack para empresas
+descripcion: "Revisamos el software que paga tu equipo, licencia a licencia, y te entregamos un plan de recorte con lo que cambiar, lo que mantener y cómo migrar."
 ---
-¿Prefieres que te lo hagamos? Montamos con las mismas herramientas que recomendamos en la web, en tu cuenta y explicándote cómo funciona todo.
+La mayoría de equipos pagan herramientas duplicadas, licencias de gente que ya no está y planes que se quedaron grandes. Nosotros lo encontramos y te decimos cómo recortarlo sin parar el trabajo.
 
-## Lo que hacemos
+## Qué incluye
 
-| Servicio | Qué incluye |
+| Servicio | Qué te llevas |
 | --- | --- |
-| **Automatización de tareas** | Analizamos tus tareas repetitivas y montamos de 1 a 3 automatizaciones en Make o n8n |
-| **Embudo de captación** | Página de captura, regalo, secuencia de 3 emails y página de venta en Systeme.io |
-| **Newsletter lista para crecer** | Configuración de beehiiv o Kit, diseño, formulario en tu web y email de bienvenida |
-| **Vídeos con IA** | Guion, voz con ElevenLabs y avatar con HeyGen para tus redes o tu curso |
+| **Auditoría de stack** | Inventario de todas tus suscripciones, coste real anual, duplicidades, licencias sin uso y un plan de recorte priorizado por ahorro |
+| **Migración acompañada** | Movemos tus datos y procesos a la alternativa elegida (por ejemplo de Kajabi o ClickFunnels a Systeme.io, o de Zapier a Make o n8n) |
+| **Automatización con IA** | Sustituimos tareas manuales por automatizaciones en Make o n8n para que el ahorro no sea solo de licencias, también de horas |
 
 ## Cómo funciona
 
-1. Nos cuentas tu negocio y qué te quita más tiempo.
-2. Te proponemos qué montar y con qué herramienta, empezando por los planes gratis siempre que sea posible.
-3. Lo montamos en tu cuenta y te lo explicamos para que sea tuyo.
+1. Nos pasas la lista de lo que pagáis (o el extracto de la tarjeta de empresa).
+2. En una semana te entregamos el plan: qué cambiar, qué mantener y por qué, con el ahorro de cada punto.
+3. Si quieres, hacemos la migración nosotros. Si no, el plan es tuyo igualmente.
 
-## Pide presupuesto
+## Pide tu auditoría
 
 {{contacto}}
 
-¿Quieres hacerlo tú? Todo lo que montamos lo explicamos gratis en nuestras [guías](/) y [recursos](/recursos/).
+¿Quieres hacerlo tú primero? Empieza por la [calculadora](/#calculadora) y el [directorio de alternativas](/alternativas/).

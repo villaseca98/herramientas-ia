@@ -1,12 +1,12 @@
 {
-  "nombre": "Herramientas IA",
-  "lema": "Comparamos las herramientas de IA por ti y te decimos cuál usar, cómo y cuánto cuesta.",
+  "nombre": "Recorta",
+  "lema": "Mismo trabajo, menos factura. Descubre cuánto pagas de más en software y a qué cambiarte.",
   "url": "http://localhost:4321",
   "idioma": "es",
-  "autor": "Equipo Herramientas IA",
+  "autor": "Equipo Recorta",
   "newsletter": {
-    "nombre": "La IA de la semana",
-    "descripcion": "Cada semana, las herramientas de IA que merecen la pena, con tutoriales y plantillas gratis.",
+    "nombre": "El Recorte",
+    "descripcion": "Una vez por semana: un recorte de software concreto con su ahorro en euros, chollos de por vida y cambios de precio de las herramientas que pagas.",
     "urlSuscripcion": "",
     "urlEmbed": ""
   },
@@ -23,20 +23,24 @@
   },
   "menu": [
     [
-      "/que-herramienta-necesito/",
-      "¿Qué herramienta necesito?"
+      "/#calculadora",
+      "Calculadora"
+    ],
+    [
+      "/alternativas/",
+      "Alternativas"
     ],
     [
       "/herramientas/",
       "Herramientas"
     ],
     [
-      "/recursos/",
-      "Recursos gratis"
+      "/guias/",
+      "Guías"
     ],
     [
       "/servicios/",
-      "Servicios"
+      "Empresas"
     ]
   ]
 }

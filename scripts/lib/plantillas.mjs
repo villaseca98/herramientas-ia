@@ -34,9 +34,9 @@ export function formularioNewsletter(sitio) {
   } else if (n.urlSuscripcion) {
     accion = `<p><a class="boton" href="${e(n.urlSuscripcion)}" target="_blank" rel="noopener">Suscribirme gratis</a></p>`;
   } else {
-    accion = '<p><a class="boton" href="/recursos/">Descargar los recursos gratis</a></p>';
+    accion = '<p><a class="boton" href="/recursos/">Descargar los recursos gratis &rarr;</a></p>';
   }
-  return `<section class="newsletter"><h2>${e(n.nombre)}</h2><p>${e(n.descripcion)}</p>${accion}</section>`;
+  return `<section class="newsletter"><div><p class="antetitulo">Newsletter gratis</p><h2>${e(n.nombre)}</h2><p>${e(n.descripcion)}</p></div>${accion}</section>`;
 }
 
 function migasDePan(sitio, migas) {
@@ -53,12 +53,11 @@ function migasDePan(sitio, migas) {
 }
 
 export function pagina(sitio, { titulo, descripcion, ruta, contenido, tipoOg = 'website', jsonLd = [], noIndex = false, migas = null }) {
-  const tituloCompleto = ruta === '/' ? `${sitio.nombre}: ${sitio.lema}` : `${titulo} | ${sitio.nombre}`;
+  const tituloCompleto = ruta === '/' ? `${sitio.nombre}: calcula cuánto pagas de más en software` : `${titulo} | ${sitio.nombre}`;
   const canonica = new URL(ruta, sitio.url).href;
   const migasPan = migasDePan(sitio, migas);
   const grafo = [...(Array.isArray(jsonLd) ? jsonLd : [jsonLd]), migasPan.jsonLd].filter(Boolean);
   const menu = (sitio.menu ?? []).map(([r, n]) => `<a href="${r}">${e(n)}</a>`).join('');
-  const cats = Object.entries(sitio.categorias).map(([slug, nombre]) => `<a href="/categoria/${slug}/">${e(nombre)}</a>`).join(' · ');
   return `<!doctype html>
 <html lang="${e(sitio.idioma)}">
 <head>
@@ -77,14 +76,19 @@ ${noIndex ? '<meta name="robots" content="noindex">' : ''}
 <meta name="twitter:card" content="summary">
 <link rel="alternate" type="application/rss+xml" title="${e(sitio.nombre)}" href="/rss.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#f4f1ea">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="/estilos.css">
 ${grafo.length ? `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': grafo }).replaceAll('<', '\\u003c')}</script>` : ''}
 </head>
 <body>
 <header class="cabecera">
   <div class="contenedor">
-    <a class="marca" href="/">${e(sitio.nombre)}</a>
-    <nav class="menu">${menu}</nav>
+    <a class="marca" href="/" aria-label="${e(sitio.nombre)}, inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></svg><span>${e(sitio.nombre.toLowerCase())}</span></a>
+    <nav class="menu" aria-label="Principal">${menu}</nav>
+    <a class="boton boton-peq" href="/#calculadora">Calcula tu recorte</a>
   </div>
 </header>
 <main class="contenedor">
@@ -93,9 +97,16 @@ ${contenido}
 </main>
 <footer class="pie">
   <div class="contenedor">
-    <p class="pie-cats">${cats}</p>
-    <p>${e(sitio.nombre)} participa en programas de afiliación: si compras desde nuestros enlaces podemos recibir una comisión, sin coste extra para ti. Solo recomendamos herramientas que hemos analizado.</p>
-    <p><a href="/servicios/">Servicios</a> · <a href="/patrocina/">Patrocina</a> · <a href="/aviso-afiliados/">Aviso de afiliados</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/rss.xml">RSS</a></p>
+    <div class="pie-rejilla">
+      <div>
+        <p class="pie-marca">${e(sitio.nombre.toLowerCase())}<span>.</span></p>
+        <p>${e(sitio.lema)}</p>
+      </div>
+      <div><p class="pie-titulo">Recortar</p><a href="/#calculadora">Calculadora</a><a href="/alternativas/">Alternativas</a><a href="/herramientas/">Fichas de herramientas</a><a href="/que-herramienta-necesito/">Test de herramientas</a></div>
+      <div><p class="pie-titulo">Aprender</p><a href="/guias/">Guías</a><a href="/recursos/">Recursos gratis</a><a href="/rss.xml">RSS</a></div>
+      <div><p class="pie-titulo">Negocio</p><a href="/servicios/">Auditoría para empresas</a><a href="/patrocina/">Patrocina</a><a href="/aviso-afiliados/">Aviso de afiliados</a><a href="/privacidad/">Privacidad</a><a href="/cookies/">Cookies</a></div>
+    </div>
+    <p class="pie-legal">${e(sitio.nombre)} se financia con enlaces de afiliado: si te das de alta en una herramienta desde aquí podemos cobrar una comisión, sin coste extra para ti. Eso nunca cambia el orden de las alternativas, que se ordenan por precio.</p>
   </div>
 </footer>
 </body>
@@ -115,27 +126,6 @@ function rejilla(sitio, articulos, vacio) {
   return articulos.length
     ? `<section class="rejilla">${articulos.map((a) => tarjetaArticulo(sitio, a)).join('\n')}</section>`
     : `<p class="vacio">${e(vacio)}</p>`;
-}
-
-export function paginaInicio(sitio, articulos, afiliados) {
-  const destacadas = [...afiliados.values()].filter((a) => a.ficha?.planGratis?.startsWith('Sí')).slice(0, 6);
-  const gratis = destacadas
-    .map((a) => `<a class="chip" href="${rutaFicha(a.slug)}"><strong>${e(a.nombre)}</strong><span>${e(a.ficha.precioDesde)}</span></a>`)
-    .join('');
-  return pagina(sitio, {
-    titulo: sitio.nombre,
-    descripcion: sitio.lema,
-    ruta: '/',
-    contenido: `<section class="portada"><h1>${e(sitio.lema)}</h1>
-<p class="entradilla">Comparativas honestas, precios reales verificados y guías paso a paso para emprendedores, freelancers y creadores.</p>
-<p><a class="boton" href="/que-herramienta-necesito/">Encuentra tu herramienta en 30 segundos</a> <a class="boton boton-sec" href="/herramientas/">Ver comparador</a></p></section>
-<h2 class="seccion">Herramientas con plan gratis</h2>
-<div class="chips">${gratis}</div>
-<h2 class="seccion">Últimas guías</h2>
-${rejilla(sitio, articulos, 'Todavía no hay artículos publicados.')}
-${formularioNewsletter(sitio)}`,
-    jsonLd: { '@type': 'WebSite', name: sitio.nombre, url: sitio.url, inLanguage: sitio.idioma },
-  });
 }
 
 export function paginaCategoria(sitio, slug, articulos, afiliados) {

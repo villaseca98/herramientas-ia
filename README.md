@@ -1,8 +1,18 @@
-# Herramientas IA: web de afiliados con contenido automatizado
+# Recorta: calcula cuánto pagas de más en software
 
-Web estática en español que compara herramientas de IA y software y monetiza con enlaces de afiliado. Un pipeline diario detecta ideas, redacta borradores con la API gratuita de Gemini y abre un pull request para que solo tengas que revisar y publicar.
+Web estática en español que ayuda a pagar menos por el software: una calculadora marca lo que pagas, te enseña tu "ticket" y te propone alternativas más baratas con precios oficiales y lo que pierdes con cada cambio. Monetiza con enlaces de afiliado en las alternativas, la newsletter "El Recorte" y auditorías de stack para empresas.
 
-Coste: 0 €. Hosting en Vercel (o Cloudflare Pages), automatización en GitHub Actions, redacción con Gemini (plan gratuito).
+Coste: 0 €. Hosting en Vercel, automatización en GitHub Actions, redacción con Gemini (plan gratuito).
+
+## Recorta en 3 piezas
+
+| Pieza | Archivo | Qué hace |
+| --- | --- | --- |
+| Datos del recorte | `data/stack.json` | Herramientas caras (precio oficial, plan, enlace a precios) y sus alternativas (`afiliado` del catálogo o `nombre` + `url`), con `porQue` y `pierdes`. |
+| Calculadora | `/` (`src/cliente/calculadora.js`) | El usuario marca lo que paga, ve su ticket y su ahorro anual, y lo comparte (`?s=kajabi,zapier`). |
+| Páginas de alternativas | `/alternativas/<slug>/` | Una página SEO por herramienta cara ("alternativas más baratas a X") con tabla, FAQ y enlaces. |
+
+Para añadir un recorte nuevo basta con añadir una entrada a `data/stack.json`: el build genera su página, la añade al sitemap y a la calculadora.
 
 ## Cómo funciona
 
