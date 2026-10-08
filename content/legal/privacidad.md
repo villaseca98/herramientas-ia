@@ -1,7 +1,7 @@
 ---
 titulo: Política de privacidad
 ---
-Esta política explica qué datos trata {{sitio}} ({{url}}).
+Esta política explica qué datos trata {{sitio}} ({{url}}). {{sitio}} es una marca de Leads Hunters, que es quien gestiona las solicitudes y te llama.
 
 ## Qué datos recogemos
 
@@ -11,13 +11,13 @@ Esta política explica qué datos trata {{sitio}} ({{url}}).
 
 ## Para qué los usamos
 
-Para enviarte la newsletter que has pedido, para contestar tu solicitud y para entender qué contenido es útil. Base legal: tu consentimiento, que puedes retirar cuando quieras.
+Para enviarte la newsletter que has pedido, para llamarte y contestar tu solicitud, y para entender qué contenido es útil. Base legal: tu consentimiento, que puedes retirar cuando quieras.
 
-Solo si nos lo pides compartimos los datos de tu solicitud con la comercializadora o el instalador que elijas para que te haga la oferta o el presupuesto. Guardamos las solicitudes un máximo de 24 meses. No vendemos tus datos a terceros para publicidad.
+Si en la llamada nos dices que quieres seguir adelante, compartimos los datos de tu solicitud con la comercializadora que te hará la oferta de luz o con el instalador de placas de tu zona que te hará el estudio y el presupuesto. El instalador solo ve tu teléfono cuando acepta preparar tu presupuesto. Guardamos las solicitudes un máximo de 24 meses. No vendemos tus datos a terceros para publicidad.
 
 ## Terceros
 
-Las solicitudes se guardan en nuestra herramienta de automatización (n8n). Al hacer clic en un enlace de afiliado sales de este sitio; la herramienta de destino aplica su propia política de privacidad y puede usar cookies para atribuir la compra.
+Las solicitudes pasan por nuestra herramienta de automatización (n8n) y se guardan en el CRM de Leads Hunters, desde el que te llama nuestro equipo. Al hacer clic en un enlace de afiliado sales de este sitio; la herramienta de destino aplica su propia política de privacidad y puede usar cookies para atribuir la compra.
 
 ## Tus derechos
 
