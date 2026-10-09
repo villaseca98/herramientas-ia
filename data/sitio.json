@@ -1,7 +1,7 @@
 {
   "nombre": "Recorta",
   "lema": "Revisamos gratis la factura de luz de tu negocio y te decimos cuánto pagas de más: potencia, energía reactiva, precio y lo que te ahorrarías con placas solares.",
-  "url": "http://localhost:4321",
+  "url": "https://herramientas-ia-eosin.vercel.app",
   "idioma": "es",
   "autor": {
     "nombre": "",

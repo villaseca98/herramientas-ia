@@ -1,5 +1,19 @@
 {
   "descripcion": "Cola de reels para Instagram. El flujo de n8n publica el primero que no haya publicado aún. Para añadir uno: sube el mp4 y la portada a public/reels/ y añade una entrada al final.",
+  "pie": {
+    "cta": "👉 ¿Pagas de más en la luz de tu negocio? Compruébalo gratis en 1 minuto: sube tu factura en {web}/revisar-factura (enlace directo en la bio 🔗)\n💬 O escríbenos «FACTURA» por privado y te la revisamos nosotros.",
+    "hashtags": [
+      "#recorta",
+      "#facturadeluz",
+      "#ahorroenergetico",
+      "#precioluz",
+      "#pymes",
+      "#autonomos",
+      "#negociolocal",
+      "#emprendedores",
+      "#ahorro"
+    ]
+  },
   "reels": [
     {
       "id": "reel-n1-reactiva",
@@ -126,6 +140,90 @@
       "video": "/reels/reel-t6-excedentes.mp4",
       "portada": "/reels/reel-t6-excedentes-portada.jpg",
       "texto": "¿Tienes placas y en verano vierten muchísimo… pero tu factura no lo nota? ☀️\n\nCon compensación simplificada, lo que viertes se descuenta solo de la energía de ese mes. Nunca de la potencia ni del contador. Y la parte de energía no baja de cero.\n\n❌ Lo que sobra, se pierde.\n❌ Y se paga más barato que la luz que compras.\n\n✅ Truco 1: batería virtual. Guarda el sobrante en euros para otros meses (mira condiciones: algunas tienen cuota).\n✅ Truco 2: gasta cuando hay sol. Termo, lavadora o aire a mediodía.\n\n📲 Pásaselo a quien tenga placas.\nTe buscamos la tarifa que mejor paga tus excedentes. Link en la bio.\n\n#placassolares #autoconsumo #excedentes #bateriavirtual #facturadeluz #energiasolar"
+    },
+    {
+      "id": "reel-u11-un-minuto",
+      "titulo": "Compruébalo en 1 minuto",
+      "video": "/reels/reel-u11-un-minuto.mp4",
+      "portada": "/reels/reel-u11-un-minuto-portada.jpg",
+      "texto": "¿Pagas de más en la luz de tu negocio? Compruébalo en 1 minuto, sin llamadas. ⏱️\n\n1️⃣ Descarga tu última factura en PDF (está en la web o en la app de tu compañía).\n2️⃣ Súbela a la web de Recorta.\n3️⃣ Te marca lo que sobra: potencia, energía reactiva, precio del kWh y si te compensan bien las placas. Y te dice cuánto pagas de más.\n\nSi quieres, te lo gestionamos. Sin coste para ti: si te cambias, paga la compañía.\n\n#comparadorluz #revisarfactura #hosteleria #comercios"
+    },
+    {
+      "id": "reel-u1-precio-kwh",
+      "titulo": "Tu precio real del kWh",
+      "video": "/reels/reel-u1-precio-kwh.mp4",
+      "portada": "/reels/reel-u1-precio-kwh-portada.jpg",
+      "texto": "¿Sabes cuánto pagas de verdad por la luz? No el precio del anuncio: el tuyo. 🧮\n\nCoge tu factura y haz una sola división:\n➗ El importe de la línea de ENERGÍA ÷ los kWh que gastaste.\nSolo esa línea: sin potencia, sin impuestos y sin alquiler.\n\nEn el ejemplo de Paco: 892,50 € ÷ 4.250 kWh = 0,21 € el kWh.\n\nEse es tu precio real. Ahora compáralo con las ofertas de tu mismo tipo de tarifa. Si hay bastante más bajas, estás pagando de más todos los meses.\n\n📌 Guárdalo y hazlo hoy con tu última factura.\n\n#preciokwh #tarifaluz #hosteleria #bares"
+    },
+    {
+      "id": "reel-u3-estimada",
+      "titulo": "Lectura estimada",
+      "video": "/reels/reel-u3-estimada.mp4",
+      "portada": "/reels/reel-u3-estimada-portada.jpg",
+      "texto": "¿Tu factura dice «lectura ESTIMADA»? Puede que estés pagando luz que no gastaste. 📸\n\nEstimada = nadie leyó el contador. La compañía calcula con lo que gastaste otros meses. Si ese mes gastaste menos, pagas de más hasta que regularicen.\n\nQué hacer:\n1️⃣ Haz una foto al contador, con la fecha.\n2️⃣ Pide por escrito que te facturen con la lectura real.\n3️⃣ Si te cobraron de más, te lo tienen que devolver o descontar.\n\nLos contadores actuales mandan la lectura solos: muchas facturas estimadas seguidas no son normales.\n\n📲 Pásaselo a alguien a quien le llegue la luz «rara».\n\n#lecturaestimada #reclamacion #peluquerias #comercios"
+    },
+    {
+      "id": "reel-u9-errores",
+      "titulo": "3 datos antes de pagar",
+      "video": "/reels/reel-u9-errores.mp4",
+      "portada": "/reels/reel-u9-errores-portada.jpg",
+      "texto": "Las facturas de luz también se equivocan. Antes de pagar, mira 3 datos. 🔍\n\n1️⃣ El titular, la dirección y el CUPS (el código de tu suministro) son los tuyos.\n2️⃣ La potencia que te cobran es la que firmaste. A Toni le cobraban 20 kW… y había contratado 15.\n3️⃣ Los precios del kWh y de la potencia son los del contrato.\n\n¿Hay un error? Reclama por escrito. La compañía tiene que responderte; si no lo hace o no estás de acuerdo, puedes ir a consumo o al servicio de energía de tu comunidad.\n\n📌 Guárdalo para la próxima factura.\n\n#reclamacion #erroresfactura #talleres #consumidores"
+    },
+    {
+      "id": "reel-u4-contador",
+      "titulo": "Alquiler del contador",
+      "video": "/reels/reel-u4-contador.mp4",
+      "portada": "/reels/reel-u4-contador-portada.jpg",
+      "texto": "¿Pagas alquiler por un contador que es tuyo? Pasa más de lo que crees. 🔌\n\nEn la factura sale como «alquiler de equipos de medida».\n✅ Si el contador es alquilado, es normal pagarlo (el precio lo fija la normativa).\n❌ Si es tuyo, no deberías pagar nada.\n\nPasa sobre todo tras cambios de compañía o de contador.\n¿No sabes de quién es? Pregúntalo a tu distribuidora: es la empresa que lleva la red de tu zona y su nombre sale en la factura.\n¿Lo compraste? Busca la factura de compra y reclama lo cobrado.\n\n#contadordeluz #comunidades #reclamacion #consumidores"
+    },
+    {
+      "id": "reel-u2-seis-potencias",
+      "titulo": "Seis periodos, seis potencias",
+      "video": "/reels/reel-u2-seis-potencias.mp4",
+      "portada": "/reels/reel-u2-seis-potencias-portada.jpg",
+      "texto": "Si tu negocio tiene tarifa 3.0TD, puedes contratar 6 potencias distintas. Y casi nadie lo aprovecha. ⚡\n\nDe P1 (las horas más caras) a P6 (noches y fines de semana). La única regla: cada periodo igual o mayor que el anterior.\n\nSi en P1 nunca pasas de 10 kW… ¿por qué pagas 15?\nLa potencia de P1 y P2 es la más cara: ajustarla a tu pico real es donde más se ahorra.\n\n🔎 Tus picos de cada periodo están en el maxímetro de la factura o en Datadis.\nOjo: si te quedas corto, se pagan excesos. Por eso se calcula con 12 meses de datos.\n\n#tarifa30td #potenciacontratada #talleres #industria"
+    },
+    {
+      "id": "reel-u7-camaras",
+      "titulo": "Las cámaras frigoríficas",
+      "video": "/reels/reel-u7-camaras.mp4",
+      "portada": "/reels/reel-u7-camaras-portada.jpg",
+      "texto": "Lo que funciona 24 horas se paga 24 horas. Y en un bar, eso son las cámaras. ❄️\n\nRevisa 3 cosas:\n1️⃣ Las gomas de la puerta. Cierra la puerta sobre un papel: si sale sin esfuerzo, no cierra bien.\n2️⃣ El condensador, sin polvo ni grasa.\n3️⃣ Que respire: ni pegada a la pared ni al lado del horno o la plancha.\n\nUna cámara que trabaja de más, gasta de más. Todos los días del año.\nUn técnico de frío te la revisa en una visita y muchas veces se paga sola.\n\n📲 Mándaselo a quien tenga un bar o un restaurante.\n\n#hosteleria #restaurantes #frioindustrial #bares"
+    },
+    {
+      "id": "reel-u5-horno-p6",
+      "titulo": "No es cuánto, es cuándo",
+      "video": "/reels/reel-u5-horno-p6.mp4",
+      "portada": "/reels/reel-u5-horno-p6-portada.jpg",
+      "texto": "Mismo pan, misma luz… y menos factura. Solo cambiando la HORA. 🥖\n\nEn la tarifa 3.0TD el kWh cuesta distinto según el periodo:\n🔴 P1, el más caro.\n🟢 P6, el más barato: de 0 a 8 h los laborables y todo el día en fines de semana y festivos.\n\nRosa mueve a P6 lo que puede: la masa madre de madrugada y las cámaras al máximo de noche.\nY como ya no gasta tanto en P1, también baja la potencia de esas horas.\n\nOjo: solo ahorras si tu contrato cobra distinto cada periodo. Míralo en la factura.\n\n#panaderias #tarifa30td #discriminacionhoraria #obradores"
+    },
+    {
+      "id": "reel-u8-led",
+      "titulo": "Halógenos fuera",
+      "video": "/reels/reel-u8-led.mp4",
+      "portada": "/reels/reel-u8-led-portada.jpg",
+      "texto": "12 focos halógenos pueden costarte unos 280 € al año de más. 💡\n\nUn halógeno gasta unos 50 W. Su equivalente LED, unos 7 W. Luz parecida, hasta un 85 % menos.\n\nLas cuentas del ejemplo:\n12 focos × 10 h × 300 días ≈ 1.550 kWh menos al año.\nA 0,18 € el kWh ≈ 280 € al año.\n\nLas bombillas LED duran años, cuestan mucho menos de lo que ahorran y en verano dan menos calor, así que el aire trabaja menos.\n\nCuentas de ejemplo: con tus horas y tu precio sale tu cifra.\n\n#iluminacionled #eficienciaenergetica #peluquerias #tiendas"
+    },
+    {
+      "id": "reel-u10-oferta",
+      "titulo": "Antes de firmar una oferta",
+      "video": "/reels/reel-u10-oferta.mp4",
+      "portada": "/reels/reel-u10-oferta-portada.jpg",
+      "texto": "Te llaman con una oferta de luz «buenísima». Antes de firmar, 3 preguntas. 📝\n\n1️⃣ ¿Tiene permanencia? En contratos de empresa puede haberla. Mira cuánto es la penalización y hasta cuándo dura.\n2️⃣ ¿El precio es fijo o solo de bienvenida?\n3️⃣ ¿Lleva servicios añadidos? Mantenimiento, seguros, asistencia… que suben la cuota sin que te des cuenta.\n\nY lo más importante: pídela POR ESCRITO y compárala con tu factura actual, con la misma potencia y el mismo consumo.\nSi no te la mandan por escrito, mala señal.\n\n📲 Pásaselo a quien esté pensando en cambiarse.\n\n#permanencia #ofertasluz #cambiodecompania #gestorias"
+    },
+    {
+      "id": "reel-u6-aire-grado",
+      "titulo": "Cada grado se paga",
+      "video": "/reels/reel-u6-aire-grado.mp4",
+      "portada": "/reels/reel-u6-aire-grado-portada.jpg",
+      "texto": "Cada grado de más en el aire acondicionado puede ser un 7 % más de consumo. 🌡️ (cifra que suele dar el IDAE; varía con el equipo y el local)\n\nTemperaturas cómodas para trabajar sin que el aparato vaya a tope:\n☀️ Verano: 25-26 °C\n❄️ Invierno: 20-21 °C\n\nY lo que es gratis:\n🚪 Puertas cerradas.\n🧽 Filtros limpios.\n⏰ Apagar al cerrar (un programador de horario cuesta poco y evita que se quede encendido el fin de semana).\n\n📌 Guárdalo para este invierno.\n\n#aireacondicionado #climatizacion #oficinas #gestorias"
+    },
+    {
+      "id": "reel-u12-numeros-placas",
+      "titulo": "Placas: primero los números",
+      "video": "/reels/reel-u12-numeros-placas.mp4",
+      "portada": "/reels/reel-u12-numeros-placas-portada.jpg",
+      "texto": "¿Placas solares en tu negocio? Primero los números, luego el presupuesto. ☀️\n\nTu factura ya dice casi todo:\n📊 Cuánto gastas al año… y cuánto de eso es de día, cuando producen las placas.\n🔢 De ahí sale cuántos kWp te hacen falta.\n💶 Lo que cuestan más o menos y en cuántos años se pagan.\n\nCon esos números pides presupuesto sabiendo qué esperar. Y si te ofrecen una instalación el doble de grande de lo que necesitas, lo verás enseguida.\n\n#placassolares #autoconsumo #energiasolar #naves"
     }
   ]
 }
