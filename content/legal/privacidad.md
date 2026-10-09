@@ -17,7 +17,9 @@ Si en la llamada nos dices que quieres seguir adelante, compartimos los datos de
 
 ## Terceros
 
-Las solicitudes pasan por nuestra herramienta de automatización (n8n) y se guardan en el CRM de Leads Hunters, desde el que te llama nuestro equipo. Al hacer clic en un enlace de afiliado sales de este sitio; la herramienta de destino aplica su propia política de privacidad y puede usar cookies para atribuir la compra.
+Las solicitudes pasan por nuestra herramienta de automatización (n8n) y se guardan en el CRM de Leads Hunters, desde el que te llama nuestro equipo. Para no perder ninguna si n8n falla, el formulario también la envía directamente al CRM.
+
+Si llegas con el enlace o el código de una gestoría o un administrador de fincas que colabora con nosotros (partner), guardamos ese código en tu navegador durante 90 días y lo asociamos a tu solicitud. Al partner solo le contamos el nombre de tu negocio o comunidad, en qué punto está la gestión y la comisión que le corresponde; nunca tu teléfono, tu email ni tu factura. Al hacer clic en un enlace de afiliado sales de este sitio; la herramienta de destino aplica su propia política de privacidad y puede usar cookies para atribuir la compra.
 
 ## Tus derechos
 
