@@ -14,6 +14,7 @@ import {
 import { cargarNegocios, cargarGuias, paginaInicioNegocios, paginaHubNegocios, paginaRevisar, paginaPlacas, paginaGuia } from './lib/negocios.mjs';
 import { cargarSectores, paginaSector, paginaSectores, rutaSector } from './lib/sectores.mjs';
 import { cargarFacturas, paginaHogar, paginaFactura, paginaBonos, redireccionesFacturas, rutaFactura } from './lib/facturas.mjs';
+import { calendarioReels } from './lib/reels.mjs';
 import { cargarStack, paginaRecorta, paginaAlternativa, paginaAlternativas, paginaGuias, paginaPrecios, paginaMigracion, rutaAlternativa } from './lib/recorta.mjs';
 
 // Bloque de contacto para páginas de servicios: solo aparece si hay email o formulario en data/sitio.json.
@@ -50,7 +51,7 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   mkdirSync(join(salida, 'reels'), { recursive: true });
   // En Vercel, la URL pública de producción; Instagram descarga los vídeos desde ahí.
   const base = process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : sitio.url;
-  writeFileSync(join(salida, 'reels', 'calendario.json'), JSON.stringify({ base, ...JSON.parse(readFileSync(join(RAIZ, 'data', 'reels.json'), 'utf8')) }, null, 2));
+  writeFileSync(join(salida, 'reels', 'calendario.json'), JSON.stringify(calendarioReels(JSON.parse(readFileSync(join(RAIZ, 'data', 'reels.json'), 'utf8')), base), null, 2));
   // pdf.js para leer las facturas en el navegador, servido desde el propio sitio.
   for (const f of ['pdf.min', 'pdf.worker.min']) cpSync(join(RAIZ, 'node_modules', 'pdfjs-dist', 'build', `${f}.mjs`), join(salida, 'js', 'pdfjs', `${f}.js`));
 
