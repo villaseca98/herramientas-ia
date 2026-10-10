@@ -135,6 +135,171 @@
     "puntuacion": 28
   },
   {
+    "id": "da676a846be7",
+    "tipo": "comparativa",
+    "titulo": "Systeme.io vs MailerLite",
+    "herramientas": [
+      "systeme",
+      "mailerlite"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "c0bffc4c5a7f",
+    "tipo": "comparativa",
+    "titulo": "Systeme.io vs Brevo",
+    "herramientas": [
+      "systeme",
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "f29392b89e71",
+    "tipo": "comparativa",
+    "titulo": "beehiiv vs MailerLite",
+    "herramientas": [
+      "beehiiv",
+      "mailerlite"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "24e196ab55b0",
+    "tipo": "comparativa",
+    "titulo": "beehiiv vs Brevo",
+    "herramientas": [
+      "beehiiv",
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "413caf3d6876",
+    "tipo": "comparativa",
+    "titulo": "GetResponse vs MailerLite",
+    "herramientas": [
+      "getresponse",
+      "mailerlite"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "5c9066721367",
+    "tipo": "comparativa",
+    "titulo": "GetResponse vs Brevo",
+    "herramientas": [
+      "getresponse",
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "8f68636454f0",
+    "tipo": "comparativa",
+    "titulo": "Kit (ConvertKit) vs MailerLite",
+    "herramientas": [
+      "kit",
+      "mailerlite"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "0bb8507ab27a",
+    "tipo": "comparativa",
+    "titulo": "Kit (ConvertKit) vs Brevo",
+    "herramientas": [
+      "kit",
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "d38c3a94c274",
+    "tipo": "comparativa",
+    "titulo": "Hostinger vs Tally",
+    "herramientas": [
+      "hostinger",
+      "tally"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "989224e3c164",
+    "tipo": "comparativa",
+    "titulo": "MailerLite vs Brevo",
+    "herramientas": [
+      "mailerlite",
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "ab6512d23ea5",
+    "tipo": "noticia",
+    "titulo": "n8n vs Zapier y más: 6 herramientas de automatización TI - El Ecosistema Startup",
+    "enlace": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTU9mRzVHWGFJLWhLM3N0SHE3M3Y4djBNQzFubU9UTk9FdjdWclhhX2J5a3cwRFNwbUtMZkhWTkhkVTBfU1E2MjcxdWRaRDQxc0lsekNkaDRRS2JucjFYNWtOUnVvTlVWVk4weUc1R1hPUExzbkpWaXRDWWlPTzFVMnpBQ1VTeExBZzVRNlQ1OA?oc=5",
+    "resumen": "n8n vs Zapier y más: 6 herramientas de automatización TI El Ecosistema Startup",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-08T14:06:49.000Z",
+    "herramientas": [
+      "make",
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 25.1
+  },
+  {
     "id": "5d4ff1b36924",
     "tipo": "lista",
     "titulo": "Alternativas a Systeme.io",
@@ -293,6 +458,180 @@
     "puntuacion": 20
   },
   {
+    "id": "7836220cf521",
+    "tipo": "lista",
+    "titulo": "Alternativas a Hostinger",
+    "herramientas": [
+      "hostinger",
+      "tally"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "f4ccd86123b1",
+    "tipo": "lista",
+    "titulo": "Alternativas a MailerLite",
+    "herramientas": [
+      "mailerlite",
+      "systeme",
+      "beehiiv",
+      "getresponse",
+      "kit",
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "befdee28dae3",
+    "tipo": "lista",
+    "titulo": "Alternativas a Brevo",
+    "herramientas": [
+      "brevo",
+      "systeme",
+      "beehiiv",
+      "getresponse",
+      "kit",
+      "mailerlite"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "87f8d772c76a",
+    "tipo": "lista",
+    "titulo": "Alternativas a Tally",
+    "herramientas": [
+      "tally",
+      "hostinger"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "c3e7335cb8f5",
+    "tipo": "noticia",
+    "titulo": "iPaaS vs. API Management: What Engineers Choose When Both Fall Short",
+    "enlace": "https://blog.n8n.io/ipaas-vs-api-management/",
+    "resumen": "Compare iPaaS versus API management tools. See why engineering teams that need execution control, self-hosting, and code-level extensibility reach for n8n.",
+    "fuente": "n8n blog",
+    "fecha": "2026-10-01T15:07:32.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "851f66dba02a",
+    "tipo": "noticia",
+    "titulo": "Mati Staniszewski (ElevenLabs): “En 2030, todos tendremos varios agentes de IA” - El Ecosistema Startup",
+    "enlace": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVjNEWi1RUVdNZTZ1bFByUUhRTC03b001d3lUVHdiV0Uya1FYdjRFZlRzZ1hoenNJbVFhWUFGa2c2SDdZaVJ6cmdYOG1RYmpvSmM4LUNwLW91Z3BGdE1wVTlGR0NfQ2N2bnlUWGZvZDY5MG9FZVlvTlQ2RXRQNFZRVmVTTHg5dDhvNFVTRXFiUlNYeWo4NG5ueEFEX05Lek5ERW5ZSzMzWQ?oc=5",
+    "resumen": "Mati Staniszewski (ElevenLabs): “En 2030, todos tendremos varios agentes de IA” El Ecosistema Startup",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-03T10:22:31.000Z",
+    "herramientas": [
+      "n8n",
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "e1115bfbbed3",
+    "tipo": "noticia",
+    "titulo": "n8n: cómo una startup de automatización de USD 2.500 millones preserva su cultura al escalar - El Ecosistema Startup",
+    "enlace": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdld1VzZ6SWRDZWRzeEt1X3d5THByaWpVTFdwX0ZvSjZ5ZFhhSDFXOEdJUjE2MDdjWm04Q1BPM3gtQVA1aTV2aVR4RzA0aWxFdkxrdG9xWW9pdEtmYlNRaUtOLVBzRzlaNTJubnBrYkM1VjdNZWQ2LTQyT29CZGZZTUotZ0ZZOFQ4Mm83Z0ZISVlQVGRFN1JFcktTVlJoZlZCb0FkX3VqX3JFZjlienZ1YTJMVmZTWmJyMktCdjM3RQ?oc=5",
+    "resumen": "n8n: cómo una startup de automatización de USD 2.500 millones preserva su cultura al escalar El Ecosistema Startup",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-08-12T07:00:00.000Z",
+    "herramientas": [
+      "make",
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "c128d1a8d8d0",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs llega a Brasil con agentes de IA conversacionales - El Ecosistema Startup",
+    "enlace": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOT0ZWR3VJS2NWV3g1d0VfdXpHVEdSWDZhcU1DNUpoT21fd0hqQXQ1c1JYbkMtaGIxSWRvbXQ1YmpNSDE2ZkRvc2tyTW9Ic2xJaUNlVWV6Q0VRc0pIQ3pFTjZxS0g5MUxoVTZ2WTNvRFJhVTljdlc1cFB0U3A2UUFEdzFfZDZweHV6bEowODVfbHp4SkdZQmc?oc=5",
+    "resumen": "ElevenLabs llega a Brasil con agentes de IA conversacionales El Ecosistema Startup",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-08-18T07:00:00.000Z",
+    "herramientas": [
+      "n8n",
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "85c26956ddcb",
+    "tipo": "noticia",
+    "titulo": "n8n vs alternativas 2026: guía definitiva para elegir plataforma de automatización con IA - El Ecosistema Startup",
+    "enlace": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNWV5RDVPUnluS2loektzTy1HRnVNZ3E3VUR0SmFRaGFnVkhVblBxbGU5OHM4SUUzel9mNldPaC1Ra1ZsUTlFWG1EdU5IdTRUS1NZblJ0czEwb1ZyTWFrWFZtVTlyS1BBTVR1djVDMnYxaWRJVXlyeVBadEZaNnNMcnAzRDYyM3B2WEJGVncwbmVzN3N5dnNERGlnMDBab3lCNmNyY3BORHZDT2lHb2h6Y09LTkZxX1RXMW5F?oc=5",
+    "resumen": "n8n vs alternativas 2026: guía definitiva para elegir plataforma de automatización con IA El Ecosistema Startup",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-08-16T12:52:02.000Z",
+    "herramientas": [
+      "make",
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "b7b62216472b",
+    "tipo": "noticia",
+    "titulo": "Requisitos de VPS para n8n: guía completa para 2026 - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5wbGxCdXNOLXE3VEkxdlkzSFY3d0wzWHdrVWxXQVd2amQzVXVxQWVqNjU4ak43QV9KS01WSGh1VTRCZDdxNzBWcEExbFozYVlyWVdxT3JNUUZhUlljQnZlcy1panVrd3dYVTFj?oc=5",
+    "resumen": "Requisitos de VPS para n8n: guía completa para 2026 Hostinger",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-05-28T07:00:00.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "c3d6e42d839b",
+    "tipo": "noticia",
+    "titulo": "Integraciones n8n que mejoran la automatización - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5FbUF1ZmxMZHlKcWgtMXl6Q3FFOTVETmhlbUFHbThKOUhnY3N6Y2Z5LU9DTDVNbDF0VW1DbU9yWXVZZVNVTGtKbnJRcFpKaHNIcHB4cGU5YTNYSDRGY3Q3QUlqTXpCN1llcUE?oc=5",
+    "resumen": "Integraciones n8n que mejoran la automatización Hostinger",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-05-08T07:00:00.000Z",
+    "herramientas": [
+      "make",
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
     "id": "e283e2fb86d6",
     "tipo": "resena",
     "titulo": "Systeme.io: reseña, precios y cómo empezar",
@@ -445,5 +784,1237 @@
     "fecha": null,
     "estado": "pendiente",
     "puntuacion": 16
+  },
+  {
+    "id": "cbd947ae293f",
+    "tipo": "resena",
+    "titulo": "MailerLite: reseña, precios y cómo empezar",
+    "herramientas": [
+      "mailerlite"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "bd843952fa93",
+    "tipo": "resena",
+    "titulo": "Brevo: reseña, precios y cómo empezar",
+    "herramientas": [
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "3b3b5fa2cc79",
+    "tipo": "resena",
+    "titulo": "Tally: reseña, precios y cómo empezar",
+    "herramientas": [
+      "tally"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "0df3b5c0dc74",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs planea invertir cientos de millones en India y formar un equipo de 100 personas - DiarioBitcoin",
+    "enlace": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPa1VmUmJkSUh3dGxBa3NBNjU0a2E1SDQ3ZHVlT1oyZ19kZGtXTGxmUDRhRlVobDF6UUJuWTFRUVBNTVM0NDVEVmZzU1pnWjhwSV90QmlTZGlfSUc0Y3lYU0I0VzJaODVNbGtSajVLOVdhQnFlWkVldW0zekxhOXk5NTFHakZycnljQXNyclM4OWRHQzNJVDk0WTNUVkZNNHc2d2wtQUJ6MDdYVWNsRzd0TW16RXk3OEtpZDVLcDBWRmpGMnp2WlpFTlhNUUg0SVBTQl9n?oc=5",
+    "resumen": "ElevenLabs planea invertir cientos de millones en India y formar un equipo de 100 personas DiarioBitcoin",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-08T17:06:57.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 15.2
+  },
+  {
+    "id": "16bb061e360b",
+    "tipo": "noticia",
+    "titulo": "OpenCharm",
+    "enlace": "https://www.producthunt.com/products/opencharm",
+    "resumen": "Open-source body for the AI agent you already run Discussion | Link",
+    "fuente": "Product Hunt",
+    "fecha": "2026-10-07T15:54:37.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 14.2
+  },
+  {
+    "id": "58df322f46a9",
+    "tipo": "noticia",
+    "titulo": "Show HN: NanoMuse – An open-source AI agent for your phone and computer",
+    "enlace": "https://github.com/nano-muse/nanoMuse",
+    "resumen": "Article URL: https://github.com/nano-muse/nanoMuse Comments URL: https://news.ycombinator.com/item?id=49987765 Points: 65 # Comments: 21",
+    "fuente": "Hacker News (Show HN)",
+    "fecha": "2026-10-07T03:30:44.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 13.7
+  },
+  {
+    "id": "d087417c80a9",
+    "tipo": "noticia",
+    "titulo": "AI firm ElevenLabs to invest 'hundreds of millions of dollars' in India - TradingView",
+    "enlace": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPLW1BS0lkQzNERnNyMjh2RU1YZHMxVnJyWG1BQWdzeUJEZnJKNlV0LU5GSTNReXdTZnFkbmZJWng2WEFVQ1c4a1RpdThWaFZHU1d5dEF4TXRMc2FEdWtiWDdfQjhqd0ZWRlhZYnA4MV8tdlJMYUJwdHAzRWNISE5ydVBDRWV5TFlZUWl0Y0EtRWZrc3FtclNja2xhUF9feXFaRFUwc3h2UmNmZzB0ZXZFRXVMeXM0UGtKenpKTF9IN05zVkpTZVEwTExSVjlxUHVBVHlZaQ?oc=5",
+    "resumen": "AI firm ElevenLabs to invest 'hundreds of millions of dollars' in India TradingView",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-06T13:45:58.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 13.1
+  },
+  {
+    "id": "5a688548e421",
+    "tipo": "noticia",
+    "titulo": "La empresa de inteligencia artificial ElevenLabs invertirá cientos de millones de dólares en India - MarketScreener España",
+    "enlace": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOT09JcFlvanhVVC1oaExuLXlzNkJPaGtGMXVhZndzY2hFWnN4aEV0SEswR2NVUmdHVndmWmg0UzktVURKLWlReVFZZEx2ekM0d2tNUGdzM2lkdXNYSGEzRGlhM2dqSDNJSmpYdG9rLUZmbTBSd3kxV0VrTnZQcEdkYldONXR1Mmo2SmRsRDNjUjZHVk9KQkdhSFVXRDB1SjkyM3I2dnl0SjhhZWM3NDNST3Nqb0dicUwzS3hUUVJtam5RMmFLLXlfeFh2ZWVTekxVN1huTGkzUlVHc2JkUHVHNXZHc0RvRG13?oc=5",
+    "resumen": "La empresa de inteligencia artificial ElevenLabs invertirá cientos de millones de dólares en India MarketScreener España",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-06T12:40:25.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 13.1
+  },
+  {
+    "id": "5eb64427abef",
+    "tipo": "noticia",
+    "titulo": "Ahrefs o Semrush: cómo la IA encarece la elección SEO - quasa.io",
+    "enlace": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQVdRclI2dWVORTJOVmxyQ0Fid3pVUUxTdGdyZWNBdnBlZFBuZzBaanBieUlHUkxrSHcyZnliU3AwQVY1RlBTSklFVG9PVWJPblZPMnphU0JjUGc0MXgycHh0dVg5UXRjSkNldEt3Yi1HUmZCZWV6anhGV0FybEkyMWQ1UXlwQjYzWWk4R1JjY0ZYdG1iYmdOUUwxbzJMZw?oc=5",
+    "resumen": "Ahrefs o Semrush: cómo la IA encarece la elección SEO quasa.io",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-04T20:00:00.000Z",
+    "herramientas": [
+      "semrush"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 11.4
+  },
+  {
+    "id": "3d0118a21420",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs duplica su valoración hasta 22.000 M$ - IndustriaMusical.com",
+    "enlace": "https://news.google.com/rss/articles/CBMif0FVX3lxTE80MlNPWTJDbTRkaUdNelpTWmd1M1ZQZXJEQTFfMW51c3BuOTFhWkNNR19XNTRaSFlXaTg3YjdEY1c0bUYySGtGcEJKLVA3WFF4R1pabTJBMEllcjBQdE56enY3Z2tRRDZCRng3U05WU3NpOGUxS2hWT01zT3hNLWs?oc=5",
+    "resumen": "ElevenLabs duplica su valoración hasta 22.000 M$ IndustriaMusical.com",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-04T15:33:05.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 11.2
+  },
+  {
+    "id": "4216cfba6bd0",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs, La IA tiene voz - RTVE.es",
+    "enlace": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5hZmplZUMwalNDYW1VNzZBWERzMEVuSFhKbjJMRDJueDdKemZ4VkZPOEIxcUNka3NDbFI3Tmg2aXNWTFE5VHZYdkFiZUlvZ3FJa1QzTzdCRVU1M0d4d0JFaDNFV1VfbE9xTzVIbWpLWnZiT3RrMFFaVUo1VQ?oc=5",
+    "resumen": "ElevenLabs, La IA tiene voz RTVE.es",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-04T08:50:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10.9
+  },
+  {
+    "id": "208cdac0a0cc",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs vale US$22.000M tras duplicar valoración en 7 meses - El Ecosistema Startup",
+    "enlace": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNb1pMUTZiOFlUTFRGal8zd3RsOGJtX09ibGtBVGdVRmMzNGdrRXAyTl8ydGp0OWNOTEpHOE5Mb3BIM2gzaDNLMExrRG1TOTVDbGRGZkQyUXJlVXhGZ1RQTEZwejE2c0JYVmlya25DVGZEVzJqcThsT1ZhdHlaTUd0R0d0M1NlWmJ3ZVFlVi1aalpLVlNnYU9j?oc=5",
+    "resumen": "ElevenLabs vale US$22.000M tras duplicar valoración en 7 meses El Ecosistema Startup",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-03T15:06:41.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10.2
+  },
+  {
+    "id": "10d65f76e074",
+    "tipo": "noticia",
+    "titulo": "How API Contract Testing Prevents Production Failures",
+    "enlace": "https://blog.n8n.io/how-api-contract-testing-prevents-production-failures/",
+    "resumen": "API contract testing helps you catch breaking changes before they disrupt your workflows. See how n8n validates API responses while your automations run.",
+    "fuente": "n8n blog",
+    "fecha": "2026-10-01T15:36:51.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "e4314c7f1a0e",
+    "tipo": "noticia",
+    "titulo": "You can now top up your n8n Assistant credits",
+    "enlace": "https://blog.n8n.io/top-up-your-n8n-assistant-credits/",
+    "resumen": "On n8n Cloud, you can now buy extra Assistant credits when you run out - manually or with auto top-up. Here's how it works.",
+    "fuente": "n8n blog",
+    "fecha": "2026-09-30T21:35:00.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "32d3b4c11c1c",
+    "tipo": "noticia",
+    "titulo": "Introducing n8n Agents",
+    "enlace": "https://blog.n8n.io/introducing-n8n-agents/",
+    "resumen": "n8n now has a new type of Agent. Describe what an agent should do, choose a model, the tools and workflows it can use, and it's ready to go!",
+    "fuente": "n8n blog",
+    "fecha": "2026-09-25T12:00:23.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "d7c16defa7f7",
+    "tipo": "noticia",
+    "titulo": "Try new models and services, skip the account setup",
+    "enlace": "https://blog.n8n.io/gateway-credits/",
+    "resumen": "Starting with n8n v2.36, you can now use supported AI models and tool services on select n8n Cloud plans without creating a provider account or generating an API key. Choose Gateway credits instead of adding a credential. Six model providers and five tool services work right out of the box.",
+    "fuente": "n8n blog",
+    "fecha": "2026-09-16T23:39:42.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "29dc63abd9c7",
+    "tipo": "noticia",
+    "titulo": "MCP vs. API: Key Differences and When To Use Each",
+    "enlace": "https://blog.n8n.io/mcp-vs-api/",
+    "resumen": "MCP vs. API: Learn how the Model Context Protocol differs from traditional APIs, when to use each, and how to combine both in n8n.",
+    "fuente": "n8n blog",
+    "fecha": "2026-09-10T16:41:50.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "9d00545aa44f",
+    "tipo": "noticia",
+    "titulo": "De Marque y ElevenLabs se alían para impulsar el audiolibro en mercados no anglófonos a través de Cantook - Publishnews",
+    "enlace": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQaVFadmZaMVRuUmZ2TEJVbHJjYThwbWNyX3JvWlpNQUsxM05iTUhsWHVzQ0JrLWFZd1k3WmdsdFhBb3BNM1ZDQ2p6bU1Ebl90YWFoV0x3bFV5Zm1YMGhfUUdXOHY0aXFWYVM5cDJqVnZMei1lVTNUcnBXTkF2Mm9BcmhmM25neW5VZXVhQTZhVC02R3JOZVR4ZTVSNDFTUzd5aElnNGdrQTVORGlfUWprTzg2OUZpaHVBcjQyNFB0d3dGY3J5eVY1YQ?oc=5",
+    "resumen": "De Marque y ElevenLabs se alían para impulsar el audiolibro en mercados no anglófonos a través de Cantook Publishnews",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-02T23:46:10.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "7e93305e518f",
+    "tipo": "noticia",
+    "titulo": "Dos chavales y un pequeño modelo de IA contras las voces sintéticas de ElevenLabs: así da sus primeros pasos la madrileña Lokutor - El Mundo",
+    "enlace": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbU1pVlpwYXAteXhDd2FwQWpHdlR6bkNvT0FNa3N6TUZTTXZBeWJVY3E0TWN1aF81bk96eDZHQUlSSW4weWZ6eDFOaGNCMTlCUUVFY0M0X0gxRGdnblVfRXdJQ2wwcjZZVkVOY2JmNHJJZ050NVNKWDkzWE9IVWdXajhuSThJSS0w0gGIAUFVX3lxTE5jM0RnWGNsdlVZS2xObUItbHRxTEJwWk05SS1fSk5fQ2ZUcnIxWlVaTkt4NHRDS2hvdHZLR0RUSlVWVk5lZVNLU2dld0x0bnBzRjZMVVAtUlJqTjQ5eE9fQ19xd1N1eUN2UWdrMHkyRDhVWDFmcUJ6N2lwMUs1VjFGbW9vZmF3ODc?oc=5",
+    "resumen": "Dos chavales y un pequeño modelo de IA contras las voces sintéticas de ElevenLabs: así da sus primeros pasos la madrileña Lokutor El Mundo",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-30T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "ba8a43dea09d",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs lanza Eleven V4 con variante Turbo de baja latencia - Unite.AI",
+    "enlace": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMkEzRWNyOU9GTDVjVnhteGg1Q0ZVNXlYQmJoM2ozN0s4UEtMTWcyR2RYSDNNcUJqN2h4RW9TUUJxd3ZmMk1GU1hZX3dmNkFrVFZZVDNlWU1ZTy1tMUdsMWI3Y1NNN3RtTlFUQmhfMzBBWmUtNUVDbTlJM2lZcTl1WE5UMWs5bmF0NnNFTzhn?oc=5",
+    "resumen": "ElevenLabs lanza Eleven V4 con variante Turbo de baja latencia Unite.AI",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-28T17:00:20.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "1d68eabcb83a",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs v4 clona tu voz con 10 segundos de audio y la hace hablar en 90 idiomas - Martin Cid Magazine",
+    "enlace": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOemNDT201d0MwYVRmcGl0WFpwREM3V2U0RGZrZ0FMMWlGRXNIT1dBTm5RSEwyZWw2cUNHbW1aLS10YWNqbWxjM1N5MlNET3V5MDdaSFVsOWxTNG1GN2JJcTNFR1NOWjNJTHExUG8tNDZFd0wzdC04U2NHUGdqTDk2V0p2aGR1a1FobG1sS3F6Yjc2VVhYZjFxdVU4QzM0U2VhRV9iS2I1R3JJN3N6aDhFQ21vdzJvSFNET3Ew?oc=5",
+    "resumen": "ElevenLabs v4 clona tu voz con 10 segundos de audio y la hace hablar en 90 idiomas Martin Cid Magazine",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-29T06:11:11.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "8d8d6dad78c7",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs duplica su valoración tras una venta de acciones de sus empleados y da entrada a EQT - MarketScreener España",
+    "enlace": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNWUJzVGhqaGZ6RHNqQ2VJdU04RzVXNHRzQnBSb19Pa0p5VUVwLWU1dms3VnJRZ3l6VExDUmRJbUFPLWQ2X0Y1SmlBUEN1RTRDX1NFZHNpUV95a0ZwRkJzRHQxZkxtWmN5dTZfWmNLenp1WlFSdzRvMjFvYUdULUxLU3lBQ255cEljZHo4NDNKRWdHM1ZMVThLTWVGWmlNanlTQlZjVHZJdXpSdnhYcFNPY0MyeFQyMERVTHVqOURXRkNFVWM2ZklmOXlZODR2VDJ1SUhvTzZyQjlrM19fR2h5T09sN0J3Zw?oc=5",
+    "resumen": "ElevenLabs duplica su valoración tras una venta de acciones de sus empleados y da entrada a EQT MarketScreener España",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-01T04:55:25.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "b7d441140856",
+    "tipo": "noticia",
+    "titulo": "La start-up londonienne d'IA ElevenLabs valorisée 22 milliards de dollars - TradingView",
+    "enlace": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5jRUdxNDNzN0ZVUEpkNDdRNGpFSnB6eEkxeGlyTkNiTFFxTGpZZW8yLU9URUZLVjZWelMtLTFlMTZsZkJxX21ta0JTQzBVcURDUjlZazNla1dYSl9QOFNqMFlR?oc=5",
+    "resumen": "La start-up londonienne d'IA ElevenLabs valorisée 22 milliards de dollars TradingView",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-30T16:23:22.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "538f45d4f7c1",
+    "tipo": "noticia",
+    "titulo": "n8n, la alternativa a iPaaS que SAP integró en Joule - El Ecosistema Startup",
+    "enlace": "https://news.google.com/rss/articles/CBMiigFBVV95cUxONUdKcTNrVFJZTGRpZkk1TFY2Q1Z3Q1dJbkR2RUpOUFJkQVk4Zm9MTUNIM05YYUNDSzkySWQyd3FPNnZROEw2cmhpRzNOZWZZSWZCTnRvakNQZks1VEIxWlhKc05ReWRrWW9zb1NuSU96VFZ4RzFHN0RnSi04QkpVSkhiN0ZHd2tWblE?oc=5",
+    "resumen": "n8n, la alternativa a iPaaS que SAP integró en Joule El Ecosistema Startup",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-01T15:28:18.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "06e59af2ae25",
+    "tipo": "noticia",
+    "titulo": "La valoración de ElevenLabs se duplica hasta 22.000 millones USD por el auge de la demanda de agentes de voz con IA - MarketScreener España",
+    "enlace": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNQXE1WVVBdEgxZ3hNVHFZdlZpQXpvUV9PeHZyZ0tMcFE4NjBrRTBOT2VOYWEwZnBRM0NaRTYxQlZBRTF3OEtaNVQyREc1S2pSdjlNa1FmaFRpMUYtTEhHZVJBcnNvRmd4QUZEQXNpUHZTcTJfTW9leWVQTjRRSkNUdEJiZzJVcEliRWtnOEVQakQ5YVhZUTRjN1ZXUVNPdUs5ck5IdWh2cmdlMFhGa0NhNjJOdDQ1RVQxbjFkN2pSXzIxMmpVbDJ1WjNDcXF0Zlp5aDVLMlVoY1E3UnMza1pjdXdZMWNvbDVhSzdPWA?oc=5",
+    "resumen": "La valoración de ElevenLabs se duplica hasta 22.000 millones USD por el auge de la demanda de agentes de voz con IA MarketScreener España",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-30T16:29:23.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "f5ec2a9ae020",
+    "tipo": "noticia",
+    "titulo": "La valoración de ElevenLabs se duplica hasta alcanzar los 22 000 millones de dólares debido al auge de la demanda de agentes de voz basados en IA - TradingView",
+    "enlace": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1lOW1hVkRRa0IxRTU5OW1pQ2txX0JQVTV1R21qa0MyRTUtczBseUlmckd2ekZOaU5PSWdKTzExSHBqd3RNaTVKeWVZT0pxZUN6MVZNSTBmQ2hJTXJUeXowOGtVRGwyVlh3bkVIWjBtSzF3b1VWenlZ?oc=5",
+    "resumen": "La valoración de ElevenLabs se duplica hasta alcanzar los 22 000 millones de dólares debido al auge de la demanda de agentes de voz basados en IA TradingView",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-30T16:28:32.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "15bf7dad87ec",
+    "tipo": "noticia",
+    "titulo": "La valutazione di ElevenLabs raddoppia a 22 miliardi di dollari grazie alla forte crescita della domanda di agenti vocali basati sull'intelligenza artificiale - TradingView",
+    "enlace": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MdzlZbjNOMXNNaG9odzVoWUxHNDA4T3JNNHF1VWhWVVlBWEFUc1drSUxHR2Y4d2hFUWRBUWlBNTdhRmxVT3AwZmNMdzhsTXQyeHFlbV94b0QzZUhFTmNTYXpJZTlhQnJXRGRZd3J1QzJSUVlyeXJr?oc=5",
+    "resumen": "La valutazione di ElevenLabs raddoppia a 22 miliardi di dollari grazie alla forte crescita della domanda di agenti vocali basati sull'intelligenza artificiale TradingView",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-30T16:28:18.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "c96cb2224f15",
+    "tipo": "noticia",
+    "titulo": "Die Unternehmensbewertung von ElevenLabs verdoppelt sich angesichts der stark steigenden Nachfrage nach KI-Sprachassistenten auf 22 Milliarden Dollar - TradingView",
+    "enlace": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBydkozQVJYYUNxWWlabUNGZzA0VVd1Y1E3bFJhT2VQbDNMRjBvSzlac0M0MC1NZTgtZFBGbTFlaVNZc256TVEtZ0JvdGF3OUo1ck9KeGViMGRxWi1OQm1MYk9iZEh6bVdQNUZRSUFVMjVxZ191dEVZ?oc=5",
+    "resumen": "Die Unternehmensbewertung von ElevenLabs verdoppelt sich angesichts der stark steigenden Nachfrage nach KI-Sprachassistenten auf 22 Milliarden Dollar TradingView",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-30T16:28:26.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "3270be8d9a5c",
+    "tipo": "noticia",
+    "titulo": "Suno lanza Speech: voz con IA para competir con ElevenLabs - El Ecosistema Startup",
+    "enlace": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNbnNSc244U1BGcFdIbzNXMi1lVnVmb3c3aHdfUng5RHNmQk01S2c2M0JiV3U4amJuWDZhTlJiSjZmLXM4STdpX3dPbGtoTkNHSEJXYWxlZGRJd29xSXlJVHJnM1E3X1ZmR25DLV9jQXlEWXp1WENVN1hWU3FIcS1VLVg0R09wQWZ0RncteGJUM2xCdw?oc=5",
+    "resumen": "Suno lanza Speech: voz con IA para competir con ElevenLabs El Ecosistema Startup",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-02T09:57:37.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "3c0b0fef277d",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs dobla valoración a US$22B con oferta a empleados - El Ecosistema Startup",
+    "enlace": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOU1FWXzRWNmMwelhPa1J4VGVUTkpvc0ZwanR1VU8yME5weHIwZEkyVkFNdFJ3SUtWWW9qVk9aSzVLYnZXano4NHZuUGx4aXMtR1dUa2VMODdodHdrLWtwRjNOeGxRbXBjcGMwQ0xwclo2Y1NKc0lyalZweU93NW1Ob0E1Sml0b2VLY1FnOWNVQ3g2Ukk?oc=5",
+    "resumen": "ElevenLabs dobla valoración a US$22B con oferta a empleados El Ecosistema Startup",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-30T18:44:48.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "b0027c6e7570",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs duplica su valoración y alcanza USD $22.000 millones en una oferta para empleados - DiarioBitcoin",
+    "enlace": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNYTAyYTM5M2pnQmxmTV9MZUh4RGxDYTZ4aDBoY0Jxa0tXdVZRSEtBc21vdFFOR0E4M1ZVS2Zhd0xwdkF1ZXp1YUNoX1N1UDRjRm8zQ1h0bkEwZms0M1o1S1hROFdEcTMxNUhuemZUeXZPZDBaWDhNVF91eWkwY25BdThFN2FKUnNiLWJOZFR2d0dwVFdkUHRHdTVSSHUta1U1OTlCOWJ1Z0xXT2pNMnVUOHd0amtvNzJfRWg0eTRieDZhLXgwNWFERlhTVnB2ZGVDMHFNMnIyUjVZdw?oc=5",
+    "resumen": "ElevenLabs duplica su valoración y alcanza USD $22.000 millones en una oferta para empleados DiarioBitcoin",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-30T16:53:38.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "2054684789b8",
+    "tipo": "noticia",
+    "titulo": "DXC y ElevenLabs anuncian una alianza estratégica para impulsar la innovación en inteligencia artificial y tecnología de voz en el ámbito empresarial - TradingView",
+    "enlace": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBOelB5UlhYbTR1TWJLT0hOLUpZQlJmTC1rVTB2aV9tXy11Qy0yVW5JNW9rc0QwLURoRkY4MTlXMEYzYkVkZTZEV1dNNDJWaU1veFR6Z045Rm02OHpQenpZSlptTVRyWmRScXhn?oc=5",
+    "resumen": "DXC y ElevenLabs anuncian una alianza estratégica para impulsar la innovación en inteligencia artificial y tecnología de voz en el ámbito empresarial TradingView",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-07-28T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "9f3082b044a7",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs podría alcanzar una valoración de USD $22.000 millones tras una nueva recaudación de fondos - DiarioBitcoin",
+    "enlace": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQS3BEWGlySHlfZDBPX2w0ZHlkV2puLVRJVGVlaWNyNjFQekZleTkyT0cyWUJVNk9TQ2Mwd0xFWFJkYm9KTUNhazJjQTNlUURIWE1qMl96RlVJSlZ4aHpibUVqVS1XbmN6R2tTd0xwV2lTT1NLSmxLNEI0ODRMQmVTc2JreklfU2RKY3VxSWY3ZXA4R3BrZWU4ZFNMMXRWRWRHNUpLXzctZXFRX1lzNDladTdXZkFyeGxFdmZJT2RzS2pYc2VZSlFlSEh0R2ZoM3NNWkFKbjFXTQ?oc=5",
+    "resumen": "ElevenLabs podría alcanzar una valoración de USD $22.000 millones tras una nueva recaudación de fondos DiarioBitcoin",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-24T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "c6069e477c71",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs duplica su valor con agentes de voz - voiceoverherald.com",
+    "enlace": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUFlBWnZYbnQ0czkxamVCMkRZN0ZOZHFRemtRWXo0NTVtRG5QRXFHOUlqY3BzVm5wekdfY2hDRjYtSnBjNFhpci02bVhUZ3lzaW11aHJwekdIMHIyc1V1Y1hNekRZbHI5czd2S0dtWXAzSENQaDZRYkZHOEszWktHYmo2Mmc5UHpsQVFPUGZsX09McFE?oc=5",
+    "resumen": "ElevenLabs duplica su valor con agentes de voz voiceoverherald.com",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-02T00:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "de86744adea1",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs lanza v4: más control expresivo y voces en 90 idiomas - DiarioBitcoin",
+    "enlace": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdmRwVWFHOWh4TkE5WnpYbzZyNEdPWDdIRXQ4MlNYSncyNE1xYmZkSElLNktKWkN1cFVELUNPWElReXIzRnhNeGNYT29mWkVOX3JhbXQtUTNCbXB6bUkybnZUM01JQS1XOHJLTm1HTFhtbTd0eVJJOGRVaWowNnZIcWpWNzRSZTFfTDZLNi02MVdZNk9yV241S2d0TU5mcjBrZlNHRl9IcVhkc29YVjBobXFESGQ?oc=5",
+    "resumen": "ElevenLabs lanza v4: más control expresivo y voces en 90 idiomas DiarioBitcoin",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-28T20:25:46.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "22dc2a8883dc",
+    "tipo": "noticia",
+    "titulo": "Universal Music y ElevenLabs crearán una plataforma musical con inteligencia artificial - DiarioBitcoin",
+    "enlace": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQRDF1WS1oQ3VGajZEYkppNjg2blo2cEtOYmxfaU5fNUM3UU9zaUF0ZDNSaXI1Ulg2MFBrWEdlaHdTcTd2M1ZPT0cxQUxxWTFQa3pxdEoxcHUxQzhuSHNEcG5saXJhZ2cyS2FYZ1pONmMxVWNfWWxTdTNac2VTdU81WVZJcURfYjE3SWg4ZTdGbGhiVDFVZndiaFdadU5uR2psMDFlRjJJYUNpaGtqMUlmbFJMaVk5YUtxRXBLWUU0UW9sbW1VOEVnSA?oc=5",
+    "resumen": "Universal Music y ElevenLabs crearán una plataforma musical con inteligencia artificial DiarioBitcoin",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-18T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "9d3c0453871e",
+    "tipo": "noticia",
+    "titulo": "Semrush para empresas: visibilidad de SEO e IA | Adobe for Business | Adobe España - Adobe for Business",
+    "enlace": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1zQmdtQTg1R1VwcjJhRkRKd01WdHE3TmQ1WVpYZl9pV09CQjhuUDM3SUVEdDRBaVFIZmE2RWRkVFI2V1NVTnptc2d2bHJpbDFqNUN4Wk9faFV0NWhuaDBnM25QRUt3R0NDTmI4M2VjUQ?oc=5",
+    "resumen": "Semrush para empresas: visibilidad de SEO e IA | Adobe for Business | Adobe España Adobe for Business",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-15T15:22:20.000Z",
+    "herramientas": [
+      "semrush"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "2b03c70260f4",
+    "tipo": "noticia",
+    "titulo": "n8n llega a Platzi - America Sistemas",
+    "enlace": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA5aUhtZEU1SXpjejVSOC1xUFRUOFV5NXRVWGdLOGhPZkgzNWtqbTVQZWVSUjB1OE41TXN1Ulh2TzhpUFN2LXFSQWFxSVNkQzRNZzZwbHgyZWFUbm5heFJN?oc=5",
+    "resumen": "n8n llega a Platzi America Sistemas",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-30T04:47:59.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "c8aae30ace6d",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs estudia una oferta que valoraría la startup en 22.000 millones - Investing.com España",
+    "enlace": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNSDJIZ2xSR3h3V05VZW95RXI0S01XZkc3NlB2aW9JZFpFUVYzSVJweWw5UGUyVmJFOG5SaTRrdjQ0OFlqMjJZaFpuSWd4SjRIRGNURnRLV2djRkxjN0I2eHY2Y0NrQks1VVItTlBUM3hEVFdHM0dqd0piUkxtczVHdzY1NENFNzRYdlFfbFJ6TmRFZ3BEeGpvWGdUSG4yWHlEcHl2b3Nka2loM1Z1NWZuemljMkJMc1lFck9EUm84anEzbmVhNlVV?oc=5",
+    "resumen": "ElevenLabs estudia una oferta que valoraría la startup en 22.000 millones Investing.com España",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-07-03T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "0d2efccb3310",
+    "tipo": "noticia",
+    "titulo": "DXC y ElevenLabs anuncian alianza estratégica para impulsar la innovación en IA y voz - TradingView",
+    "enlace": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1NTkRxeGFKbFMwMnVSc05LejZZQlhRa1hncm5MeDlBOWQ0Y3VENmNGMHlmYTliLUF0d2VZYmt1TG1nZk9HcElrekxpYWNMbWJVNnNVal9UMXNWeXh6a2NETXNlaHBEdWpBSzFB?oc=5",
+    "resumen": "DXC y ElevenLabs anuncian alianza estratégica para impulsar la innovación en IA y voz TradingView",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-07-28T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "a2185d52f8f6",
+    "tipo": "noticia",
+    "titulo": "UMG y ElevenLabs preparan una plataforma musical con IA - quasa.io",
+    "enlace": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNN2RpcjMtamlyOHhOcFljSjctSENNaHZuR1JXc2hyVEM4Mk03Wm5ybTFJZXI1R3EyN1lTWmMyVFNobzQ4WVpUYmRjUDljMnRZUERVRF9tUE5xdVZKMnBhN203YS1JeVM1ZF9LUmh1ZFM1TThxcE5fT2hBQi1Gc1NjUnpNNGJVVmx3RlM5QklPZ0U0dw?oc=5",
+    "resumen": "UMG y ElevenLabs preparan una plataforma musical con IA quasa.io",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-14T12:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "e1a165086231",
+    "tipo": "noticia",
+    "titulo": "Universal Music y ElevenLabs lanzan música con IA: los artistas cobrarán por cada canción - MONCLOA.COM",
+    "enlace": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQclI5RFFqRnoxdnhTWTFlaDZEcWRrWWRzNWNjQk9GNzZqRUhRRGVPYVBONzRJSUh0dE1jMXMwMm40QmxJeEFhSzROcDVhQVpXcGpRZXlYOUtFeDFDOTlEYk14aUV5VmZ1T0lENDJFcHh4SzIzRE1VSWZXNVNwcXFLOEIwQk80WDQ?oc=5",
+    "resumen": "Universal Music y ElevenLabs lanzan música con IA: los artistas cobrarán por cada canción MONCLOA.COM",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-12T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "136d58f0f53f",
+    "tipo": "noticia",
+    "titulo": "UMG firma un acuerdo global de IA con ElevenLabs - IndustriaMusical.com",
+    "enlace": "https://news.google.com/rss/articles/CBMib0FVX3lxTE40ZVpyU1k0T0VXd0lCdjlRZUVxbWVlazlISHd3SWVoUXNJM0tyWFBHQVBnMjlhcHAtNVdmX1lGb05VN0poSmZQVS1uNExvSGVxVWhlQ3FhV0pLVkY5RDJFc25Va2VGajlxYXBLX3Exaw?oc=5",
+    "resumen": "UMG firma un acuerdo global de IA con ElevenLabs IndustriaMusical.com",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-12T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "70fb77a741ae",
+    "tipo": "noticia",
+    "titulo": "Borja Batlle (ElevenLabs): \"La siguiente interfaz es la voz. Basta ver cómo los jóvenes mandan mensajes o piden ayuda a la IA\" - Business Insider España",
+    "enlace": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNTE12dU8tRlFuc3NpSUowUlptaXduM2ZxODNMWVQ1STRTV0lDQTJGeVpUTG9xRU8yY19kUU84cXlZcnVkQmFzb0xISzE1QWJXSXhEUjNzQkNKY2xLR3QyRld3VEpWVVF5SnNhMHUydl9DRjhMdzRuempiQVIwWW9UelZVMU4wMjlLTFlnOHZ1TC1uRlJBMlVkR3Y4ZU5LMWFDWlJ4OFFuTWhMN2R3aXJhMWl0XzVtYmZjbGo5dm5nSEdUaHFlWjQ4YTVnVnFHQjBNRUJxb2VIQm90UEswTFpnUG9NcWNfNTFSX0YzV1JlZHd5VHJncDhZ0gH8AUFVX3lxTE1pYkU5YjItV094aTZ0X1dMc2JqS0ZTc2NuWFZTS0VFVmtJaTdsR0s0YXAyd0kyMUJiWU0zS1lKUlYtb1JCSUVjNlZ6eTVIVkhXOE1PUHYybTlQNnpkS1pmVzRFbm5IaGV4dVFvQVBIczdXVFZWOUR3eEtUUXBSQzRSTEkzaThBNHFGSzYxckQ5OTlxc0ZyYlJrUzhEQlFaNW85bEs2WjhhZ2lDVml5amQ3ZkNQbGN3aGdmcWtLY2Naem8yRzV3cGE0cUpab2NWd3ZaaFRFWXZQR2ZkWTJkbUlDWUp5WDhxcEItMDdScGVnYnYzbWE0YUNWbU8zeA?oc=5",
+    "resumen": "Borja Batlle (ElevenLabs): \"La siguiente interfaz es la voz. Basta ver cómo los jóvenes mandan mensajes o piden ayuda a la IA\" Business Insider España",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-04T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "c7293c7988f9",
+    "tipo": "noticia",
+    "titulo": "Borja Batlle (ElevenLabs): \"España tiene un apetito innovador enorme para liderar la revolución de la IA en la voz\" - El Español",
+    "enlace": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOTnU0WUxIRjREblliV2xBM2xLa09zQzFVdFd4SzZVVEF0VTZZcko0cEVPN2xKZmJkNHVwZWQ4cklRQkx0M0RUOElkZkhKVTZCbG1SOW4wbFJIX2g5cGdqNHpyQUVCRGplbFFjSURVZV9MX0YzQktaUHZET3hqM3hnNzZvTGs4RDFrUU1aZTUzTVhmTTE2RVE3aTNGbzlUR2w1M2wxWGVUOTNtMDNHS2h3U3NDaDI5Z3JZT0picDdtLU1vQXJGNWdoQ0ZWVDJBRUlBQzVtT0NZYTViWTgzbExoMlU3bDZESVNXV2hwZy1fUlNmTnBqcFUtTzFiZ2F5RzV5UEJTcnZscVFlNk4wYUplTm9MdlrSAZoCQVVfeXFMTWtfb2l5dXVhdGpseHpBSXF5V1lWS2tNbURFZDdXUnRWbE04SzZyZkFndVRsQk9TeG9OU01Qb09iSFpURHBXbHBUWjJxYVBwQkJxSG1RSmZWZFk5Y0lLYWJRNUxOUGQzQVVNTzdtajhvTllXeVZreEZFblFPNTMxMjU0dFdCblVjVHhnbVFSR3loLS1DcXRqWGVBQTlHcU94aGlXMXhnYW1Kb3YyUXNQS244Ukl4QWFlRkdTU3Y1LU9rdlZIR3VJTF9JYU9UNVc0eU9fNFBJY0k5V25jbkIySzNxZDJtbUx3Z1BKdHNwaHljUHgwT3NTWllvS3NpMnM0MHVXYnNpblFnSl9lWHdJVHVST19kNWVVdGhn?oc=5",
+    "resumen": "Borja Batlle (ElevenLabs): \"España tiene un apetito innovador enorme para liderar la revolución de la IA en la voz\" El Español",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-08-28T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "b635db142915",
+    "tipo": "noticia",
+    "titulo": "La revolución de las voces AI: CEO de ElevenLabs comparte su visión y futuro en el sector - Cadena 3 Argentina",
+    "enlace": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOT0NuVWgyNG9uTDBzdVNKNy1pMzdpTHVvTzd2cDAwaXhyYzNlYnBEQUlwR093RkFORG5GM0RlVzJ1cnM4UWVvUVJIMlI1a3JtOTJSZV9BbGFlcV9YUHFkSGt4TDBZcE1wbFZVcG5abWp3X1p5am02ZGFDNlBhU21TQlBhcmk4MnBtaDU2dmdjeFkzdXBRby1kaU1fcUVGSWhTZTdBTVVWVXBoa09NUmZJeDh2VVhVU1Q0N0lDUmo0ZW9CRTVhdUl0dE1zZTkwN2VUMHFNYdIB2gFBVV95cUxORXYzbmg5OWFNbjNJYmVnOEticWZKTDJ1cU9SRGdLa3NKU1Z5bS0zMXRUV0l5VUgtLVBZeVFtTFVnZlNLNGdlbVFDZTdrWVNHR0FEa3pWRi1WZzhiUXRfdmkyOWRVcC1FOXFKd2FFaEZrZzZ0QkdyaUpUMHZOS1VIdXhTMWJfMWl1UldUcWlzSGx6V2I1VEphZTFtQWFmUGFBY19YZUxTcDhnUzhxWktpWU9NN1VWRThJaGphSFpsLTUxajBST3JERzNKVHhlWEtHUVIyWXlraldHdw?oc=5",
+    "resumen": "La revolución de las voces AI: CEO de ElevenLabs comparte su visión y futuro en el sector Cadena 3 Argentina",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-24T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "8a27ae28b2a1",
+    "tipo": "noticia",
+    "titulo": "Substack o beehiiv: cuándo el 10% cambia el ganador - quasa.io",
+    "enlace": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeTRLSV9TdFp2NmpLbm5kUE0xRWJTUHVRZWE3dG00TnF3TlFVdXpIclp5VmRNLVFUQy16UEluMms2YUY0blFyTU5HZU9KLTJpZEFQMzBYeFRlRFREWk1pWkFFT25jVWNUbHlPczhLekR6aFM0RWJIMlF1OU4xcTNRQUZQMjYzUFhU?oc=5",
+    "resumen": "Substack o beehiiv: cuándo el 10% cambia el ganador quasa.io",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-07T07:00:00.000Z",
+    "herramientas": [
+      "beehiiv"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "0905681776e1",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs lanza Music v2.5 con canciones más naturales y acceso gratuito - DiarioBitcoin",
+    "enlace": "https://news.google.com/rss/articles/CBMitgFBVV95cUxObnotUEU5OGZ0bmdNZzVKNzQ2QUVObFZjRGN3RU9PNUZwbE1nc2pLeGltWUpFUW1vc1Nxc3RhV01MQkNYRHNiVWozRWtMZzZzS0V5SXpBVVZVaE1PS09WUlh3OE9PWEhZN1kwazFHZ2haYmR2VU5BRjliVW1pODBfUWliQU95T1NwVklleHdvb3dHcWJneWV2V3p5MjBLUmhyTEROVENOaFVxdWxxZ3JUQm5oNjBNQQ?oc=5",
+    "resumen": "ElevenLabs lanza Music v2.5 con canciones más naturales y acceso gratuito DiarioBitcoin",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-14T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "717c05ddb206",
+    "tipo": "noticia",
+    "titulo": "Carles Reina trae a Madrid a ElevenLabs, el gigante de la IA de voz - Observatorio Blockchain",
+    "enlace": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZGx6T29OMmx6Ql84M29tVlFnYzg0NFIxQVFfaDEzUTV0TVl4OVU5Ymc0QXNxc19WZFFKVlVoNkpoT280NXh4LXlEdklEWlItU0o5ZXBRWnhUNXh3MW1sVHNKU0h5aG5aeXh4aExnYnRxX0ltXzhZSHZMNmJhZnJSQ1NnR096cm8walllVF9rcTV4VHNSS2w2YlUtWTZEZw?oc=5",
+    "resumen": "Carles Reina trae a Madrid a ElevenLabs, el gigante de la IA de voz Observatorio Blockchain",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-08-29T16:12:05.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "0df8bbd343a6",
+    "tipo": "noticia",
+    "titulo": "La API de ElevenLabs incorpora un flujo automatizado para doblar audio y video - Diario TI",
+    "enlace": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPSHNLMUxpR0lFbW05ZXFXRk9OSFZTTDZTeUNOek84elQwWmpfcndMVWE4QXQ0TjNTYWNoSUhvTmlFTHpBNlNnWks1OGNyRk0wU0ZkUm9aU1QzM2pmck5mOVR5blgtc1VHeDdQYy1IR1piSnpjd1prN2RMY0pCbVRMUG5nVjFPbEJUclkxaVhhdEotRjVDc1FENUpDWlZIUTJ3Ym1obUUza2x3dw?oc=5",
+    "resumen": "La API de ElevenLabs incorpora un flujo automatizado para doblar audio y video Diario TI",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-08-06T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "324883bfe0e2",
+    "tipo": "noticia",
+    "titulo": "Devoteam y ElevenLabs llevan los agentes de voz con IA a la atención al cliente - Portal ERP",
+    "enlace": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdm1CcDloZVl1ME5tQzFMZFY1NjQxbHNuUkFLLUx0aldIUFVjdTBOckh5Z1Q5eGl4SU5PUG5xMmlCX05WeUFfQ0RHMjJ3emVhVUl5YnJ0eDU5Wnl6dWdMZjB5S2ZhN09jcG5NRnQ4akxWUXJQSTZ2SW5YcUR4R0VrSXFoUi13TVdRQzh5cHhjWFBhaUJMbnRXWDh0Sk5KamNSVGNSOHJOd18xLU9aajQzSW5R?oc=5",
+    "resumen": "Devoteam y ElevenLabs llevan los agentes de voz con IA a la atención al cliente Portal ERP",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-08-13T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "899b12730ca7",
+    "tipo": "noticia",
+    "titulo": "HeyGen duplica sus ingresos recurrentes anuales (ARR) hasta los 200 millones de dólares en ocho meses gracias al auge del vídeo con IA centrado en la identidad - Business Wire",
+    "enlace": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAtTUtfM0xSUHpoaEtXS1hhRmVoeXZNZEVITWFlTHRZUWc0VDZHMVU4TU9SdXhTR2ZFdm5CekJZTGtTbThrV2tLM0lIRjN5RllTU1l5ZHhPQUN0T2dnWXVaejBJSmY0Z2s?oc=5",
+    "resumen": "HeyGen duplica sus ingresos recurrentes anuales (ARR) hasta los 200 millones de dólares en ocho meses gracias al auge del vídeo con IA centrado en la identidad Business Wire",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-25T07:00:00.000Z",
+    "herramientas": [
+      "heygen"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "dc8dd0b7a80c",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs entra al marco de nube del Reino Unido estimado en GBP 14.000 millones - DiarioBitcoin",
+    "enlace": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQclVPSEwtTkNVMG5KVXJKU0pBWDlrdnNyRF9OZDNtX0M2bmhOcENxNEVFVUl0RmFQeDlSLU9OajJNZlZuTVhvVEluUm5jelNWUExrMHc2YkhSR1hRMV9vWHFndldfaWdtMVRPTXF6MjFiNlNoZVUzX2cyZDZSWnQtM191MXZwSFRvTUh6YXNEUjJ6YTROQTZObVpBWWRpNDJqTEI5ZUFBanozaWVQUE5oUjdCOWdnN3RTcjEyQTdyeXJ4dEpzenk3V1RhNDc?oc=5",
+    "resumen": "ElevenLabs entra al marco de nube del Reino Unido estimado en GBP 14.000 millones DiarioBitcoin",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-11T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "173fd03231c7",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs abre una 'pop up' en Madrid para entrevistar con IA a los dos pilotos de Audi en la Fórmula 1 - Infobae",
+    "enlace": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQb1lQMWc3ZHVuXzg4SEN3enoyMS1ZcWh1WDlONEU3Q3pOX2Rnd2hIbXZWV29HMVhZRmFHeTF2V3RlZFFYMjRQSGp6bWxQMUw2M0FKMDN4QmJYOGFiVGRCOC1fV2R0Z3pMc2F4aVRqN2ZXbDQ4anE2UndaRm9KRWdkaUFjMDVCSDk1SGg2TmxFM0Itc2o0LU5YeXJCaUJmNU4wSDRuQmttNVJpamMzMzB5V0FqZUVhNFp6T2lXeTZMNm1PWXc0eS1uamcxMkZZbnZUZWxGVHdGeGtMZUdFSUp6RFZ5emRGZ2phNUhV0gGGAkFVX3lxTFB4ZkFfN2VqRlJNOTRBNVZjdjJnRFVrNVd5YlNhTi1lU3NSc0tFNlVBWUJUeE9yMTJ3VTlISjF6Uzdtak9xZFdBTVVZRHdQYW82NUJkczVFUWRZdzhJaUhpclo5NTFXOFMtdmlydkVSU2NfTUxwdmZWT0Y3enNXMzJXN1AxRjBOUzRXZHZ4cUN0RmxJeUVXbWVZcWc1NF9Kd0lGTE9Dbi15a3VHblc4VWI4TUY4WTdJQ2xiejAtdWJTS0RLeW1rME5DX09DN3QwYXV4MUlBeEg3LVNJUFFBb0ZHWndTQTAtS0hNS241TUpGZDVhQUN0Vi1BaEtDYmpLNVJSX0k4VVE?oc=5",
+    "resumen": "ElevenLabs abre una 'pop up' en Madrid para entrevistar con IA a los dos pilotos de Audi en la Fórmula 1 Infobae",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-11T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "dab881ee226d",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs lleva su IA a Madrid con una tienda pop-up que solo estará abierta hasta el 13 de septiembre - La Razón",
+    "enlace": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOdlQxQmRhWFJvNkpuM0thbXd6SU5FaW8yZlhXSTBWT2VhZ1FldXpRaHRnZTBNQ0JaY0VpRDZUTW5NNFVJRzVOMHZqT2lYaDl4WFZDRTh2Z2pfRXlWblA2Zk1yUk1Zb3FLTE9KMFZQMmV3cUozTTE5MDJIV1JzWF84WnlRWHhSZ1V5dkxIN2dzM250Q3B0N0FKSEUxNVRlazdOcnlhRWlEckwyaUdIdURXQXR0Z0Q1XzZXX0I3RU5kaFQ1cmQzTEo1UHhoOU9Pblh6T3R3ZE4ybkRZckE3WldhaWh6bU5SbTBvNnFBTzlMaVZnQk54Z1FqNHA0YUVFOU94bHlHV3ozWHdCLUhKMFE?oc=5",
+    "resumen": "ElevenLabs lleva su IA a Madrid con una tienda pop-up que solo estará abierta hasta el 13 de septiembre La Razón",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-11T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "88ab4bc9c802",
+    "tipo": "noticia",
+    "titulo": "TestMu AI anuncia su integración oficial para n8n y lleva infraestructura de navegadores reales a los flujos de trabajo con agentes de IA - Business Wire",
+    "enlace": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5FQnJVQWIzSkY3RlFfZ1lTU2VzcUhPSlNmUkdpa0JCUFp5RTJScTUxUVJMS0w1VVppajJhTGhDbzYxNW1tVFRzUlMySjhZTG50Nm9EVlhHcDBTMEhxWGpFXzRGOTA1d3M?oc=5",
+    "resumen": "TestMu AI anuncia su integración oficial para n8n y lleva infraestructura de navegadores reales a los flujos de trabajo con agentes de IA Business Wire",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-19T07:00:00.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "aa858a5ae31e",
+    "tipo": "noticia",
+    "titulo": "Qué es N8N, qué flujos de trabajo puedes hacer conectando aplicaciones con esta plataforma y cuál es su precio - Xataka",
+    "enlace": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOR21QS2pOSkJuVnkzYnhxZVBxVHdYMFlpNGlhV0RHTmw4OXNQQkNUNDhWTUlGblRfRXp6WVNNMExnZnM4QkdTampra0tiVFlDc1BtNEdtdllERDFRZUExQW0xZnpaWmVjdDdLQ2M1b0ZKOE0wSXUyRHpSVzY1NWt3NFRScEoxakJsNnNRSGRKTWY5UFJXeUhGSVJrTGZ2R2pvckF3NFFMek1yRnVrZmt2OHRFT0VYOG5yYkpKWmtxanpiQdIBxwFBVV95cUxQZUkxLUJNWWNTQldVUmJTQXgweTVISGdyZ0dDNDBQLUVKVzBIZENjOE1lMzN0SHpUQ3YxendhYnZOVnZTVzN5aENwVmVYTDFfZ1dmd1R2Vm8zTmVoM3pLRHUycHhwdERfYmc0dGcxY19fMndnU0tPVkVxQjZmd205WXZETnpDLUxzczY0V1FvM19XQ3Q1cFozRkw3WEVyeWJMekQzV2tfQUZZMEpRb1hWZlZzQks1WXhLdW91a3haSmZITUZGZ0tR?oc=5",
+    "resumen": "Qué es N8N, qué flujos de trabajo puedes hacer conectando aplicaciones con esta plataforma y cuál es su precio Xataka",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-04-15T07:00:00.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "8a7205465fd6",
+    "tipo": "noticia",
+    "titulo": "DXC Technology incorpora IA de voz de ElevenLabs - Computing BPS",
+    "enlace": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQLWJHUXk5dHlobFd5X3YwaF9vUXhxZG5MWl8teUJNOENReXNtLW0xOXZ4RHAwUmIyTDI1X2kyclRZamtCYU5iSHJTaXowTVJvdjhpcWdGajZOLUE4TmtONUVkall4akRsZUxWQUJQNVVPdHdWa0s1RGRrQmRFSW5ObkllODFORVY3ZE94QkFmdkpBdU9jWHJmNTNTcG9ERmpMemFLWkdSM1Q?oc=5",
+    "resumen": "DXC Technology incorpora IA de voz de ElevenLabs Computing BPS",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-07-30T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "a10b790f9685",
+    "tipo": "noticia",
+    "titulo": "El unicornio europeo de la inteligencia artificial ElevenLabs abre oficina en España - El Periódico",
+    "enlace": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNVE5vQmp0RVFGcERBZzR2NHFEcVZaRGN0UF80ZDhGNE9mdXlvY2pzRFV0Y1pKQ09wb0dJQ0N2U2RGdTZReGpvcW1rMkhBSzFzbHg3MDdHNFZKcmp5VFJJMVloYW5WQVc0WWRhRVl1Wkd4RVJJTjc4QXR5VU5XemdwRVpscEFSWXhHX1ZfYndWak9EZWlIX0taUlpvS1lCMW85UWYxWE5XWTdNWmc0Y3lvb0dBTTR0ZFBPNlJZWkgxNmFvRzgtLUxRQlRNX1otTTA0MHc1Qi1vOEpNUXZMSDBKXzA4MUdTVEtyMnVDcFBCVElWTWMzV21PYjNSNDl6dw?oc=5",
+    "resumen": "El unicornio europeo de la inteligencia artificial ElevenLabs abre oficina en España El Periódico",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-04-28T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "ce54005f8863",
+    "tipo": "noticia",
+    "titulo": "El unicornio europeo de inteligencia artificial ElevenLabs desembarca en España - Expansión",
+    "enlace": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQUFJtWnVadWd2RzN2TlQyeVBhR3M2aS1ZeWVudDc2NlZ0Y2xrb2pJQkJfc1BNTHpIRkZVM3d5Zm53OEtqYjJJSEJfcm9Id010aVBBLTQ5WGFBU3NqTmhrZDQ4Q2t4SC1lX1hIUGlkSUcxeHJLUkhjOC1aOXl2OE1iMTEyZXNKWVg0ZmlhMTBHTTLSAZABQVVfeXFMUDFkMlF2aFRUMWpMUUF4QnhyLThtSWFnb0IzeEtZSkxQOUktRU9yZHhpM1ZaYmQyYkNCMEZsenF4ZUgzM2VFRXZxN1d0bVUxYnB2SEpEdHBMY2dBdkFzQ0tnS0g1WUxPT1VsWkVHeXJjVy1DeE1FSlV3ay1kT0FONlhvTmZXV2s1TkpVQzl6RVha?oc=5",
+    "resumen": "El unicornio europeo de inteligencia artificial ElevenLabs desembarca en España Expansión",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-04-28T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "be83eecf7149",
+    "tipo": "noticia",
+    "titulo": "Cloudflare y beehiiv presentan controles de rastreo con IA para ayudar a los editores independientes a navegar por la era de la inteligencia artificial - Yahoo Finanzas",
+    "enlace": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ2xPZk5DYmJRT25MeHM4TlVhX0ZhUjlzLThtMjd3Rk14M2xNdDk2UXpQVVdmUEZFVG1MSmVfWTZBcEZfTzNwdGpwUnRFckw5dGktTndIcnkxRWtZSk5vSHBrcGZ0QnlyTHN5WWFJUVJPT3hLODg1ek1TbUsyR21XMG5kNlltaVFtbmpZajhoR2N5VmdrZERDRm8tS213emVZSnFueWp3?oc=5",
+    "resumen": "Cloudflare y beehiiv presentan controles de rastreo con IA para ayudar a los editores independientes a navegar por la era de la inteligencia artificial Yahoo Finanzas",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-23T07:00:00.000Z",
+    "herramientas": [
+      "beehiiv"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "186a6959f5ce",
+    "tipo": "noticia",
+    "titulo": "Prueba gratuita de Semrush: 14 días gratis en Pro, Guru y Semrush One. - AFFiNCO",
+    "enlace": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9VT2h6cEdvRzZKaDRYSWE2ZldybVd3RDJTeXpwLVpyVUFDMU13X0lmbm1GeG1VanJHVkZnRGNMcDlxdk5DQmdqcVNTNkJ4cFc4MzhmaQ?oc=5",
+    "resumen": "Prueba gratuita de Semrush: 14 días gratis en Pro, Guru y Semrush One. AFFiNCO",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-05T07:00:00.000Z",
+    "herramientas": [
+      "semrush"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "8391210411c8",
+    "tipo": "noticia",
+    "titulo": "SynthID se expande: OpenAI, Kakao y ElevenLabs adoptan la marca de agua de Google para contenido IA - WWWhat's new",
+    "enlace": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZ0ZYSzlBNnYxdmc0bDZhNGRqWTlWQzZVQXdiZUNVa2ZfNHRoWFlucERBeHpyZGM1Rl9ZMk1KVl8yNzFrNDE1ay05YzZJbW1JanlyN1p0ZHNhcGRYLUNsVDZHRjlzZktfcEo1aGJMNW1vY2ExUmJYOXYyWmE2NmtvTjlQbXhZOF9LQmtSMmI3RXBseDdxYkF5UWF3YmlDbHM?oc=5",
+    "resumen": "SynthID se expande: OpenAI, Kakao y ElevenLabs adoptan la marca de agua de Google para contenido IA WWWhat's new",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-05-20T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "6cb498bb68ce",
+    "tipo": "noticia",
+    "titulo": "Universal Music y ElevenLabs crean plataforma de IA para remezclas y nuevas versiones - DiarioBitcoin",
+    "enlace": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMU1VWm5WVERuOF84a29tZXA4T0ZFUV9IVlVnUk5DWGUzUnhSdTdRNzdxQjV4d3dLZkMwQmFzQ3hTenJkR2U5SUU4T2JlVlduQWNyOTg2T2RPbkxBSUZCNXpNZ1NkTi1wSC1yR0J2Y0RvLVEtVnA1QkhZb2laX2xHWEhvcmJ3OHpSMTJjXzRKbUt6bVJOVTdrR0JHeUN1UWlBWWJLN2U2SVNIZjdGWC1jMGdjUk5aSVl5LWdXWXJMRnFyN2c?oc=5",
+    "resumen": "Universal Music y ElevenLabs crean plataforma de IA para remezclas y nuevas versiones DiarioBitcoin",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-10T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "0e6cc4ab8716",
+    "tipo": "noticia",
+    "titulo": "Generador de voz con IA de ElevenLabs: ¿Qué es en 2026? - Plisio",
+    "enlace": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBWUmtKTXBjSkt5X2lneXF2Y0lCcF8yWElWdmprOXJGSVhMMENtYnhraW1XVmU0dDZoUkI1LVNLcTdXdU5ZbjhvbG1ia0JZU1E?oc=5",
+    "resumen": "Generador de voz con IA de ElevenLabs: ¿Qué es en 2026? Plisio",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-22T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "18ddbc3efa9f",
+    "tipo": "noticia",
+    "titulo": "Universal Music Group y ElevenLabs se alían para impulsar la creación musical con IA licenciada - Roastbrief",
+    "enlace": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPYzZlZTctTnZtelNpT1RuR09uT3hFeThQQllmNU9PUjBYVm1tMVM2c19INi1ITUZnWmJURlk1WFluaC1RRUc2ZDI5YjVPeUx0cjc4NDNoMjdZSkdOOHAzMmZoeDVfVWc5WmVwZExBTTRwTUpRQUV2YnpmVUlWODZLUXFHVVZkbjFQenhvLUczS0NXcE9hVDFyVUNiYXZldVB6NjhzS1ZiT19hdVJoc2E3VG9XeGFyNHdvekVHWDRPN2E5b0JrZG5QVlNB?oc=5",
+    "resumen": "Universal Music Group y ElevenLabs se alían para impulsar la creación musical con IA licenciada Roastbrief",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-11T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "b54454d5c0eb",
+    "tipo": "noticia",
+    "titulo": "Universal Music y ElevenLabs crean app de música con IA - TVN",
+    "enlace": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQT2wyV0dYbzdfd0pYazFvQTlxV2VpQ2lMTlhCOXJDaEZnYkpfOUY0d0RnSjNUcnBCZmF4ekgyN3RRVmtvT3lYalVhMDFOQmVKb1ozQUctOWtDdENOLUNJNUN1emoxNXpNcHc2cXJCU0tteTQycUN1anA2MDdUSHZLVzd1eThMRGdCN3FCc19RLWwxdVZfa0t1RHJQOA?oc=5",
+    "resumen": "Universal Music y ElevenLabs crean app de música con IA TVN",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-14T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "8598d2824d57",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs abre oficina en Madrid y ficha a Santander como inversor: por qué España es estratégico para la IA de voz mundial - WWWhat's new",
+    "enlace": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPT1VoOGFXUGRJLXAyZy1pTjJqdW1aUHlZUG9uczhudkpfT1VQVnhXVGhtVWgzQXZNRVpjR1dqcDdNczhNLTF5LWRsbHFCclExZ2tHVThsdFYzM3VpSUlQY1U1LXJITlg2dVQ1TG8tTThrcFF6TmhOb2UyaEtEZnpDQnllNl9UZU9wS1pqNTdYbjFYdU5VOEt6blZ5SjRuWHdoMHBpa2Z4bG5paHpiR3c?oc=5",
+    "resumen": "ElevenLabs abre oficina en Madrid y ficha a Santander como inversor: por qué España es estratégico para la IA de voz mundial WWWhat's new",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-05-01T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "972d7babbe5c",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs recrea la voz y la imagen de Stan Lee con inteligencia artificial - Infobae",
+    "enlace": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPb0tYOGdqbi01Rmk2NzFlUTVNVlpDWGs5cFdLblpIUFlSa29EbmtUYXBlVmtGcTBPQXV2QVZDaG05Y0N6c1hLblVzLWM4YTUzcW9RczVYencyckJUaGpYakhaSVl6YWJmZThQdHc3bWZwT1dReFFEdjdRZzBseThtM1BNOE12RlIyMU9KSVpjanZrbmdWem5iR0sySWl6TUlqcGJlcWRFWDVwRWZyd3dhRWJERF9BVEtqMllEMDJzcnFNdzRLdkRv0gHiAUFVX3lxTE9BNVA3cVNvWkZpdTFfcF9kTmZGaENxRDI2Z2dZNWF3VGszbDRneXFOT3BqYmgwbGJhZ2VlYnNtYm9wNTRXNEZsb0pxblk3bGpGVFFxanlUUE51X3dKYVhYMUFKSVdHeWZiTTlZcW1uMnRJQzI4Z3NOSkp0ZmVVM0NscE1jWC1kazkxV0pTWkJCS0xLd1pJTkRyV3pTY3JZYjdLQVVwcnpTd3dDTkxzVGhXZWdzOTdHaF9EWkZkTnF1QnZqTXR6Y3FKZWpZYW1BRTB2TC1fTUhTUUZZV2h4X0FNeWc?oc=5",
+    "resumen": "ElevenLabs recrea la voz y la imagen de Stan Lee con inteligencia artificial Infobae",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-05-27T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "f6c9c4e3b89d",
+    "tipo": "noticia",
+    "titulo": "Comparativa de herramientas SEO y GEO en 2026: SEMrush, Ahrefs, SE Ranking, DinoRank y Antropus.io - Marketing Directo",
+    "enlace": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOTktWSVB6RVlEYnIyOXp3M2Q3amNpc3JmUDZSZ0xmaEFydTNHOXhoX1dLc0UwcUpFSjJ2RDV2enRPT0JZQy1pZ0JyWjVfS1RFa3J3a2Zva2JuMENEQndJSnVQT2hPb2E3dFlPNUVtTF9QbnJ4SThSMS1nbm9UWDdKNGVLMEtId1JPU1VqbnEwZUl6dWlaWE9EZk9kSWF2emd6UGx1Tzl0bnQzbU5fU1h1b3g4NnU0RS1UQ1lZNzN1eG82dWZIX0FkR2VIYmxjRUcxX3hTaVpuQlPSAd4BQVVfeXFMT0laVVVxWUZQWDlta2RJdFpZQ2ZTNFROc3R3MExGM2Z4MFV1RzB4SVBPQ3oydlRXRXZRX2ZocGNQZDhrcnpXaS11Q1V1QlptUHRqdkgzSmFJSEttRUlRQWxmU09EWlI4V1MzdTBycFh0c1A1UzZqRVdaRDFzd3kxOF9HeHJySW5KQ3d0Z3Y1TWFpNTFCWnFVaEtoa1JBM0tzZEFxY0ZjQ29lUl9KcVZVWklPeFppQVBZeEczb19tTFo4TC1BZVI2aGpPZTh2ZDhrQnczLVZqSDc4VmVtenl3?oc=5",
+    "resumen": "Comparativa de herramientas SEO y GEO en 2026: SEMrush, Ahrefs, SE Ranking, DinoRank y Antropus.io Marketing Directo",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-11T07:00:00.000Z",
+    "herramientas": [
+      "semrush"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "702d633f180e",
+    "tipo": "noticia",
+    "titulo": "Netflix usa IA de ElevenLabs para voz de Gene Wilder | MARKET_TRENDS - El Ecosistema Startup",
+    "enlace": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaFpYUENUYkJxbWc2bVVLRVdVYS1NWlB2OTZvOGI1ci02NVc1Znd5MWU0NzFOd3BTcXB3eUNGRXpFcENSMlQ0U2YzNkhfc1pSNXBiNE1wM09fSDd1TE9tRm5oU1hxOU9sYVpKSG1iTWtSMl92V3Q3NEJrRlRVeW9jYUppZ0xEZGJjRkk5YkpDLVlsd1hvVkNzNGNHZGVPdw?oc=5",
+    "resumen": "Netflix usa IA de ElevenLabs para voz de Gene Wilder | MARKET_TRENDS El Ecosistema Startup",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-30T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "9928e6a5e067",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs Explicado: Funciones, Precios, API, Clonación de Voz y Guía Completa (2026) - Bleap",
+    "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE41ZnBVQWZtTzdxcUt5eE54MkltaHhUR3hvX3YyT1ZmVUhyeElfS1drRDlQMWZ1d1RCeGJUMUh2MWpSWWE0T0Z6Sy1BYTlfR2dHU0U3azRYUjNpRXhER1ZGeTc0WGNVMzdr?oc=5",
+    "resumen": "ElevenLabs Explicado: Funciones, Precios, API, Clonación de Voz y Guía Completa (2026) Bleap",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-08-03T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "c7ef10ea7d25",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs abre oficina en Madrid para escalar su IA en España - La Ecuación Digital",
+    "enlace": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPVEtNUVRkY1UzWmZFS0Z4SFIwbmtpWTQ2ay1YMldtOVZXaDJlY0VHdTdtZXc1RzE2TXJfWTdsM28xdmtIb3JjWUowSGxMX1FiaV9kYWdxQ3g1ZnlHME9QQjJyRGJqajhDQk5YRGdUaDY0YU1FTlVIRWlReWdGYlRSV243R3RwdkhSX3JHLWZiQ3p3dw?oc=5",
+    "resumen": "ElevenLabs abre oficina en Madrid para escalar su IA en España La Ecuación Digital",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-04-29T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "499f2fb90925",
+    "tipo": "noticia",
+    "titulo": "IA en LinkedIn: ¿Cómo lograr más visibilidad según Semrush? - Urgente24",
+    "enlace": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNaHpIMEF1LWZKVXplN2tHSmFVQ3N3bm8zbjFQdnZURE1nX3BwTzdRNDI5ci1QdUY1TDhXekJBSGItUC1jTFNTbUdLaW84RFlKTkV1OV9SOURWdndNZ0RackE5Tk1Vdl9yUlFNaG83T3BLWW9CUDlSZFpLY0dDcEgzQ1Z1VE55Y01DWFlKaWNwMVkxbU3SAZgBQVVfeXFMT3YtdmM2YmpmcUg2TzJFWnBqTXEycGpsZkhWS2NwYjFRZHVuMW96SW54U0lTdk9uNUMwT2pxTzdKZS0ycXlxc1B0bmZkZHUxMms0eHM3am1xV19FT1BzN0hfRU9CRjdVNGFNbDdwcG5LdVdPT1VUcXZIcFdNQ3BjUWFLbVp0RGZSeVh1TmdSVHN5dXptelM3NnA?oc=5",
+    "resumen": "IA en LinkedIn: ¿Cómo lograr más visibilidad según Semrush? Urgente24",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-12T07:00:00.000Z",
+    "herramientas": [
+      "semrush"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "0595de474e5a",
+    "tipo": "noticia",
+    "titulo": "Mati Staniszewski, CEO de ElevenLabs: “este año veremos a la IA casi al mismo nivel que el humano para todo tipo de interacciones” - Diario Financiero",
+    "enlace": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQR2xTRDBtSWZnM2JWVll1bG52UFo4UFlHM05ab241RFBlcTJDbnRTb3RkLTIzT21ZOE5zc21vX3k5WHBRYnAtZm5xcDd3VnVNc2MyaFhIeUU4MkgxeDVUcGRsUUJFV1JuenRIVVpya0ozeVctS0JYazJ2UjN5X1NiZk5MdVVHMTc5N1luQ3lwTVFFM1R3dDBMazFGQ3p4amI1cUZBbFlkakdaWW9ZbUdF?oc=5",
+    "resumen": "Mati Staniszewski, CEO de ElevenLabs: “este año veremos a la IA casi al mismo nivel que el humano para todo tipo de interacciones” Diario Financiero",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-12T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "338c976a41c0",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs apuesta por Madrid para la IA - CapitalMadrid",
+    "enlace": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPeXRoWHRNeDZKR0hZc2t1dm1WY2xBZjBXNVFyMFpfWjd2VHFYN0dHeWY4WklTTHJwZXFmbmwtSGdEbk1nUFdERjE2VU4wQUtqXy1aT21nbFVuUnpVV0Z3U0EyUmNwTUN2N0cyQXBLUjA3a1FkZXk1TzNQNnJxTmUyb3J5NVZWRHBVcC1McFFjdVFHZ2dmVEE?oc=5",
+    "resumen": "ElevenLabs apuesta por Madrid para la IA CapitalMadrid",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-04-29T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "35a98d6285db",
+    "tipo": "noticia",
+    "titulo": "Estas son las 36 marcas que aparecen en prácticamente todas las respuestas de la inteligencia artificial según Semrush - Revista Merca2.0",
+    "enlace": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQRnBndk9pRGl6b09zT1lfc2FfOEpwbE5FVUZwRUppOFYtR1M0YjJQN3FXUzFYNVhodi0zQ1U0X2owWlQwTTZaSkNIRzVlZ2dMclpoVFdudnU4V2owVDdsQWtOcGRXTVZmRU9fZFkwX3FDcmJydHlVOHg1ZWQ2b0YyOFVxU19aWWxqQmFnNVpEcXFUdVdQZk5xdnNVR3hXQzBZS0JPcVNLQW5RcmFkMGRoZHlLd2JGRzFFeHVaNFpBZDRwYUExR2hkdXVyTFhHZw?oc=5",
+    "resumen": "Estas son las 36 marcas que aparecen en prácticamente todas las respuestas de la inteligencia artificial según Semrush Revista Merca2.0",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-07-21T07:00:00.000Z",
+    "herramientas": [
+      "semrush"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "eb9f652c6501",
+    "tipo": "noticia",
+    "titulo": "Dify vs n8n: qué plataforma elegir para apps de IA (y cómo usarla con OpenRouter) - Pasquale Pillitteri",
+    "enlace": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1SQl9ocVNJRkRFamJHVHFNcGN6TlYtQWVjbnpFMkd0UHRfOVlOOVRhRUd2NlN2SUtfNUw0SE5XZ1MyQ3p1NnE5UE1qLTRjRFdTdm1xQ1hpYS1xZnN5N3pqeWJlY29CbXBvcWFsOWNUa0VGR2JsY1hBT1Zn?oc=5",
+    "resumen": "Dify vs n8n: qué plataforma elegir para apps de IA (y cómo usarla con OpenRouter) Pasquale Pillitteri",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-25T07:00:00.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "db2462bdfc38",
+    "tipo": "noticia",
+    "titulo": "OpenAI mejora GPT Transcribe, pero sigue detrás de ElevenLabs, Google y Mistral - DiarioBitcoin",
+    "enlace": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRk1kd2xhOWpQMDNOX3NadDhUUFQ1TTZlOE1VaTlMbXl5SGVOcUdtaUJ3VzJjVE9ORWFjQ0VMajhGLURRNl9CcWpCOEdMZXMwSVNtUUs0QmtPYU5aWmhvTVVHVVhWRkVlNmVtd1huckhTcDZKQmdjUi1CcUhobU1uVjdONHN3UU1IR0ZlcFl1WFdpQWI2Z1NlYk1MenpramFXVm5zcFJGNFlXLWtNcXlzZ2tadk9SMjVR?oc=5",
+    "resumen": "OpenAI mejora GPT Transcribe, pero sigue detrás de ElevenLabs, Google y Mistral DiarioBitcoin",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-07-29T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "547eaf7e1233",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs aterriza en Madrid para liderar la revolución de la IA de voz en España - Marketing Directo",
+    "enlace": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOUERmRkNzSkxTR2J1T2JSTTAydl9DUWE2dXBSdG5uc3BtZFZ3U2pwbW5nYk4wbFltdWZraWU4UDRfTU1SR2N5RVBsQVRZeXdYSWtPZDhKUDl4UXNUN1padHhYV01JcWl5OGdYQWFwQTdNclVTcmFZVkpBNGhfS09fX2h0azZWVV9aM2NfU3lKRUtJWGJudUtKMTBqM0dwR2ZvWnpr0gGoAUFVX3lxTE4wN1ZtVE02dW5ZVDdRZ2hmRmp3ZWRQeFhtRjgtM3QzZWVVeDBRTnN6QnF1SWpMMkJUcGxPREtYdDltcjhhQ0FkMGFqeGYxRkxPeUpyUy0tVDNScEVfdUMxRGZjUlNieHhqMWxnWGhQb2VmNEJnckhhX0pLdk9EWTgtaUN6Qk1lZVV0YXEyOHNJR1VmTS1QUFdpR0JHZDlyLUhUZ0MzaXd3QQ?oc=5",
+    "resumen": "ElevenLabs aterriza en Madrid para liderar la revolución de la IA de voz en España Marketing Directo",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-04-28T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "0dbc48c247b8",
+    "tipo": "noticia",
+    "titulo": "DXC se asocia con ElevenLabs e incorpora IA de voz en su oferta empresarial - mercado.com.ar",
+    "enlace": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbjVGLWFfZHJVRWZoVmRmcm1IbG5vdzNCeThtS1JDU3cwTm1QV0QwcWFyMVNpRUhjaXFoRGVURm04ZmQxUzh1TndBOVp2TGhUdTU1T21mMkFrRWNmU0hlUGJRc1hQU0FjUkRrN2lXNXpFZ196ZVNVNjI1WlFZVmM0SXJpLS1vU2RPUlA2VkZnbXBzNGZIb2NzSzZRc25fdlB3anBaeTZTRFgtVHdULXdnVw?oc=5",
+    "resumen": "DXC se asocia con ElevenLabs e incorpora IA de voz en su oferta empresarial mercado.com.ar",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-07-29T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "86a5aed209da",
+    "tipo": "noticia",
+    "titulo": "Michael Caine replicó su voz con IA para narrar el audiolibro de ‘La Odisea’: “Bravo a él por reconocer hacia dónde va la tecnología” - Infobae",
+    "enlace": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNU1hFQzR1Y1dhb2dVa2U3bjhSVmdZaUNJVTFscGNubnUxVG9tYURUaGxVejQzQWVFY09HQlpIeHhISFJTbTJ5cDNXN1pfcVNXa21hLThrOWN3ZW1CemlzNHFvSU8xY3ZCOGNOODEyeU1IZ05WVXJCeVl2enE0aEdFQWVKVkQxcEw5SzI4NXFjY2FoVTJ4Zjc0Q1drUGRNamZmenpZZXZDaElRRHlfc04tYXhRcjk5cGVqVTA1R1JDaXRDQUoyY25wX285c0VDOUN3clJ2VlU1WWxnTGFIQWlxU190VFI2bGExblItcGNBa1Y3TXVSRVhOSnQzdDV4ZXBHN2FQRjM3Q0laTDJC0gGnAkFVX3lxTE9sc1lNa3RFVDg5TElITlloWGtkTXkwV3lhM1JfSWMxdXRNMWxvdno1aWdTUFNnWFZTLXprSFhvVlVJYzAtclpoTU1CemxmbmVNbkIwTWNBaVJPaFo5UXJ3LXEyVHdINkc1RUE5THIyUFhueGtKeFI3Nmh5ODRWcEdjZDRaM1hIdVpUVEttZ29BbUduY2M2OFpxTmpqNzc0cHRDTEJfSzRrSW1BU0dPd3pwaURac3NTR3ZWcmp0TktfRnVoS3NHeFN5MHFLT0RYNU9OSk83OERHVFdJRWpMbzdyQ1JzVjVWdjFDQzNvOXd2c3FSNk9JV1llc1FocTYtSC11dXhIN3FpRGI4ZFZKTXJ0Ymk5Z0h6WGlpQkU3eHpyQno4dWhocFk?oc=5",
+    "resumen": "Michael Caine replicó su voz con IA para narrar el audiolibro de ‘La Odisea’: “Bravo a él por reconocer hacia dónde va la tecnología” Infobae",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-23T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "d462bd21b8ca",
+    "tipo": "noticia",
+    "titulo": "El Ícono de Marvel Stan Lee \"Revive\" por Segunda Vez Gracias a la IA de ElevenLabs - Decrypt News",
+    "enlace": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPdXhycW1HZllEVHFxajlMX2ROSm5tVy16QlNZUEVZOUlxY0Rsd0hwbDJsdWlsUnROdEVmdlJOdWI0dWpRSW9MU0hKNGZXYWJpY0NrcE1TN1BlaEJmc2drMERodUdGZndtNGUzMUNXR0xUZXNzTmE3ZDdaQ1JQazF6N3pCeFhHYnhMOHVETg?oc=5",
+    "resumen": "El Ícono de Marvel Stan Lee \"Revive\" por Segunda Vez Gracias a la IA de ElevenLabs Decrypt News",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-05-28T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "085eab18e82a",
+    "tipo": "noticia",
+    "titulo": "¿Por qué ChatGPT recomienda unas marcas y Google otras? Un estudio de Semrush explica las diferencias entre las plataformas de IA - Revista Merca2.0",
+    "enlace": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPM1pOYUp4c1pNemFxOWJaNGFWVjFKN3pDTUlodm5zX1JJLXRnaXhMS1BEVUpQMXpGTi1LaDZjdjhtYzBjbkMyNjVzV01oQlB4MGFTUVZRd3RJT3NhTElzMk5WTVRYS2pjVnM0R0N1cEt1MFJnd1NUM0VjbjFvNXY0VkdsWHFkQWktNnM5Mmt3SGw3NkRzeEp4bTlYY0hxSERzNW9oSzRNMVBMNHNBdE1xN2NXdHphMmxFS3hQZ1Q0Z2F5MHhlSjZtVVZFcklieGRQN1p4RUVFUHdweHB5TWo1YlZmQ0szams?oc=5",
+    "resumen": "¿Por qué ChatGPT recomienda unas marcas y Google otras? Un estudio de Semrush explica las diferencias entre las plataformas de IA Revista Merca2.0",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-07-14T07:00:00.000Z",
+    "herramientas": [
+      "semrush"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "f721de88b0a7",
+    "tipo": "noticia",
+    "titulo": "Google AI Overviews está transformando las búsquedas y ahora estas son las nuevas reglas para aparecer en los resultados: Semrush - Revista Merca2.0",
+    "enlace": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOeGJ0cElZRFlpa3N2ZFFkVUV2QVdvVE83N3hJWXVsUzNBRTU2LW1GSWFiYTNzWksyNDhVb2hnbzBYdEtPblY0LW9kRDIwYjBKZXlTVjV6RGFlZDZUWHVxaU45eHF1VGVTS0w0SVdYdnlGdmF0UHJuSUw4VFlMZl82NUk2NHZrUjNIcnpTSDlUWkZNU0pndEtRU2JpLUR5Y3BJWmNDTGlCUVpRbW1rWWE2clZYQXdwaXNzWjZQOEdGRW1GMFE3UTM2QW9jRTJaNzA4MFpZenhNcGdkamJ4UkF6c2xHdGc0YU9B?oc=5",
+    "resumen": "Google AI Overviews está transformando las búsquedas y ahora estas son las nuevas reglas para aparecer en los resultados: Semrush Revista Merca2.0",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-08-12T07:00:00.000Z",
+    "herramientas": [
+      "semrush"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "2008574be1da",
+    "tipo": "noticia",
+    "titulo": "Abuso de n8n impulsa phishing y malware impulsados por IA - SOC Prime",
+    "enlace": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNaGVZRDdaTk9DVGdUYjNUdWJsNkRNUlEyZjFwMTRDYzItSktRc191SEVaZXZfZTRZRmItdF9wRnNHaHNoY18tQnd0RXNTaXR0dFotNlFIalpST25LUGtDbkxRNmxiR3RSQWdwQUl2R0hxem11NmZaVEJJOEdqOXd1WXZ2Yk85Q1pnS3ZFenFpeTk?oc=5",
+    "resumen": "Abuso de n8n impulsa phishing y malware impulsados por IA SOC Prime",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-04-16T07:00:00.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "c05d09b1b618",
+    "tipo": "noticia",
+    "titulo": "YouTube domina la inteligencia artificial: es la marca con mayor presencia en ChatGPT, Gemini y Google AI, según Semrush - Revista Merca2.0",
+    "enlace": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNR2FiQ2RlZkVOUU9Kc1RTemw0VjZoblQ4ZHZ4MllKV2pOaTh0NERjNGI1WVNJeHFMdGtKbnVxR0hmaklESlhoNnZiYm5sRFkySHpwMHY2UUdKeFR6Z0s2Q2Z6Nm9rU25sVTZpMVhoTnU0U29zTkxjMWtVSzBFT2tnRUxVWlpnMTZTZ3dial9YQWpqNUltajZXZjRYRFBRMUhjWHB2N2NNa1ZjSEdnaG5iV205YjJUdTUydEpSRW9nVmtRRFNManFiQWxOVU85MlNFUlhtdU1MMjJiQQ?oc=5",
+    "resumen": "YouTube domina la inteligencia artificial: es la marca con mayor presencia en ChatGPT, Gemini y Google AI, según Semrush Revista Merca2.0",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-07-28T07:00:00.000Z",
+    "herramientas": [
+      "semrush"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "3267a1694b3c",
+    "tipo": "noticia",
+    "titulo": "Qué es n8n: workflows, IA y precios 2026 - El Ecosistema Startup",
+    "enlace": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1ZLVdDYndMdW9EbFp4YS14SWVSZnZlSlZkbVdoNDBVMTAwV0RZVFd0ckx6akhmNlQ4Z0p3aWFfUmdZamtlUEVoVGNYZ282dERpd0FoaHRUNDlTNzVHNXNZNnVDWENzb0kybEFZenhNSU9iV3YtMlFtcg?oc=5",
+    "resumen": "Qué es n8n: workflows, IA y precios 2026 El Ecosistema Startup",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-04-15T07:00:00.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
   }
 ]
