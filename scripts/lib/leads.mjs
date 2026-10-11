@@ -25,7 +25,8 @@ export function formularioLead(sitio, opciones = {}) {
   if (!TIPOS_LEAD.includes(o.tipo)) throw new Error(`Tipo de lead no válido: ${o.tipo}`);
   const esPro = o.tipo === 'instalador' || o.tipo === 'profesional';
   const oculto = (n, v = '') => `<input type="hidden" name="${n}" value="${e(v)}">`;
-  return `<form class="form-lead${o.oscuro ? ' form-lead-oscuro' : ''}" id="${e(o.id)}" data-lead data-endpoint="${e(sitio.contacto.webhookLeads)}" novalidate>
+  const respaldo = /^https:\/\//.test(sitio.contacto.respaldoLeads ?? '') ? ` data-respaldo="${e(sitio.contacto.respaldoLeads)}"` : '';
+  return `<form class="form-lead${o.oscuro ? ' form-lead-oscuro' : ''}" id="${e(o.id)}" data-lead data-endpoint="${e(sitio.contacto.webhookLeads)}"${respaldo} novalidate>
   <div class="lead-cabeza"><p class="antetitulo">Gratis · sin compromiso</p><h3>${e(o.titulo)}</h3><p>${e(o.texto)}</p></div>
   ${oculto('interes', o.interes)}${oculto('tipo', o.tipo)}${oculto('resumen')}${oculto('ahorroAnual')}
   <div class="lead-campos">
@@ -36,7 +37,8 @@ export function formularioLead(sitio, opciones = {}) {
     ${esPro
     ? `<label class="campo"><span>${o.tipo === 'instalador' ? 'Zona en la que instalas' : 'Clientes en cartera (aprox.)'}</span><input class="lead-input" name="sector" maxlength="60"></label>`
     : `${o.sector ? oculto('sector', o.sector) : '<label class="campo"><span>Tipo de negocio</span><input class="lead-input" name="sector" placeholder="Bar, taller, comunidad…" maxlength="60"></label>'}
-    ${o.conFactura ? '<label class="campo"><span>Lo que pagas de luz al mes</span><span class="campo-entrada"><input name="facturaMensual" inputmode="decimal" maxlength="8"><em>€</em></span></label>' : oculto('facturaMensual')}`}
+    ${o.conFactura ? '<label class="campo"><span>Lo que pagas de luz al mes</span><span class="campo-entrada"><input name="facturaMensual" inputmode="decimal" maxlength="8"><em>€</em></span></label>' : oculto('facturaMensual')}
+    <label class="campo campo-partner"><span>Código de tu gestoría o administrador <small>(opcional)</small></span><input class="lead-input" name="partner" autocomplete="off" maxlength="30" pattern="[A-Za-z0-9-]{2,30}"></label>`}
   </div>
   <label class="lead-trampa" aria-hidden="true">No rellenes esto <input name="web" tabindex="-1" autocomplete="off"></label>
   <label class="lead-consentimiento"><input type="checkbox" name="consentimiento" required> <span>Acepto que ${e(sitio.nombre)} me contacte sobre esta solicitud y, si lo pido, comparta mis datos con la comercializadora o el instalador que elija. <a href="/privacidad/">Privacidad</a>.</span></label>

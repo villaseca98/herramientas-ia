@@ -26,7 +26,8 @@
     "email": "",
     "urlFormulario": "",
     "whatsapp": "",
-    "webhookLeads": "https://leadshunters.app.n8n.cloud/webhook/recorta-lead"
+    "webhookLeads": "https://leadshunters.app.n8n.cloud/webhook/recorta-lead",
+    "respaldoLeads": "https://leadshunters-nrfo.vercel.app/api/public/lead"
   },
   "menu": [
     {
