@@ -16,6 +16,7 @@
     "umbralGrandeKwp": 10,
     "fuenteCoste": { "texto": "Precios de instalación 2026 de SotySolar: 4.000–9.000 € en vivienda y desde 26.000 € en empresas de 15–40 kW", "url": "https://sotysolar.es/placas-solares/instalacion/precio" },
     "potenciaPanelKw": 0.45,
+    "m2PorKwp": 5,
     "vidaUtilAnos": 25,
     "autoconsumoPorDefecto": { "negocio": 0.6, "comunidad": 0.5, "vivienda": 0.35 }
   }

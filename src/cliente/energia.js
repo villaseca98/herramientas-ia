@@ -46,12 +46,17 @@ export function extraerDatos(textoBruto) {
     if (todos.length) consumo = Math.max(...todos);
   }
 
+  // Muchas facturas de empresa traen el historial: «consumo de los últimos 12 meses» o «consumo anual».
+  const ma = /(?:consumo (?:de los )?[uú]ltimos 12 meses|consumo anual|consumo (?:del )?[uú]ltimo año)[^0-9]{0,40}(\d[\d.]*(?:,\d+)?)\s*kWh/i.exec(texto);
+  const consumoAnual = ma ? numero(ma[1]) : null;
+
   return {
     tarifa: tarifa ? `${tarifa[1]}TD` : null,
     dias,
     potencias,
     maximetros,
     consumoKwh: consumo,
+    consumoAnualKwh: consumoAnual && consumo && consumoAnual > consumo ? consumoAnual : null,
     importeEnergia: importeTras(texto, /(t[eé]rmino de energ[ií]a|energ[ií]a consumida|por energ[ií]a consumida|importe por energ[ií]a)/i),
     importePotencia: importeTras(texto, /(t[eé]rmino de potencia|por potencia contratada|importe por potencia)/i),
     importeReactiva: importeTras(texto, /energ[ií]a reactiva/i),
@@ -62,14 +67,19 @@ export function extraerDatos(textoBruto) {
 
 const redondear = (n) => Math.round(n);
 
-export function simularSolar({ consumoAnualKwh, fraccionDiurna, precioKwh }, ref) {
+// produccionKwhKwp: la de la zona del cliente (si no, la media de ref). maxKwp: lo que cabe en su tejado.
+export function simularSolar({ consumoAnualKwh, fraccionDiurna, precioKwh, produccionKwhKwp, maxKwp }, ref) {
   if (!(consumoAnualKwh > 0) || !(precioKwh > 0)) return null;
-  const kWpExacto = (consumoAnualKwh * fraccionDiurna) / ref.produccionKwhKwp;
-  const kWp = Math.max(1.5, Math.round(kWpExacto * 10) / 10);
+  const produccionKwp = produccionKwhKwp > 0 ? produccionKwhKwp : ref.produccionKwhKwp;
+  const kWpExacto = (consumoAnualKwh * fraccionDiurna) / produccionKwp;
+  const ideal = Math.max(1.5, Math.round(kWpExacto * 10) / 10);
+  const limitado = maxKwp > 0 && maxKwp < ideal;
+  const kWp = limitado ? Math.floor(maxKwp * 10) / 10 : ideal;
+  if (!(kWp > 0)) return null;
   const paneles = Math.max(3, Math.ceil(kWp / ref.potenciaPanelKw));
   const costeKwp = kWp > ref.umbralGrandeKwp ? ref.costeKwpGrande : ref.costeKwpPequena;
   const coste = kWp * costeKwp;
-  const produccion = kWp * ref.produccionKwhKwp;
+  const produccion = kWp * produccionKwp;
   const autoconsumido = Math.min(produccion, consumoAnualKwh * fraccionDiurna);
   const ahorroAnual = autoconsumido * precioKwh;
   return {
@@ -80,12 +90,16 @@ export function simularSolar({ consumoAnualKwh, fraccionDiurna, precioKwh }, ref
     amortizacionAnos: ahorroAnual > 0 ? Math.round((coste / ahorroAnual) * 10) / 10 : null,
     ahorroVida: redondear(ahorroAnual * ref.vidaUtilAnos - coste),
     cobertura: Math.round((autoconsumido / consumoAnualKwh) * 100),
+    produccionKwhKwp: produccionKwp,
+    kWpIdeal: ideal,
+    limitado,
   };
 }
 
 // Analiza los datos de una factura. Cada hallazgo dice qué es, cuánto cuesta al año y qué hacer.
 // ahorroAnual es null cuando el ahorro no se puede calcular con la factura (se explica en el texto).
-export function analizarFactura(d, ref, { tipo = 'negocio' } = {}) {
+// zona: { produccionKwhKwp } · metrosTejado: m² libres · diurno: parte del consumo en horas de sol.
+export function analizarFactura(d, ref, { tipo = 'negocio', zona = null, metrosTejado = null, diurno = null } = {}) {
   const dias = d.dias > 0 ? d.dias : 30;
   const anual = 365 / dias;
   const hallazgos = [];
@@ -162,15 +176,23 @@ export function analizarFactura(d, ref, { tipo = 'negocio' } = {}) {
     });
   }
 
-  const consumoAnual = d.consumoKwh > 0 ? d.consumoKwh * anual : null;
+  const consumoReal = d.consumoAnualKwh > 0;
+  const consumoAnual = consumoReal ? d.consumoAnualKwh : d.consumoKwh > 0 ? d.consumoKwh * anual : null;
   const solar = consumoAnual
-    ? simularSolar({ consumoAnualKwh: consumoAnual, fraccionDiurna: ref.solar.autoconsumoPorDefecto[tipo] ?? 0.5, precioKwh: precioMedio ?? ref.precioReferenciaKwh }, ref.solar)
+    ? simularSolar({
+      consumoAnualKwh: consumoAnual,
+      fraccionDiurna: diurno ?? ref.solar.autoconsumoPorDefecto[tipo] ?? 0.5,
+      precioKwh: precioMedio ?? ref.precioReferenciaKwh,
+      produccionKwhKwp: zona?.produccionKwhKwp,
+      maxKwp: metrosTejado > 0 ? metrosTejado / ref.solar.m2PorKwp : null,
+    }, ref.solar)
     : null;
 
   const ahorroAnual = hallazgos.reduce((t, h) => t + (h.ahorroAnual ?? 0), 0);
   return {
     facturaAnual: d.total > 0 ? redondear(d.total * anual) : null,
     consumoAnual: consumoAnual ? redondear(consumoAnual) : null,
+    consumoAnualReal: consumoReal,
     precioMedio,
     hallazgos: hallazgos.sort((a, b) => (b.ahorroAnual ?? b.costeAnual ?? 0) - (a.ahorroAnual ?? a.costeAnual ?? 0)),
     ahorroAnual,
@@ -178,8 +200,59 @@ export function analizarFactura(d, ref, { tipo = 'negocio' } = {}) {
   };
 }
 
+// Provincia por las dos primeras cifras del código postal, con su producción aproximada (HSP × 365 × factor).
+export function zonaPorCp(cp, provincias) {
+  const m = /^(\d{2})\d{3}$/.exec(String(cp ?? '').trim());
+  const p = m && provincias.provincias.find((x) => x.cp === m[1]);
+  return p ? { ...p, produccionKwhKwp: Math.round((p.hsp * 365 * provincias.factor) / 10) * 10 } : null;
+}
+
+export const HORARIOS = {
+  dia: { texto: 'Sobre todo de día (abre de mañana y tarde)', diurno: 0.7 },
+  mixto: { texto: 'De día y hasta la noche', diurno: 0.5 },
+  continuo: { texto: '24 horas (frío, industria, turnos)', diurno: 0.45 },
+  noche: { texto: 'Sobre todo de noche o de madrugada', diurno: 0.25 },
+};
+
+// Cualificación previa para placas: lo que la factura no dice y decide si el proyecto sale o no.
+// c: { propiedad: propio|alquilado|compartido, cubierta: chapa|teja|plana|fibrocemento|nose, sombras: no|algunas|muchas, tipo }
+export function cualificarPlacas(solar, c = {}) {
+  if (!solar) return null;
+  const avisos = [];
+  let puntos = solar.amortizacionAnos && solar.amortizacionAnos <= 6 ? 2 : solar.amortizacionAnos && solar.amortizacionAnos <= 9 ? 1 : 0;
+  const coma = (n) => String(n).replace('.', ',');
+  if (solar.kWp < 3) {
+    avisos.push({ gravedad: 'alta', titulo: 'Instalación muy pequeña', texto: `Con este consumo o este tejado salen ${coma(solar.kWp)} kWp. A ese tamaño muchas instaladoras de empresa no presupuestan y el coste por kWp sube.` });
+    puntos -= 2;
+  }
+  if (solar.limitado) {
+    avisos.push({ gravedad: 'media', titulo: 'Tu tejado se queda corto', texto: `Para tu consumo de día harían falta unos ${coma(solar.kWpIdeal)} kWp, pero en los metros que dices caben unos ${coma(solar.kWp)} kWp. Hemos calculado con lo que cabe.` });
+  }
+  if (c.propiedad === 'alquilado') {
+    avisos.push({ gravedad: 'media', titulo: 'El local es alquilado', texto: 'Necesitas el permiso del propietario por escrito antes de pedir presupuesto. Si te quedan pocos años de contrato, pacta qué pasa con las placas al irte.' });
+    puntos -= 1;
+  } else if (c.propiedad === 'compartido') {
+    avisos.push({ gravedad: 'media', titulo: 'Cubierta compartida', texto: 'En una nave o edificio con más dueños hace falta el acuerdo de la comunidad o de los copropietarios. También se puede hacer autoconsumo colectivo.' });
+    puntos -= 1;
+  } else if (c.propiedad === 'propio') puntos += 1;
+  if (c.cubierta === 'fibrocemento') {
+    avisos.push({ gravedad: 'alta', titulo: 'Cubierta de uralita o fibrocemento', texto: 'Suele contener amianto: no se puede instalar encima y hay que retirarla con una empresa autorizada (RERA). Encarece la obra, aunque algunas comunidades autónomas lo ayudan.' });
+    puntos -= 2;
+  } else if (c.cubierta === 'nose') {
+    avisos.push({ gravedad: 'info', titulo: 'Tipo de cubierta por confirmar', texto: 'Chapa, teja o azotea cambian la estructura y el precio. Lo mira el instalador en la visita.' });
+  }
+  if (c.sombras === 'muchas') {
+    avisos.push({ gravedad: 'alta', titulo: 'Muchas sombras', texto: 'Edificios o árboles que tapan el tejado parte del día pueden bajar mucho la producción. Hace falta un estudio de sombras antes de decidir.' });
+    puntos -= 2;
+  } else if (c.sombras === 'algunas') {
+    avisos.push({ gravedad: 'info', titulo: 'Algunas sombras', texto: 'El instalador las mide en la visita y coloca los paneles donde no lleguen.' });
+  }
+  const nivel = puntos >= 2 ? 'alto' : puntos >= 0 ? 'medio' : 'bajo';
+  return { nivel, avisos };
+}
+
 // Texto que acompaña la petición de gestión (WhatsApp, email o formulario).
-export function resumenPeticion(d, r) {
+export function resumenPeticion(d, r, extra = {}) {
   const lineas = [
     'Hola, quiero que me reviséis la factura de luz de mi negocio.',
     d.tarifa ? `Tarifa: ${d.tarifa}` : '',
@@ -187,7 +260,15 @@ export function resumenPeticion(d, r) {
     d.potencias?.length ? `Potencia contratada: ${d.potencias.join(' / ')} kW` : '',
     d.total ? `Total factura: ${d.total} €` : '',
     r.ahorroAnual ? `La web me dice que podría ahorrar unos ${r.ahorroAnual} € al año.` : '',
-    r.solar ? `Placas: unos ${r.solar.kWp} kWp, ahorro estimado ${r.solar.ahorroAnual} €/año.` : '',
+    r.solar ? `Placas: unos ${r.solar.kWp} kWp, ahorro estimado ${r.solar.ahorroAnual} €/año${r.solar.amortizacionAnos ? `, se pagan en ${r.solar.amortizacionAnos} años` : ''}.` : '',
+    r.consumoAnual ? `Consumo anual: ${r.consumoAnual} kWh (${r.consumoAnualReal ? 'de la factura' : 'estimado con un mes'}).` : '',
+    extra.zona ? `Zona: ${extra.zona}` : '',
+    extra.metrosTejado ? `Tejado libre: ${extra.metrosTejado} m²` : '',
+    extra.horario ? `Horario: ${extra.horario}` : '',
+    extra.propiedad ? `Local: ${extra.propiedad}` : '',
+    extra.cubierta ? `Cubierta: ${extra.cubierta}` : '',
+    extra.sombras ? `Sombras: ${extra.sombras}` : '',
+    extra.cualificacion ? `Encaje para placas: ${extra.cualificacion.nivel}${extra.cualificacion.avisos.length ? ` (${extra.cualificacion.avisos.map((a) => a.titulo).join('; ')})` : ''}` : '',
   ];
   return lineas.filter(Boolean).join('\n');
 }

@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { RAIZ, leerJson, escaparHtml as e, separarFrontmatter, renderizarMarkdown } from './contenido.mjs';
 import { pagina, formularioNewsletter, extraerPreguntas } from './plantillas.mjs';
 import { formularioLead, hayLeads, scriptLeads } from './leads.mjs';
-import { extraerDatos, analizarFactura } from '../../src/cliente/energia.js';
+import { extraerDatos, analizarFactura, HORARIOS } from '../../src/cliente/energia.js';
 import { formatear } from '../../src/cliente/recorte.js';
 import { sectoresConPlacas, rutaPlacasSector } from './placas.mjs';
 
@@ -13,8 +13,9 @@ const PARTE_ENERGIA = 0.65; // Parte de la factura que suponemos energía cuando
 
 export function cargarNegocios() {
   const ref = leerJson('data/negocios.json');
+  const provincias = leerJson('data/provincias.json');
   const ejemplo = extraerDatos(readFileSync(join(RAIZ, 'data', 'factura-ejemplo.txt'), 'utf8'));
-  return { ref, ejemplo, analisisEjemplo: analizarFactura(ejemplo, ref) };
+  return { ref, provincias, ejemplo, analisisEjemplo: analizarFactura(ejemplo, ref) };
 }
 
 // Guías en Markdown de content/negocios. Frontmatter: titulo, descripcion, ruta, antetitulo, entradilla, cta, grupo, orden.
@@ -202,7 +203,7 @@ function campo(nombre, etiqueta, unidad, extra = '') {
 
 export function paginaRevisar(sitio, neg) {
   const leads = hayLeads(sitio);
-  const datos = JSON.stringify({ ref: neg.ref, ejemplo: neg.ejemplo, contacto: sitio.contacto ?? {}, leads }).replaceAll('<', '\\u003c');
+  const datos = JSON.stringify({ ref: neg.ref, provincias: neg.provincias, ejemplo: neg.ejemplo, contacto: sitio.contacto ?? {}, leads }).replaceAll('<', '\\u003c');
   const enl = leads ? { href: '#lead-revisar' } : enlacePeticion(sitio);
   const periodos = [1, 2, 3, 4, 5, 6].map((i) => `<div class="periodo-fila${i > 2 ? ' solo-seis' : ''}"><b>P${i}</b>${campo(`p${i}`, `Potencia P${i}`, 'kW')}${campo(`m${i}`, `Maxímetro P${i}`, 'kW')}</div>`).join('');
   const contenido = `<section class="hero hero-alt">
@@ -232,8 +233,18 @@ export function paginaRevisar(sitio, neg) {
       ${campo('importeReactiva', 'Energía reactiva', '€')}
       ${campo('importeExcesos', 'Excesos de potencia', '€')}
       ${campo('total', 'Total de la factura', '€')}
+      ${campo('consumoAnualKwh', 'Consumo últimos 12 meses (si sale)', 'kWh')}
     </div>
     <details class="periodos" open><summary>Potencia contratada y maxímetro por periodo</summary><div class="periodos-rejilla">${periodos}</div></details>
+    <div class="form-cabeza form-tejado"><h2>Tu negocio y tu tejado</h2><p class="nota">La factura no lo dice y cambia mucho el resultado: el sol de tu zona, el sitio que tienes y si se puede instalar.</p></div>
+    <div class="campos-rejilla">
+      <label class="campo"><span>Código postal del local</span><span class="campo-entrada"><input name="cp" inputmode="numeric" maxlength="5" autocomplete="postal-code"><em id="cp-zona">—</em></span></label>
+      ${campo('metrosTejado', 'Tejado libre sin sombras (aprox.)', 'm²')}
+      <label class="campo"><span>¿Cuándo gastas más luz?</span><select name="horario"><option value="">Según el tipo de negocio</option>${Object.entries(HORARIOS).map(([k, h]) => `<option value="${k}">${e(h.texto)}</option>`).join('')}</select></label>
+      <label class="campo"><span>El local es…</span><select name="propiedad"><option value="">Sin indicar</option><option value="propio">Mío (o de mi empresa)</option><option value="alquilado">Alquilado</option><option value="compartido">Nave o edificio compartido</option></select></label>
+      <label class="campo"><span>Tipo de cubierta</span><select name="cubierta"><option value="">Sin indicar</option><option value="chapa">Chapa o panel sándwich</option><option value="teja">Teja</option><option value="plana">Plana (azotea)</option><option value="fibrocemento">Uralita o fibrocemento</option><option value="nose">No lo sé</option></select></label>
+      <label class="campo"><span>Sombras en el tejado</span><select name="sombras"><option value="">Sin indicar</option><option value="no">Ninguna</option><option value="algunas">Algunas, parte del día</option><option value="muchas">Muchas (edificios o árboles altos)</option></select></label>
+    </div>
   </form>
 </section>
 <section class="resultado-factura" id="resultado-factura" hidden>
@@ -244,7 +255,7 @@ export function paginaRevisar(sitio, neg) {
       <button type="button" class="enlace-boton" id="rf-copiar">Copiar el resumen</button>
     </div>
   </div>
-  <div class="rf-solar"><h3>Tus placas solares</h3><div id="rf-solar"></div></div>
+  <div class="rf-solar"><h3>Tus placas solares <span class="sello-previa">Estimación previa</span></h3><div id="rf-solar"></div><div id="rf-cualifica"></div></div>
   <h3 class="rf-subtitulo">Y lo que ya pagas de más en tu factura</h3>
   <div class="hallazgos" id="rf-hallazgos"></div>
   ${formularioLead(sitio, { id: 'lead-revisar', titulo: 'Quiero presupuesto de placas y ofertas de luz', texto: 'Te traemos presupuesto por escrito de un instalador de tu zona con estos datos y, si te interesa, ofertas de luz mejores. Sin compromiso: nos pagan ellos, no tú.', boton: 'Quiero mi estudio gratis', conFactura: false, oscuro: true })}
@@ -267,7 +278,7 @@ ${scriptLeads(sitio)}
 
 export function paginaPlacas(sitio, neg, guias, sectores = []) {
   const s = neg.ref.solar;
-  const datos = JSON.stringify({ solar: s, precio: neg.ref.precioReferenciaKwh, parteEnergia: PARTE_ENERGIA }).replaceAll('<', '\\u003c');
+  const datos = JSON.stringify({ solar: s, provincias: neg.provincias, precio: neg.ref.precioReferenciaKwh, parteEnergia: PARTE_ENERGIA }).replaceAll('<', '\\u003c');
   const deplacas = guias.filter((g) => g.ruta.startsWith('/placas-solares/'));
   const contenido = `<section class="hero hero-alt">
   <p class="antetitulo">${ICONO_TIJERA} Simulador de placas solares</p>
@@ -280,6 +291,8 @@ export function paginaPlacas(sitio, neg, guias, sectores = []) {
     <fieldset class="campo modo"><legend>Sé mi consumo en</legend><label><input type="radio" name="modo" value="euros" checked> euros al mes</label><label><input type="radio" name="modo" value="kwh"> kWh al mes</label></fieldset>
     <label class="campo"><span>Lo que gastas al mes</span><span class="campo-entrada"><input name="cantidad" inputmode="decimal" value="400"><em id="cantidad-unidad">€/mes</em></span></label>
     <label class="campo"><span>Precio de tu energía</span><span class="campo-entrada"><input name="precio" inputmode="decimal" value="${String(neg.ref.precioReferenciaKwh * 1.3).slice(0, 5).replace('.', ',')}"><em>€/kWh</em></span></label>
+    <label class="campo"><span>Código postal del local</span><span class="campo-entrada"><input name="cp" inputmode="numeric" maxlength="5" autocomplete="postal-code"><em id="cp-zona">—</em></span></label>
+    <label class="campo"><span>Tejado libre sin sombras (aprox.)</span><span class="campo-entrada"><input name="metrosTejado" inputmode="decimal"><em>m²</em></span></label>
     <label class="campo rango"><span>Consumo en horas de sol <b id="diurno-valor">60%</b></span><input type="range" name="diurno" min="10" max="90" step="5" value="60"></label>
     <p class="nota">Si solo pones euros, suponemos que un ${Math.round(PARTE_ENERGIA * 100)}% de tu factura es energía. Con kWh el cálculo es más fino.</p>
   </form>
@@ -293,9 +306,10 @@ export function paginaPlacas(sitio, neg, guias, sectores = []) {
         <div><span>Coste orientativo</span><b id="sim-coste"></b><small>antes de ayudas</small></div>
         <div><span>Se paga en</span><b id="sim-amort"></b><small>después, todo ahorro</small></div>
         <div><span>Ganancia en ${s.vidaUtilAnos} años</span><b id="sim-vida"></b><small>ya descontado el coste</small></div>
-        <div><span>Produce</span><b id="sim-produccion"></b><small>${formatear(s.produccionKwhKwp)} kWh por kWp</small></div>
+        <div><span>Produce</span><b id="sim-produccion"></b><small id="sim-prod-kwp"></small></div>
         <div><span>Cubre</span><b id="sim-cobertura"></b><small>de tu consumo</small></div>
       </div>
+      <p class="sim-limite" id="sim-limite" hidden></p>
       <div class="sim-grafico" id="sim-grafico" aria-label="Saldo acumulado año a año"></div>
       <p class="sim-leyenda"><span class="neg">Recuperando la inversión</span><span class="pos">Ganancia</span></p>
       <a class="boton boton-bloque" href="${hayLeads(sitio) ? '#lead-placas' : '/revisar-factura/'}">${hayLeads(sitio) ? 'Pedir presupuesto gratis &rarr;' : 'Afinar con mi factura real &rarr;'}</a>
