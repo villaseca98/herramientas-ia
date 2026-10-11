@@ -1,0 +1,379 @@
+{
+ "revisado": "2026-10-11",
+ "nota": "Horas solares pico (HSP) diarias por provincia, coordenadas de la capital. La web pide a PVGIS (Comisión Europea) la producción real de esas coordenadas; si no contesta, usa HSP × 365 × factor, calibrado con PVGIS en Bizkaia (1.155), Madrid (1.632) y Santa Cruz de Tenerife (1.769 kWh/kWp).",
+ "factor": 0.81,
+ "fuenteHsp": {
+  "texto": "Solar360: horas solares pico por provincia",
+  "url": "https://www.solar360.es/blog/sostenibilidad/horas-solares-en-espana"
+ },
+ "fuenteProduccion": {
+  "texto": "PVGIS, Comisión Europea",
+  "url": "https://re.jrc.ec.europa.eu/pvg_tools/es/"
+ },
+ "provincias": [
+  {
+   "cp": "01",
+   "nombre": "Álava",
+   "lat": 42.85,
+   "lon": -2.67,
+   "hsp": 4.2
+  },
+  {
+   "cp": "02",
+   "nombre": "Albacete",
+   "lat": 38.99,
+   "lon": -1.86,
+   "hsp": 5.7
+  },
+  {
+   "cp": "03",
+   "nombre": "Alicante",
+   "lat": 38.35,
+   "lon": -0.48,
+   "hsp": 5.7
+  },
+  {
+   "cp": "04",
+   "nombre": "Almería",
+   "lat": 36.84,
+   "lon": -2.46,
+   "hsp": 6.1
+  },
+  {
+   "cp": "05",
+   "nombre": "Ávila",
+   "lat": 40.66,
+   "lon": -4.7,
+   "hsp": 5.3
+  },
+  {
+   "cp": "06",
+   "nombre": "Badajoz",
+   "lat": 38.88,
+   "lon": -6.97,
+   "hsp": 5.7
+  },
+  {
+   "cp": "07",
+   "nombre": "Illes Balears",
+   "lat": 39.57,
+   "lon": 2.65,
+   "hsp": 5.4
+  },
+  {
+   "cp": "08",
+   "nombre": "Barcelona",
+   "lat": 41.39,
+   "lon": 2.17,
+   "hsp": 5.4
+  },
+  {
+   "cp": "09",
+   "nombre": "Burgos",
+   "lat": 42.34,
+   "lon": -3.7,
+   "hsp": 5.0
+  },
+  {
+   "cp": "10",
+   "nombre": "Cáceres",
+   "lat": 39.47,
+   "lon": -6.37,
+   "hsp": 5.7
+  },
+  {
+   "cp": "11",
+   "nombre": "Cádiz",
+   "lat": 36.53,
+   "lon": -6.29,
+   "hsp": 6.0
+  },
+  {
+   "cp": "12",
+   "nombre": "Castellón",
+   "lat": 39.99,
+   "lon": -0.05,
+   "hsp": 5.6
+  },
+  {
+   "cp": "13",
+   "nombre": "Ciudad Real",
+   "lat": 38.99,
+   "lon": -3.93,
+   "hsp": 5.7
+  },
+  {
+   "cp": "14",
+   "nombre": "Córdoba",
+   "lat": 37.89,
+   "lon": -4.78,
+   "hsp": 5.9
+  },
+  {
+   "cp": "15",
+   "nombre": "A Coruña",
+   "lat": 43.36,
+   "lon": -8.41,
+   "hsp": 4.3
+  },
+  {
+   "cp": "16",
+   "nombre": "Cuenca",
+   "lat": 40.07,
+   "lon": -2.13,
+   "hsp": 5.7
+  },
+  {
+   "cp": "17",
+   "nombre": "Girona",
+   "lat": 41.98,
+   "lon": 2.82,
+   "hsp": 4.1
+  },
+  {
+   "cp": "18",
+   "nombre": "Granada",
+   "lat": 37.18,
+   "lon": -3.6,
+   "hsp": 5.9
+  },
+  {
+   "cp": "19",
+   "nombre": "Guadalajara",
+   "lat": 40.63,
+   "lon": -3.17,
+   "hsp": 5.6
+  },
+  {
+   "cp": "20",
+   "nombre": "Gipuzkoa",
+   "lat": 43.32,
+   "lon": -1.98,
+   "hsp": 3.6
+  },
+  {
+   "cp": "21",
+   "nombre": "Huelva",
+   "lat": 37.26,
+   "lon": -6.95,
+   "hsp": 6.0
+  },
+  {
+   "cp": "22",
+   "nombre": "Huesca",
+   "lat": 42.14,
+   "lon": -0.41,
+   "hsp": 5.6
+  },
+  {
+   "cp": "23",
+   "nombre": "Jaén",
+   "lat": 37.78,
+   "lon": -3.79,
+   "hsp": 5.8
+  },
+  {
+   "cp": "24",
+   "nombre": "León",
+   "lat": 42.6,
+   "lon": -5.57,
+   "hsp": 5.3
+  },
+  {
+   "cp": "25",
+   "nombre": "Lleida",
+   "lat": 41.62,
+   "lon": 0.62,
+   "hsp": 5.4
+  },
+  {
+   "cp": "26",
+   "nombre": "La Rioja",
+   "lat": 42.47,
+   "lon": -2.45,
+   "hsp": 4.5
+  },
+  {
+   "cp": "27",
+   "nombre": "Lugo",
+   "lat": 43.01,
+   "lon": -7.56,
+   "hsp": 4.3
+  },
+  {
+   "cp": "28",
+   "nombre": "Madrid",
+   "lat": 40.42,
+   "lon": -3.7,
+   "hsp": 5.7
+  },
+  {
+   "cp": "29",
+   "nombre": "Málaga",
+   "lat": 36.72,
+   "lon": -4.42,
+   "hsp": 5.8
+  },
+  {
+   "cp": "30",
+   "nombre": "Murcia",
+   "lat": 37.99,
+   "lon": -1.13,
+   "hsp": 5.7
+  },
+  {
+   "cp": "31",
+   "nombre": "Navarra",
+   "lat": 42.81,
+   "lon": -1.64,
+   "hsp": 5.5
+  },
+  {
+   "cp": "32",
+   "nombre": "Ourense",
+   "lat": 42.34,
+   "lon": -7.86,
+   "hsp": 4.8
+  },
+  {
+   "cp": "33",
+   "nombre": "Asturias",
+   "lat": 43.36,
+   "lon": -5.85,
+   "hsp": 3.8
+  },
+  {
+   "cp": "34",
+   "nombre": "Palencia",
+   "lat": 42.01,
+   "lon": -4.53,
+   "hsp": 5.3
+  },
+  {
+   "cp": "35",
+   "nombre": "Las Palmas",
+   "lat": 28.12,
+   "lon": -15.43,
+   "hsp": 5.9
+  },
+  {
+   "cp": "36",
+   "nombre": "Pontevedra",
+   "lat": 42.43,
+   "lon": -8.64,
+   "hsp": 4.4
+  },
+  {
+   "cp": "37",
+   "nombre": "Salamanca",
+   "lat": 40.97,
+   "lon": -5.66,
+   "hsp": 5.3
+  },
+  {
+   "cp": "38",
+   "nombre": "Santa Cruz de Tenerife",
+   "lat": 28.46,
+   "lon": -16.25,
+   "hsp": 5.9
+  },
+  {
+   "cp": "39",
+   "nombre": "Cantabria",
+   "lat": 43.46,
+   "lon": -3.8,
+   "hsp": 3.9
+  },
+  {
+   "cp": "40",
+   "nombre": "Segovia",
+   "lat": 40.95,
+   "lon": -4.12,
+   "hsp": 5.0
+  },
+  {
+   "cp": "41",
+   "nombre": "Sevilla",
+   "lat": 37.39,
+   "lon": -5.98,
+   "hsp": 6.0
+  },
+  {
+   "cp": "42",
+   "nombre": "Soria",
+   "lat": 41.76,
+   "lon": -2.46,
+   "hsp": 5.1
+  },
+  {
+   "cp": "43",
+   "nombre": "Tarragona",
+   "lat": 41.12,
+   "lon": 1.25,
+   "hsp": 5.7
+  },
+  {
+   "cp": "44",
+   "nombre": "Teruel",
+   "lat": 40.34,
+   "lon": -1.11,
+   "hsp": 5.1
+  },
+  {
+   "cp": "45",
+   "nombre": "Toledo",
+   "lat": 39.86,
+   "lon": -4.02,
+   "hsp": 5.8
+  },
+  {
+   "cp": "46",
+   "nombre": "Valencia",
+   "lat": 39.47,
+   "lon": -0.38,
+   "hsp": 5.7
+  },
+  {
+   "cp": "47",
+   "nombre": "Valladolid",
+   "lat": 41.65,
+   "lon": -4.72,
+   "hsp": 5.4
+  },
+  {
+   "cp": "48",
+   "nombre": "Bizkaia",
+   "lat": 43.26,
+   "lon": -2.93,
+   "hsp": 3.8
+  },
+  {
+   "cp": "49",
+   "nombre": "Zamora",
+   "lat": 41.5,
+   "lon": -5.75,
+   "hsp": 5.4
+  },
+  {
+   "cp": "50",
+   "nombre": "Zaragoza",
+   "lat": 41.65,
+   "lon": -0.89,
+   "hsp": 5.6
+  },
+  {
+   "cp": "51",
+   "nombre": "Ceuta",
+   "lat": 35.89,
+   "lon": -5.32,
+   "hsp": 6.3
+  },
+  {
+   "cp": "52",
+   "nombre": "Melilla",
+   "lat": 35.29,
+   "lon": -2.94,
+   "hsp": 6.2
+  }
+ ]
+}

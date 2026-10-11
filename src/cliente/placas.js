@@ -1,5 +1,5 @@
 // Simulador de placas solares (/placas-solares/): tamaño, coste, ahorro y amortización según tu consumo.
-import { simularSolar } from './energia.js';
+import { simularSolar, zonaPorCp } from './energia.js';
 import { formatear } from './recorte.js';
 
 const C = JSON.parse(document.getElementById('datos-placas').textContent);
@@ -7,6 +7,22 @@ const f = document.getElementById('form-placas');
 const $ = (id) => document.getElementById(id);
 const euros = (n) => `${formatear(Math.round(n))} €`;
 const coma = (n) => String(n).replace('.', ',');
+
+// Sol de la provincia del código postal: tabla aproximada y, en cuanto contesta, PVGIS.
+const pvgis = new Map();
+function zonaActual() {
+  const z = zonaPorCp(f.cp.value, C.provincias);
+  if (!z) return null;
+  if (pvgis.get(z.cp)) return { ...z, produccionKwhKwp: pvgis.get(z.cp), fuente: 'PVGIS' };
+  if (!pvgis.has(z.cp)) {
+    pvgis.set(z.cp, null);
+    fetch(`/api/produccion?lat=${z.lat}&lon=${z.lon}`, { signal: AbortSignal.timeout(9000) })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => { pvgis.set(z.cp, j?.kwhKwp || false); pintar(); })
+      .catch(() => { pvgis.set(z.cp, false); pintar(); });
+  }
+  return { ...z, fuente: 'aprox' };
+}
 
 function pintar() {
   const modo = f.modo.value;
@@ -16,7 +32,10 @@ function pintar() {
   const fraccion = Number(f.diurno.value) / 100;
   $('diurno-valor').textContent = `${f.diurno.value}%`;
   $('cantidad-unidad').textContent = modo === 'kwh' ? 'kWh/mes' : '€/mes';
-  const s = simularSolar({ consumoAnualKwh: consumoAnual, fraccionDiurna: fraccion, precioKwh: precio }, C.solar);
+  const zona = zonaActual();
+  const metros = Number(f.metrosTejado.value.replace(',', '.')) || 0;
+  $('cp-zona').textContent = zona ? zona.nombre : '—';
+  const s = simularSolar({ consumoAnualKwh: consumoAnual, fraccionDiurna: fraccion, precioKwh: precio, produccionKwhKwp: zona?.produccionKwhKwp, maxKwp: metros > 0 ? metros / C.solar.m2PorKwp : null }, C.solar);
   $('sim-vacio').hidden = Boolean(s);
   $('sim-res').hidden = !s;
   if (!s) return;
@@ -28,12 +47,16 @@ function pintar() {
   $('sim-vida').textContent = euros(s.ahorroVida);
   $('sim-cobertura').textContent = `${s.cobertura}%`;
   $('sim-produccion').textContent = `${formatear(s.produccionAnual)} kWh/año`;
+  $('sim-prod-kwp').textContent = `${formatear(s.produccionKwhKwp)} kWh por kWp${zona ? ` en ${zona.nombre}${zona.fuente === 'PVGIS' ? ' (PVGIS)' : ''}` : ' (media de España)'}`;
+  $('sim-limite').hidden = !s.limitado;
+  $('sim-limite').textContent = s.limitado ? `Tu tejado se queda corto: para tu consumo de día harían falta ${coma(s.kWpIdeal)} kWp y en ${formatear(metros)} m² caben unos ${coma(s.kWp)} kWp. Calculamos con lo que cabe.` : '';
   const lead = document.getElementById('lead-placas');
   if (lead) {
     lead.elements.ahorroAnual.value = String(Math.round(s.ahorroAnual));
     lead.elements.tipo.value = f.tipo.value;
     if (modo === 'euros' && lead.elements.facturaMensual && !lead.elements.facturaMensual.dataset.tocado) lead.elements.facturaMensual.value = String(mensual);
-    lead.elements.resumen.value = `Simulador de placas (${f.tipo.value}): ${modo === 'kwh' ? `${mensual} kWh/mes` : `${mensual} €/mes`}, ${f.diurno.value}% de consumo de día. Instalación de ${coma(s.kWp)} kWp (${s.paneles} paneles), coste orientativo ${euros(s.coste)}, ahorro ${euros(s.ahorroAnual)}/año, se paga en ${s.amortizacionAnos ? `${coma(s.amortizacionAnos)} años` : '—'}.`;
+    if (/^\d{5}$/.test(f.cp.value.trim()) && !lead.elements.codigoPostal.value) lead.elements.codigoPostal.value = f.cp.value.trim();
+    lead.elements.resumen.value = `Simulador de placas (${f.tipo.value})${zona ? `, ${zona.nombre} (CP ${f.cp.value.trim()})` : ''}${metros ? `, ${metros} m² de tejado libre` : ''}: ${modo === 'kwh' ? `${mensual} kWh/mes` : `${mensual} €/mes`}, ${f.diurno.value}% de consumo de día. Instalación de ${coma(s.kWp)} kWp (${s.paneles} paneles), coste orientativo ${euros(s.coste)}, ahorro ${euros(s.ahorroAnual)}/año, se paga en ${s.amortizacionAnos ? `${coma(s.amortizacionAnos)} años` : '—'}.`;
   }
   const anos = C.solar.vidaUtilAnos;
   const max = Math.max(s.ahorroVida + s.coste, s.coste);

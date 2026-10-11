@@ -1,5 +1,5 @@
 // Página /revisar-factura/: lee el PDF de la factura en el navegador, rellena el formulario y muestra el análisis.
-import { extraerDatos, analizarFactura, resumenPeticion, numero } from './energia.js';
+import { extraerDatos, analizarFactura, resumenPeticion, numero, zonaPorCp, cualificarPlacas, HORARIOS } from './energia.js';
 import { formatear } from './recorte.js';
 
 const C = JSON.parse(document.getElementById('datos-revisar').textContent);
@@ -7,7 +7,30 @@ const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const euros = (n) => `${formatear(Math.round(n))} €`;
 const form = $('form-factura');
-const CAMPOS = ['dias', 'consumoKwh', 'importeEnergia', 'importePotencia', 'importeReactiva', 'importeExcesos', 'total'];
+const CAMPOS = ['dias', 'consumoKwh', 'importeEnergia', 'importePotencia', 'importeReactiva', 'importeExcesos', 'total', 'consumoAnualKwh'];
+const coma = (n) => String(n).replace('.', ',');
+const ETIQUETAS = {
+  propiedad: { propio: 'propio', alquilado: 'alquilado', compartido: 'nave o edificio compartido' },
+  cubierta: { chapa: 'chapa o panel sándwich', teja: 'teja', plana: 'plana', fibrocemento: 'uralita o fibrocemento', nose: 'no lo sabe' },
+  sombras: { no: 'ninguna', algunas: 'algunas', muchas: 'muchas' },
+};
+
+// Producción real de la provincia: se pide a PVGIS (vía /api/produccion) y, mientras o si falla, se usa la tabla.
+const pvgis = new Map();
+function zonaActual() {
+  const z = zonaPorCp(form.cp.value, C.provincias);
+  if (!z) return null;
+  const real = pvgis.get(z.cp);
+  if (real) return { ...z, produccionKwhKwp: real, fuente: 'PVGIS' };
+  if (!pvgis.has(z.cp)) {
+    pvgis.set(z.cp, null);
+    fetch(`/api/produccion?lat=${z.lat}&lon=${z.lon}`, { signal: AbortSignal.timeout(9000) })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => { pvgis.set(z.cp, j?.kwhKwp || false); pintar(); })
+      .catch(() => { pvgis.set(z.cp, false); pintar(); });
+  }
+  return { ...z, fuente: pvgis.get(z.cp) === false ? 'aprox' : 'buscando' };
+}
 
 function leerFormulario() {
   const num = (v) => (String(v).trim() === '' ? null : numero(v));
@@ -49,7 +72,14 @@ function enlacePeticion(texto) {
 
 function pintar() {
   const d = leerFormulario();
-  const r = analizarFactura(d, C.ref, { tipo: form.tipo.value });
+  const zona = zonaActual();
+  $('cp-zona').textContent = zona ? zona.nombre : '—';
+  const metros = numero(form.metrosTejado.value);
+  const r = analizarFactura(d, C.ref, { tipo: form.tipo.value, zona, metrosTejado: metros, diurno: HORARIOS[form.horario.value]?.diurno ?? null });
+  const extra = {
+    propiedad: form.propiedad.value, cubierta: form.cubierta.value, sombras: form.sombras.value, tipo: form.tipo.value,
+  };
+  const cualif = cualificarPlacas(r.solar, extra);
   const hay = d.consumoKwh > 0 || d.importeReactiva > 0 || d.importeExcesos > 0;
   $('resultado-factura').hidden = !hay;
   if (!hay) return;
@@ -72,13 +102,29 @@ function pintar() {
   <div><span>Ahorro al año</span><strong class="resalta">${euros(s.ahorroAnual)}</strong><small>cubre ~${s.cobertura}% de tu consumo</small></div>
   <div><span>Se paga en</span><strong>${s.amortizacionAnos ? `${String(s.amortizacionAnos).replace('.', ',')} años` : '—'}</strong><small>luego todo es ahorro</small></div>
 </div>
-<p class="nota">Estimación con ${formatear(C.ref.solar.produccionKwhKwp)} kWh por kWp al año y tu precio actual de la energía. El estudio real depende de tu tejado, orientación y horario. <a href="/placas-solares/">Ajustar en el simulador &rarr;</a></p>` : '';
-  const texto = resumenPeticion(d, r);
+<ul class="solar-base">
+  <li>${zona ? `Sol de <b>${esc(zona.nombre)}</b>: ${formatear(s.produccionKwhKwp)} kWh por kWp al año ${{ PVGIS: '(PVGIS, Comisión Europea)', buscando: '(aproximado; afinando con PVGIS…)', aprox: '(aproximado para tu provincia)' }[zona.fuente]}` : `Sol medio de España: ${formatear(s.produccionKwhKwp)} kWh por kWp. <b>Pon tu código postal</b> para usar el de tu zona.`}</li>
+  <li>${r.consumoAnualReal ? `Consumo de tus últimos 12 meses: ${formatear(r.consumoAnual)} kWh.` : `Consumo anual estimado con un solo mes: ${formatear(r.consumoAnual)} kWh. <b>Pon el de los últimos 12 meses</b> si sale en tu factura: invierno y verano no se parecen.`}</li>
+  <li>${metros > 0 ? `Tejado libre: ${formatear(metros)} m², caben unos ${coma(Math.floor((metros / C.ref.solar.m2PorKwp) * 10) / 10)} kWp.` : '<b>Pon los metros de tejado libres</b> para saber si cabe la instalación.'}</li>
+</ul>
+<p class="nota">Estimación previa con lo que nos has dicho. El instalador la confirma en una visita: orientación, inclinación, sombras, estructura y estado de la cubierta.</p>` : '';
+  const nivel = { alto: 'Encaje alto', medio: 'Encaje medio', bajo: 'Encaje bajo' };
+  $('rf-cualifica').innerHTML = cualif ? `<div class="cualifica cualifica-${cualif.nivel}"><p><span class="sello">${nivel[cualif.nivel]}</span> ${cualif.nivel === 'alto' ? 'Con estos datos, las placas pintan muy bien para tu negocio.' : cualif.nivel === 'medio' ? 'Pueden salir a cuenta, pero hay cosas que confirmar antes.' : 'Ahora mismo no lo vemos claro: mira por qué.'}</p>${cualif.avisos.map((a) => `<article class="aviso aviso-${a.gravedad}"><h4>${esc(a.titulo)}</h4><p>${esc(a.texto)}</p></article>`).join('')}</div>` : '';
+  const texto = resumenPeticion(d, r, {
+    zona: zona ? `${zona.nombre} (CP ${form.cp.value.trim()})` : '',
+    metrosTejado: metros > 0 ? metros : null,
+    horario: HORARIOS[form.horario.value]?.texto ?? '',
+    propiedad: ETIQUETAS.propiedad[extra.propiedad] ?? '',
+    cubierta: ETIQUETAS.cubierta[extra.cubierta] ?? '',
+    sombras: ETIQUETAS.sombras[extra.sombras] ?? '',
+    cualificacion: cualif,
+  });
   const lead = $('lead-revisar');
   if (lead) {
     lead.elements.resumen.value = texto;
     lead.elements.ahorroAnual.value = String(Math.round(r.ahorroAnual + (r.solar?.ahorroAnual ?? 0)));
     lead.elements.tipo.value = form.tipo.value;
+    if (/^\d{5}$/.test(form.cp.value.trim()) && !lead.elements.codigoPostal.value) lead.elements.codigoPostal.value = form.cp.value.trim();
     if (d.total) lead.elements.facturaMensual.value = String(Math.round((d.total / (d.dias || 30)) * 30));
   }
   $('rf-copiar').dataset.texto = texto;
