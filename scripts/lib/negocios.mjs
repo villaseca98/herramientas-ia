@@ -6,6 +6,7 @@ import { pagina, formularioNewsletter, extraerPreguntas } from './plantillas.mjs
 import { formularioLead, hayLeads, scriptLeads } from './leads.mjs';
 import { extraerDatos, analizarFactura } from '../../src/cliente/energia.js';
 import { formatear } from '../../src/cliente/recorte.js';
+import { sectoresConPlacas, rutaPlacasSector } from './placas.mjs';
 
 const ICONO_TIJERA = '<svg class="icono-tijera" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></svg>';
 const PARTE_ENERGIA = 0.65; // Parte de la factura que suponemos energía cuando el usuario solo da euros al mes.
@@ -101,42 +102,46 @@ function tarjetaGuia(g) {
 
 const PASOS = `<section class="pasos">
   <div><span class="promesa-num">01</span><h3>Subes tu factura</h3><p>El PDF tal cual. Se lee en tu navegador en segundos: no la guardamos en ningún servidor.</p></div>
-  <div><span class="promesa-num">02</span><h3>Ves lo que pagas de más</h3><p>Recargos por reactiva, potencia que no usas, precio de la energía y lo que te ahorrarían unas placas.</p></div>
-  <div><span class="promesa-num">03</span><h3>Si quieres, lo gestionamos</h3><p>Pedimos ofertas, hacemos el papeleo y te buscamos instalador. Gratis: nos paga la compañía, no tú.</p></div>
+  <div><span class="promesa-num">02</span><h3>Ves tus placas y lo que pagas de más</h3><p>Tamaño de la instalación, coste, ahorro y años para pagarla. Y además los recargos, la potencia que no usas y el precio de la energía.</p></div>
+  <div><span class="promesa-num">03</span><h3>Te traemos presupuesto</h3><p>De un instalador de tu zona, por escrito y sin compromiso. También las ofertas de luz. Gratis: nos pagan ellos, no tú.</p></div>
 </section>`;
 
-export function paginaInicioNegocios(sitio, neg, guias) {
+export function paginaInicioNegocios(sitio, neg, guias, todosSectores = []) {
   const a = neg.analisisEjemplo;
   const sectores = guias.filter((g) => g.grupo === 'sector');
   const contenido = `<section class="hero hero-negocios">
   <div>
-    <p class="antetitulo">${ICONO_TIJERA} Revisión gratis · sin registro · 1 minuto</p>
-    <h1>Tu negocio paga <span class="tachado">de más</span> luz.</h1>
-    <p class="entradilla">Sube tu factura y te decimos exactamente dónde se va el dinero: recargos por energía reactiva, potencia que no usas, precio caro y lo que te ahorrarías con placas solares. Si quieres, lo arreglamos nosotros, gratis.</p>
-    <p class="hero-botones"><a class="boton" href="/revisar-factura/">Revisar mi factura gratis &rarr;</a> <a class="boton boton-sec" href="/placas-solares/">Simular placas</a></p>
+    <p class="antetitulo">${ICONO_TIJERA} Placas solares para negocios · estudio gratis</p>
+    <h1>Que tu tejado <span class="tachado">pague</span> tu luz.</h1>
+    <p class="entradilla">Sube tu factura y en un minuto te decimos cuántas placas necesita tu negocio, cuánto cuestan y en cuántos años se pagan. De paso, te marcamos lo que ya pagas de más: recargos, potencia que no usas y precio caro. Si te sale a cuenta, te traemos presupuesto de un instalador de tu zona, gratis.</p>
+    <p class="hero-botones"><a class="boton" href="/revisar-factura/">Calcular mis placas con mi factura &rarr;</a> <a class="boton boton-sec" href="/placas-solares/">Simular sin factura</a></p>
     <ul class="hero-datos">
-      <li><strong>0 €</strong> te cuesta la revisión y la gestión</li>
+      <li><strong>0 €</strong> te cuesta el estudio y el presupuesto</li>
       <li><strong>Tu PDF</strong> no sale de tu navegador</li>
       <li><strong>Sin llamadas</strong> que no pidas</li>
     </ul>
   </div>
   <aside class="factura-ejemplo" aria-label="Ejemplo de análisis">
     <p class="res-etq">Ejemplo de análisis · bar con tarifa 3.0TD</p>
-    <p class="res-grande">${formatear(a.ahorroAnual)}<span class="res-unidad"> €/año</span></p>
-    <p class="res-sub">que paga de más en su factura de ${formatear(a.facturaAnual)} € al año</p>
-    <ul class="ejemplo-lista">${a.hallazgos.filter((h) => h.ahorroAnual).map((h) => `<li><span>${e(h.titulo)}</span><b>-${formatear(h.ahorroAnual)} €</b></li>`).join('')}
-      ${a.solar ? `<li><span>Placas de ${String(a.solar.kWp).replace('.', ',')} kWp (se pagan en ${String(a.solar.amortizacionAnos).replace('.', ',')} años)</span><b>-${formatear(a.solar.ahorroAnual)} €</b></li>` : ''}</ul>
+    <p class="res-grande">${formatear(a.ahorroAnual + (a.solar?.ahorroAnual ?? 0))}<span class="res-unidad"> €/año</span></p>
+    <p class="res-sub">menos en una factura de ${formatear(a.facturaAnual)} € al año${a.solar ? `, con placas de ${String(a.solar.kWp).replace('.', ',')} kWp que se pagan en ${String(a.solar.amortizacionAnos).replace('.', ',')} años` : ''}</p>
+    <ul class="ejemplo-lista">${a.solar ? `<li><span>Placas solares (${formatear(a.solar.coste)} € de instalación)</span><b>-${formatear(a.solar.ahorroAnual)} €</b></li>` : ''}
+      ${a.hallazgos.filter((h) => h.ahorroAnual).map((h) => `<li><span>${e(h.titulo)}</span><b>-${formatear(h.ahorroAnual)} €</b></li>`).join('')}</ul>
     <a class="boton boton-bloque boton-claro" href="/revisar-factura/?ejemplo=1">Ver el análisis completo &rarr;</a>
   </aside>
 </section>
 ${PASOS}
 <section>
-  <div class="cabecera-seccion"><h2>Dónde pierde dinero un negocio</h2><a href="/negocios/">Todas las guías &rarr;</a></div>
+  <div class="cabecera-seccion"><h2>Placas solares por tipo de negocio</h2><a href="/placas-solares/empresas/">Cuánto ahorra cada negocio &rarr;</a></div>
+  <div class="tarjetas-guia">${sectoresConPlacas(todosSectores).slice(0, 7).map((s) => `<a class="tarjeta-guia" href="${rutaPlacasSector(s.slug)}"><span class="antetitulo">Placas · encaje ${e(s.placas.encaje)}</span><strong>${e(s.nombre)}</strong><span>${e(s.placas.texto)}</span></a>`).join('')}<a class="tarjeta-guia" href="/placas-solares/empresas/"><span class="antetitulo">Empresas</span><strong>Todos los negocios</strong><span>Tabla de ahorro según lo que pagas de luz.</span></a></div>
+</section>
+<section>
+  <div class="cabecera-seccion"><h2>Y lo que ya pagas de más</h2><a href="/negocios/">Todas las guías &rarr;</a></div>
   <div class="fugas">
     <a class="fuga" href="/negocios/energia-reactiva/"><span class="fuga-num">01</span><h3>Energía reactiva</h3><p>Un recargo por motores, frío y climatización que se elimina para siempre con un aparato. Muchos lo pagan cada mes sin saberlo.</p><span class="enlace-sec">Cómo quitarla &rarr;</span></a>
     <a class="fuga" href="/negocios/potencia-contratada/"><span class="fuga-num">02</span><h3>Potencia que no usas</h3><p>Se paga todos los días, abras o no. Si tu maxímetro está muy por debajo de lo contratado, te sobra.</p><span class="enlace-sec">Cómo ajustarla &rarr;</span></a>
     <a class="fuga" href="/negocios/tarifas-2-0td-3-0td-6-1td/"><span class="fuga-num">03</span><h3>Precio sin revisar</h3><p>Contratos de hace años, promociones que acabaron, precios por periodo que nadie comparó.</p><span class="enlace-sec">Entender tu tarifa &rarr;</span></a>
-    <a class="fuga" href="/placas-solares/"><span class="fuga-num">04</span><h3>Un tejado vacío</h3><p>Si trabajas de día, las placas producen justo cuando consumes. En muchos negocios se pagan en pocos años.</p><span class="enlace-sec">Simular placas &rarr;</span></a>
+    <a class="fuga" href="/placas-solares/empresas/"><span class="fuga-num">04</span><h3>Un tejado vacío</h3><p>Si trabajas de día, las placas producen justo cuando consumes. En muchos negocios se pagan en pocos años.</p><span class="enlace-sec">Simular placas &rarr;</span></a>
   </div>
 </section>
 <section>
@@ -201,9 +206,9 @@ export function paginaRevisar(sitio, neg) {
   const enl = leads ? { href: '#lead-revisar' } : enlacePeticion(sitio);
   const periodos = [1, 2, 3, 4, 5, 6].map((i) => `<div class="periodo-fila${i > 2 ? ' solo-seis' : ''}"><b>P${i}</b>${campo(`p${i}`, `Potencia P${i}`, 'kW')}${campo(`m${i}`, `Maxímetro P${i}`, 'kW')}</div>`).join('');
   const contenido = `<section class="hero hero-alt">
-  <p class="antetitulo">${ICONO_TIJERA} Lector de facturas · gratis</p>
-  <h1>Revisa tu factura de luz en un minuto</h1>
-  <p class="entradilla">Sube el PDF de tu última factura. Leemos los datos en tu propio navegador (no se sube a ningún servidor) y te decimos qué te sobra, qué te cobran de más y cuánto te ahorrarías con placas.</p>
+  <p class="antetitulo">${ICONO_TIJERA} Calculadora de placas y lector de facturas · gratis</p>
+  <h1>Calcula tus placas con tu factura en un minuto</h1>
+  <p class="entradilla">Sube el PDF de tu última factura. Leemos los datos en tu propio navegador (no se sube a ningún servidor) y te decimos cuántas placas necesitas, cuánto ahorras y en cuántos años se pagan. De paso, qué te cobran de más.</p>
 </section>
 <section class="lector">
   <label class="zona-pdf" id="zona-pdf" for="archivo-pdf">
@@ -233,15 +238,16 @@ export function paginaRevisar(sitio, neg) {
 </section>
 <section class="resultado-factura" id="resultado-factura" hidden>
   <div class="rf-cabeza">
-    <div><p class="res-etq">Pagas de más, al año</p><p class="res-grande"><span id="rf-ahorro">0 €</span></p><p class="res-sub" id="rf-sub"></p></div>
+    <div><p class="res-etq">Podrías ahorrar, al año</p><p class="res-grande"><span id="rf-ahorro">0 €</span></p><p class="res-sub" id="rf-sub"></p></div>
     <div class="rf-acciones">
-      ${enl ? `<a class="boton" id="rf-pedir" href="${e(enl.href)}">Quiero que me lo gestionéis gratis &rarr;</a>` : '<a class="boton boton-apagado" id="rf-pedir" href="#">Gestión gratuita muy pronto</a>'}
+      ${enl ? `<a class="boton" id="rf-pedir" href="${e(enl.href)}">Quiero presupuesto de placas gratis &rarr;</a>` : '<a class="boton boton-apagado" id="rf-pedir" href="#">Presupuesto gratis muy pronto</a>'}
       <button type="button" class="enlace-boton" id="rf-copiar">Copiar el resumen</button>
     </div>
   </div>
+  <div class="rf-solar"><h3>Tus placas solares</h3><div id="rf-solar"></div></div>
+  <h3 class="rf-subtitulo">Y lo que ya pagas de más en tu factura</h3>
   <div class="hallazgos" id="rf-hallazgos"></div>
-  <div class="rf-solar"><h3>Y si pusieras placas solares</h3><div id="rf-solar"></div></div>
-  ${formularioLead(sitio, { id: 'lead-revisar', titulo: 'Quiero que me lo gestionéis gratis', texto: 'Te mandamos ofertas por escrito con estos datos y, si te interesa, presupuesto de placas de un instalador de tu zona. Nos paga la compañía, no tú.', conFactura: false, oscuro: true })}
+  ${formularioLead(sitio, { id: 'lead-revisar', titulo: 'Quiero presupuesto de placas y ofertas de luz', texto: 'Te traemos presupuesto por escrito de un instalador de tu zona con estos datos y, si te interesa, ofertas de luz mejores. Sin compromiso: nos pagan ellos, no tú.', boton: 'Quiero mi estudio gratis', conFactura: false, oscuro: true })}
 </section>
 <section class="como"><h2>Tu factura no sale de tu ordenador</h2><p class="como-texto">El PDF se procesa con JavaScript en tu navegador. No lo subimos ni lo guardamos. Solo nos llega algo si pulsas "Quiero que me lo gestionéis" y decides enviarnos el resumen.</p></section>
 ${bloqueCta(sitio, 'placas')}
@@ -250,8 +256,8 @@ ${bloqueCta(sitio, 'placas')}
 ${scriptLeads(sitio)}
 <script type="module">if (new URLSearchParams(location.search).has('ejemplo')) addEventListener('load', () => document.getElementById('cargar-ejemplo').click());</script>`;
   return pagina(sitio, {
-    titulo: 'Revisa gratis tu factura de luz: lector automático para negocios',
-    descripcion: 'Sube el PDF de tu factura de luz y descubre en un minuto si pagas energía reactiva, potencia que no usas o un precio caro, y cuánto ahorrarías con placas.',
+    titulo: 'Calcula tus placas solares con tu factura de luz',
+    descripcion: 'Sube el PDF de tu factura de luz y descubre en un minuto cuántas placas necesita tu negocio, cuánto ahorras y en cuántos años se pagan, y si pagas reactiva o potencia de más.',
     ruta: '/revisar-factura/',
     migas: [['/revisar-factura/', 'Revisar factura']],
     contenido,
@@ -259,7 +265,7 @@ ${scriptLeads(sitio)}
   });
 }
 
-export function paginaPlacas(sitio, neg, guias) {
+export function paginaPlacas(sitio, neg, guias, sectores = []) {
   const s = neg.ref.solar;
   const datos = JSON.stringify({ solar: s, precio: neg.ref.precioReferenciaKwh, parteEnergia: PARTE_ENERGIA }).replaceAll('<', '\\u003c');
   const deplacas = guias.filter((g) => g.ruta.startsWith('/placas-solares/'));
@@ -299,6 +305,7 @@ export function paginaPlacas(sitio, neg, guias) {
 ${formularioLead(sitio, { id: 'lead-placas', interes: 'placas', titulo: 'Pide presupuesto de placas gratis', texto: 'Te ponemos en contacto con un instalador de tu zona con este estudio ya hecho. Presupuesto por escrito, con producción estimada y garantías. Sin compromiso.', boton: 'Quiero presupuesto' })}
 <p class="meta">Cálculo orientativo. Producción: ${e(s.fuenteProduccion.texto)} (<a href="${e(s.fuenteProduccion.url)}" rel="nofollow noopener" target="_blank">PVGIS</a>). Coste: ${formatear(s.costeKwpPequena)} €/kWp hasta ${s.umbralGrandeKwp} kWp y ${formatear(s.costeKwpGrande)} €/kWp por encima, a partir de los <a href="${e(s.fuenteCoste.url)}" rel="nofollow noopener" target="_blank">precios de SotySolar 2026</a>. Dimensionamos la instalación para cubrir tu consumo en horas de sol, que es la energía que más ahorra.</p>
 ${PASOS.replace('Subes tu factura', 'Simulas o subes tu factura').replace('Si quieres, lo gestionamos', 'Te buscamos instalador')}
+<section><div class="cabecera-seccion"><h2>Placas por tipo de negocio</h2><a href="/placas-solares/empresas/">Placas para empresas &rarr;</a></div><div class="tarjetas-guia">${sectoresConPlacas(sectores).map((s) => `<a class="tarjeta-guia" href="${rutaPlacasSector(s.slug)}"><span class="antetitulo">Encaje ${e(s.placas.encaje)}</span><strong>${e(s.nombre)}</strong><span>${e(s.placas.texto)}</span></a>`).join('')}</div></section>
 <section><div class="cabecera-seccion"><h2>Antes de pedir presupuesto</h2></div><div class="tarjetas-guia">${deplacas.map(tarjetaGuia).join('')}<a class="tarjeta-guia" href="/instaladores/"><span class="antetitulo">Para instaladores</span><strong>¿Instalas placas?</strong><span>Recibe clientes de tu zona con el consumo ya analizado.</span></a></div></section>
 ${formularioNewsletter(sitio)}
 <script type="application/json" id="datos-placas">${datos}</script>

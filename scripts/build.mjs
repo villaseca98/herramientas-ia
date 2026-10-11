@@ -13,7 +13,9 @@ import {
 } from './lib/plantillas.mjs';
 import { cargarNegocios, cargarGuias, paginaInicioNegocios, paginaHubNegocios, paginaRevisar, paginaPlacas, paginaGuia } from './lib/negocios.mjs';
 import { cargarSectores, paginaSector, paginaSectores, rutaSector } from './lib/sectores.mjs';
+import { paginaPlacasEmpresas, paginaPlacasSector, rutaPlacasSector, sectoresConPlacas } from './lib/placas.mjs';
 import { cargarFacturas, paginaHogar, paginaFactura, paginaBonos, redireccionesFacturas, rutaFactura } from './lib/facturas.mjs';
+import { calendarioReels } from './lib/reels.mjs';
 import { cargarStack, paginaRecorta, paginaAlternativa, paginaAlternativas, paginaGuias, paginaPrecios, paginaMigracion, rutaAlternativa } from './lib/recorta.mjs';
 
 // Bloque de contacto para páginas de servicios: solo aparece si hay email o formulario en data/sitio.json.
@@ -50,14 +52,16 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   mkdirSync(join(salida, 'reels'), { recursive: true });
   // En Vercel, la URL pública de producción; Instagram descarga los vídeos desde ahí.
   const base = process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : sitio.url;
-  writeFileSync(join(salida, 'reels', 'calendario.json'), JSON.stringify({ base, ...JSON.parse(readFileSync(join(RAIZ, 'data', 'reels.json'), 'utf8')) }, null, 2));
+  writeFileSync(join(salida, 'reels', 'calendario.json'), JSON.stringify(calendarioReels(JSON.parse(readFileSync(join(RAIZ, 'data', 'reels.json'), 'utf8')), base), null, 2));
   // pdf.js para leer las facturas en el navegador, servido desde el propio sitio.
   for (const f of ['pdf.min', 'pdf.worker.min']) cpSync(join(RAIZ, 'node_modules', 'pdfjs-dist', 'build', `${f}.mjs`), join(salida, 'js', 'pdfjs', `${f}.js`));
 
-  escribir('index.html', paginaInicioNegocios(sitio, negocios, guias));
+  escribir('index.html', paginaInicioNegocios(sitio, negocios, guias, sectores));
   escribir('negocios/index.html', paginaHubNegocios(sitio, guias));
   escribir('revisar-factura/index.html', paginaRevisar(sitio, negocios));
-  escribir('placas-solares/index.html', paginaPlacas(sitio, negocios, guias));
+  escribir('placas-solares/index.html', paginaPlacas(sitio, negocios, guias, sectores));
+  escribir('placas-solares/empresas/index.html', paginaPlacasEmpresas(sitio, sectores, negocios.ref));
+  for (const s of sectoresConPlacas(sectores)) escribir(`${rutaPlacasSector(s.slug).slice(1)}index.html`, paginaPlacasSector(sitio, s, sectores, negocios.ref));
   for (const g of guias) escribir(`${g.ruta.slice(1)}index.html`, paginaGuia(sitio, g, guias));
   escribir('negocios/sectores/index.html', paginaSectores(sitio, sectores, guias.filter((g) => g.grupo === 'sector')));
   for (const s of sectores) escribir(`${rutaSector(s.slug).slice(1)}index.html`, paginaSector(sitio, s, sectores, negocios.ref));
@@ -121,7 +125,7 @@ export function construir({ incluirBorradores = false, salida = join(RAIZ, 'dist
   }
   escribir('_redirects', `${redirecciones.join('\n')}\n`);
 
-  const urls = ['/', '/negocios/', '/revisar-factura/', '/placas-solares/', ...guias.map((g) => g.ruta), '/negocios/sectores/', ...sectores.map((x) => rutaSector(x.slug)), '/hogar/', '/bonos/', ...facturas.facturas.map((f) => rutaFactura(f.slug)), '/software/', '/alternativas/', ...stack.herramientas.map((h) => rutaAlternativa(h.slug)), '/guias/', '/precios/', '/migracion-gratis/', '/herramientas/', '/que-herramienta-necesito/', ...fichas, ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...estaticas];
+  const urls = ['/', '/negocios/', '/revisar-factura/', '/placas-solares/', '/placas-solares/empresas/', ...sectoresConPlacas(sectores).map((x) => rutaPlacasSector(x.slug)), ...guias.map((g) => g.ruta), '/negocios/sectores/', ...sectores.map((x) => rutaSector(x.slug)), '/hogar/', '/bonos/', ...facturas.facturas.map((f) => rutaFactura(f.slug)), '/software/', '/alternativas/', ...stack.herramientas.map((h) => rutaAlternativa(h.slug)), '/guias/', '/precios/', '/migracion-gratis/', '/herramientas/', '/que-herramienta-necesito/', ...fichas, ...Object.keys(sitio.categorias).map((s) => `/categoria/${s}/`), ...estaticas];
   const entradas = [
     ...urls.map((u) => ({ loc: new URL(u, sitio.url).href })),
     ...articulos.filter((a) => a.estado === 'publicado').map((a) => ({ loc: new URL(`/${a.slug}/`, sitio.url).href, lastmod: a.actualizado ?? a.fecha })),

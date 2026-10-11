@@ -633,3 +633,9 @@ table.comparativa { width: 100%; border-collapse: collapse; font-size: .95rem; }
 .sector-placas .solar-cifras strong.resalta { color: #5fd394; }
 .sector-faq { margin: 12px 0 28px; }
 @media (max-width: 860px) { .sector-rejilla, .sector-placas { grid-template-columns: 1fr; } }
+
+/* Placas para empresas */
+.tabla-placas td { white-space: nowrap; }
+.tabla-placas small { color: var(--suave); }
+.tabla-placas .resalta { color: var(--ahorro); font-weight: 700; }
+.rf-subtitulo { margin: 28px 0 12px; }
