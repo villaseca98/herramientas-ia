@@ -1,6 +1,6 @@
 {
   "nombre": "Recorta",
-  "lema": "Revisamos gratis la factura de luz de tu negocio y te decimos cuánto pagas de más: potencia, energía reactiva, precio y lo que te ahorrarías con placas solares.",
+  "lema": "Placas solares para negocios: con tu factura de luz te decimos cuántas placas necesitas, cuánto cuestan y en cuántos años se pagan, y te traemos presupuesto de un instalador de tu zona. Gratis.",
   "url": "https://herramientas-ia-eosin.vercel.app",
   "idioma": "es",
   "autor": {
@@ -30,12 +30,53 @@
   },
   "menu": [
     {
+      "titulo": "Placas solares",
+      "enlaces": [
+        {
+          "ruta": "/revisar-factura/",
+          "nombre": "Calcula tus placas con tu factura",
+          "desc": "Tamaño, coste, ahorro y años para pagarlas",
+          "destacado": true
+        },
+        {
+          "ruta": "/placas-solares/empresas/",
+          "nombre": "Placas para empresas",
+          "desc": "Cuánto ahorra un negocio según lo que paga"
+        },
+        {
+          "ruta": "/placas-solares/naves-y-almacenes/",
+          "nombre": "Naves y almacenes",
+          "desc": "Mucha cubierta y consumo de día"
+        },
+        {
+          "ruta": "/placas-solares/talleres-mecanicos/",
+          "nombre": "Talleres",
+          "desc": "Compresores y maquinaria en horas de sol"
+        },
+        {
+          "ruta": "/placas-solares/",
+          "nombre": "Simulador sin factura",
+          "desc": "Con lo que pagas al mes"
+        },
+        {
+          "ruta": "/placas-solares/guia/",
+          "nombre": "Guía de placas para empresas",
+          "desc": "Precios, excedentes, ayudas y errores"
+        },
+        {
+          "ruta": "/placas-solares/comunidades/",
+          "nombre": "Placas en comunidades",
+          "desc": "Autoconsumo colectivo paso a paso"
+        }
+      ]
+    },
+    {
       "titulo": "Negocios",
       "enlaces": [
         {
           "ruta": "/revisar-factura/",
           "nombre": "Revisa tu factura gratis",
-          "desc": "Sube el PDF y ve en un minuto cuánto pagas de más",
+          "desc": "Lo que pagas de más en recargos, potencia y precio",
           "destacado": true
         },
         {
@@ -82,27 +123,6 @@
           "ruta": "/negocios/sectores/",
           "nombre": "Todos los sectores",
           "desc": "Panaderías, talleres, gimnasios, hoteles y más"
-        }
-      ]
-    },
-    {
-      "titulo": "Placas solares",
-      "enlaces": [
-        {
-          "ruta": "/placas-solares/",
-          "nombre": "Simulador de placas",
-          "desc": "Cuánto cuestan, cuánto ahorras y en cuánto se pagan",
-          "destacado": true
-        },
-        {
-          "ruta": "/placas-solares/guia/",
-          "nombre": "Guía de placas para empresas",
-          "desc": "Precios, excedentes, ayudas y errores"
-        },
-        {
-          "ruta": "/placas-solares/comunidades/",
-          "nombre": "Placas en comunidades",
-          "desc": "Autoconsumo colectivo paso a paso"
         }
       ]
     },

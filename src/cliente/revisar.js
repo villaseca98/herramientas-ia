@@ -53,9 +53,10 @@ function pintar() {
   const hay = d.consumoKwh > 0 || d.importeReactiva > 0 || d.importeExcesos > 0;
   $('resultado-factura').hidden = !hay;
   if (!hay) return;
-  $('rf-ahorro').textContent = euros(r.ahorroAnual);
+  const total = r.ahorroAnual + (r.solar?.ahorroAnual ?? 0);
+  $('rf-ahorro').textContent = euros(total);
   $('rf-sub').textContent = r.facturaAnual
-    ? `Tu factura sale a unos ${euros(r.facturaAnual)} al año${r.ahorroAnual ? `: podrías recortar un ${Math.round((r.ahorroAnual / r.facturaAnual) * 100)}%` : ''}.`
+    ? `Tu factura sale a unos ${euros(r.facturaAnual)} al año${total ? `: con placas${r.ahorroAnual ? ' y quitando lo que pagas de más' : ''} podrías recortar un ${Math.round((total / r.facturaAnual) * 100)}%` : ''}.`
     : 'Pon el total de la factura para ver el porcentaje.';
   $('rf-hallazgos').innerHTML = r.hallazgos.length
     ? r.hallazgos.map((h) => `<article class="hallazgo hallazgo-${h.gravedad}">

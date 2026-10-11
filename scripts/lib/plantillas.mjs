@@ -108,7 +108,7 @@ ${grafo.length ? `<script type="application/ld+json">${JSON.stringify({ '@contex
     <a class="marca" href="/" aria-label="${e(sitio.nombre)}, inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></svg><span>${e(sitio.nombre.toLowerCase())}</span></a>
     <button class="menu-abrir" type="button" aria-expanded="false" aria-controls="menu-principal"><span class="sr">Menú</span><i></i><i></i><i></i></button>
     <nav class="menu" id="menu-principal" aria-label="Principal">${menu}</nav>
-    <a class="boton boton-peq cabecera-cta" href="/revisar-factura/">Revisar mi factura</a>
+    <a class="boton boton-peq cabecera-cta" href="/revisar-factura/">Calcular mis placas</a>
   </div>
 </header>
 <script>

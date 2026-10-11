@@ -1,9 +1,10 @@
 {
   "descripcion": "Cola de reels para Instagram. El flujo de n8n publica el primero que no haya publicado aún. Para añadir uno: sube el mp4 y la portada a public/reels/ y añade una entrada al final.",
   "pie": {
-    "cta": "👉 ¿Pagas de más en la luz de tu negocio? Compruébalo gratis en 1 minuto: sube tu factura en {web}/revisar-factura (enlace directo en la bio 🔗)\n💬 O escríbenos «FACTURA» por privado y te la revisamos nosotros.",
+    "cta": "👉 ¿Cuánto te ahorrarían las placas en tu negocio? Calcúlalo gratis con tu factura en 1 minuto: {web}/revisar-factura (enlace directo en la bio 🔗). De paso te dice si pagas de más.\n💬 O escríbenos «FACTURA» por privado y te lo calculamos nosotros.",
     "hashtags": [
       "#recorta",
+      "#placassolares",
       "#facturadeluz",
       "#ahorroenergetico",
       "#precioluz",
