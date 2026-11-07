@@ -135,6 +135,156 @@
     "puntuacion": 28
   },
   {
+    "id": "da676a846be7",
+    "tipo": "comparativa",
+    "titulo": "Systeme.io vs MailerLite",
+    "herramientas": [
+      "systeme",
+      "mailerlite"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "c0bffc4c5a7f",
+    "tipo": "comparativa",
+    "titulo": "Systeme.io vs Brevo",
+    "herramientas": [
+      "systeme",
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "f29392b89e71",
+    "tipo": "comparativa",
+    "titulo": "beehiiv vs MailerLite",
+    "herramientas": [
+      "beehiiv",
+      "mailerlite"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "24e196ab55b0",
+    "tipo": "comparativa",
+    "titulo": "beehiiv vs Brevo",
+    "herramientas": [
+      "beehiiv",
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "413caf3d6876",
+    "tipo": "comparativa",
+    "titulo": "GetResponse vs MailerLite",
+    "herramientas": [
+      "getresponse",
+      "mailerlite"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "5c9066721367",
+    "tipo": "comparativa",
+    "titulo": "GetResponse vs Brevo",
+    "herramientas": [
+      "getresponse",
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "8f68636454f0",
+    "tipo": "comparativa",
+    "titulo": "Kit (ConvertKit) vs MailerLite",
+    "herramientas": [
+      "kit",
+      "mailerlite"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "0bb8507ab27a",
+    "tipo": "comparativa",
+    "titulo": "Kit (ConvertKit) vs Brevo",
+    "herramientas": [
+      "kit",
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "d38c3a94c274",
+    "tipo": "comparativa",
+    "titulo": "Hostinger vs Tally",
+    "herramientas": [
+      "hostinger",
+      "tally"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
+    "id": "989224e3c164",
+    "tipo": "comparativa",
+    "titulo": "MailerLite vs Brevo",
+    "herramientas": [
+      "mailerlite",
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 28
+  },
+  {
     "id": "5d4ff1b36924",
     "tipo": "lista",
     "titulo": "Alternativas a Systeme.io",
@@ -293,6 +443,284 @@
     "puntuacion": 20
   },
   {
+    "id": "7836220cf521",
+    "tipo": "lista",
+    "titulo": "Alternativas a Hostinger",
+    "herramientas": [
+      "hostinger",
+      "tally"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "f4ccd86123b1",
+    "tipo": "lista",
+    "titulo": "Alternativas a MailerLite",
+    "herramientas": [
+      "mailerlite",
+      "systeme",
+      "beehiiv",
+      "getresponse",
+      "kit",
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "befdee28dae3",
+    "tipo": "lista",
+    "titulo": "Alternativas a Brevo",
+    "herramientas": [
+      "brevo",
+      "systeme",
+      "beehiiv",
+      "getresponse",
+      "kit",
+      "mailerlite"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "87f8d772c76a",
+    "tipo": "lista",
+    "titulo": "Alternativas a Tally",
+    "herramientas": [
+      "tally",
+      "hostinger"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "0399d2439504",
+    "tipo": "noticia",
+    "titulo": "Guía completa: cómo instalar n8n automática y manualmente - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1JaGJNSlRkRDVFRGpaRUJLcmdqdm0xZUJicEJPT0FuZ1dBdjJ3dTVFMDlNcW1LNEhYSFI0RHBscVNrZ1RqbFVQdFBxLXY4azlDSU1fTUJNZTc5TThkSzhyWlpSSjItRTMxcHc?oc=5",
+    "resumen": "Guía completa: cómo instalar n8n automática y manualmente Hostinger",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-07-10T03:37:15.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "19b3cb6f0b9d",
+    "tipo": "noticia",
+    "titulo": "Cómo ejecutar DeepSeek en un VPS n8n: 7 pasos fáciles - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4zVUNEVjVBaDlIZUlEdF96UWN1SHZNOUhSZDBiRk5hNHBLNF9SaFl6bElCTEpvR3dYZXFWV3ViMTcyVm1lM1ZKODRmTmpPRk0xaE9VbFRpU2tDdVR3OWowak0xYUFyYm9EMkI0WXhZWmUzVzZhcHc?oc=5",
+    "resumen": "Cómo ejecutar DeepSeek en un VPS n8n: 7 pasos fáciles Hostinger",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-07-10T01:33:22.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "888d1e98570e",
+    "tipo": "noticia",
+    "titulo": "Cómo crear un agente de IA con n8n (guía paso a paso) - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOYi1wN3FTSXFTR0xxMkNLYklLeWJKVGZYVmkyY2ozR0dmeEZXdFFMTklPRTU1NWxqamR6WS0yQ0o0eG4tcmVLYmVtYXFBOG5FeFk3SmxfV2stUmhzTVcwZkRiT3BSd0g0bS1xcDhRY3VmVEZDRUZyZzFTUFhKaTBTag?oc=5",
+    "resumen": "Cómo crear un agente de IA con n8n (guía paso a paso) Hostinger",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-02T07:00:00.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "c28b141e761b",
+    "tipo": "noticia",
+    "titulo": "Cómo automatizar bots de Telegram con n8n paso a paso - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1aY0ZtZUZRcFZnbXZLQTk5MFpQQW9zcEpnandBUFZxdWJzNWtNU0JwMUxKWkNsbktFVHZhdExzSmVVRGRISDU2dFN4Y3laTXhFZGZmRFp2M0pHa1pCV0dSVGFXdkNlbXdaRFlsVTEyMDNpN0JiZkI1UA?oc=5",
+    "resumen": "Cómo automatizar bots de Telegram con n8n paso a paso Hostinger",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-01-20T08:00:00.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "b7b62216472b",
+    "tipo": "noticia",
+    "titulo": "Requisitos de VPS para n8n: guía completa para 2026 - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5wbGxCdXNOLXE3VEkxdlkzSFY3d0wzWHdrVWxXQVd2amQzVXVxQWVqNjU4ak43QV9KS01WSGh1VTRCZDdxNzBWcEExbFozYVlyWVdxT3JNUUZhUlljQnZlcy1panVrd3dYVTFj?oc=5",
+    "resumen": "Requisitos de VPS para n8n: guía completa para 2026 Hostinger",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-05-28T07:00:00.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "d25ce193ca0d",
+    "tipo": "noticia",
+    "titulo": "Cómo integrar n8n con Ollama: guía completa con casos de uso - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1DVWVPVXFqSFI5ZUhxeV90QjRaTFROWDNGOFNVS1piWGxvb1EwTksydGlfdV9pWmlybU1xdjVfcEVCc3dDNG5fVUl2Rnp4aGJUbE1Bc0RySkd6aFFSY3N6YXBtT3A3bTF0MEE0VThJOGZiTjNpdGM0eQ?oc=5",
+    "resumen": "Cómo integrar n8n con Ollama: guía completa con casos de uso Hostinger",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-03-10T07:00:00.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "5a43029db914",
+    "tipo": "noticia",
+    "titulo": "10 mejores prácticas de n8n para una automatización exitosa - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1pdUt3Ykk3d1JnYlJ5NkNoa01xX3Q1RUJZaDQ1MFVUN2dTWUgzaXNLUzRPZGp4UU0yeHB0Y2tyZFU0eHlJQmg1ak1vRmtVZjl0SXFuR2padHQ0OWFXelBPUVNiWlVIUWhUeExBX2VybERuSHM?oc=5",
+    "resumen": "10 mejores prácticas de n8n para una automatización exitosa Hostinger",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-03-10T07:00:00.000Z",
+    "herramientas": [
+      "make",
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "c97d80c59597",
+    "tipo": "noticia",
+    "titulo": "¿Qué se puede automatizar con n8n? 11 ideas de flujos de trabajo - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1aWWg1Qy1jRkV4TXUtSl9uYkwxekdTeXJzZmR4aVF6R2dWZ0tOWDR1cGJHcEJLU0lpUXU1alotZldQdTlEWDNRUzJhUUw0Yml1aWtfMnVZUnpBbFd1LUpRZ0NnYXItZjB1M0NjY09WdXd0YnBmRGx2bDdSVWU?oc=5",
+    "resumen": "¿Qué se puede automatizar con n8n? 11 ideas de flujos de trabajo Hostinger",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-03-10T07:00:00.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "76abe6a15eb7",
+    "tipo": "noticia",
+    "titulo": "Cómo instalar n8n en Docker: 8 pasos sencillos - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB4VmVLN3B6ZjVfVldyTEE3bDFqVjdnTXFzeHl4UmxGeExYbzBBTTBBRFFzcy1RUzZTRzVGUHJyN1FqeGJXV2tRaUhFQ29BMHM2QkpKVTFuX2JhcXM0V2ZfWHppLXFKbEpKenJKeC1nSkY2cUVHdHJF?oc=5",
+    "resumen": "Cómo instalar n8n en Docker: 8 pasos sencillos Hostinger",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-11-20T08:00:00.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "3f038f8ecaa9",
+    "tipo": "noticia",
+    "titulo": "Automatiza tu sitio de WordPress con n8n fácilmente - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9mN2FFLXVDd0hETHpLSVBpNWJod19GOFFyMkR0WnlDdG9oQ1hpT2VGVlAxM3JyTlZCQWNjdEJDaERJMG03TTUxdHNYQ0VYbC1aYUJDZmVKWFZET2ZHV3UwME8zdkNFYlFMMzFXUGFyQnNBTmw0YTJMZ1h3?oc=5",
+    "resumen": "Automatiza tu sitio de WordPress con n8n fácilmente Hostinger",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-11-10T08:00:00.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "f12dc21de29e",
+    "tipo": "noticia",
+    "titulo": "Cómo integrar WhatsApp y n8n para crear flujos automáticos - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1EcVpBYkpzWG0wSDlhdUxqbEtiZlN5Zzh2Z2V6VDRyRWZ5UlFuangyQUF6M1JyandPUzFsa2dCYWl4VUQ0NHNIa0U5YlJOa1puTlFmaGQ5XzZ0ekEyTHhHZUZ6N1lpYktjUWdfTTFTaG9vVGpCcUpnWTZabw?oc=5",
+    "resumen": "Cómo integrar WhatsApp y n8n para crear flujos automáticos Hostinger",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-09-08T07:00:00.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "48a9cbd11967",
+    "tipo": "noticia",
+    "titulo": "n8n WordPress: automatiza tu sitio con flujos no-code 2026 - KeepCoding",
+    "enlace": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1Sd2ZEU0sxZ0plemZYTVJIQzZXTkJxMkxzdVZOTTJCSUFDaXNIYVkxbWVYMFBsblh1MnFuZ1NKWkJoNWRvM2JOT2lpRi1MeUNVYW9n?oc=5",
+    "resumen": "n8n WordPress: automatiza tu sitio con flujos no-code 2026 KeepCoding",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-09-09T07:00:00.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "902a73409bd4",
+    "tipo": "noticia",
+    "titulo": "Instalar n8n en VPS: automatiza con hosting en server propio - One.com",
+    "enlace": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1DQy1mVVgzTVJlQW5SV0tsZ3BON1ZkYXhqMTRCNm5lX2V1UklPWlBmTWU1RmFOdThTYlRrUkdVcGlndTh2SGhweWFqclhHQ2xWeU5keENhbGZoaWdWSWFNMQ?oc=5",
+    "resumen": "Instalar n8n en VPS: automatiza con hosting en server propio One.com",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-10-03T07:00:00.000Z",
+    "herramientas": [
+      "n8n",
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 20
+  },
+  {
+    "id": "cb9df0a58999",
+    "tipo": "noticia",
+    "titulo": "Muse Realtime Avatar",
+    "enlace": "https://www.producthunt.com/products/meta-ai",
+    "resumen": "Turn voice chats with Muse into live video calls Discussion | Link",
+    "fuente": "Product Hunt",
+    "fecha": "2026-11-06T18:21:58.000Z",
+    "herramientas": [
+      "heygen"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 16.3
+  },
+  {
     "id": "e283e2fb86d6",
     "tipo": "resena",
     "titulo": "Systeme.io: reseña, precios y cómo empezar",
@@ -445,5 +873,621 @@
     "fecha": null,
     "estado": "pendiente",
     "puntuacion": 16
+  },
+  {
+    "id": "cbd947ae293f",
+    "tipo": "resena",
+    "titulo": "MailerLite: reseña, precios y cómo empezar",
+    "herramientas": [
+      "mailerlite"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "bd843952fa93",
+    "tipo": "resena",
+    "titulo": "Brevo: reseña, precios y cómo empezar",
+    "herramientas": [
+      "brevo"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "3b3b5fa2cc79",
+    "tipo": "resena",
+    "titulo": "Tally: reseña, precios y cómo empezar",
+    "herramientas": [
+      "tally"
+    ],
+    "enlace": null,
+    "resumen": "",
+    "fuente": "catálogo",
+    "fecha": null,
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "ae86b5e30c6f",
+    "tipo": "noticia",
+    "titulo": "adELA y ElevenLabs se unen para preservar la voz de pacientes con ELA: \"El acceso es gratuito de por vida\" - ConSalud",
+    "enlace": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOZTA2emdBU3RkT2ZBQzFwUDYwVm5KV1UxMWlxamhmMEhTUlBfMUZRZ0xlamtkMndUTHdiaXUtS0F1QW9OQUJ4VW00RE9VOEYtd0ZzVndYUXJFbDVnc0VMbzFPU3RHSU40WGJhNVVDZ2FDOXdNNHFLQnFiX01BVWtHNC1tZ0cxZ2NxZ281ZTdMbjM3Sld1WVQwV2I4b1FMSkloRzVTVFAyaFg0TmJTMDZVSHE0eThNdFF6QUN0aUNDeDFrLWVwWHJzSGdtNG9jSGN6NXpkM211dFNUR2RfV2ljalpCdw?oc=5",
+    "resumen": "adELA y ElevenLabs se unen para preservar la voz de pacientes con ELA: \"El acceso es gratuito de por vida\" ConSalud",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-11-06T12:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 16
+  },
+  {
+    "id": "bd9853707f0c",
+    "tipo": "noticia",
+    "titulo": "Google Omni 1.2 Flash",
+    "enlace": "https://www.producthunt.com/products/google-omni-1-2-flash",
+    "resumen": "Gemini Omni 1.2 Flash: 15s AI video at $0.07 per second Discussion | Link",
+    "fuente": "Product Hunt",
+    "fecha": "2026-11-05T17:10:35.000Z",
+    "herramientas": [
+      "heygen"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 15.2
+  },
+  {
+    "id": "0235e4a7460c",
+    "tipo": "noticia",
+    "titulo": "El MWC 2027 confirma a los CEO de ElevenLabs y Kalshi y el debut de SoftBank en Barcelona - Zonamovilidad.es",
+    "enlace": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQR2owVFRNNDVCMU1LaWhzWEt2dVE0Qmc3Z2ludkpza0NBdFV4RmNKQ0FVNVFwcjRjb1ZPMmc0Z1JDTjlrUEhaQjdsMHBJejJmN3hJODJJQXUwdlNEUW9aai1CeDd3SktBTUNVU0dQS0hUYklSRy1uLWlfZ0VIZ21Td2hKTlE5VGZ4Mmo1VTRib2o4b1NzN05vaQ?oc=5",
+    "resumen": "El MWC 2027 confirma a los CEO de ElevenLabs y Kalshi y el debut de SoftBank en Barcelona Zonamovilidad.es",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-11-05T11:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 15
+  },
+  {
+    "id": "a45ad40dd37b",
+    "tipo": "noticia",
+    "titulo": "MWC27 suma a ElevenLabs, Kalshi y SoftBank - La Ecuación Digital",
+    "enlace": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOWHVQbFVEOGc0OGRIRlpacjhVQi05VkNuRDBSemZ5cnpUUGs2M0NSN0g2LTdLbzloLVZJbklYVFN6ZkxCelVFSC16LUVjRE5ULUxWN29wc2Fma2djcTNQbmZuWC1Nd21BTlNyMWN5bTNsMnZNTjBWUkxMaUdwYVRad0h6eVd4QXYyNHgxMA?oc=5",
+    "resumen": "MWC27 suma a ElevenLabs, Kalshi y SoftBank La Ecuación Digital",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-11-05T09:00:25.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 14.9
+  },
+  {
+    "id": "70e33643df83",
+    "tipo": "noticia",
+    "titulo": "ELA y voz con IA: ElevenLabs y adELA ofrecen acceso gratuito - Revista Perfiles",
+    "enlace": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNT1dyam1Ba3VxU1ZzdUxEUW1tVUFhSWF3QlRfUFdnQlRFQk1SQzhSN2ZsaW1xZDY3ZnFqM1pKZHJwUkZWdll5emNUeWR4eWpkeFJmU0JpcHpiVEpwdWhGRzFMZW52eEJ6R182YjZrZ3RrRzl4Q2ZFNHktWUNUb090NE81X2FpNXRj?oc=5",
+    "resumen": "ELA y voz con IA: ElevenLabs y adELA ofrecen acceso gratuito Revista Perfiles",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-11-04T10:20:57.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 13.9
+  },
+  {
+    "id": "7e121cd4d20f",
+    "tipo": "noticia",
+    "titulo": "Why We're Moving n8n's Automation Team Beyond the Service Desk Model",
+    "enlace": "https://blog.n8n.io/why-were-moving-n8ns-automation-team-beyond-the-service-desk-model/",
+    "resumen": "Romina da Costa, head of internal AI and automation at n8n, shares the four principles her team uses to help every team build and own its automations.",
+    "fuente": "n8n blog",
+    "fecha": "2026-10-29T07:10:00.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "66a7aef1c16e",
+    "tipo": "noticia",
+    "titulo": "Introducing n8n 3.0",
+    "enlace": "https://blog.n8n.io/introducing-n8n-v3/",
+    "resumen": "n8n 3.0 beta is out, focused on reliability, stability and security. Here’s what’s changing and how to get ready.",
+    "fuente": "n8n blog",
+    "fecha": "2026-10-27T11:53:21.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "33489ef6298c",
+    "tipo": "noticia",
+    "titulo": "AI Agent Memory: How LLM Agents Manage State in Production",
+    "enlace": "https://blog.n8n.io/ai-agent-memory-how-llm-agents-manage-state-in-production/",
+    "resumen": "Learn how AI agent memory works, explore short-term and long-term memory architectures, and discover how to combine n8n and Cognee to build AI workflows that retain context, share knowledge, and learn across sessions.",
+    "fuente": "n8n blog",
+    "fecha": "2026-10-23T12:20:34.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "590f69e9fd8c",
+    "tipo": "noticia",
+    "titulo": "Hallucination Detection Methods for AI Agent Workflows",
+    "enlace": "https://blog.n8n.io/hallucination-detection-methods-for-ai-agent-workflows/",
+    "resumen": "Learn practical hallucination detection methods for AI workflows. See how your team can identify unreliable outputs before they spread.",
+    "fuente": "n8n blog",
+    "fecha": "2026-10-22T17:21:13.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "013763e69663",
+    "tipo": "noticia",
+    "titulo": "Stateful vs. Stateless: Managing Context in AI Agent Builds",
+    "enlace": "https://blog.n8n.io/stateful-vs-stateless/",
+    "resumen": "Stateful versus stateless design changes how systems scale and remember context. Learn when to use memory nodes, state stores, or both.",
+    "fuente": "n8n blog",
+    "fecha": "2026-10-22T15:44:39.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "87c753a50507",
+    "tipo": "noticia",
+    "titulo": "Why we refreshed the n8n brand",
+    "enlace": "https://blog.n8n.io/n8n-brand-refresh-2026/",
+    "resumen": "A new logo, a new typeface, and a new take on our pink, built for where n8n is going.",
+    "fuente": "n8n blog",
+    "fecha": "2026-10-20T11:09:09.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "fc06fb4487de",
+    "tipo": "noticia",
+    "titulo": "Run your n8n AI workflows on NVIDIA DGX Spark, with no cloud API",
+    "enlace": "https://blog.n8n.io/n8n-nvidia-dgx-spark/",
+    "resumen": "Most small businesses want the same handful of AI jobs. They want to draft emails, summarize calls, read invoices, search their own documents, and make the odd image. Plenty of them can t send customer data to a cloud API to do it. Often the reason is data privacy",
+    "fuente": "n8n blog",
+    "fecha": "2026-10-19T13:22:17.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "8149ac9406e4",
+    "tipo": "noticia",
+    "titulo": "Build n8n workflows with Gemini 4 Argon: MCP, the Assistant, and Agents",
+    "enlace": "https://blog.n8n.io/build-n8n-workflows-with-gemini-4-argon-mcp-the-assistant-and-agents/",
+    "resumen": "Gemini 4 Argon just dropped, and n8n is one of the first companies to use and integrate the model. Check out how you can use it with your existing n8n workflows and how to build new ones. Here are the benchmarks Google published: Benchmarks reported by Google. Source: Gemini 4",
+    "fuente": "n8n blog",
+    "fecha": "2026-10-13T16:09:03.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "fac19e3ef006",
+    "tipo": "noticia",
+    "titulo": "Build a morning AI news brief with You.com, Jev, and n8n",
+    "enlace": "https://blog.n8n.io/spotlight-you-com/",
+    "resumen": "Every weekday at 8am, this workflow searches the day's AI news, scores every article for materiality at about $0.00004 apiece, and posts one cited brief per topic to Slack. Topics with no real news get no post.",
+    "fuente": "n8n blog",
+    "fecha": "2026-10-13T05:45:04.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "9a3c13e27c8d",
+    "tipo": "noticia",
+    "titulo": "10+ herramientas de inteligencia artificial para marketing confiables - Hostinger",
+    "enlace": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSVd1SmxSQ21NVzhvS1FvR0c3a2lueVhQLURKZVdubkViS29SZkpueVBzM3hlUjNha29yVTltbF9zWUJwX3RFZ2M1SnpOajJGeTlBSVgxOHRLSzFGNkZQa19taHhuVXIyb09VSUt5QjJIN01XZ3BodlZZMldzNUZ1bGZxekNCMkl2bTRiVjFBRmw?oc=5",
+    "resumen": "10+ herramientas de inteligencia artificial para marketing confiables Hostinger",
+    "fuente": "Google Noticias: herramientas IA",
+    "fecha": "2026-07-10T02:45:20.000Z",
+    "herramientas": [
+      "hostinger"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "aa858a5ae31e",
+    "tipo": "noticia",
+    "titulo": "Qué es N8N, qué flujos de trabajo puedes hacer conectando aplicaciones con esta plataforma y cuál es su precio - Xataka",
+    "enlace": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOR21QS2pOSkJuVnkzYnhxZVBxVHdYMFlpNGlhV0RHTmw4OXNQQkNUNDhWTUlGblRfRXp6WVNNMExnZnM4QkdTampra0tiVFlDc1BtNEdtdllERDFRZUExQW0xZnpaWmVjdDdLQ2M1b0ZKOE0wSXUyRHpSVzY1NWt3NFRScEoxakJsNnNRSGRKTWY5UFJXeUhGSVJrTGZ2R2pvckF3NFFMek1yRnVrZmt2OHRFT0VYOG5yYkpKWmtxanpiQdIBxwFBVV95cUxQZUkxLUJNWWNTQldVUmJTQXgweTVISGdyZ0dDNDBQLUVKVzBIZENjOE1lMzN0SHpUQ3YxendhYnZOVnZTVzN5aENwVmVYTDFfZ1dmd1R2Vm8zTmVoM3pLRHUycHhwdERfYmc0dGcxY19fMndnU0tPVkVxQjZmd205WXZETnpDLUxzczY0V1FvM19XQ3Q1cFozRkw3WEVyeWJMekQzV2tfQUZZMEpRb1hWZlZzQks1WXhLdW91a3haSmZITUZGZ0tR?oc=5",
+    "resumen": "Qué es N8N, qué flujos de trabajo puedes hacer conectando aplicaciones con esta plataforma y cuál es su precio Xataka",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-04-15T07:00:00.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "4cb6bc44551a",
+    "tipo": "noticia",
+    "titulo": "Taller: IA en producción con n8n. diseñar sistemas, no chats - UPV",
+    "enlace": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOcW5fb2dpSUdtU0xtYWJ0TUQ0aWw1c2pibnNLMWxsMEdib1dvMFhCY1dWS0FqM1NwR3d2V0JwUUx3UmVhcENWdWpiUVJKeXpSWWNwLVkwZnYtc1BLak9oOUthTWpaOGJvUktPYjUyaHJkOVc3a09BNERUbGJscEZ6aHlHclF4dk5wVDBPNG5pd2FrMk0?oc=5",
+    "resumen": "Taller: IA en producción con n8n. diseñar sistemas, no chats UPV",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-30T10:49:16.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "f5ec2a9ae020",
+    "tipo": "noticia",
+    "titulo": "La valoración de ElevenLabs se duplica hasta alcanzar los 22 000 millones de dólares debido al auge de la demanda de agentes de voz basados en IA - TradingView",
+    "enlace": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1lOW1hVkRRa0IxRTU5OW1pQ2txX0JQVTV1R21qa0MyRTUtczBseUlmckd2ekZOaU5PSWdKTzExSHBqd3RNaTVKeWVZT0pxZUN6MVZNSTBmQ2hJTXJUeXowOGtVRGwyVlh3bkVIWjBtSzF3b1VWenlZ?oc=5",
+    "resumen": "La valoración de ElevenLabs se duplica hasta alcanzar los 22 000 millones de dólares debido al auge de la demanda de agentes de voz basados en IA TradingView",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-30T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "c8aae30ace6d",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs estudia una oferta que valoraría la startup en 22.000 millones - Investing.com España",
+    "enlace": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNSDJIZ2xSR3h3V05VZW95RXI0S01XZkc3NlB2aW9JZFpFUVYzSVJweWw5UGUyVmJFOG5SaTRrdjQ0OFlqMjJZaFpuSWd4SjRIRGNURnRLV2djRkxjN0I2eHY2Y0NrQks1VVItTlBUM3hEVFdHM0dqd0piUkxtczVHdzY1NENFNzRYdlFfbFJ6TmRFZ3BEeGpvWGdUSG4yWHlEcHl2b3Nka2loM1Z1NWZuemljMkJMc1lFck9EUm84anEzbmVhNlVV?oc=5",
+    "resumen": "ElevenLabs estudia una oferta que valoraría la startup en 22.000 millones Investing.com España",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-07-03T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "ce54005f8863",
+    "tipo": "noticia",
+    "titulo": "El unicornio europeo de inteligencia artificial ElevenLabs desembarca en España - Expansión",
+    "enlace": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQUFJtWnVadWd2RzN2TlQyeVBhR3M2aS1ZeWVudDc2NlZ0Y2xrb2pJQkJfc1BNTHpIRkZVM3d5Zm53OEtqYjJJSEJfcm9Id010aVBBLTQ5WGFBU3NqTmhrZDQ4Q2t4SC1lX1hIUGlkSUcxeHJLUkhjOC1aOXl2OE1iMTEyZXNKWVg0ZmlhMTBHTTLSAZABQVVfeXFMUDFkMlF2aFRUMWpMUUF4QnhyLThtSWFnb0IzeEtZSkxQOUktRU9yZHhpM1ZaYmQyYkNCMEZsenF4ZUgzM2VFRXZxN1d0bVUxYnB2SEpEdHBMY2dBdkFzQ0tnS0g1WUxPT1VsWkVHeXJjVy1DeE1FSlV3ay1kT0FONlhvTmZXV2s1TkpVQzl6RVha?oc=5",
+    "resumen": "El unicornio europeo de inteligencia artificial ElevenLabs desembarca en España Expansión",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-04-28T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "a5b887476318",
+    "tipo": "noticia",
+    "titulo": "Reseña de ElevenLabs: Estas voces de IA suenan casi demasiado reales - Unite.AI",
+    "enlace": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5Iell5UFQ4WG1VUkhid1FMbThvLUVKZHpnUjVudnZubDBYRXl1Vk55ODh3Z29hcVNXandFakFEaHRIS1k5U3JDN0d1aGNmeHJNRHhEWg?oc=5",
+    "resumen": "Reseña de ElevenLabs: Estas voces de IA suenan casi demasiado reales Unite.AI",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-21T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "ff7980f43b84",
+    "tipo": "noticia",
+    "titulo": "Cómo usar n8n para automatizar tus workflows - Cyberclick",
+    "enlace": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNYlAzMzlkYzM3SGEyLVFVZC1BR2VCX01oWGJVNEVVbWh3YnprRXFEd3A0akxYUmR3eG00dWhEN3dtNGNlRHJHQVVsQm5nRnIyNnhtSTlOZm5SYndtcDlROGMyWkZIUkV2RFdqYnQyNUJ6YTBiNW1vMThENTd5UWlkQmVDa0Z3Y1RPMGNuTjV30gGeAUFVX3lxTE5Fd0NoU2pLejJLamxrTDVuMlFyZEo2RktrcVVWV2dyZHBSaDdvR1Z3RU1IMThId0JSUmhnS1ZwYjZTREU3eUxzLWdyQVhxU0NZYnEyQTVna0ZBM1hRNUNsMFN6RXh3N2dURVBVcGJMdHQwdmllYUswdVZUbDRKZFltUWN5cHFfT1JyM1Y0aXluTGFFMF9NMTk0a05CSnR3?oc=5",
+    "resumen": "Cómo usar n8n para automatizar tus workflows Cyberclick",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-04-10T07:00:00.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "4d5c398a98aa",
+    "tipo": "noticia",
+    "titulo": "Opinión de Semrush para 2026: La mejor herramienta SEO del mercado - 01net.com",
+    "enlace": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA5T1h5S240OGt3dzlmSUNXUC14MHp4dW9JeXpscjhabElHVFlVN2FFcW1zMU1vY1hiUUtTUlU2bWZDaEVZX2ZJajBTMjlXUENINXNNSXhXSmtvZl9tMGdZ?oc=5",
+    "resumen": "Opinión de Semrush para 2026: La mejor herramienta SEO del mercado 01net.com",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-02-23T08:00:00.000Z",
+    "herramientas": [
+      "semrush"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "d087417c80a9",
+    "tipo": "noticia",
+    "titulo": "AI firm ElevenLabs to invest 'hundreds of millions of dollars' in India - TradingView",
+    "enlace": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPLW1BS0lkQzNERnNyMjh2RU1YZHMxVnJyWG1BQWdzeUJEZnJKNlV0LU5GSTNReXdTZnFkbmZJWng2WEFVQ1c4a1RpdThWaFZHU1d5dEF4TXRMc2FEdWtiWDdfQjhqd0ZWRlhZYnA4MV8tdlJMYUJwdHAzRWNISE5ydVBDRWV5TFlZUWl0Y0EtRWZrc3FtclNja2xhUF9feXFaRFUwc3h2UmNmZzB0ZXZFRXVMeXM0UGtKenpKTF9IN05zVkpTZVEwTExSVjlxUHVBVHlZaQ?oc=5",
+    "resumen": "AI firm ElevenLabs to invest 'hundreds of millions of dollars' in India TradingView",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-10-06T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "f5e5d3362ced",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs doubles valuation to $22B after recent $300M employee tender offer - TradingView",
+    "enlace": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNbGpuREgxVUVtd05wLWIyVDNPMGx1Q3RRd1oyY1ZHV0ZKX1J2SlpSa3NUN0M1MkJKWnQzbEw5VnNTLXVVRWh1ekl1alZRM0RfXzZ5V1VYSTdfWGlUb2JwQ0sxYkdYcFlhOEpHNl9KZ3pnQWVOUHM5amtjN2IydjN0cUpKbXp1Sy1oWnpkVnZINzUyWldHVG5HUnZON3RYR0pfdXNCV1FKOVIyMWlCMkV5bE1ySXhpTDBGRjlYaHlkNXI1SnBzUlRoOUo0SHp3SjNWajZN?oc=5",
+    "resumen": "ElevenLabs doubles valuation to $22B after recent $300M employee tender offer TradingView",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-09-30T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "78920c46dd95",
+    "tipo": "noticia",
+    "titulo": "Boston Consulting Group y ElevenLabs anuncian una alianza estratégica para transformar la experiencia del cliente empresarial con agentes conversacionales - Boston Consulting Group",
+    "enlace": "https://news.google.com/rss/articles/CBMioAJBVV95cUxNZEJHaS02YVRzOGhVZGdacGRIbVhnNFl1WHRWMHY2N29VejNHd1FNY1lLUlV5alA4ZXdzSEt4dlctZlVOeWFZNUYxRnZuQ2VpZG1RT3pONUIxWTlzeDJPTDBITWtJQ3pUZWxlTmdkX3JHY0VhVGxXY0lkNENEbzNKN0xCVU80TFpGbVp6SUhnRlVDTnFmWFMtVkZVOVZwRHJIOXUyQkxtNC02bDk1QU9qMDRfa0N4UTdPT2VlX3lEVGRXZFpiYkxxM1NtMENQNWx4S0ZwVjhKdFpFVXZ1aExvTDBTU1pXaDVqcUdjYVlma05POGp5OU5VaWcyaGktLU05S0tFM3NFUE56Q1lpUlBiSTNXVUxPcTdCWTV3RFVvY2g?oc=5",
+    "resumen": "Boston Consulting Group y ElevenLabs anuncian una alianza estratégica para transformar la experiencia del cliente empresarial con agentes conversacionales Boston Consulting Group",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-02-20T08:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "f7516f03301d",
+    "tipo": "noticia",
+    "titulo": "Revisión de HeyGen: Cloné a mí mismo en un avatar de IA aterradoramente real - Unite.AI",
+    "enlace": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1udXRsRlZpOWZWRjU3TWg5bXowSzdBNGdQemhiaUExaWFDTVNUUlJ3SnBtYUNkSnBfV1F0dU45V3liMUpiQnB1ZjYtVHQyMnc?oc=5",
+    "resumen": "Revisión de HeyGen: Cloné a mí mismo en un avatar de IA aterradoramente real Unite.AI",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-04-02T07:00:00.000Z",
+    "herramientas": [
+      "heygen"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "9c8e24b49ab2",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs se dispara a $11 mil millones impulsada por Nvidia y acelera su camino hacia Wall Street - Yahoo Finanzas",
+    "enlace": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOYVFCdGlHWjFYdWRfUVhLWjJ3Sjk1WXl4aC14UzdVYmVmTUwzZTdmVWZLaWZyT3d2SG1BOTdVM0E2c243Qi14b2MzTG5PSjhaNi1lcjFPUHFUYkp5c1Y0U2x2MGtuOVh4b0xKNjYzRTBZOWNaQ3JlUEdIaVFEMWNVUFZZZ0dLSUpFUG5NUFk2YjB4TEg4Q1E?oc=5",
+    "resumen": "ElevenLabs se dispara a $11 mil millones impulsada por Nvidia y acelera su camino hacia Wall Street Yahoo Finanzas",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-02-08T08:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "899b12730ca7",
+    "tipo": "noticia",
+    "titulo": "HeyGen duplica sus ingresos recurrentes anuales (ARR) hasta los 200 millones de dólares en ocho meses gracias al auge del vídeo con IA centrado en la identidad - Business Wire",
+    "enlace": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAtTUtfM0xSUHpoaEtXS1hhRmVoeXZNZEVITWFlTHRZUWc0VDZHMVU4TU9SdXhTR2ZFdm5CekJZTGtTbThrV2tLM0lIRjN5RllTU1l5ZHhPQUN0T2dnWXVaejBJSmY0Z2s?oc=5",
+    "resumen": "HeyGen duplica sus ingresos recurrentes anuales (ARR) hasta los 200 millones de dólares en ocho meses gracias al auge del vídeo con IA centrado en la identidad Business Wire",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-25T07:00:00.000Z",
+    "herramientas": [
+      "heygen"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "9fb1c928d720",
+    "tipo": "noticia",
+    "titulo": "Carles Reina, 'business angel' en Revolut o ElevenLabs, lanza un fondo de IA y defensa - El Confidencial",
+    "enlace": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPbU9yWnhVOU5Rb2JiXy10LWNzNWRYcXZoV25URG9QRHE2RGx1MXd4ZVgtUVFDa19aclVEY2FjUGItSGsydHhfZVZRclFmc0RxRDhCVlhLQnBWRzQyQTZCUlhYcTFHYW9kNnZ6bFpmQTdpSHJyakJVRjgwRVUzU0IzaG1IVy1TaDNLMXJ6Qllrck1VNmtQS0RVa2gtZldNZ1FKSFd2WExYOU1URWVva0RUS082aENBa2xkcThiWmlPX2hUWGFRbGQ1MU9NUlpRREEtSTF5RkhRNXU5SzIx?oc=5",
+    "resumen": "Carles Reina, 'business angel' en Revolut o ElevenLabs, lanza un fondo de IA y defensa El Confidencial",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-11-26T08:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "661a31efbd5e",
+    "tipo": "noticia",
+    "titulo": "Adobe comprará Semrush por 1.900 millones de dólares - Reason Why",
+    "enlace": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBIcERFUWp1UlB6WllkSHRqVF9MYzJ3TkNwWC1pVTh0cmFDVUJyd0pHR2R4Nk8tSzRDbUh2anJYQVZKeFVmVDAyRWp0SWNWU3haQlZDNXd4TEw0RllfTldDbmZvOTgydFhoUi1DcWtPUG9RT3M3bk1iaVp3?oc=5",
+    "resumen": "Adobe comprará Semrush por 1.900 millones de dólares Reason Why",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-11-20T08:00:00.000Z",
+    "herramientas": [
+      "semrush"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "88ab4bc9c802",
+    "tipo": "noticia",
+    "titulo": "TestMu AI anuncia su integración oficial para n8n y lleva infraestructura de navegadores reales a los flujos de trabajo con agentes de IA - Business Wire",
+    "enlace": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5FQnJVQWIzSkY3RlFfZ1lTU2VzcUhPSlNmUkdpa0JCUFp5RTJScTUxUVJMS0w1VVppajJhTGhDbzYxNW1tVFRzUlMySjhZTG50Nm9EVlhHcDBTMEhxWGpFXzRGOTA1d3M?oc=5",
+    "resumen": "TestMu AI anuncia su integración oficial para n8n y lleva infraestructura de navegadores reales a los flujos de trabajo con agentes de IA Business Wire",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-06-19T07:00:00.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "1e443bca2cdf",
+    "tipo": "noticia",
+    "titulo": "DXC y ElevenLabs anuncian una alianza estratégica para impulsar la innovación en inteligencia artificial y tecnología de voz en el ámbito empresarial - PR Newswire",
+    "enlace": "https://news.google.com/rss/articles/CBMivAJBVV95cUxPZFpBS0dzX0hDbHA4a1JXQTVQSXVha0dWZ04tcTViV01ScVhxSlY3ZmFFc1dJNldOLVg5R3JxelpWU29haF9mWGVsNjdDblIzZ005cDBvRzkzcUZNVExpM3dXS1ZUNG9oSldLeExnc0ZVM2F2S2djWlBoVmdQT2lXSmhYZDk3RGFudWpRankxN25Kdk9LdHcxOV85NW1EUnlaRWplcXRoZGwzSVVpXzZESFE0RG95QnhlVlRJbllnd3FPVWViRW5qMzYwOXhDZEFJSWFaWVExN1BSTVFxeFpTUXBZSkxWOWRaZjgyeDRvVllzQzRyUDM3TmJqVUo4STdBU203WEQ1bTVvSTJsLUd5RGZkeEF6TWtGVUFuaklWWGl0SFJOdk81bllYRjBrTjg2STdEeGhpYjZLQ282?oc=5",
+    "resumen": "DXC y ElevenLabs anuncian una alianza estratégica para impulsar la innovación en inteligencia artificial y tecnología de voz en el ámbito empresarial PR Newswire",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2026-07-28T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "7df1060ee0e3",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs vs. Murf AI: ¿qué herramienta es mejor para ti? - Cyberclick",
+    "enlace": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPbVRHWU9XMDloZENUQnI3SDJ5SjJ4eDZUTFJ3LTJUU2JaUEM4M200ZDNSYUY3aHY5UXBycG1PcWNGcm1LUmxRWGFCdDlFelBSNjR5bzlsbUJ6WlI1M1VBZXVHbnU1c3gzTUYzeWFsQ1Z4WHExNVNQakJCTGthc09DYzVGVVpwclYzN2ZQeXhxQWlsZ2lvbld1ZEFwONIBqwFBVV95cUxOUmR5cDdRdUxLOTFWSGl5VUhubTJIMmFJNWpUVWVkRF94M2xSUEVXQjNlb3R4aWNXUkNDWlh0cVgwMlhpXy1QM3A2eU9ncm9KLTViRDZyS0hmZmlON3o1dDljNXktYlR4THBiSFl5cTFGenJHSFVGQi1tMkZyQm1yRkdWbmJac2hTalY5U0QyeEhpY0cwbjVrd2JlVFczMnhZeGpyNVdOc0hxa00?oc=5",
+    "resumen": "ElevenLabs vs. Murf AI: ¿qué herramienta es mejor para ti? Cyberclick",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-10-27T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "b33133b5e761",
+    "tipo": "noticia",
+    "titulo": "Adobe compra Semrush - IEBS Business School",
+    "enlace": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9RMzZDUzNUazR6SXhHd0x4Wkxqb2Q3OGlnLXp1NmM2ZW5JUVpTTGdYcThFdHBzUlVoR05IRkJnNDNXOEo5d2Y2dlhkRG9IQWp1cXpxQnJjblk5ZDQ5VjRFMFNPbw?oc=5",
+    "resumen": "Adobe compra Semrush IEBS Business School",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-11-28T08:00:00.000Z",
+    "herramientas": [
+      "semrush"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "64d5c8d9a37a",
+    "tipo": "noticia",
+    "titulo": "Así es cómo HeyGen se sube al boom del video de alta calidad con IA - Forbes Colombia",
+    "enlace": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMFVsdGpyRTNyUjFiQ1QxRHItODhxSnVxSHhOVWpzTm5tcnFLVDFxMEtJUmUtQkRyQkoxakZJOTN0R3Q5LURqNVNwTG9icjdZaE5sU1ZWTGN3dEhxZkYzTVZWa1NGcHpJQkRQVE5wV0RnekdrcklkallzT1U1UkROMGtPWEF0ZGNWT2ZvRGxhMkJ5QQ?oc=5",
+    "resumen": "Así es cómo HeyGen se sube al boom del video de alta calidad con IA Forbes Colombia",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-11-13T08:00:00.000Z",
+    "herramientas": [
+      "heygen"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "5c676d1e9484",
+    "tipo": "noticia",
+    "titulo": "Hay un nuevo unicornio en Europa: se llama n8n, es alemán y ha convertido las automatizaciones de flujos de trabajo en algo sexy - Xataka",
+    "enlace": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQMW5BRmlQQlBrR1NvbFF3eFFZeE1PRmJhaTdwVXRUY3h1bzZOOENPcFFhNGN2SWJLTWFQQ0h1RnJNLV9GRkUxejdSdTB6MkxQTWJ2SkZ4cWM5UmZKMktWX1NWRnFjeVd3cW9RNnRiTk5YbFM5ay0yVk1NMWYxUEhZTDk0RnM3UW5CWElfS3VEU1dGbnQ2ZkVDM3cyRXVBM3lDeGZKNTZhYjkwdm9UVC1uaXdyc0oxOHR1WkhxQXBKUVhnRWZmU2Jib180MWwydGQ2N3VHbnoxQVFUbnZYUUHSAeMBQVVfeXFMUHBOYWtQS0V1QTdxWnFadlhFcDhvY0FFQU4wMlRnekpCZld5R3RTSXhqSWJYZGxoNU5DRDFNUzZrLTR5M1VBWUFTOW5UdzBLTU1MVHJLak8tTGViSk9KeWtNbEQzTXNkYTA3SXdKb0VnVU5xeGtBNjgyRmwtVnFldzMxTk9IZVNWV09qTXB6cUZieHNCWWxUVUlMbVM1anJtYVczR0NqcTdfRXRQR2t3MWxReUJFeUQ1cmdtODF3R0hhVGVhTTdzUlJPa3VZRkRJcUVvMGE2N3RxMjk5MUtwYUVuOEE?oc=5",
+    "resumen": "Hay un nuevo unicornio en Europa: se llama n8n, es alemán y ha convertido las automatizaciones de flujos de trabajo en algo sexy Xataka",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-08-08T07:00:00.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "a4eeca17cc7c",
+    "tipo": "noticia",
+    "titulo": "Qué es n8n y por qué se ha convertido en la herramienta favorita para automatizar tareas - IEBS Business School",
+    "enlace": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBpMFhMTXV6RTltTkZJaVBxVDVZRVZZTzFTZEJPMWg3SmxaV1N0Z2tLNnpRWGU4NExHazNlX1RNcnh0NE5QaHJvVElfR0NyWDZud3dLSnVEWmY4OXl3VXJwVS14MU95OFhuZi1saFBxam5ieGxENXc?oc=5",
+    "resumen": "Qué es n8n y por qué se ha convertido en la herramienta favorita para automatizar tareas IEBS Business School",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-10-30T07:00:00.000Z",
+    "herramientas": [
+      "n8n"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "c053b7e02ee5",
+    "tipo": "noticia",
+    "titulo": "Los premios Chroma Awards, organizados por ElevenLabs, abren el plazo de presentación de candidaturas, con fecha límite el 3 de noviembre - Business Wire",
+    "enlace": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE84MDlkZm5ScTRUcXA3dVVsN0xHWXZ0ZHZUcElvQVI3aE11TlJ3dlREaWt5WmtISHhYQ01Oc3dPXzA4RWpheFRTZ3MtYkVFNG5vXy12emhNNUpnOHFiUmNYdjk5bTVGa28?oc=5",
+    "resumen": "Los premios Chroma Awards, organizados por ElevenLabs, abren el plazo de presentación de candidaturas, con fecha límite el 3 de noviembre Business Wire",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-09-16T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "de62d98996aa",
+    "tipo": "noticia",
+    "titulo": "ElevenLabs lanza Eleven Music en colaboración con socios de la industria musical - Business Wire",
+    "enlace": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBUdllBZHgtX0NtUWdOSFFhbzNnel9kQjAybGw1TG5XVlJxMWhhWlpHZEMyMHozdmZINTBZR09UUnN3VmZPUy1adDFwZEo2S1VuWU5CQ09aNnVMLVgxRUx5REMzMHk2NFU?oc=5",
+    "resumen": "ElevenLabs lanza Eleven Music en colaboración con socios de la industria musical Business Wire",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2025-08-05T07:00:00.000Z",
+    "herramientas": [
+      "elevenlabs"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
+  },
+  {
+    "id": "2ec6172e49db",
+    "tipo": "noticia",
+    "titulo": "Semrush Acquires Kompyte, an Adara portfolio company - Capital Riesgo",
+    "enlace": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbmtYcnNnUXZQQWpzVndGY3dCTGwxaDlnY3NhM2ttYXRHWWdhWjFyVmJzaUU2bHpWd1Z2MkFXbENZUFMwOFk4VUVfUWhqMUQxbEpJcU9PN0Fya0lVdDVGaEJ2RGpWdjJFc0tiN2hwbkhNdHZEWUY0VEg5RFVZU0x3QXN5bFJFMm01SzJnRlRXbF9GUDlW?oc=5",
+    "resumen": "Semrush Acquires Kompyte, an Adara portfolio company Capital Riesgo",
+    "fuente": "Google Noticias: marcas del catálogo",
+    "fecha": "2022-03-19T07:00:00.000Z",
+    "herramientas": [
+      "semrush"
+    ],
+    "estado": "pendiente",
+    "puntuacion": 10
   }
 ]
